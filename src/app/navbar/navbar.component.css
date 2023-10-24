@@ -1,0 +1,82 @@
+header .navbar{
+    padding: 1rem;
+    background-color:white;
+}
+
+header nav .navbar-toggler{
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+header nav .navbar-toggler:hover{
+    background-color: #f2f2f2;   
+}
+
+header nav .navbar-toggler:focus {
+    outline:0;
+}
+
+header .navbar .navbar-brand{
+    padding: 0;
+    margin: 0;
+}
+
+header .navbar .navbar-brand .nav-logo{
+    padding: 0.4rem 0 0 0;
+    margin-bottom: 0.4rem;
+    font-size: 17px;
+    font-weight: 600;
+    color: #323232;
+}
+
+header .navbar .navbar-collapse .nav-item{
+    padding: 0.4rem 1rem 0 1rem;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .navbar .navbar-collapse .nav-item .nav-link{
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #323232;
+}
+
+#list{
+    padding-bottom: 3px;
+    padding-right: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #323232;
+    border: none;
+    cursor: pointer;
+}
+
+#list:focus {
+    outline:0;
+}
+
+#list option{
+    font-size: 15px;
+    font-weight: 500;
+    color: #323232;
+}
+
+header .navbar .navbar-nav li > a:after{
+    content: '';
+    display: block;
+    height: 2px;
+    border-radius: 26px;
+    background: red;
+    transform: scaleX(0);
+    transition: transform .4s;
+}
+
+header .navbar .navbar-nav li > a:hover:after{
+    transform: scaleX(1);
+    height: 2px;
+    transition: transform .4s;
+}
