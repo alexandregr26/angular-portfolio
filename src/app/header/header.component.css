@@ -36,39 +36,3 @@
     font-weight: 400;
     margin-bottom: 40px;
 }
-
-#box-banner .bannerbutton{
-    display: flex;
-    justify-content: center;
-    text-align: left;
-}
-
-#box-banner .bannerbutton button{
-    font-size: 20px;
-    font-weight: 600;
-    background-color: transparent;
-    color: #323232;
-    border: 2px solid red;
-    border-radius: 20px;
-    overflow: hidden;
-    padding: 8px 16px;
-    text-transform: uppercase;
-    transition: .4s ease;
-    transition-property: background-color, color;
-}
-
-#box-banner .bannerbutton button:focus{
-    outline: none;
-}
-
-#box-banner .bannerbutton button:hover{
-    color: white;
-    background-color: red;
-}
-
-#box-banner .bannerbutton button:before{
-    content: '';
-    background: grey;
-    opacity: .5s;
-    filter: blur(30px);
-}

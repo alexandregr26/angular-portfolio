@@ -45,26 +45,6 @@ header .navbar .navbar-collapse .nav-item .nav-link{
     color: #323232;
 }
 
-#list{
-    padding-bottom: 3px;
-    padding-right: 8px;
-    font-size: 15px;
-    font-weight: 500;
-    color: #323232;
-    border: none;
-    cursor: pointer;
-}
-
-#list:focus {
-    outline:0;
-}
-
-#list option{
-    font-size: 15px;
-    font-weight: 500;
-    color: #323232;
-}
-
 header .navbar .navbar-nav li > a:after{
     content: '';
     display: block;
