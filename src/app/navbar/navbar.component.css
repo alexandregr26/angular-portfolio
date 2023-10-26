@@ -63,3 +63,14 @@ header .navbar .navbar-nav li > a:hover:after{
 .mr-auto {
     margin-right: auto!important;
 }
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-icon i {
+    font-size: 30px;
+    padding: 0rem 1rem;
+}

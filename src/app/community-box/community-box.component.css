@@ -1,5 +1,5 @@
 #community-struct{
-    padding-top: 30px;
+    padding-top: 40px;
 }
 
 img{
@@ -8,6 +8,6 @@ img{
     border-radius: 14px;
 }
 
-p {
-    font-size: 18px;
+.subtitle {
+    padding: 0px;
 }

@@ -167,7 +167,7 @@ export class HomeComponent {
 
   ece: CommunityBox = {
     img: "../../assets/img/community/ececlub.JPG",
-    title: "Fundraising Assistant - NCDSB",
+    title: "Finance Director - ECE Club",
     date: "September 2018 - April 2019",
     description: "As the Finance Director for the ECE Club, I assumed a pivotal role in ensuring financial stability and accountability within the ECE Club at the University of Toronto. During the 2018-2019 academic year, I meticulously crafted and managed a comprehensive budget of $40K, overseeing all club expenses with precision and care, contributing to the club's financial health and ability to carry out its mission effectively."
   };

@@ -17,6 +17,24 @@
     padding: 0px 12px 12px 0px;
 }
 
+.mini-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #323232;
+    padding: 10px 0 0 0;
+}
+
 .subtitle {
     font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 20px 0 10px 0;
+}
+
+.date {
+    font-weight: 500;
+}
+
+.mini-description {
+    font-size: 16px;
 }
