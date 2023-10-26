@@ -148,7 +148,7 @@ export class HomeComponent {
     img: "../../assets/img/community/brasa.JPG",
     title: "President - BRASA UofT",
     date: "September 2018 - April 2023",
-    description: ""
+    description: "My journey with BRASA UofT has been a remarkable odyssey of growth and cultural connection. Starting as the Director of Communications in 2018, I was honoured to have a role in promoting Brazilian culture and organizing events for BRASA UofT. It was rewarding and a source of solace, allowing me to stay close to my roots despite being far from home. These experiences served as valuable stepping stones in my path to becoming Vice-President in 2019, which, in turn, equipped me to fulfill the responsibilities of President from 2020 to 2023. I'm proud to have increased BRASA UofT's reach within the Greater Toronto Area and across Canada, fostering a vibrant network of Brazilians. The growth I've witnessed during my time with BRASA, from 10 participants to over 150, stands as a testament to our collective impact on the organization and the enduring strength of our community."
   };
 
   frosh: CommunityBox = {
@@ -162,7 +162,7 @@ export class HomeComponent {
     img: "../../assets/img/community/smc.jpg",
     title: "House President - Sorbara Hall (SMC)",
     date: "September 2019 - April 2020",
-    description: ""
+    description: "As the House President for my residence floor, I organized and led various house events and meetings to boost the social atmosphere in our living space. Working alongside other residence leaders, I helped create a nurturing and inclusive environment that encouraged participation and mutual respect among all St. Michael's College residents."
   };
 
   ece: CommunityBox = {
@@ -182,7 +182,7 @@ export class HomeComponent {
   hc: CommunityBox = {
     img: "../../assets/img/community/hc.jpg",
     title: "Fundraising Assistant - NCDSB",
-    date: "September 2014 - September 2017",
+    date: "September 2014 - September 2018",
     description: "I actively participated in an annual walk and helped raise funds for building schools in Haiti, supporting infrastructure projects, and helping to break the cycle of poverty. This walk unites students, staff, and local communities from across Niagara towards the common goal of making a positive impact in developing countries."
   };
 
