@@ -1,20 +1,120 @@
 <app-header></app-header>
-<section class="about">
+<!-- About Me -->
+<section class="info">
     <div class="container box">
         <h1 class="title">About Me</h1>
+        <p>I'm a highly motivated Electrical and Computer Engineering graduate from the
+            University of Toronto, with a minor in Engineering Business and a certificate in Artificial
+            Intelligence.</p>
+        <p>My professional focus is to create simple and elegant solutions to complex problems.
+            I firmly believe that every project presents unique challenges, exciting goals, and creative
+            solutions waiting to be uncovered. But here's the twist - I'm not just about the technical stuff.
+            I'm equally interested in aligning those solutions with business objectives to drive success.</p>
+        <p>I'm also all about building meaningful connections. If you're interested in
+            collaborating on exciting projects, discussing new technologies, or connecting with like-minded
+            professionals, don't hesitate to reach out. Let's connect and explore possibilities together!</p>
+    </div>
+</section>
+<!-- Skills -->
+<section>
+    <div class="container box">
+        <h1 class="title">Skills</h1>
+        <p>My experiences with different projects have equipped me with a blend of both hard and soft skills.
+            Adapting to the unique demands of each project and situation, I've learned new ways of doing things
+            and sharpened my proficiency with various tools. I'm also all about personal growth - always looking
+            to improve and expand my skillset as I journey forward.</p>
+        <h2 class="subtitle">Programming Languages:</h2>
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <p>I'm a highly motivated Electrical and Computer Engineering graduate from the
-                    University of Toronto, with a minor in Engineering Business and a certificate in Artificial
-                    Intelligence.</p>
-                <p>My professional focus is to create simple and elegant solutions to complex problems.
-                    I firmly believe that every project presents unique challenges, exciting goals, and creative
-                    solutions waiting to be uncovered. But here's the twist - I'm not just about the technical stuff.
-                    I'm equally interested in aligning those solutions with business objectives to drive success.</p>
-                <p>I'm also all about building meaningful connections. If you're interested in
-                    collaborating on exciting projects, discussing new technologies, or connecting with like-minded
-                    professionals, don't hesitate to reach out. Let's connect and explore possibilities together!</p>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="assembly"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="c"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="cpp"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="csharp"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="javascript"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="python"></app-skill>
             </div>
         </div>
+        <h2 class="subtitle">Tools:</h2>
+        <div class="row">
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="angular"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="aws"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="css"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="docker"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="git"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="html"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="matlab"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="multisim"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="mysql"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="dotnet"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="postgresql"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="react"></app-skill>
+            </div>
+        </div>
+        <h2 class="subtitle">Languages:</h2>
+        <div class="row">
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="english"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="portuguese"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="spanish"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="french"></app-skill>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Community -->
+<section>
+    <div class="container box">
+        <h1 class="title">Community Participation</h1>
+        <p>Participating in my communities has been a deeply enriching journey, reinforcing my belief in the
+            significance of collective engagement. Through my volunteering experiences and various social roles, I've
+            contributed to meaningful causes and witnessed the transformative power of unity. These experiences have
+            been pivotal in nurturing my leadership skills and reaffirming my unwavering commitment to being a
+            constructive and responsible member of society, solidifying my dedication to making a positive difference in
+            the world around me.</p>
+        <app-community-box [communitybox]="brasa"></app-community-box>
+        <app-community-box [communitybox]="frosh"></app-community-box>
+        <app-community-box [communitybox]="smc"></app-community-box>
+        <app-community-box [communitybox]="ece"></app-community-box>
+        <app-community-box [communitybox]="hc"></app-community-box>
+        <app-community-box [communitybox]="notl"></app-community-box>
     </div>
 </section>

@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { CommunityBoxComponent } from './community-box/community-box.component';
+import { SkillComponent } from './skill/skill.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CommunityBoxComponent } from './community-box/community-box.component';
     HeaderComponent,
     NavbarComponent,
     HomeComponent,
-    CommunityBoxComponent
+    CommunityBoxComponent,
+    SkillComponent
   ],
   imports: [
     BrowserModule,
