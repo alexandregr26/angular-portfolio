@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { CommunityBoxComponent } from './community-box/community-box.component';
 import { SkillComponent } from './skill/skill.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SkillComponent } from './skill/skill.component';
     NavbarComponent,
     HomeComponent,
     CommunityBoxComponent,
-    SkillComponent
+    SkillComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
