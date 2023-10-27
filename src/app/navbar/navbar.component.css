@@ -3,19 +3,6 @@ header .navbar{
     background-color:white;
 }
 
-header nav .navbar-toggler{
-    background-color: transparent;
-    border-radius: 20px;
-}
-
-header nav .navbar-toggler:hover{
-    background-color: #f2f2f2;   
-}
-
-header nav .navbar-toggler:focus {
-    outline:0;
-}
-
 header .navbar .navbar-brand{
     padding: 0;
     margin: 0;
@@ -73,4 +60,11 @@ header .navbar .navbar-nav li > a:hover:after{
 .nav-icon i {
     font-size: 30px;
     padding: 0rem 1rem;
+}
+
+/* Responsiveness */ 
+@media (max-width: 767px){
+    .navbar {
+        display: none;
+    }
 }

@@ -31,3 +31,31 @@
     font-weight: 400;
     margin-bottom: 40px;
 }
+
+/* Responsiveness */ 
+@media (max-width: 767px){
+    #box-banner #banner-struct{
+        text-align: center;
+    }
+
+    #box-banner .row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #box-banner .bannertext h1{
+        font-weight: 600;
+        font-size: 14vw;
+    }
+    
+    #box-banner .bannertext h2{
+        margin-top: 20px;
+        font-size: 6vw;
+        font-weight: 400;
+        margin-bottom: 1px;
+    }
+    
+    #box-banner .bannertext h3{
+        display: none;
+    }
+}
