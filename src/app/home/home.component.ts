@@ -121,13 +121,13 @@ export class HomeComponent {
   english: Skill = {
     img: "assets/img/skills/languages/english.png",
     title: "English",
-    level: "Advanced"
+    level: "Fluent"
   };
 
   portuguese: Skill = {
     img: "assets/img/skills/languages/portuguese.png",
     title: "Portuguese",
-    level: "Advanced"
+    level: "Fluent"
   };
 
   spanish: Skill = {
@@ -148,7 +148,7 @@ export class HomeComponent {
     img: "assets/img/community/brasa.JPG",
     title: "President - BRASA UofT",
     date: "September 2018 - April 2023",
-    description: "My journey with BRASA UofT has been a remarkable odyssey of growth and cultural connection. Starting as the Director of Communications in 2018, I was honoured to have a role in promoting Brazilian culture and organizing events for BRASA UofT. It was rewarding and a source of solace, allowing me to stay close to my roots despite being far from home. These experiences served as valuable stepping stones in my path to becoming Vice-President in 2019, which, in turn, equipped me to fulfill the responsibilities of President from 2020 to 2023. I'm proud to have increased BRASA UofT's reach within the Greater Toronto Area and across Canada, fostering a vibrant network of Brazilians. The growth I've witnessed during my time with BRASA, from 10 participants to over 150, stands as a testament to our collective impact on the organization and the enduring strength of our community."
+    description: "My journey with BRASA UofT has been a remarkable odyssey of growth and cultural connection. My active role in promoting Brazilian culture was a rewarding experience and a great source of solace that allowed me to stay close to my roots despite being far from home. I'm proud to have increased BRASA UofT's reach within the Greater Toronto Area and across Canada, fostering a vibrant network of Brazilians. The growth I've witnessed during my time with BRASA, from 10 participants to over 150, stands as a testament to our collective impact on the organization and the enduring strength of our community."
   };
 
   frosh: CommunityBox = {
