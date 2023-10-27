@@ -1,0 +1,41 @@
+.project-item {
+    height: 200px;
+    width: 100%;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.project-item:hover {
+    box-shadow: 0 2px 2px 2px #cccccc;
+}
+
+.overlay {
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #323232;
+}
+
+.project-item:hover .overlay {
+    opacity: 0.88;
+    top: 50%;
+    height: 50%;
+}
+
+.text {
+    color: white;
+    margin: 20px 0px 0px 20px;
+}
+
+.subtitle {
+    font-size: 18px;
+    padding: 0;
+}

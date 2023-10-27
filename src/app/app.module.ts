@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { CommunityBoxComponent } from './community-box/community-box.component';
 import { SkillComponent } from './skill/skill.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProjectBoxComponent } from './project-box/project-box.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     CommunityBoxComponent,
     SkillComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectBoxComponent
   ],
   imports: [
     BrowserModule,
