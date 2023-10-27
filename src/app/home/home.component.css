@@ -5,3 +5,11 @@
 .info {
     background: #f2f2f2;
 }
+
+.info .title {
+    text-decoration: none;
+}
+
+#project-struct{
+    padding: 20px 20px;
+}

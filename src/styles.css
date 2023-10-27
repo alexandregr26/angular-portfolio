@@ -15,6 +15,10 @@
     text-transform: uppercase;
     text-align: left;
     padding: 0px 12px 12px 0px;
+    text-decoration: underline;
+    text-underline-offset: 14px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: red;
 }
 
 .mini-title {
