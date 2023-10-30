@@ -1,8 +1,8 @@
-#box-banner img{
+img{
     width: 100%;
 }
 
-#box-banner #banner-struct{
+#banner-struct{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,18 +15,18 @@
     margin: 0;
 }
 
-#box-banner .bannertext h1{
+h1{
     font-weight: 600;
     font-size: 90px;
 }
 
-#box-banner .bannertext h2{
+h2{
     font-size: 36px;
     font-weight: 400;
     margin-bottom: 2px;
 }
 
-#box-banner .bannertext h3{
+h3{
     font-size: 22px;
     font-weight: 400;
     margin-bottom: 40px;
@@ -34,28 +34,28 @@
 
 /* Responsiveness */ 
 @media (max-width: 767px){
-    #box-banner #banner-struct{
+    #banner-struct{
         text-align: center;
     }
 
-    #box-banner .row{
+    .row{
         display: flex;
         flex-direction: column-reverse;
     }
 
-    #box-banner .bannertext h1{
+    h1{
         font-weight: 600;
         font-size: 14vw;
     }
     
-    #box-banner .bannertext h2{
+    h2{
         margin-top: 20px;
         font-size: 6vw;
         font-weight: 400;
         margin-bottom: 1px;
     }
     
-    #box-banner .bannertext h3{
+    h3{
         display: none;
     }
 }
