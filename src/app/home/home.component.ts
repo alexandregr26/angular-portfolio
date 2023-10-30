@@ -177,13 +177,13 @@ export class HomeComponent {
   english: Skill = {
     img: "assets/img/skills/languages/english.png",
     title: "English",
-    level: "Fluent"
+    level: "Native"
   };
 
   portuguese: Skill = {
     img: "assets/img/skills/languages/portuguese.png",
     title: "Portuguese",
-    level: "Fluent"
+    level: "Native"
   };
 
   spanish: Skill = {
