@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,6 +12,11 @@ import { SkillComponent } from './skill/skill.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProjectBoxComponent } from './project-box/project-box.component';
 import { ContactComponent } from './contact/contact.component';
+
+const appRoutes: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'contact', component: ContactComponent}
+]
 
 @NgModule({
   declarations: [
@@ -26,7 +32,8 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
