@@ -10,6 +10,7 @@ import { CommunityBoxComponent } from './community-box/community-box.component';
 import { SkillComponent } from './skill/skill.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProjectBoxComponent } from './project-box/project-box.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProjectBoxComponent } from './project-box/project-box.component';
     CommunityBoxComponent,
     SkillComponent,
     FooterComponent,
-    ProjectBoxComponent
+    ProjectBoxComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

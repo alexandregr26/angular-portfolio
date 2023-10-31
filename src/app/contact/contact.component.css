@@ -1,0 +1,159 @@
+img{
+    width: 100%;
+}
+
+#bannerContainerStruct{
+    padding: 0;
+    margin: 0;
+}
+
+#header-struct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+#header-struct h1{
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+#header-struct h3{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.contact-box a {
+    display: inherit;
+    text-decoration: none;
+    color: #323232;
+    font-weight: 500;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+.contact-circle:hover {
+    box-shadow: 0 1px 1px 1px #cccccc;
+}
+
+.contact-circle{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border-radius: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    margin-right: 20px;
+}
+
+.contact-circle i {
+    font-size: 30px;
+    color: white;
+}
+
+/* Resume */
+
+.resume-box {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    justify-content: center;
+}
+
+/* Form */
+.form-group {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group .input-wrapper {
+    width: 49%;
+}
+
+.input-wrapper {
+    padding: 0;
+    border: 0.06rem solid #323232;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 0.8em;
+    width: 100%;
+}
+
+.action-button {
+    text-transform: uppercase;
+    background-color: white;
+    border: 0.1rem solid red;
+    border-radius: 45px;
+    font-weight: 600;
+    height: 3rem;
+    width: 230px;
+    max-width: 100%;
+    transition: .4s ease;
+    transition-property: background-color, color;
+}
+
+.action-button:focus {
+    outline: none;
+}
+
+.action-button:hover {
+    color: white;
+    background-color: red;
+}
+
+.action-button:before {
+    content: '';
+    background: grey;
+    opacity: .5s;
+    filter: blur(30px);
+}
+
+.submit-wrapper {
+    padding: 0;
+}
+
+/* Responsiveness */ 
+@media (max-width: 767px){
+    #header-struct{
+        text-align: center;
+    }
+
+    #contact .row{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #header-struct h1{
+        font-size: 12vw;
+    }
+    
+    #header-struct h3{
+        font-size: 3vw;
+    }
+
+    .submit-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+}
