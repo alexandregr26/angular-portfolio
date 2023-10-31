@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ProjectBox } from '../_models/ProjectBox';
+import { ProjectBox } from '../../_models/ProjectBox';
 
 @Component({
   selector: 'app-project-box',

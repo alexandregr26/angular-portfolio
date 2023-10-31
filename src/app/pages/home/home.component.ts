@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { CommunityBox } from '../_models/CommunityBox';
-import { Skill } from '../_models/Skill';
-import { ProjectBox } from '../_models/ProjectBox';
+import { CommunityBox } from '../../_models/CommunityBox';
+import { Skill } from '../../_models/Skill';
+import { ProjectBox } from '../../_models/ProjectBox';
 
 @Component({
   selector: 'app-home',

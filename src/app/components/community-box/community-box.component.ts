@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CommunityBox } from '../_models/CommunityBox';
+import { CommunityBox } from '../../_models/CommunityBox';
 
 @Component({
   selector: 'app-community-box',

@@ -4,14 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './header/header.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { HomeComponent } from './home/home.component';
-import { CommunityBoxComponent } from './community-box/community-box.component';
-import { SkillComponent } from './skill/skill.component';
-import { FooterComponent } from './footer/footer.component';
-import { ProjectBoxComponent } from './project-box/project-box.component';
-import { ContactComponent } from './contact/contact.component';
+import { HeaderComponent } from './components/header/header.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './pages/home/home.component';
+import { CommunityBoxComponent } from './components/community-box/community-box.component';
+import { SkillComponent } from './components/skill/skill.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ProjectBoxComponent } from './components/project-box/project-box.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
