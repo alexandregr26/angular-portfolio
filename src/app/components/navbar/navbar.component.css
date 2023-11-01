@@ -10,15 +10,13 @@ header .navbar .navbar-brand{
 
 header .navbar .navbar-brand .nav-logo{
     padding: 0.4rem 0 0 26px;
-    margin-bottom: 0.4rem;
     font-size: 22px;
     font-weight: 600;
     color: #323232;
 }
 
 header .navbar .navbar-collapse .nav-item{
-    padding: 0.4rem 1rem 0 1rem;
-    margin-bottom: 0.4rem;
+    padding: 0.4rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,8 +61,29 @@ header .navbar .navbar-nav li > a:hover:after{
 }
 
 /* Responsiveness */ 
+/* Extra Small Devices */
 @media (max-width: 767px){
     .navbar {
         display: none;
     }
+}
+
+/* Small Devices */
+@media (min-width: 768px) and (max-width: 991px){
+    .nav-icon {
+        display: none;
+    }
+
+    header .navbar .navbar-collapse .nav-item{
+        padding: 0.4rem 0.4rem;
+    }
+
+    header .navbar .navbar-brand .nav-logo{
+        padding: 0.4rem 0.4rem 0.4rem 0;
+    }
+}
+
+/* Medium Devices */
+@media (min-width: 992px) and (max-width: 1199px){
+
 }

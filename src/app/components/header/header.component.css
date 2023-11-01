@@ -2,6 +2,11 @@ img{
     width: 100%;
 }
 
+#bannerContainerStruct{
+    padding: 0;
+    margin: 0;
+}
+
 #banner-struct{
     display: flex;
     flex-direction: column;
@@ -10,29 +15,23 @@ img{
     text-align: left;
 }
 
-#bannerContainerStruct{
-    padding: 0;
-    margin: 0;
-}
-
 h1{
     font-weight: 600;
     font-size: 90px;
 }
 
 h2{
-    font-size: 36px;
     font-weight: 400;
-    margin-bottom: 2px;
+    font-size: 36px;
 }
 
 h3{
-    font-size: 22px;
     font-weight: 400;
-    margin-bottom: 40px;
+    font-size: 22px;
 }
 
-/* Responsiveness */ 
+/* Responsiveness */
+/* Extra Small Devices */
 @media (max-width: 767px){
     #banner-struct{
         text-align: center;
@@ -44,18 +43,46 @@ h3{
     }
 
     h1{
-        font-weight: 600;
         font-size: 14vw;
     }
     
     h2{
         margin-top: 20px;
         font-size: 6vw;
-        font-weight: 400;
         margin-bottom: 1px;
     }
     
     h3{
         display: none;
+    }
+}
+
+/* Small Devices */
+@media (min-width: 768px) and (max-width: 991px){
+    h1{
+        font-size: 3.6rem;
+    }
+    
+    h2{
+        font-size: 1.6rem;
+    }
+    
+    h3{
+        display: none;
+    }
+}
+
+/* Medium Devices */
+@media (min-width: 992px) and (max-width: 1199px){
+    h1{
+        font-size: 5rem;
+    }
+    
+    h2{
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
     }
 }
