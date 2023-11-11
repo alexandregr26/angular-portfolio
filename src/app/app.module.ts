@@ -12,10 +12,12 @@ import { SkillComponent } from './components/skill/skill.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProjectBoxComponent } from './components/project-box/project-box.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { AmazonComponent } from './pages/work/amazon/amazon.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'contact', component: ContactComponent}
+  {path: 'contact', component: ContactComponent},
+  {path: 'work/amazon', component: AmazonComponent}
 ]
 
 @NgModule({
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
     SkillComponent,
     FooterComponent,
     ProjectBoxComponent,
-    ContactComponent
+    ContactComponent,
+    AmazonComponent
   ],
   imports: [
     BrowserModule,
