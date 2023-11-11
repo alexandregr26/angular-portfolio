@@ -99,36 +99,6 @@ input {
     width: 100%;
 }
 
-.action-button {
-    text-transform: uppercase;
-    color: #323232;
-    background-color: white;
-    border: 0.1rem solid red;
-    border-radius: 45px;
-    font-weight: 600;
-    height: 3rem;
-    width: 230px;
-    max-width: 100%;
-    transition: .4s ease;
-    transition-property: background-color, color;
-}
-
-.action-button:focus {
-    outline: none;
-}
-
-.action-button:hover {
-    color: white;
-    background-color: red;
-}
-
-.action-button:before {
-    content: '';
-    background: grey;
-    opacity: .5s;
-    filter: blur(30px);
-}
-
 .submit-wrapper {
     padding: 0;
 }

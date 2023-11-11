@@ -7,6 +7,8 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Fonts */
+
 .title {
     font-size: 36px;
     font-weight: bold;
@@ -42,16 +44,26 @@
     font-size: 16px;
 }
 
-.box {
-    padding: 40px 40px;
-}
-
 .info {
     background: #f2f2f2;
 }
 
 .info .title {
     text-decoration: none;
+}
+
+.job-description {
+    text-align: justify;
+}
+
+.project-description {
+    text-align: justify;
+}
+
+/* Containers */
+
+.box {
+    padding: 40px 40px;
 }
 
 .tools {
@@ -66,4 +78,40 @@
     background: #f2f2f2;
     border-radius: 12px;
     font-weight: 500;
+}
+
+#project-struct{
+    padding: 20px 20px;
+}
+
+/* Buttons */
+
+.action-button {
+    text-transform: uppercase;
+    color: #323232;
+    background-color: white;
+    border: 0.1rem solid red;
+    border-radius: 45px;
+    font-weight: 600;
+    height: 3rem;
+    width: 230px;
+    max-width: 100%;
+    transition: .4s ease;
+    transition-property: background-color, color;
+}
+
+.action-button:focus {
+    outline: none;
+}
+
+.action-button:hover {
+    color: white;
+    background-color: red;
+}
+
+.action-button:before {
+    content: '';
+    background: grey;
+    opacity: .5s;
+    filter: blur(30px);
 }
