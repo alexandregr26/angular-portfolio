@@ -14,12 +14,14 @@ import { ProjectBoxComponent } from './components/project-box/project-box.compon
 import { ContactComponent } from './pages/contact/contact.component';
 import { AmazonComponent } from './pages/work/amazon/amazon.component';
 import { ThomsonReutersComponent } from './pages/work/thomson-reuters/thomson-reuters.component';
+import { SplitzComponent } from './pages/work/splitz/splitz.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'work/amazon', component: AmazonComponent},
-  {path: 'work/reuters', component: ThomsonReutersComponent}
+  {path: 'work/reuters', component: ThomsonReutersComponent},
+  {path: 'work/splitz', component: SplitzComponent}
 ]
 
 @NgModule({
@@ -34,7 +36,8 @@ const appRoutes: Routes = [
     ProjectBoxComponent,
     ContactComponent,
     AmazonComponent,
-    ThomsonReutersComponent
+    ThomsonReutersComponent,
+    SplitzComponent
   ],
   imports: [
     BrowserModule,
