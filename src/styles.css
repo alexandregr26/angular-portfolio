@@ -53,3 +53,17 @@
 .info .title {
     text-decoration: none;
 }
+
+.tools {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tool {
+    padding: 1rem 2rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: #f2f2f2;
+    border-radius: 12px;
+    font-weight: 500;
+}
