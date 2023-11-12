@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ProjectBox } from '../../_models/ProjectBox';
-import { WorkHeader } from '../../_models/WorkHeader';
+import { ProjectBox } from '../../../_models/ProjectBox';
+import { WorkHeader } from '../../../_models/WorkHeader';
 
 @Component({
   selector: 'app-fps',
