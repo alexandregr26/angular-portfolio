@@ -1,0 +1,74 @@
+<!-- Header -->
+<section id="splitz-header">
+    <div class="container work-header">
+        <img src="assets/img/experience/UTAT/header.png" alt="">
+    </div>
+</section>
+<!-- Summary -->
+<section>
+    <div class="container box">
+        <h1 class="title">Project Description</h1>
+        <p class="project-description">In 2020, as a member of the University of Toronto Aerospace Team (UTAT), I was
+            assigned to design a low-power sensor for the Ground Station of the Defiance rocket project. The Defiance
+            rocket, a hybrid rocket that had been under development since 2017, was a rocket designed by UTAT that aimed
+            to surpass the Canadian amateur altitude record at 13.4 km. The Ground Station was a crucial part of the
+            Defiance project, orchestrating the rocket's tracking and managing critical test and fill procedures on its
+            launch pad. The low-power sensor, an integral part of the Ground Station, was strategically designed to
+            address potential emergencies that might lead to the rocket's launch abortion. Unfortunately, the complete
+            testing of this sensor design faced barriers due to the COVID-19 pandemic, as essential components were
+            located on campus and strict access restrictions were in place.</p>
+
+        <div class="row">
+            <div class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="subtitle">Requirements</h1>
+                <ul>
+                    <li>Automatically turn off the circuit when the 22V battery reaches 18V to protect the circuit's components.
+                    </li>
+                    <li>Have a minimum amount of current flowing in the circuit once it is turned off.</li>
+                </ul>
+                <h1 class="subtitle">Components</h1>
+                <ul>
+                    <li>22.2 Lithium-Ion Battery </li>
+                    <li>LT1495 Op Amp</li>
+                    <li>LT1389 Zener Diode (Voltage Reference)</li>
+                    <li>MOSFET Transistor</li>
+                </ul>
+            </div>
+            <div id="final-design" class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <img src="assets/img/experience/UTAT/sensor.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Other Works -->
+<section>
+    <div class="container box">
+        <h1 class="title">Other Works</h1>
+        <div class="row">
+            <div id="project-struct" class="col-lg-4 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="blockchain"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-4 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="amazon"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-4 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="tr"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-4 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="threads"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-4 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="mappa"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-4 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="portfolio"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-4 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="splitz"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-4 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="fps"></app-project-box>
+            </div>
+        </div>
+    </div>
+</section>

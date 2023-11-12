@@ -1,0 +1,24 @@
+#splitz-header {
+    background-color: #00002F;
+}
+
+.work-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.work-header img {
+    width: 100%;
+    max-height: 600px;
+}
+
+li{
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+#final-design {
+    align-items: center;
+}
