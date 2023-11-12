@@ -1,0 +1,58 @@
+<!-- Header -->
+<section class="work-header-section">
+    <app-work-header [header]="header"></app-work-header>
+</section>
+<!-- Summary -->
+<section>
+    <div class="container box">
+        <h1 class="title">Project Description</h1>
+        <p class="project-description">For my final project in the University of Toronto's second-year computer
+            engineering course, Computer Organization (ECE243), I coded a first-person shooter (FPS) game - my
+            first-ever dive into game development. Drawing inspiration from classic arcade games, the FPS utilized a
+            basic yet effective ray tracing algorithm to render a 3D environment. The game was developed in the C
+            language and fine-tuned for execution on Altera's DE1-SoC board, where users use switches to navigate the
+            virtual space and push buttons to shoot fireballs at enemies. Even though this was my first and only
+            experience with game development, it sparked an interest in me, making me consider future roles in software
+            engineering with a focus on the exciting world of game development.</p>
+        <h1 class="subtitle">Tools Used</h1>
+        <div class="tools">
+            <div class="tool">Assembly</div>
+            <div class="tool">C</div>
+            <div class="tool">GIT</div>
+        </div>
+        <h1 class="subtitle">Live Demo</h1>
+        <img id="demo" src="/assets/img/experience/ECE243/fps.gif" alt="">
+    </div>
+</section>
+<!-- Other Works -->
+<section>
+    <div class="container box">
+        <h1 class="title">Other Works</h1>
+        <div class="row">
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="blockchain"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="amazon"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="tr"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="threads"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="mappa"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="portfolio"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="splitz"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="utat"></app-project-box>
+            </div>
+        </div>
+    </div>
+</section>
