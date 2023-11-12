@@ -84,6 +84,18 @@
     padding: 20px 20px;
 }
 
+.work-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.work-block img{
+    width: 80%;
+    border-radius: 12px;
+}
+
 /* Buttons */
 
 .action-button {

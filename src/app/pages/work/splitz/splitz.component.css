@@ -14,21 +14,9 @@
     max-height: 600px;
 }
 
-#splitz-block{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 li{
     font-size: 18px;
     padding-top: 10px;
-}
-
-#splitz-block img{
-    width: 80%;
-    border-radius: 20px;
 }
 
 .splitz-button {
@@ -36,4 +24,8 @@ li{
     align-items: center;
     margin: 0.5rem 0;
     justify-content: center;
+}
+
+#splitz-design{
+    align-items: center;
 }
