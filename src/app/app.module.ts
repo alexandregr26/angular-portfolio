@@ -15,13 +15,20 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AmazonComponent } from './pages/work/amazon/amazon.component';
 import { ThomsonReutersComponent } from './pages/work/thomson-reuters/thomson-reuters.component';
 import { SplitzComponent } from './pages/work/splitz/splitz.component';
+import { UtatComponent } from './pages/work/utat/utat.component';
+import { WorkHeaderComponent } from './components/work-header/work-header.component';
+import { FpsComponent } from './pages/work/fps/fps.component';
+import { MappaComponent } from './pages/work/mappa/mappa.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'work/amazon', component: AmazonComponent},
   {path: 'work/reuters', component: ThomsonReutersComponent},
-  {path: 'work/splitz', component: SplitzComponent}
+  {path: 'work/splitz', component: SplitzComponent},
+  {path: 'work/utat', component: UtatComponent},
+  {path: 'work/fps', component: FpsComponent},
+  {path: 'work/mappa', component: MappaComponent}
 ]
 
 @NgModule({
@@ -37,7 +44,11 @@ const appRoutes: Routes = [
     ContactComponent,
     AmazonComponent,
     ThomsonReutersComponent,
-    SplitzComponent
+    SplitzComponent,
+    UtatComponent,
+    WorkHeaderComponent,
+    FpsComponent,
+    MappaComponent
   ],
   imports: [
     BrowserModule,

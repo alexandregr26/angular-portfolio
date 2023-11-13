@@ -1,0 +1,119 @@
+<!-- Header -->
+<section class="work-header-section">
+    <app-work-header [header]="header"></app-work-header>
+</section>
+<!-- Summary -->
+<section>
+    <div class="container box">
+        <h1 class="title">Project Description</h1>
+        <p class="project-description">As part of my second-year engineering design course at the University of Toronto,
+            ECE297, I was part of a team that took on a project to build a Geographic Information System (GIS)
+            application. Working exclusively with C++, we aimed to create an application similar to Google Maps. We did
+            this by leveraging APIs to query a geographic information database and employing a graphics library to
+            display such information to the users, thus bringing the GIS application to life. Throughout the project, my
+            biggest priority was designing a user-friendly interface and creating a seamless user experience, reflecting
+            my belief in the significance of aesthetics and functionality in the engineering design process.</p>
+        <h1 class="subtitle">The Team</h1>
+        <p class="project-description">The first stage of the project was team formation. In this stage, all team
+            members gathered to align on project goals, draft a team charter, and assign individual roles. We
+            prioritized open communication and quickly established weekly meetings to ensure everyone was on the same
+            page and to address any challenges as soon as possible. Regarding code management, we all used Git - for the
+            first time, preventing conflicts in the project's source code. This focus on communication and collaboration
+            laid a strong foundation for our journey throughout the GIS application development.</p>
+        <div class="row">
+            <div class="work-block col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <img src="assets/img/experience/ECE297/pratish.png" alt="">
+                <h1 class="mini-title">Pratish Dalal</h1>
+            </div>
+            <div class="work-block col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <img src="assets/img/experience/ECE297/alexandre.png" alt="">
+                <h1 class="mini-title">Me</h1>
+            </div>
+            <div class="work-block col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <img src="assets/img/experience/ECE297/marcos.png" alt="">
+                <h1 class="mini-title">Marcos Madrigal</h1>
+            </div>
+        </div>
+        <h1 class="subtitle">Development</h1>
+        <p class="project-description">With the support of a Teaching Assistant (TA), who provided guidance and reviewed
+            our work at every milestone, we ensured our technical decisions aligned with project goals. This iterative
+            feedback loop enhanced our communication with technical supervisors. Simultaneously, under the guidance of a
+            Communication Instructor, we learned to present our progress and final project to less technical clients.
+            This instructor bridged the gap, helping us convey complex technical aspects in an accessible way. This dual
+            guidance prepared us for real-world scenarios, emphasizing the importance of effective communication in
+            software engineering projects.</p>
+        <div class="row">
+            <div class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="subtitle">Powerful Search Bar</h1>
+                <p>We built a search bar with the following capabilities:</p>
+                <ul>
+                    <li>Allow users to find their destination using partial street names or misspelled names</li>
+                    <li>Locate and highlight the intersection of two given streets</li>
+                    <li>Find the shortest driving or walking path between two locations</li>
+                    <li>Delete any past search-related data to improve the map's responsiveness</li>
+                </ul>
+            </div>
+            <div id="splitz-design" class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <img src="assets/img/experience/ECE297/search.png" alt="">
+            </div>
+            <div id="splitz-design" class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <img src="assets/img/experience/ECE297/customizable.png" alt="">
+            </div>
+            <div class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="subtitle">100% Customizable</h1>
+                <p>We wanted to give complete control to the user by making every feature on the map customizable. One
+                    of our ideas as a result of this was a mode that allows the user to fully customize the map colour
+                    scheme and filter specific content from the map.</p>
+            </div>
+            <div class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="subtitle">Visual Features</h1>
+                <ul>
+                    <li>Street names displayed at proper zoom levels</li>
+                    <li>Major roads are differentiated from minor roads</li>
+                    <li>Colour-coded points of interest</li>
+                    <li>Visible street directions</li>
+                </ul>
+            </div>
+            <div id="splitz-design" class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <img src="assets/img/experience/ECE297/visual.png" alt="">
+            </div>
+        </div>
+        <h1 class="subtitle">Tools Used</h1>
+        <div class="tools">
+            <div class="tool">C++</div>
+            <div class="tool">GIT</div>
+        </div>
+    </div>
+</section>
+<!-- Other Works -->
+<section>
+    <div class="container box">
+        <h1 class="title">Other Works</h1>
+        <div class="row">
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="blockchain"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="amazon"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="tr"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="threads"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="fps"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="portfolio"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="splitz"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="utat"></app-project-box>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,16 @@
+.work-header-section {
+    background-color: #002A5B;
+}
+
+.work-block {
+    align-items: center;
+    margin: 40px 0;
+}
+
+.mini-title {
+    font-size: 22px;
+}
+
+li{
+    padding-top: 10px;
+}
