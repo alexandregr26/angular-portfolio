@@ -21,6 +21,7 @@ import { FpsComponent } from './pages/work/fps/fps.component';
 import { MappaComponent } from './pages/work/mappa/mappa.component';
 import { Ece344Component } from './pages/work/ece344/ece344.component';
 import { PortfolioComponent } from './pages/work/portfolio/portfolio.component';
+import { CapstoneComponent } from './pages/work/capstone/capstone.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -33,6 +34,7 @@ const appRoutes: Routes = [
   {path: 'work/mappa', component: MappaComponent},
   {path: 'work/ECE344', component: Ece344Component},
   {path: 'work/portfolio', component: PortfolioComponent},
+  {path: 'work/capstone', component: CapstoneComponent}
 ]
 
 @NgModule({
@@ -54,7 +56,8 @@ const appRoutes: Routes = [
     FpsComponent,
     MappaComponent,
     Ece344Component,
-    PortfolioComponent
+    PortfolioComponent,
+    CapstoneComponent
   ],
   imports: [
     BrowserModule,

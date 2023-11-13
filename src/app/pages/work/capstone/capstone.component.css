@@ -1,0 +1,16 @@
+.work-header-section {
+    background-color: #095e41;
+}
+
+li {
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+}
+
+#capstone-team {
+    max-width: 75%;
+    border-radius:12px; 
+}
