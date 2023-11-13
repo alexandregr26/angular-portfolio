@@ -20,6 +20,7 @@ import { WorkHeaderComponent } from './components/work-header/work-header.compon
 import { FpsComponent } from './pages/work/fps/fps.component';
 import { MappaComponent } from './pages/work/mappa/mappa.component';
 import { Ece344Component } from './pages/work/ece344/ece344.component';
+import { PortfolioComponent } from './pages/work/portfolio/portfolio.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -31,6 +32,7 @@ const appRoutes: Routes = [
   {path: 'work/fps', component: FpsComponent},
   {path: 'work/mappa', component: MappaComponent},
   {path: 'work/ECE344', component: Ece344Component},
+  {path: 'work/portfolio', component: PortfolioComponent},
 ]
 
 @NgModule({
@@ -51,7 +53,8 @@ const appRoutes: Routes = [
     WorkHeaderComponent,
     FpsComponent,
     MappaComponent,
-    Ece344Component
+    Ece344Component,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
