@@ -30,6 +30,13 @@
     margin: 2rem 0;
 }
 
+.info .title {
+    text-decoration: underline;
+    text-underline-offset: 14px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: red;
+}
+
 /* Responsiveness */
 /* Extra Small Devices */
 @media (max-width: 767px){
