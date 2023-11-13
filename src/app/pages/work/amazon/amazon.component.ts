@@ -12,7 +12,7 @@ export class AmazonComponent {
     title: "Blockchain Application",
     company: "UofT Engineering Capstone",
     img: "assets/img/experience/Capstone/banner.png",
-    route: "/"
+    route: "/work/capstone"
   };
 
   tr: ProjectBox = {
