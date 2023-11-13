@@ -17,7 +17,7 @@ export class FpsComponent {
     title: "Blockchain Application",
     company: "UofT Engineering Capstone",
     img: "assets/img/experience/Capstone/banner.png",
-    route: "/work/amazon"
+    route: "/"
   };
 
   tr: ProjectBox = {
@@ -38,14 +38,14 @@ export class FpsComponent {
     title: "Multithreaded Web Server",
     company: "ECE344",
     img: "assets/img/experience/ECE344/banner.png",
-    route: "/work/amazon"
+    route: "/work/ECE344"
   };
 
   mappa: ProjectBox = {
     title: "GIS Application",
     company: "ECE297",
     img: "assets/img/experience/ECE297/banner.png",
-    route: "/work/amazon"
+    route: "/work/mappa"
   };
 
   splitz: ProjectBox = {
@@ -59,7 +59,7 @@ export class FpsComponent {
     title: "Online Portfolio",
     company: "Freelance",
     img: "assets/img/experience/Portfolio/banner.png",
-    route: "/work/amazon"
+    route: "/work/portfolio"
   };
 
   utat: ProjectBox = {

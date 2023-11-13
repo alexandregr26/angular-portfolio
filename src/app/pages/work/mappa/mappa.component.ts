@@ -17,7 +17,7 @@ export class MappaComponent {
     title: "Blockchain Application",
     company: "UofT Engineering Capstone",
     img: "assets/img/experience/Capstone/banner.png",
-    route: "/work/amazon"
+    route: "/"
   };
 
   tr: ProjectBox = {
@@ -38,7 +38,7 @@ export class MappaComponent {
     title: "Multithreaded Web Server",
     company: "ECE344",
     img: "assets/img/experience/ECE344/banner.png",
-    route: "/work/amazon"
+    route: "/work/ECE344"
   };
 
   splitz: ProjectBox = {
@@ -52,7 +52,7 @@ export class MappaComponent {
     title: "Online Portfolio",
     company: "Freelance",
     img: "assets/img/experience/Portfolio/banner.png",
-    route: "/work/amazon"
+    route: "/work/portfolio"
   };
 
   fps: ProjectBox = {

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProjectBox } from '../../../_models/ProjectBox';
+import { WorkHeader } from '../../../_models/WorkHeader';
 
 @Component({
   selector: 'app-splitz',
@@ -8,11 +9,15 @@ import { ProjectBox } from '../../../_models/ProjectBox';
 })
 export class SplitzComponent {
 
+  header: WorkHeader = {
+    img: "assets/img/experience/Splitz/header.png"
+  };
+
   blockchain: ProjectBox = {
     title: "Blockchain Application",
     company: "UofT Engineering Capstone",
     img: "assets/img/experience/Capstone/banner.png",
-    route: "/work/amazon"
+    route: "/"
   };
 
   tr: ProjectBox = {
@@ -33,35 +38,35 @@ export class SplitzComponent {
     title: "Multithreaded Web Server",
     company: "ECE344",
     img: "assets/img/experience/ECE344/banner.png",
-    route: "/work/amazon"
+    route: "/work/ECE344"
   };
 
   mappa: ProjectBox = {
     title: "GIS Application",
     company: "ECE297",
     img: "assets/img/experience/ECE297/banner.png",
-    route: "/work/amazon"
+    route: "/work/mappa"
   };
 
   portfolio: ProjectBox = {
     title: "Online Portfolio",
     company: "Freelance",
     img: "assets/img/experience/Portfolio/banner.png",
-    route: "/work/amazon"
+    route: "/work/portfolio"
   };
 
   fps: ProjectBox = {
     title: "FPS Game",
     company: "ECE243",
     img: "assets/img/experience/ECE243/banner.png",
-    route: "/work/amazon"
+    route: "/work/fps"
   };
 
   utat: ProjectBox = {
     title: "Low Power Sensor",
     company: "UTAT",
     img: "assets/img/experience/UTAT/banner.png",
-    route: "/work/amazon"
+    route: "/work/utat"
   };
 
 }

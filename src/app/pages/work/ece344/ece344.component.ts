@@ -17,7 +17,7 @@ export class Ece344Component {
     title: "Blockchain Application",
     company: "UofT Engineering Capstone",
     img: "assets/img/experience/Capstone/banner.png",
-    route: "/work/amazon"
+    route: "/"
   };
 
   tr: ProjectBox = {
@@ -52,7 +52,7 @@ export class Ece344Component {
     title: "Online Portfolio",
     company: "Freelance",
     img: "assets/img/experience/Portfolio/banner.png",
-    route: "/work/amazon"
+    route: "/work/portfolio"
   };
 
   fps: ProjectBox = {
