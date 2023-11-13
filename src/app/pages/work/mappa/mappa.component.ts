@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ProjectBox } from '../../../_models/ProjectBox';
-import { WorkHeader } from '../../../_models/WorkHeader';
 
 @Component({
   selector: 'app-mappa',
@@ -8,10 +7,6 @@ import { WorkHeader } from '../../../_models/WorkHeader';
   styleUrls: ['./mappa.component.css']
 })
 export class MappaComponent {
-  
-  header: WorkHeader = {
-    img: "assets/img/education/uoft.png"
-  };
 
   blockchain: ProjectBox = {
     title: "Blockchain Application",

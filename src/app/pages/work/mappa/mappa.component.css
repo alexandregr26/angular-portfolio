@@ -1,5 +1,6 @@
-.work-header-section {
-    background-color: #002A5B;
+.work-header-section img {
+    max-height: 600px;
+    width: 100%;
 }
 
 .work-block {
