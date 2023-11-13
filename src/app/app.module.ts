@@ -19,6 +19,7 @@ import { UtatComponent } from './pages/work/utat/utat.component';
 import { WorkHeaderComponent } from './components/work-header/work-header.component';
 import { FpsComponent } from './pages/work/fps/fps.component';
 import { MappaComponent } from './pages/work/mappa/mappa.component';
+import { Ece344Component } from './pages/work/ece344/ece344.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
   {path: 'work/splitz', component: SplitzComponent},
   {path: 'work/utat', component: UtatComponent},
   {path: 'work/fps', component: FpsComponent},
-  {path: 'work/mappa', component: MappaComponent}
+  {path: 'work/mappa', component: MappaComponent},
+  {path: 'work/ECE344', component: Ece344Component},
 ]
 
 @NgModule({
@@ -48,7 +50,8 @@ const appRoutes: Routes = [
     UtatComponent,
     WorkHeaderComponent,
     FpsComponent,
-    MappaComponent
+    MappaComponent,
+    Ece344Component
   ],
   imports: [
     BrowserModule,
