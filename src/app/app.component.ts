@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+
+declare const gtag: Function;
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +11,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-portfolio';
+
+  constructor(public router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        gtag('config', 'MEASUREMENT-ID', { 'page_path': event.urlAfterRedirects });
+      }      
+    })
+  }
 }
