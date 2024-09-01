@@ -11,12 +11,13 @@
             implementing software applications in low-level programming languages such as Assembly, C, and C++. This was
             thanks, in no small part, to the challenges of the third-year course ECE344: Operating Systems at the
             University of Toronto. This course presented projects that made us dig deep into threads, processes, and
-            concurrency. In one major assignment, I built a preemptive, user-level thread package, incorporating mutex
-            locks and condition variables to simulate concurrency on processors.</p>
-        <p class="project-description">In another unrelated but subsequent lab, I coded a caching, multi-threaded web
-            server, enabling parallelism. The approach involved creating a pool of worker threads that managed incoming
-            HTTP requests and implementing a memory-based file caching system to store recently requested files.
-            Completing these projects not only sharpened my technical skills but also gave me a fascinating peek into
+            concurrency. For example, in one major assignment, I built a preemptive, user-level thread package,
+            incorporating mutex locks and condition variables to simulate concurrency on processors.</p>
+        <p class="project-description">In another unrelated but subsequent lab, I designed a multi-threaded web server
+            with a caching mechanism to support parallelism and fast lookups. This involved creating a pool of worker
+            threads that managed incoming HTTP requests and implementing a memory-based file caching system to store
+            recently requested files. Completing these projects not only sharpened my technical skills but also gave me
+            a fascinating peek into
             the inner workings of computers, leaving me excited to dive even deeper into this topic in the near future.
         </p>
         <p class="project-description">The source code for the thread package and the caching web server are available
@@ -35,28 +36,28 @@
         <h1 class="title">Other Works</h1>
         <div class="row">
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="blockchain"></app-project-box>
+                <app-project-box [projectbox]="projects['blockchain']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="tr"></app-project-box>
+                <app-project-box [projectbox]="projects['tr']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="amazon"></app-project-box>
+                <app-project-box [projectbox]="projects['amazon']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="mappa"></app-project-box>
+                <app-project-box [projectbox]="projects['aps360']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="portfolio"></app-project-box>
+                <app-project-box [projectbox]="projects['ece297']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="splitz"></app-project-box>
+                <app-project-box [projectbox]="projects['splitz']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="fps"></app-project-box>
+                <app-project-box [projectbox]="projects['ece243']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="utat"></app-project-box>
+                <app-project-box [projectbox]="projects['utat']"></app-project-box>
             </div>
         </div>
     </div>

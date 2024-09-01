@@ -1,12 +1,3 @@
-#employment-struct{
-    padding: 20px 20px;
+.work-header-section {
+    background-color: #ff7f00;
 }
-
-span {
-    font-weight: bold;
-}
-
-img {
-    width: 100%;
-}
-

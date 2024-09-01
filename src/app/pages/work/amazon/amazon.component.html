@@ -1,29 +1,23 @@
+<!-- Header -->
+<section class="work-header-section">
+    <app-work-header [header]="header"></app-work-header>
+</section>
 <!-- Summary -->
 <section>
     <div class="container box">
         <h1 class="title">Software Developer Engineer Intern</h1>
-        <h1 class="subtitle">Employment Details</h1>
-        <div class="row">
-            <div id="employment-struct" class="col-lg-6 col-md-6 col-sm-12 col-12">
-                <p><span>Title: </span>Software Developer Engineer Intern</p>
-                <p><span>Company: </span>Amazon</p>
-                <p><span>Location: </span>Toronto</p>
-                <p><span>Date: </span>May 2021 - August 2021</p>
-            </div>
-            <div id="employment-struct" class="col-lg-6 col-md-6 col-sm-12 col-12">
-                <img src="assets/img/experience/Amazon/work.png" alt="">
-            </div>
-        </div>
-        <h1 class="subtitle">Job Description</h1>
-        <p class="job-description">As a Software Developer Engineer Intern at Amazon, I led the development of a pivotal mobile web feature
-            using React, allowing advertisers to visualize their campaign performance on the Amazon platform. In
-            addition to development, I conducted comprehensive design reviews, facilitated User Acceptance Testing
-            (UAT), and executed UI tests to ensure an optimal user experience before the feature's release. One
-            significant contribution involved conducting an experiment to assess the feature's impact on user engagement
-            and load times. The widespread adoption and minimal latency demonstrated by the results affirmed the
-            feature's substantial value, leading to its permanent integration into Amazon's website as a testament to
-            its success in enhancing user interaction and platform performance, showcasing my ability to deliver
-            impactful solutions effectively.</p>
+        <h1 class="subtitle">Position Summary</h1>
+        <p class="job-description">As a Software Developer Engineer Intern at Amazon, I led the creation of a mobile web
+            feature using React and Redux to help advertisers visualize campaign performance, boosting user engagement
+            and conversion rates by 10%. In addition to development, I conducted comprehensive design reviews,
+            facilitated User Acceptance Testing (UAT), and executed UI tests to ensure an optimal user experience and
+            the successful release of a bug-free feature. After its launch, I evaluated the feature's impact on user
+            engagement and load times using Weblab, which revealed widespread adoption and minimal latency across
+            different regions. This experience allowed me to engage deeply with the entire software development
+            lifecycle, from initial concept and design to post-launch maintenance and performance analysis. It equipped
+            me with the skills necessary to effectively create and develop new software solutions. The positive outcomes
+            for customers and the feature's permanent integration into Amazon's website stand as a testament to the
+            value and impact of this work.</p>
         <h1 class="subtitle">Tools Used</h1>
         <div class="tools">
             <div class="tool">CSS</div>
@@ -31,6 +25,7 @@
             <div class="tool">HTML</div>
             <div class="tool">JavaScript</div>
             <div class="tool">React</div>
+            <div class="tool">Redux</div>
         </div>
     </div>
 </section>
@@ -40,28 +35,28 @@
         <h1 class="title">Other Works</h1>
         <div class="row">
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="blockchain"></app-project-box>
+                <app-project-box [projectbox]="projects['blockchain']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="tr"></app-project-box>
+                <app-project-box [projectbox]="projects['tr']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="threads"></app-project-box>
+                <app-project-box [projectbox]="projects['aps360']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="mappa"></app-project-box>
+                <app-project-box [projectbox]="projects['ece297']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="portfolio"></app-project-box>
+                <app-project-box [projectbox]="projects['splitz']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="splitz"></app-project-box>
+                <app-project-box [projectbox]="projects['ece344']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="fps"></app-project-box>
+                <app-project-box [projectbox]="projects['ece243']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="utat"></app-project-box>
+                <app-project-box [projectbox]="projects['utat']"></app-project-box>
             </div>
         </div>
     </div>

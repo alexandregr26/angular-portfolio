@@ -5,16 +5,15 @@
 <!-- Summary -->
 <section>
     <div class="container box">
-        <h1 class="title">ECE243</h1>
+        <h1 class="title">FPS Game</h1>
         <h1 class="subtitle">Project Description</h1>
         <p class="project-description">For my final project in the University of Toronto's second-year computer
-            engineering course, Computer Organization (ECE243), I coded a first-person shooter (FPS) game - my
-            first-ever dive into game development. Drawing inspiration from classic arcade games, the FPS utilized a
-            basic yet effective ray tracing algorithm to render a 3D environment. The game was developed in the C
-            language and fine-tuned for execution on Altera's DE1-SoC board, where users use switches to navigate the
-            virtual space and push buttons to shoot fireballs at enemies. Even though this was my first and only
-            experience with game development, it sparked an interest in me, making me consider future roles in software
-            engineering with a focus on the exciting world of game development.</p>
+            engineering course, Computer Organization (ECE243), I coded a first-person shooter (FPS) game. Drawing
+            inspiration from classic arcade games, the FPS utilized a basic yet effective ray tracing algorithm to
+            render a 3D environment. The game was developed in the C language and fine-tuned for execution on Altera's
+            DE1-SoC board, where users use switches to navigate the virtual space and push buttons to shoot fireballs at
+            enemies. Although this was my first-ever dive into the world of game development, it inspired me to explore
+            future opportunities in software engineering with a focus on this dynamic and exciting world.</p>
         <p class="project-description">The source code for the FPS game is available
             on my GitHub page but on a private repository to support academic integrity. Please contact me if you would
             like to know more.</p>
@@ -34,28 +33,28 @@
         <h1 class="title">Other Works</h1>
         <div class="row">
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="blockchain"></app-project-box>
+                <app-project-box [projectbox]="projects['blockchain']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="tr"></app-project-box>
+                <app-project-box [projectbox]="projects['tr']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="amazon"></app-project-box>
+                <app-project-box [projectbox]="projects['amazon']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="threads"></app-project-box>
+                <app-project-box [projectbox]="projects['aps360']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="mappa"></app-project-box>
+                <app-project-box [projectbox]="projects['ece297']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="portfolio"></app-project-box>
+                <app-project-box [projectbox]="projects['splitz']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="splitz"></app-project-box>
+                <app-project-box [projectbox]="projects['ece344']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="utat"></app-project-box>
+                <app-project-box [projectbox]="projects['utat']"></app-project-box>
             </div>
         </div>
     </div>

@@ -1,42 +1,45 @@
+<!-- Header -->
+<section class="work-header-section">
+    <app-work-header [header]="header"></app-work-header>
+</section>
 <!-- Summary -->
 <section>
     <div class="container box">
         <h1 class="title">Software Developer Intern</h1>
-        <h1 class="subtitle">Employment Details</h1>
-        <div class="row">
-            <div id="employment-struct" class="col-lg-6 col-md-6 col-sm-12 col-12">
-                <p><span>Title: </span>Software Developer Intern</p>
-                <p><span>Company: </span>Thomson Reuters</p>
-                <p><span>Location: </span>Toronto</p>
-                <p><span>Date: </span>September 2021 - September 2022</p>
-            </div>
-            <div id="employment-struct" class="col-lg-6 col-md-6 col-sm-12 col-12">
-                <img src="assets/img/experience/ThomsonReuters/work.png" alt="">
-            </div>
-        </div>
-        <h1 class="subtitle">Job Description</h1>
-        <p class="job-description">As a Software Developer Intern at Thomson Reuters, I played a pivotal role in
-            optimizing internal tools. This optimization involved restructuring API endpoints using C# within the .NET
-            Framework to align with industry best practices, ensuring improved usability and performance. In tandem, I
-            automated the onboarding process for new developers, utilizing AWS services to create a more time-efficient
-            setup that eliminated unnecessary manual tasks. Additionally, I developed a testing tool using Angular and
-            .NET, ensuring compliance with the OAuth protocol and enabling comprehensive testing of API authorization
-            flows. Beyond technical contributions, I actively participated in Agile development processes, leading daily
-            stand-up meetings, planning sprints, and facilitating sprint retrospective sessions. These experiences not
-            only refined my technical skills but also provided a comprehensive understanding of effective teamwork and
-            project management in a professional setting.</p>
+        <h1 class="subtitle">Position Summary</h1>
+        <p class="job-description">As a Software Developer Intern at Thomson Reuters, I contributed to developing web
+            applications using modern technologies such as AWS, C#, .NET, and Angular. My role primarily focused on
+            building and revamping REST APIs, ensuring they adhered to industry best practices. This effort enhanced
+            usability and performance across various services and laid the foundation for further work in backend
+            development.</p>
+        <p class="job-description">As I advanced in this area, I took on the challenge of automating onboarding
+            processes, optimizing workflows, implementing secure token exchange systems, and managing user sessions,
+            which deepened my understanding of modern authorization protocols like OAuth and best practices in identity
+            and access management. However, my responsibilities did not stop at the backend; I was also involved in
+            designing and developing responsive, user-friendly interfaces that ensured a seamless experience for
+            end-users. This hands-on work in full-stack development equipped me with a well-rounded technical
+            knowledge, which I continue to build upon.</p>
+        <p class="job-description">Beyond technical contributions, I actively participated in Agile development
+            processes. I frequently led daily stand-up meetings, sprint planning sessions, and retrospective
+            discussions, strengthening my teamwork and project management skills. Reflecting on this internship, I
+            realize it not only refined my software engineering skills but also improved my ability to collaborate
+            effectively in a
+            dynamic, international setting.</p>
         <h1 class="subtitle">Tools Used</h1>
         <div class="tools">
             <div class="tool">Angular</div>
             <div class="tool">AWS</div>
             <div class="tool">C#</div>
             <div class="tool">CSS</div>
+            <div class="tool">Confluence</div>
             <div class="tool">Docker</div>
             <div class="tool">GIT</div>
             <div class="tool">HTML</div>
             <div class="tool">JavaScript</div>
+            <div class="tool">Jira</div>
             <div class="tool">.NET</div>
-            <div class="tool">Python</div>
+            <div class="tool">Postman</div>
+            <div class="tool">Swagger</div>
         </div>
     </div>
 </section>
@@ -46,28 +49,28 @@
         <h1 class="title">Other Works</h1>
         <div class="row">
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="blockchain"></app-project-box>
+                <app-project-box [projectbox]="projects['blockchain']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="amazon"></app-project-box>
+                <app-project-box [projectbox]="projects['amazon']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="threads"></app-project-box>
+                <app-project-box [projectbox]="projects['aps360']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="mappa"></app-project-box>
+                <app-project-box [projectbox]="projects['ece297']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="portfolio"></app-project-box>
+                <app-project-box [projectbox]="projects['splitz']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="splitz"></app-project-box>
+                <app-project-box [projectbox]="projects['ece344']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="fps"></app-project-box>
+                <app-project-box [projectbox]="projects['ece243']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="utat"></app-project-box>
+                <app-project-box [projectbox]="projects['utat']"></app-project-box>
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
             <div class="container">
                 <h1>Feeling Nostalgic?</h1>
                 <h3>Click the button below to be
-                    teleported to the "good old days" of my previous portfolio!</h3>
+                    redirected to my previous portfolio!</h3>
             </div>
             <div class="button-box">
                 <a target="_blank" href="https://alexandregr26.github.io/portfolio/">
@@ -22,16 +22,10 @@
 <section class="info">
     <div class="container box">
         <h1 class="title">Online Portfolio</h1>
-        <h1 class="subtitle">Project Description</h1>
-        <p class="project-description">Motivated by a profound passion for learning and driven to carve out a unique and
-            authentic professional identity, I designed this online portfolio. Initially developed in 2020 using HTML,
-            CSS, and JavaScript, I rebuilt it this year with Angular, adopting a more structured and modern approach to
-            upgrade the user experience. In the ever-evolving field of software engineering, I firmly believe in and
-            follow the necessity for continual learning and adapting to newer technologies.</p>
-        <p class="project-description">This portfolio is not just a digital showcase of my work; it encapsulates my
-            commitment to breaking free from the standard resume conventions and embracing innovation in narrating my
-            professional story - it is my way of giving recruiters and future employers a better look at my journey from
-            an electric and computer engineering student to the software engineer I am today.</p>
+        <p class="project-description">Driven by the desire to craft a unique professional identity, I decided to build
+            this online portfolio to provide recruiters and future employers with a complete view of my professional
+            journey. Initially developed in 2020 using HTML, CSS, and JavaScript, I rebuilt it this year (2023) with
+            Angular, embracing a more structured and modern approach to enhance the user experience.</p>
     </div>
 </section>
 <section>
@@ -52,28 +46,31 @@
         <h1 class="title">Other Works</h1>
         <div class="row">
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="blockchain"></app-project-box>
+                <app-project-box [projectbox]="projects['blockchain']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="tr"></app-project-box>
+                <app-project-box [projectbox]="projects['tr']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="amazon"></app-project-box>
+                <app-project-box [projectbox]="projects['amazon']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="threads"></app-project-box>
+                <app-project-box [projectbox]="projects['aps360']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="mappa"></app-project-box>
+                <app-project-box [projectbox]="projects['ece297']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="splitz"></app-project-box>
+                <app-project-box [projectbox]="projects['splitz']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="fps"></app-project-box>
+                <app-project-box [projectbox]="projects['ece344']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="utat"></app-project-box>
+                <app-project-box [projectbox]="projects['ece243']"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="projects['utat']"></app-project-box>
             </div>
         </div>
     </div>

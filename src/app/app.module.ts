@@ -28,14 +28,14 @@ const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'work/amazon', component: AmazonComponent },
-  { path: 'work/reuters', component: ThomsonReutersComponent },
+  { path: 'work/tr', component: ThomsonReutersComponent },
   { path: 'work/splitz', component: SplitzComponent },
   { path: 'work/utat', component: UtatComponent },
-  { path: 'work/fps', component: FpsComponent },
-  { path: 'work/mappa', component: MappaComponent },
-  { path: 'work/ECE344', component: Ece344Component },
+  { path: 'work/ece243', component: FpsComponent },
+  { path: 'work/ece297', component: MappaComponent },
+  { path: 'work/ece344', component: Ece344Component },
   { path: 'work/capstone', component: CapstoneComponent },
-  { path: 'work/APS360', component: Aps360Component }
+  { path: 'work/aps360', component: Aps360Component }
 ]
 
 @NgModule({
