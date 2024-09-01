@@ -39,6 +39,13 @@ export class HomeComponent {
     route: "/work/ECE344"
   };
 
+  spotify: ProjectBox = {
+    title: "Song Popularity Predictor",
+    company: "APS360",
+    img: "assets/img/experience/Spotify/black-banner.png",
+    route: "/work/APS360"
+  };
+
   mappa: ProjectBox = {
     title: "GIS Application",
     company: "ECE297",
@@ -48,16 +55,9 @@ export class HomeComponent {
 
   splitz: ProjectBox = {
     title: "Chrome Extension",
-    company: "Freelance",
+    company: "Personal Project",
     img: "assets/img/experience/Splitz/banner.png",
     route: "/work/splitz"
-  };
-
-  portfolio: ProjectBox = {
-    title: "Online Portfolio",
-    company: "Freelance",
-    img: "assets/img/experience/Portfolio/banner.png",
-    route: "/work/portfolio"
   };
 
   fps: ProjectBox = {
@@ -78,7 +78,7 @@ export class HomeComponent {
   assembly: Skill = {
     img: "assets/img/skills/hard/assembly.png",
     title: "Assembly",
-    level: "Advanced"
+    level: "Intermediate"
   };
 
   c: Skill = {
@@ -105,6 +105,12 @@ export class HomeComponent {
     level: "Advanced"
   };
 
+  typescript: Skill = {
+    img: "assets/img/skills/hard/typescript.png",
+    title: "TypeScript",
+    level: "Intermediate"
+  };
+
   python: Skill = {
     img: "assets/img/skills/hard/python.png",
     title: "Python",
@@ -115,6 +121,42 @@ export class HomeComponent {
     img: "assets/img/skills/hard/angular.png",
     title: "Angular",
     level: "Advanced"
+  };
+
+  expo: Skill = {
+    img: "assets/img/skills/hard/expo.jfif",
+    title: "Expo",
+    level: "Basic"
+  };
+
+  express: Skill = {
+    img: "assets/img/skills/hard/express.png",
+    title: "Express",
+    level: "Intermediate"
+  };
+
+  figma: Skill = {
+    img: "assets/img/skills/hard/figma.png",
+    title: "Figma",
+    level: "Basic"
+  };
+
+  flask: Skill = {
+    img: "assets/img/skills/hard/flask.png",
+    title: "Flask",
+    level: "Basic"
+  };
+
+  node: Skill = {
+    img: "assets/img/skills/hard/node.jpg",
+    title: "Node.js",
+    level: "Advanced"
+  };
+
+  redux: Skill = {
+    img: "assets/img/skills/hard/redux.png",
+    title: "Redux",
+    level: "Intermediate"
   };
 
   aws: Skill = {
@@ -138,7 +180,43 @@ export class HomeComponent {
   git: Skill = {
     img: "assets/img/skills/hard/git.png",
     title: "Git",
-    level: "Advanced"
+    level: ""
+  };
+
+  confluence: Skill = {
+    img: "assets/img/skills/hard/confluence.png",
+    title: "Confluence",
+    level: ""
+  };
+
+  jira: Skill = {
+    img: "assets/img/skills/hard/jira.jpg",
+    title: "Jira",
+    level: ""
+  };
+
+  postman: Skill = {
+    img: "assets/img/skills/hard/postman.png",
+    title: "Postman",
+    level: ""
+  };
+
+  vs: Skill = {
+    img: "assets/img/skills/hard/vs.png",
+    title: "Visual Studio",
+    level: ""
+  };
+
+  vscode: Skill = {
+    img: "assets/img/skills/hard/vscode.jpg",
+    title: "VS Code",
+    level: ""
+  };
+
+  swagger: Skill = {
+    img: "assets/img/skills/hard/swagger.png",
+    title: "Swagger",
+    level: ""
   };
 
   html: Skill = {
@@ -149,7 +227,7 @@ export class HomeComponent {
 
   matlab: Skill = {
     img: "assets/img/skills/hard/matlab.png",
-    title: "Matlab",
+    title: "MATLAB",
     level: "Intermediate"
   };
 
@@ -166,43 +244,43 @@ export class HomeComponent {
   };
 
   dotnet: Skill = {
-    img: "assets/img/skills/hard/dotnet.png",
+    img: "assets/img/skills/hard/dotnet.svg",
     title: ".NET",
-    level: "Advanced"
+    level: "Intermediate"
   };
 
   postgresql: Skill = {
     img: "assets/img/skills/hard/postgresql.png",
-    title: "PostGreSQL",
+    title: "PostgreSQL",
     level: "Advanced"
   };
 
   react: Skill = {
     img: "assets/img/skills/hard/react.png",
     title: "React",
-    level: "Basic"
-  };
-
-  english: Skill = {
-    img: "assets/img/skills/languages/english.png",
-    title: "English",
-    level: "Native"
-  };
-
-  portuguese: Skill = {
-    img: "assets/img/skills/languages/portuguese.png",
-    title: "Portuguese",
-    level: "Native"
-  };
-
-  spanish: Skill = {
-    img: "assets/img/skills/languages/spanish.png",
-    title: "Spanish",
     level: "Intermediate"
   };
 
+  english: Skill = {
+    img: "assets/img/skills/languages/flags/canada.jpg",
+    title: "English",
+    level: "Fluent"
+  };
+
+  portuguese: Skill = {
+    img: "assets/img/skills/languages/flags/brazil.png",
+    title: "Portuguese",
+    level: "Fluent"
+  };
+
+  spanish: Skill = {
+    img: "assets/img/skills/languages/flags/spain.png",
+    title: "Spanish",
+    level: "Beginner"
+  };
+
   french: Skill = {
-    img: "assets/img/skills/languages/french.png",
+    img: "assets/img/skills/languages/flags/france.png",
     title: "French",
     level: "Intermediate"
   };
@@ -220,21 +298,21 @@ export class HomeComponent {
     img: "assets/img/community/frosh.JPG",
     title: "Orientation Leader - Engineering Frosh Week",
     date: "April 2020 - September 2022",
-    description: "In my role as an orientation leader at the University of Toronto, I had the opportunity to welcome incoming students to our campus and help them embrace the values, customs, and atmosphere of the Faculty of Applied Science & Engineering. I helped lead a group of 44 first-year students throughout the Orientation program, serving as a positive example and assisting these students in their transition from high school to university life."
+    description: "As an orientation leader at the University of Toronto, I had the pleasure of welcoming incoming students to campus and introducing them to the values and culture of the Faculty of Applied Science & Engineering. Guiding a group of 44 first-year students through the Orientation program, I served as a positive role model, helping them transition smoothly from high school to university life."
   };
 
   smc: CommunityBox = {
     img: "assets/img/community/smc.jpg",
     title: "House President - Sorbara Hall (SMC)",
     date: "September 2019 - April 2020",
-    description: "As the House President for my residence floor, I organized and led various house events and meetings to boost the social atmosphere in our living space. Working alongside other residence leaders, I helped create a nurturing and inclusive environment that encouraged participation and mutual respect among all St. Michael's College residents."
+    description: "As House President of my residence floor, I organized and led events and meetings to enhance our community's social atmosphere. Collaborating with other residence leaders, I focused on fostering a welcoming and inclusive environment that encouraged participation and mutual respect among all St. Michael's College residents."
   };
 
   ece: CommunityBox = {
     img: "assets/img/community/ececlub.JPG",
     title: "Finance Director - ECE Club",
     date: "September 2018 - April 2019",
-    description: "As the Finance Director for the ECE Club, I assumed a pivotal role in ensuring financial stability and accountability within the ECE Club at the University of Toronto. During the 2018-2019 academic year, I meticulously crafted and managed a comprehensive budget of $40K, overseeing all club expenses with precision and care, contributing to the club's financial health and ability to carry out its mission effectively."
+    description: "As Finance Director for the ECE Club, I played a crucial role in maintaining the club's financial stability and accountability. I carefully created and managed a $40K budget, overseeing all expenses with precision and diligence. My efforts ensured the club's financial health, enabling it to carry out its mission and support many student initiatives."
   };
 
   notl: CommunityBox = {
@@ -248,7 +326,7 @@ export class HomeComponent {
     img: "assets/img/community/hc.jpg",
     title: "Fundraising Assistant - NCDSB",
     date: "September 2014 - September 2018",
-    description: "I actively participated in an annual walk and helped raise funds for building schools in Haiti, supporting infrastructure projects, and helping to break the cycle of poverty. This walk unites students, staff, and local communities from across Niagara towards the common goal of making a positive impact in developing countries."
+    description: "I participated in an annual walk to raise funds for building schools and supporting infrastructure projects in Haiti, contributing to efforts to break the cycle of poverty. This event brought together students, staff, and local communities across Niagara with the shared goal of making a positive impact in developing countries."
   };
 
 }
