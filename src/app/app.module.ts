@@ -25,17 +25,61 @@ import { CapstoneComponent } from './pages/work/capstone/capstone.component';
 import { Aps360Component } from './pages/work/aps360/aps360.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'work/amazon', component: AmazonComponent },
-  { path: 'work/tr', component: ThomsonReutersComponent },
-  { path: 'work/splitz', component: SplitzComponent },
-  { path: 'work/utat', component: UtatComponent },
-  { path: 'work/ece243', component: FpsComponent },
-  { path: 'work/ece297', component: MappaComponent },
-  { path: 'work/ece344', component: Ece344Component },
-  { path: 'work/capstone', component: CapstoneComponent },
-  { path: 'work/aps360', component: Aps360Component }
+  {
+    path: '',
+    component: HomeComponent,
+    title: 'Alexandre Gouveia Rodrigues'
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    title: 'Contact Me | Alexandre Gouveia Rodrigues'
+  },
+  {
+    path: 'work/amazon',
+    component: AmazonComponent,
+    title: 'Amazon | Alexandre Gouveia Rodrigues'
+  },
+  {
+    path: 'work/tr',
+    component: ThomsonReutersComponent,
+    title: 'Thomson Reuters | Alexandre Gouveia Rodrigues'
+  },
+  {
+    path: 'work/splitz',
+    component: SplitzComponent,
+    title: 'Splitz | Alexandre Gouveia Rodrigues'
+  },
+  {
+    path: 'work/utat',
+    component: UtatComponent,
+    title: 'UTAT | Alexandre Gouveia Rodrigues'
+  },
+  {
+    path: 'work/ece243',
+    component: FpsComponent,
+    title: 'FPS | Alexandre Gouveia Rodrigues'
+  },
+  {
+    path: 'work/ece297',
+    component: MappaComponent,
+    title: 'Mappa | Alexandre Gouveia Rodrigues'
+  },
+  {
+    path: 'work/ece344',
+    component: Ece344Component,
+    title: 'ECE344 | Alexandre Gouveia Rodrigues'
+  },
+  {
+    path: 'work/capstone',
+    component: CapstoneComponent,
+    title: 'Capstone | Alexandre Gouveia Rodrigues'
+  },
+  {
+    path: 'work/aps360',
+    component: Aps360Component,
+    title: 'Song Popularity Predictor | Alexandre Gouveia Rodrigues'
+  }
 ]
 
 @NgModule({
