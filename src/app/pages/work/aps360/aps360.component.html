@@ -1,0 +1,110 @@
+<!-- Header -->
+<section class="work-header-section">
+    <app-work-header [header]="header"></app-work-header>
+</section>
+<!-- Summary -->
+<section>
+    <div class="container box">
+        <h1 class="title">Song Popularity Predictor</h1>
+        <h1 class="subtitle">Project Description</h1>
+        <p class="project-description">With the exponential growth of music streaming services, breaking into the music
+            industry has become increasingly challenging for new artists. As streaming platforms like Spotify rely
+            heavily on algorithms that recommend songs based on their perceived popularity, it has become crucial for
+            artists to create music that aligns with these algorithmic preferences. The objective of this project was to
+            develop a predictive model that could forecast the popularity of a song based on its audio features. By
+            leveraging deep learning techniques, specifically an Artificial Neural Network (ANN), this project aimed to
+            provide artists with valuable insights into which songs are likely to gain the most exposure on streaming
+            platforms, thereby improving their chances of success in a competitive industry.</p>
+        <div class="img-container">
+            <img src="assets/img/experience/Spotify/illustration.png" alt="">
+        </div>
+        <h1 class="subtitle">Data Processing</h1>
+        <p class="project-description">The foundation of any predictive model lies in the quality and relevance of the
+            data used for training. For this project, we utilized a combination of a pre-existing dataset from Kaggle
+            and song features extracted directly from the Spotify API. The initial dataset comprised 174,000 songs, but
+            our group applied several processing steps to refine this data to better suit our model's requirements.</p>
+        <p class="project-description">The first step involved filtering out any songs released before the year 2000, as
+            our focus was on current music trends. This reduced the dataset to 42,000 songs. We then eliminated any
+            duplicate songs to prevent the model from being biased towards certain feature values. In cases where
+            duplicates existed, the most popular version of the song was retained. This further refined the dataset to
+            approximately 38,000 songs. To ensure the model could train effectively, we calculated the mean, median, and
+            mode of the dataset’s popularity scores, aiming for a balanced distribution around a mean popularity rating
+            of 50. Finally, we applied min-max normalization to all data values, standardizing them between 0 and 1.
+            This normalization was crucial for speeding up the model's learning process and handling the variability
+            between different feature values. Additionally, we implemented a weighted cross-entropy function to address
+            class imbalance, ensuring the model did not favor any particular class.</p>
+        <div class="img-container">
+            <img src="assets/img/experience/Spotify/dataset.png" alt="">
+        </div>
+        <h1 class="subtitle">ANN Model</h1>
+        <p class="project-description">The heart of this project was the development and training of a deep learning
+            model using an Artificial Neural Network (ANN). The choice of an ANN was driven by its ability to learn
+            complex, non-linear relationships between input features and the target output—in this case, the song's
+            popularity.</p>
+        <p class="project-description">The architecture of our ANN consisted of four fully connected layers. The first
+            three layers were composed of 1,000, 2,000, and 4,000 hidden units, respectively, and utilized the ReLU
+            activation function. This setup allowed the model to capture intricate patterns in the data by assigning
+            weights to different song features. The output layer consisted of five neurons, each corresponding to a
+            specific popularity class ranging from 0 to 4. These classes were designed to simplify the prediction
+            process and reduce variance, making it easier for the model to achieve accurate results. Our model was
+            trained over multiple epochs, and we carefully tuned hyperparameters to achieve the best possible
+            performance.</p>
+        <div class="img-container">
+            <img src="assets/img/experience/Spotify/ANN.png" alt="">
+        </div>
+        <h1 class="subtitle">Results</h1>
+        <p class="project-description">The ANN model we developed demonstrated significant improvements over the
+            baseline model - a decision tree classifier. While the decision tree achieved a baseline accuracy of 45%,
+            our ANN model outperformed it with a testing accuracy of 55%. To further evaluate the model's performance,
+            we also examined its accuracy across different popularity classes. The model excelled in predicting songs in
+            the mid-range popularity classes (2 and 3), achieving accuracies of 53.4% and 58.8%, respectively. However,
+            it
+            struggled with songs at the extremities of the popularity spectrum, particularly in classes 1 and 4, where
+            accuracy dropped significantly. Despite these challenges, the model provided valuable insights into the
+            relationship between a song's audio features and its potential success on streaming platforms.</p>
+        <div class="img-container">
+            <img src="assets/img/experience/Spotify/results.png" alt="">
+        </div>
+        <p class="project-description">Overall, this project showcased the potential of applying deep learning to
+            predict song popularity. As my
+            first AI-related project, it was both challenging and rewarding, resulting in a model that outperformed
+            traditional methods and provided valuable insights. This experience has deepened my interest in AI and its
+            practical applications in the music industry and beyond.</p>
+        <h1 class="subtitle">Tools Used</h1>
+        <div class="tools">
+            <div class="tool">Python</div>
+            <div class="tool">PyTorch</div>
+            <div class="tool">NumPy</div>
+            <div class="tool">Git</div>
+        </div>
+    </div>
+</section>
+<!-- Other Works -->
+<section>
+    <div class="container box">
+        <h1 class="title">Other Works</h1>
+        <div class="row">
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="blockchain"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="tr"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="amazon"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="mappa"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="splitz"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="fps"></app-project-box>
+            </div>
+            <div id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="utat"></app-project-box>
+            </div>
+        </div>
+    </div>
+</section>

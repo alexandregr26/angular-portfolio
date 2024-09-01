@@ -22,19 +22,20 @@ import { MappaComponent } from './pages/work/mappa/mappa.component';
 import { Ece344Component } from './pages/work/ece344/ece344.component';
 import { PortfolioComponent } from './pages/work/portfolio/portfolio.component';
 import { CapstoneComponent } from './pages/work/capstone/capstone.component';
+import { Aps360Component } from './pages/work/aps360/aps360.component';
 
 const appRoutes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'work/amazon', component: AmazonComponent},
-  {path: 'work/reuters', component: ThomsonReutersComponent},
-  {path: 'work/splitz', component: SplitzComponent},
-  {path: 'work/utat', component: UtatComponent},
-  {path: 'work/fps', component: FpsComponent},
-  {path: 'work/mappa', component: MappaComponent},
-  {path: 'work/ECE344', component: Ece344Component},
-  {path: 'work/portfolio', component: PortfolioComponent},
-  {path: 'work/capstone', component: CapstoneComponent}
+  { path: '', component: HomeComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'work/amazon', component: AmazonComponent },
+  { path: 'work/reuters', component: ThomsonReutersComponent },
+  { path: 'work/splitz', component: SplitzComponent },
+  { path: 'work/utat', component: UtatComponent },
+  { path: 'work/fps', component: FpsComponent },
+  { path: 'work/mappa', component: MappaComponent },
+  { path: 'work/ECE344', component: Ece344Component },
+  { path: 'work/capstone', component: CapstoneComponent },
+  { path: 'work/APS360', component: Aps360Component }
 ]
 
 @NgModule({
@@ -57,7 +58,8 @@ const appRoutes: Routes = [
     MappaComponent,
     Ece344Component,
     PortfolioComponent,
-    CapstoneComponent
+    CapstoneComponent,
+    Aps360Component
   ],
   imports: [
     BrowserModule,
