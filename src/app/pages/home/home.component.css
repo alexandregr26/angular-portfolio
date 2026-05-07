@@ -1,0 +1,28 @@
+#about p {
+    max-width: 980px;
+    margin-bottom: 1rem;
+    color: #334155;
+    font-size: 1.02rem;
+}
+
+#about p:last-child {
+    margin-bottom: 0;
+}
+
+#work,
+#projects,
+#skills,
+#community {
+    background: transparent;
+}
+
+#work .box,
+#projects .box,
+#skills .box,
+#community .box {
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 24px;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+    margin-top: 26px;
+}

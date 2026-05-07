@@ -1,6 +1,6 @@
-<a href="{{projectbox.route}}">
+<a [routerLink]="projectbox.route" class="project-link">
     <div style="background: url('{{projectbox.img}}') no-repeat; background-position: center;
-    background-size: 100% 100%;" class="project-item">
+    background-size: cover;" class="project-item">
         <div class="overlay">
             <div class="text">
                 <h2 class="subtitle">{{projectbox.title}}</h2>

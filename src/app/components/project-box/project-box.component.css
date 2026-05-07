@@ -1,41 +1,56 @@
+.project-link {
+    text-decoration: none;
+}
+
 .project-item {
-    height: 200px;
+    height: 220px;
     width: 100%;
     position: relative;
-    border: 1px solid black;
-    border-radius: 12px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 
 .project-item:hover {
-    box-shadow: 0 2px 2px 2px #cccccc;
+    transform: translateY(-4px);
+    box-shadow: 0 18px 34px rgba(15, 23, 42, 0.15);
 }
 
 .overlay {
     position: absolute;
-    top: 100%;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 0;
+    height: 100%;
     width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #323232;
+    opacity: 1;
+    transition: .35s ease;
+    background: linear-gradient(180deg, rgba(2, 6, 23, 0.02) 8%, rgba(2, 6, 23, 0.72) 84%);
 }
 
 .project-item:hover .overlay {
-    opacity: 0.88;
-    top: 50%;
-    height: 50%;
+    background: linear-gradient(180deg, rgba(2, 6, 23, 0.06) 12%, rgba(2, 6, 23, 0.82) 86%);
 }
 
 .text {
     color: white;
-    margin: 20px 0px 0px 20px;
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 16px;
 }
 
 .subtitle {
     font-size: 18px;
     padding: 0;
+    margin-bottom: 2px;
+    color: #ffffff;
+}
+
+.text p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
 }

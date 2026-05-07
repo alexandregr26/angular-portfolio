@@ -1,6 +1,8 @@
 header .navbar{
-    padding: 1rem;
-    background-color:white;
+    padding: 0.9rem 0;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 header .navbar .navbar-brand{
@@ -9,10 +11,11 @@ header .navbar .navbar-brand{
 }
 
 header .navbar .navbar-brand .nav-logo{
-    padding: 0.4rem 0 0 26px;
-    font-size: 22px;
-    font-weight: 600;
-    color: #323232;
+    padding: 0.2rem 0 0 4px;
+    font-size: 1.05rem;
+    font-weight: 650;
+    color: #0f172a;
+    letter-spacing: -0.01em;
 }
 
 header .navbar .navbar-collapse .nav-item{
@@ -26,7 +29,8 @@ header .navbar .navbar-collapse .nav-item .nav-link{
     padding: 0;
     margin: 0;
     font-weight: 500;
-    color: #323232;
+    color: #334155;
+    font-size: 0.95rem;
 }
 
 header .navbar .navbar-nav li > a:after{
@@ -34,7 +38,7 @@ header .navbar .navbar-nav li > a:after{
     display: block;
     height: 2px;
     border-radius: 26px;
-    background: red;
+    background: #0f172a;
     transform: scaleX(0);
     transition: transform .4s;
 }
@@ -56,8 +60,9 @@ header .navbar .navbar-nav li > a:hover:after{
 }
 
 .nav-icon i {
-    font-size: 30px;
+    font-size: 26px;
     padding: 0rem 1rem;
+    color: #0f172a;
 }
 
 /* Responsiveness */ 

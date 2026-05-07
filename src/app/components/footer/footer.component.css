@@ -1,9 +1,11 @@
 footer{
-    padding: 2rem 0;
-    background-color: #323232;
+    padding: 1.5rem 0;
+    background-color: #0f172a;
+    border-top: 1px solid rgba(148, 163, 184, 0.25);
 }
 
 p{
     margin: 0;
-    color: white;
+    color: #e2e8f0;
+    letter-spacing: 0.02em;
 }

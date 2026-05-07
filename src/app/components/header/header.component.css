@@ -1,9 +1,11 @@
 img{
     width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14);
 }
 
 #bannerContainerStruct{
-    padding: 0;
+    padding: 32px 0 8px 0;
     margin: 0;
 }
 
@@ -15,19 +17,29 @@ img{
     text-align: left;
 }
 
-h1{
+#banner-struct h1{
     font-weight: 600;
-    font-size: 90px;
+    font-size: clamp(2.2rem, 5vw, 4.35rem);
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    color: #0f172a;
+    margin-bottom: 18px;
 }
 
-h2{
-    font-weight: 400;
-    font-size: 36px;
+.intro-label{
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 16px;
 }
 
-h3{
+.intro-description{
     font-weight: 400;
-    font-size: 22px;
+    font-size: 1.04rem;
+    color: #334155;
+    max-width: 540px;
 }
 
 /* Responsiveness */
@@ -42,47 +54,37 @@ h3{
         flex-direction: column-reverse;
     }
 
-    h1{
+    #banner-struct h1{
         font-size: 14vw;
     }
-    
-    h2{
+
+    .intro-label{
         margin-top: 20px;
-        font-size: 6vw;
-        margin-bottom: 1px;
     }
-    
-    h3{
-        display: none;
+
+    .intro-description{
+        font-size: 0.95rem;
     }
 }
 
 /* Small Devices */
 @media (min-width: 768px) and (max-width: 991px){
-    h1{
+    #banner-struct h1{
         font-size: 3.6rem;
     }
-    
-    h2{
-        font-size: 1.6rem;
-    }
-    
-    h3{
+
+    .intro-description{
         display: none;
     }
 }
 
 /* Medium Devices */
 @media (min-width: 992px) and (max-width: 1199px){
-    h1{
+    #banner-struct h1{
         font-size: 5rem;
     }
-    
-    h2{
-        font-size: 2rem;
-    }
 
-    h3 {
+    .intro-description {
         font-size: 1.2rem;
     }
 }
