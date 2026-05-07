@@ -224,6 +224,48 @@ export class HomeComponent {
     level: "Intermediate"
   };
 
+  ansible: Skill = {
+    img: "assets/img/skills/hard/ansible.png",
+    title: "Ansible",
+    level: "Intermediate"
+  };
+
+  datadog: Skill = {
+    img: "assets/img/skills/hard/datadog.png",
+    title: "Datadog",
+    level: "Intermediate"
+  };
+
+  kubernetes: Skill = {
+    img: "assets/img/skills/hard/kubernetes.png",
+    title: "Kubernetes",
+    level: "Intermediate"
+  };
+
+  langgraph: Skill = {
+    img: "assets/img/skills/hard/langgraph.png",
+    title: "LangGraph",
+    level: "Intermediate"
+  };
+
+  mcp: Skill = {
+    img: "assets/img/skills/hard/mcp.png",
+    title: "MCP",
+    level: "Intermediate"
+  };
+
+  numpy: Skill = {
+    img: "assets/img/skills/hard/numpy.png",
+    title: "NumPy",
+    level: "Intermediate"
+  };
+
+  pytorch: Skill = {
+    img: "assets/img/skills/hard/pytorch.png",
+    title: "PyTorch",
+    level: "Intermediate"
+  };
+
   // Community
 
   brasa: CommunityBox = {

@@ -1,6 +1,12 @@
 import { ProjectBox } from "../_models/ProjectBox";
 
 export const projects: { [key: string]: ProjectBox } = {
+    coinbase: {
+        title: "Software Engineer",
+        company: "Coinbase",
+        img: "assets/img/experience/coinbase/logo.png",
+        route: "/work/coinbase"
+    },
     utat: {
         title: "Low Power Sensor",
         company: "UTAT",

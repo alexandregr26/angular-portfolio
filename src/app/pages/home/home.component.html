@@ -3,16 +3,11 @@
 <section id="about" class="info">
     <div class="container box">
         <h1 class="title">About Me</h1>
-        <p>I'm an Electrical and Computer Engineering graduate from the
-            University of Toronto, with a Business minor and a certificate in Artificial
-            Intelligence.</p>
-        <p>My professional focus is to create elegant solutions for complex problems. For me, each project is a new
-            adventure with unique challenges, exciting goals, and innovative solutions ready to be discovered. But
-            there's more to my story than just tech. I'm passionate about bridging the gap between technology and
-            business, ensuring every solution not only works but also delivers real value to the world.</p>
-        <p>I'm also all about building meaningful connections. If you're interested in collaborating on groundbreaking
-            projects, exploring new technologies, or simply connecting with like-minded professionals, let's get in
-            touch! Together, we can unlock new possibilities and create a better future.</p>
+        <p>I'm an engineer interested in building systems that move the world forward — not just software that ships, but technology that creates clarity, accelerates decisions, and improves lives.</p>
+        <p>My background sits across engineering, business, and artificial intelligence. I studied Electrical and Computer Engineering at the University of Toronto, and have worked at Amazon, Thomson Reuters, and Coinbase across product engineering, developer platforms, production infrastructure, and AI-powered operational tooling.</p>
+        <p>Across these experiences, I've become drawn to complex environments where technology, people, and decision-making collide. Markets, history, policy, culture, and human behavior all shape how systems are built, adopted, and experienced — because technology does not exist in isolation. It lives inside the world, and it should improve the world it touches.</p>
+        <p>What I want to build is simple to say and hard to do: systems that matter. Tools that clarify instead of confuse, accelerate without dehumanizing, strengthen human judgment, and improve the lives of the people they serve.</p>
+        <p>I’m looking for ambitious teams operating at the edge of what is possible — teams building with real stakes, real users, and the potential to leave the world better than they found it.</p>
     </div>
 </section>
 <!-- Work -->
@@ -21,13 +16,24 @@
         <h1 class="title">Work</h1>
         <div class="row">
             <div id="project-struct" class="col-lg-4 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="projects['blockchain']"></app-project-box>
+                <app-project-box [projectbox]="projects['coinbase']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-4 col-md-6 col-sm-12 col-12">
                 <app-project-box [projectbox]="projects['tr']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-4 col-md-6 col-sm-12 col-12">
                 <app-project-box [projectbox]="projects['amazon']"></app-project-box>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Projects -->
+<section id="projects">
+    <div class="container box">
+        <h1 class="title">Projects</h1>
+        <div class="row">
+            <div id="project-struct" class="col-lg-4 col-md-6 col-sm-12 col-12">
+                <app-project-box [projectbox]="projects['blockchain']"></app-project-box>
             </div>
             <div id="project-struct" class="col-lg-4 col-md-6 col-sm-12 col-12">
                 <app-project-box [projectbox]="projects['aps360']"></app-project-box>
@@ -78,6 +84,9 @@
                 <app-skill [skill]="javascript"></app-skill>
             </div>
             <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="matlab"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
                 <app-skill [skill]="python"></app-skill>
             </div>
             <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
@@ -87,16 +96,10 @@
                 <app-skill [skill]="typescript"></app-skill>
             </div>
         </div>
-        <h2 class="subtitle">Technologies:</h2>
+        <h2 class="subtitle">Application Development:</h2>
         <div class="row">
             <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
-                <app-skill [skill]="aws"></app-skill>
-            </div>
-            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
                 <app-skill [skill]="angular"></app-skill>
-            </div>
-            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
-                <app-skill [skill]="docker"></app-skill>
             </div>
             <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
                 <app-skill [skill]="expo"></app-skill>
@@ -111,9 +114,6 @@
                 <app-skill [skill]="flask"></app-skill>
             </div>
             <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
-                <app-skill [skill]="matlab"></app-skill>
-            </div>
-            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
                 <app-skill [skill]="dotnet"></app-skill>
             </div>
             <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
@@ -125,26 +125,44 @@
             <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
                 <app-skill [skill]="redux"></app-skill>
             </div>
-        </div>
-        <h2 class="subtitle">Developer Tools:</h2>
-        <div class="row">
-            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
-                <app-skill [skill]="confluence"></app-skill>
-            </div>
-            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
-                <app-skill [skill]="git"></app-skill>
-            </div>
-            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
-                <app-skill [skill]="jira"></app-skill>
-            </div>
             <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
                 <app-skill [skill]="postman"></app-skill>
             </div>
-            <div id="comunity-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
-                <app-skill [skill]="vscode"></app-skill>
-            </div>
             <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
                 <app-skill [skill]="swagger"></app-skill>
+            </div>
+        </div>
+        <h2 class="subtitle">AI, Cloud & Infrastructure:</h2>
+        <div class="row">
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="ansible"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="aws"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="datadog"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="docker"></app-skill>
+            </div>
+            <div id="comunity-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="kubernetes"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="langgraph"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="langgraph"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="mcp"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="numpy"></app-skill>
+            </div>
+            <div id="community-struct" class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <app-skill [skill]="pytorch"></app-skill>
             </div>
         </div>
         <h2 class="subtitle">Languages:</h2>
