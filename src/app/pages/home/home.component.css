@@ -19,7 +19,8 @@
 #work .box,
 #projects .box,
 #skills .box,
-#community .box {
+#community .box,
+#about .box {
     background: #ffffff;
     border: 1px solid rgba(15, 23, 42, 0.08);
     border-radius: 28px;

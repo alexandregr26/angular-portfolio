@@ -1,6 +1,13 @@
 <a [routerLink]="projectbox.route" class="project-link">
     <div style="background: url('{{projectbox.img}}') no-repeat; background-position: center;
-    background-size: cover;" class="project-item">
+    background-size: cover;"
+        class="project-item"
+        [class.pointer-active]="isPointerInside"
+        [style.--mx]="mouseX + 'px'"
+        [style.--my]="mouseY + 'px'"
+        (mousemove)="onPointerMove($event)"
+        (mouseenter)="onPointerEnter($event)"
+        (mouseleave)="onPointerLeave()">
         <div class="overlay">
             <div class="text">
                 <h2 class="subtitle">{{projectbox.title}}</h2>
