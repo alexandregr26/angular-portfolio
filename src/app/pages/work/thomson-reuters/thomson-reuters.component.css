@@ -87,11 +87,15 @@
 }
 
 .job-description {
-    max-width: 980px;
+    width: 100%;
     margin: 0 0 18px;
     color: var(--color-ink-soft);
     font-size: 1.02rem;
     line-height: 1.78;
+    text-align: justify;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
 }
 
 .job-description:last-child {
