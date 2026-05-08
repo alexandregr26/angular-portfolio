@@ -13,6 +13,12 @@
     background: rgba(255, 255, 255, 0.72);
 }
 
+.about-panel p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
 .community-list {
     display: grid;
     gap: 20px;
@@ -157,24 +163,39 @@
 
 .skills-cluster {
     display: grid;
-    grid-template-columns: 320px minmax(0, 1fr);
-    gap: 28px;
-    padding: 26px;
+    grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+    align-items: center;
+    gap: 36px;
+    padding: 28px 30px;
     border-radius: 26px;
     background: rgba(255, 255, 255, 0.68);
 }
 
+.skills-cluster-header {
+    max-width: 320px;
+}
+
 .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+    align-content: start;
+    gap: 12px;
+    width: 100%;
 }
 
 @media (max-width: 991px) {
     .experience-card,
     .skills-cluster {
         grid-template-columns: 1fr;
+    }
+
+    .skills-cluster {
+        gap: 18px;
+        padding: 24px;
+    }
+
+    .skills-cluster-header {
+        max-width: none;
     }
 
     .experience-media {
@@ -199,6 +220,10 @@
 @media (max-width: 767px) {
     .about-panel {
         padding: 20px;
+    }
+
+    .about-panel p {
+        text-align: left;
     }
 
     .credibility-box * {

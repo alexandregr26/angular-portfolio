@@ -354,22 +354,22 @@ export class HomeComponent {
     {
       title: "Core Engineering",
       description: "Languages and systems foundations used to reason about performance, correctness, and architecture.",
-      skills: [this.python, this.c, this.cpp, this.csharp, this.typescript, this.javascript, this.postgresql, this.html, this.css]
+      skills: [this.assembly, this.c, this.csharp, this.cpp, this.css, this.html, this.javascript, this.postgresql, this.python, this.typescript]
     },
     {
       title: "Application Development",
       description: "Frameworks and tools for building polished, maintainable web and application experiences.",
-      skills: [this.angular, this.react, this.redux, this.node, this.express, this.dotnet, this.figma, this.expo, this.flask, this.postman, this.swagger]
+      skills: [this.dotnet, this.angular, this.express, this.figma, this.flask, this.node, this.postman, this.react, this.redux, this.swagger]
     },
     {
       title: "AI, Data & Infrastructure",
       description: "Practical tooling for AI workflows, cloud systems, deployment, observability, and platform work.",
-      skills: [this.pytorch, this.numpy, this.langgraph, this.mcp, this.aws, this.docker, this.kubernetes, this.datadog, this.ansible, this.aws]
+      skills: [this.ansible, this.aws, this.datadog, this.docker, this.kubernetes, this.langgraph, this.mcp, this.numpy, this.pytorch]
     },
     {
       title: "Communication",
       description: "Languages that support collaboration across teams, users, and international environments.",
-      skills: [this.english, this.portuguese, this.french]
+      skills: [this.english, this.french, this.portuguese]
     }
   ];
 
