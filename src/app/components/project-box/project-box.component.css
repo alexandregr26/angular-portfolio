@@ -1,76 +1,44 @@
+:host,
 .project-link {
+    display: block;
+}
+
+.project-link {
+    color: inherit;
     text-decoration: none;
 }
 
 .project-item {
-    height: 220px;
-    width: 100%;
+    --mx: 50%;
+    --my: 50%;
+    min-height: 245px;
     position: relative;
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
-    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    isolation: isolate;
+    overflow: visible;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.72);
+    transition: transform .34s cubic-bezier(.2,.8,.2,1), box-shadow .34s cubic-bezier(.2,.8,.2,1);
 }
 
-.project-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 18px 34px rgba(15, 23, 42, 0.15);
+.project-media {
+    min-height: 128px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 24px 24px 0 0;
 }
 
-.project-item::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background:
-        radial-gradient(ellipse 220px 140px at var(--mx) var(--my), rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04) 38%, rgba(255, 255, 255, 0) 72%),
-        radial-gradient(ellipse 64px 48px at calc(var(--mx) - 18px) calc(var(--my) - 12px), rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0) 72%);
-    opacity: 0;
-    transition: opacity 0.15s ease;
-    pointer-events: none;
-    mix-blend-mode: screen;
+.project-content {
+    padding: 18px;
 }
 
-.project-item.pointer-active::after {
-    opacity: 1;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 1;
-    transition: .35s ease;
-    background: linear-gradient(180deg, rgba(2, 6, 23, 0.02) 8%, rgba(2, 6, 23, 0.72) 84%);
-}
-
-.project-item:hover .overlay {
-    background: linear-gradient(180deg, rgba(2, 6, 23, 0.06) 12%, rgba(2, 6, 23, 0.82) 86%);
-}
-
-.text {
-    color: white;
-    position: absolute;
-    left: 18px;
-    right: 18px;
-    bottom: 16px;
+.project-content p {
+    margin: 0 0 6px 0;
+    color: var(--color-ink-soft);
 }
 
 .subtitle {
-    font-size: 18px;
     padding: 0;
-    margin-bottom: 2px;
-    color: #ffffff;
-}
-
-.text p {
     margin: 0;
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--color-ink);
+    font-size: 1.05rem;
 }

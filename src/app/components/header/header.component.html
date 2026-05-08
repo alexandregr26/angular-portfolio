@@ -1,15 +1,30 @@
-<div class="container">
-    <div id="bannerContainerStruct" class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <img src="assets/img/header/profile.png" alt="">
-        </div>
-        <div id="banner-struct" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <div class="container">
-                <p class="intro-label">Engineer | Builder | Systems Thinker</p>
-                <h1>Alexandre Gouveia Rodrigues</h1>
-                <p class="intro-description">I design and build high-impact software systems across product engineering,
-                    infrastructure, and AI-powered tooling. This portfolio highlights the work I am most proud of.</p>
+<section class="hero-shell">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-copy">
+                <p class="hero-kicker">Hello, my name is</p>
+                <h1 class="hero-name" aria-label="Alexandre Gouveia Rodrigues">
+                    <span class="name-word name-alexandre">Alexandre</span>
+                    <span class="name-word name-gouveia">Gouveia</span>
+                    <span class="name-word name-rodrigues">Rodrigues</span>
+                </h1>
+                <p class="intro-description">I'm a computer engineer who builds software for environments where technology, people, and decision-making collide - systems that create clarity, accelerate decisions, and improve the lives of the people they serve.</p>
+                <div class="hero-actions" aria-label="Primary links">
+                    <a class="hero-button liquid-glass" href="#work" (pointermove)="moveLiquidGlass($event)" (pointerleave)="resetLiquidGlass($event)">Work</a>
+                    <a class="hero-button liquid-glass" href="#projects" (pointermove)="moveLiquidGlass($event)" (pointerleave)="resetLiquidGlass($event)">Projects</a>
+                    <a class="hero-button liquid-glass" href="#skills" (pointermove)="moveLiquidGlass($event)" (pointerleave)="resetLiquidGlass($event)">Skills</a>
+                    <a class="hero-button liquid-glass" href="#community" (pointermove)="moveLiquidGlass($event)" (pointerleave)="resetLiquidGlass($event)">Community</a>
+                    <a class="hero-icon-link liquid-glass" target="_blank" href="https://github.com/alexandregr26/" aria-label="GitHub" (pointermove)="moveLiquidGlass($event)" (pointerleave)="resetLiquidGlass($event)">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a class="hero-icon-link liquid-glass" target="_blank" href="https://www.linkedin.com/in/alexandre-gouveia-r/" aria-label="LinkedIn" (pointermove)="moveLiquidGlass($event)" (pointerleave)="resetLiquidGlass($event)">
+                        <i class='bx bxl-linkedin-square'></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual" aria-label="Portrait of Alexandre Gouveia Rodrigues">
+                <img class="hero-profile" src="assets/img/header/new-profile.jpg" alt="Alexandre Gouveia Rodrigues">
             </div>
         </div>
     </div>
-</div>
+</section>

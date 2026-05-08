@@ -1,36 +1,60 @@
 <header>
-    <nav class="navbar navbar-expand navbar-light">
+    <nav class="navbar navbar-expand navbar-light" aria-label="Primary navigation">
         <div id="navbar-container" class="container">
             <a class="navbar-brand" href="#">
-                <h1 class="nav-logo">Alexandre Gouveia Rodrigues</h1>
+                <span class="nav-mark" aria-hidden="true">AGR</span>
+                <span class="nav-logo">Alexandre Gouveia Rodrigues</span>
             </a>
-            <div class="navbar-collapse" id="navbarNav">
+            <div class="navbar-collapse desktop-nav" id="navbarNav">
                 <div class="mr-auto"></div>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link liquid-glass" href="#about" (pointermove)="moveLiquidGlass($event)" (pointerleave)="resetLiquidGlass($event)">About</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#work">Work</a>
+                        <a class="nav-link liquid-glass" href="#work" (pointermove)="moveLiquidGlass($event)" (pointerleave)="resetLiquidGlass($event)">Work</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link liquid-glass" href="#projects" (pointermove)="moveLiquidGlass($event)" (pointerleave)="resetLiquidGlass($event)">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link liquid-glass" href="#skills" (pointermove)="moveLiquidGlass($event)" (pointerleave)="resetLiquidGlass($event)">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#community">Community</a>
+                        <a class="nav-link liquid-glass" href="#community" (pointermove)="moveLiquidGlass($event)" (pointerleave)="resetLiquidGlass($event)">Community</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" routerLink="/contact">Contact</a>
+                        <a class="nav-link liquid-glass" routerLink="/contact" (pointermove)="moveLiquidGlass($event)" (pointerleave)="resetLiquidGlass($event)">Contact</a>
                     </li>
                 </ul>
+                <a class="nav-resume" href="assets/pdf/AlexandreGouveiaRodriguesResume.pdf" target="_blank">Resume</a>
+                <li class="nav-icon">
+                    <a target="_blank" href="https://github.com/alexandregr26/"><i
+                            class='bx bxl-github'></i><span class="sr-only">GitHub</span></a>
+                </li>
                 <li class="nav-icon">
                     <a target="_blank" href="https://www.linkedin.com/in/alexandre-gouveia-r/"><i
-                            class='bx bxl-linkedin-square'></i></a>
+                            class='bx bxl-linkedin-square'></i><span class="sr-only">LinkedIn</span></a>
                 </li>
             </div>
+            <details class="mobile-nav">
+                <summary aria-label="Open navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </summary>
+                <div class="mobile-panel">
+                    <a href="#about">About</a>
+                    <a href="#work">Work</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#community">Community</a>
+                    <a routerLink="/contact">Contact</a>
+                    <a href="assets/pdf/AlexandreGouveiaRodriguesResume.pdf" target="_blank">Resume</a>
+                    <a target="_blank" href="https://github.com/alexandregr26/">GitHub</a>
+                    <a target="_blank" href="https://www.linkedin.com/in/alexandre-gouveia-r/">LinkedIn</a>
+                </div>
+            </details>
         </div>
     </nav>
 </header>

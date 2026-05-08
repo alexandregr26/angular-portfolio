@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommunityBox } from '../../_models/CommunityBox';
 import { Skill } from '../../_models/Skill';
+import { ProjectBox } from '../../_models/ProjectBox';
 import { projects } from 'src/app/data/projects';
 
 @Component({
@@ -12,6 +13,89 @@ export class HomeComponent {
 
   // Work
   projects = projects;
+
+  professionalExperiences = [
+    {
+      company: "Coinbase",
+      role: "Software Engineer",
+      type: "Professional experience",
+      img: this.projects['coinbase'].img,
+      logoDesktop: "assets/img/experience/coinbase/logo-desktop.png",
+      route: null,
+      date: "Jan 2025 – Present",
+      summary: "Software engineering experience in a high-stakes financial technology environment.",
+      scope: "Product engineering, developer platforms, production infrastructure, and AI-powered operational tooling.",
+      impact: "Built in environments where reliability, clarity, and execution quality matter.",
+      technologies: ["Ansible", "AWS", "Datadog", "Docker", "Go", "Kubernetes", "LangGraph", "MCPs", "Python"]
+    },
+    {
+      company: "Thomson Reuters",
+      role: "Software Developer Intern",
+      type: "Internship",
+      img: this.projects['tr'].img,
+      logoDesktop: "assets/img/experience/ThomsonReuters/logo-desktop.png",
+      route: this.projects['tr'].route,
+      date: "Sep 2021 – Sep 2022",
+      summary: "Worked across backend APIs, authorization flows, onboarding automation, and responsive interfaces.",
+      scope: "REST APIs, OAuth-oriented identity work, user session management, Angular UI development, and Agile delivery.",
+      impact: "Improved usability, performance, and onboarding workflows across internal and user-facing services.",
+      technologies: ["Angular", "AWS", "C#", "Docker", ".NET", "OAuth", "Swagger"]
+    },
+    {
+      company: "Amazon",
+      role: "Software Engineer Intern",
+      type: "Internship",
+      img: this.projects['amazon'].img,
+      logoDesktop: "assets/img/experience/Amazon/logo-desktop.png",
+      route: this.projects['amazon'].route,
+      date: "May 2021 – Aug 2021",
+      summary: "Built a React and Redux web feature for advertisers to visualize campaign performance.",
+      scope: "Frontend feature development, design reviews, UAT, UI testing, and post-launch performance analysis.",
+      impact: "Improved user engagement and conversion rates by 10%, based on the existing case-study writeup.",
+      technologies: ["Figma", "React", "Redux"]
+    }
+  ];
+
+  featuredProjects = [
+    {
+      ...this.projects['blockchain'],
+      context: "Capstone · Healthcare systems",
+      summary: "Patient-centric electronic health record sharing with Hyperledger Fabric and encrypted file distribution.",
+      technologies: ["Hyperledger Fabric", "JavaScript", "API design", "Encryption"]
+    },
+    {
+      ...this.projects['aps360'],
+      context: "Applied machine learning",
+      summary: "Neural network model for predicting song popularity from audio features and dataset preparation.",
+      technologies: ["PyTorch", "Python", "NumPy", "Data modeling"]
+    },
+    {
+      ...this.projects['ece297'],
+      context: "GIS application",
+      summary: "A desktop mapping application focused on search, visualization, route interaction, and user-centered design.",
+      technologies: ["C++", "GIS", "UI design", "Algorithms"]
+    }
+  ];
+
+  secondaryProjects: ProjectBox[] = [
+    this.projects['ece344'],
+    this.projects['splitz'],
+    this.projects['ece243'],
+    this.projects['utat']
+  ];
+
+  moveLiquidGlass(event: PointerEvent): void {
+    const target = event.currentTarget as HTMLElement;
+    const rect = target.getBoundingClientRect();
+    target.style.setProperty('--mx', `${event.clientX - rect.left}px`);
+    target.style.setProperty('--my', `${event.clientY - rect.top}px`);
+  }
+
+  resetLiquidGlass(event: PointerEvent): void {
+    const target = event.currentTarget as HTMLElement;
+    target.style.setProperty('--mx', '50%');
+    target.style.setProperty('--my', '50%');
+  }
 
   // Skills
   assembly: Skill = {
@@ -266,13 +350,36 @@ export class HomeComponent {
     level: "Intermediate"
   };
 
+  skillGroups = [
+    {
+      title: "Core Engineering",
+      description: "Languages and systems foundations used to reason about performance, correctness, and architecture.",
+      skills: [this.python, this.c, this.cpp, this.csharp, this.typescript, this.javascript, this.postgresql, this.html, this.css]
+    },
+    {
+      title: "Application Development",
+      description: "Frameworks and tools for building polished, maintainable web and application experiences.",
+      skills: [this.angular, this.react, this.redux, this.node, this.express, this.dotnet, this.figma, this.expo, this.flask, this.postman, this.swagger]
+    },
+    {
+      title: "AI, Data & Infrastructure",
+      description: "Practical tooling for AI workflows, cloud systems, deployment, observability, and platform work.",
+      skills: [this.pytorch, this.numpy, this.langgraph, this.mcp, this.aws, this.docker, this.kubernetes, this.datadog, this.ansible, this.aws]
+    },
+    {
+      title: "Communication",
+      description: "Languages that support collaboration across teams, users, and international environments.",
+      skills: [this.english, this.portuguese, this.french]
+    }
+  ];
+
   // Community
 
   brasa: CommunityBox = {
     img: "assets/img/community/brasa.JPG",
     title: "President - BRASA UofT",
     date: "September 2018 - April 2023",
-    description: "My journey with BRASA UofT has been a remarkable odyssey of growth and cultural connection. My active role in promoting Brazilian culture was a rewarding experience and a great source of solace that allowed me to stay close to my roots despite being far from home. I'm proud to have increased BRASA UofT's reach within the Greater Toronto Area and across Canada, fostering a vibrant network of Brazilians. The growth I've witnessed during my time with BRASA, from 10 participants to over 150, stands as a testament to our collective impact on the organization and the enduring strength of our community."
+    description: "My journey with BRASA UofT has been a remarkable odyssey of growth and cultural connection. My active role in promoting Brazilian culture was a rewarding experience and a great source of solace that allowed me to stay close to my roots despite being far from home. I'm proud to have increased BRASA UofT's reach within the GTA and across Canada, fostering a vibrant network of Brazilians. The growth I've witnessed during my time with BRASA, from 10 participants to 150+, stands as a testament to our collective impact on the organization and the enduring strength of our community."
   };
 
   frosh: CommunityBox = {
