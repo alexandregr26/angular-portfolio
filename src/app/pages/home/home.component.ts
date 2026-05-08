@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { CommunityBox } from '../../_models/CommunityBox';
 import { Skill } from '../../_models/Skill';
 import { ProjectBox } from '../../_models/ProjectBox';
@@ -9,7 +10,30 @@ import { projects } from 'src/app/data/projects';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngAfterViewInit(): void {
+    if (this.route.snapshot.routeConfig?.path === 'contact') {
+      this.scrollToSection('contact');
+      window.history.replaceState(null, '', '/#contact');
+    }
+
+    this.route.fragment.subscribe(fragment => {
+      if (!fragment) {
+        return;
+      }
+
+      this.scrollToSection(fragment);
+    });
+  }
+
+  private scrollToSection(fragment: string): void {
+    setTimeout(() => {
+      document.getElementById(fragment)?.scrollIntoView({ block: 'start' });
+    });
+  }
 
   // Work
   projects = projects;

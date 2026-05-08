@@ -11,7 +11,6 @@ import { CommunityBoxComponent } from './components/community-box/community-box.
 import { SkillComponent } from './components/skill/skill.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProjectBoxComponent } from './components/project-box/project-box.component';
-import { ContactComponent } from './pages/contact/contact.component';
 import { AmazonComponent } from './pages/work/amazon/amazon.component';
 import { ThomsonReutersComponent } from './pages/work/thomson-reuters/thomson-reuters.component';
 import { SplitzComponent } from './pages/work/splitz/splitz.component';
@@ -32,7 +31,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'contact',
-    component: ContactComponent,
+    component: HomeComponent,
     title: 'Contact Me | Alexandre Gouveia Rodrigues'
   },
   {
@@ -46,39 +45,74 @@ const appRoutes: Routes = [
     title: 'Thomson Reuters | Alexandre Gouveia Rodrigues'
   },
   {
-    path: 'work/splitz',
+    path: 'project/splitz',
     component: SplitzComponent,
     title: 'Splitz | Alexandre Gouveia Rodrigues'
   },
   {
-    path: 'work/utat',
+    path: 'project/utat',
     component: UtatComponent,
     title: 'UTAT | Alexandre Gouveia Rodrigues'
   },
   {
-    path: 'work/ece243',
+    path: 'project/ece243',
     component: FpsComponent,
     title: 'FPS | Alexandre Gouveia Rodrigues'
   },
   {
-    path: 'work/ece297',
+    path: 'project/ece297',
     component: MappaComponent,
     title: 'Mappa | Alexandre Gouveia Rodrigues'
   },
   {
-    path: 'work/ece344',
+    path: 'project/ece344',
     component: Ece344Component,
     title: 'ECE344 | Alexandre Gouveia Rodrigues'
   },
   {
-    path: 'work/capstone',
+    path: 'project/capstone',
     component: CapstoneComponent,
     title: 'Capstone | Alexandre Gouveia Rodrigues'
   },
   {
-    path: 'work/aps360',
+    path: 'project/aps360',
     component: Aps360Component,
     title: 'Song Popularity Predictor | Alexandre Gouveia Rodrigues'
+  },
+  {
+    path: 'work/splitz',
+    redirectTo: 'project/splitz',
+    pathMatch: 'full'
+  },
+  {
+    path: 'work/utat',
+    redirectTo: 'project/utat',
+    pathMatch: 'full'
+  },
+  {
+    path: 'work/ece243',
+    redirectTo: 'project/ece243',
+    pathMatch: 'full'
+  },
+  {
+    path: 'work/ece297',
+    redirectTo: 'project/ece297',
+    pathMatch: 'full'
+  },
+  {
+    path: 'work/ece344',
+    redirectTo: 'project/ece344',
+    pathMatch: 'full'
+  },
+  {
+    path: 'work/capstone',
+    redirectTo: 'project/capstone',
+    pathMatch: 'full'
+  },
+  {
+    path: 'work/aps360',
+    redirectTo: 'project/aps360',
+    pathMatch: 'full'
   }
 ]
 
@@ -92,7 +126,6 @@ const appRoutes: Routes = [
     SkillComponent,
     FooterComponent,
     ProjectBoxComponent,
-    ContactComponent,
     AmazonComponent,
     ThomsonReutersComponent,
     SplitzComponent,
@@ -108,7 +141,10 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, {
+      anchorScrolling: 'enabled',
+      scrollPositionRestoration: 'enabled'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

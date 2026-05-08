@@ -11,31 +11,31 @@ export const projects: { [key: string]: ProjectBox } = {
         title: "Low Power Sensor",
         company: "UTAT",
         img: "assets/img/experience/UTAT/banner.png",
-        route: "/work/utat"
+        route: "/project/utat"
     },
     ece243: {
         title: "FPS Game",
         company: "ECE243",
         img: "assets/img/experience/ECE243/banner.png",
-        route: "/work/ece243"
+        route: "/project/ece243"
     },
     splitz: {
         title: "Chrome Browser Extension",
         company: "Personal Project",
         img: "assets/img/experience/Splitz/banner.png",
-        route: "/work/splitz"
+        route: "/project/splitz"
     },
     ece297: {
         title: "Geographic Information System Application",
         company: "ECE297",
         img: "assets/img/experience/ECE297/banner.png",
-        route: "/work/ece297"
+        route: "/project/ece297"
     },
     blockchain: {
         title: "Blockchain for Electronic Health Records in Ontario",
         company: "UofT Engineering Capstone",
         img: "assets/img/experience/Capstone/header.png",
-        route: "/work/capstone"
+        route: "/project/capstone"
     },
     tr: {
         title: "Software Developer Intern",
@@ -53,12 +53,12 @@ export const projects: { [key: string]: ProjectBox } = {
         title: "Multithreaded Web Server",
         company: "ECE344",
         img: "assets/img/experience/ECE344/banner.png",
-        route: "/work/ece344"
+        route: "/project/ece344"
     },
     aps360: {
         title: "Deep Learning Model for Predicting Song Popularity",
         company: "APS360",
         img: "assets/img/experience/Spotify/black-banner.png",
-        route: "/work/aps360"
+        route: "/project/aps360"
     }
 };

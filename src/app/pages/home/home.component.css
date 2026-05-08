@@ -6,6 +6,40 @@
     padding-top: 26px;
 }
 
+#contact .box {
+    padding-top: 46px;
+    padding-bottom: 34px;
+}
+
+.closing-signature {
+    padding: 24px 0 44px;
+}
+
+.closing-signature blockquote {
+    max-width: 720px;
+    margin: 0 auto;
+    padding-top: 22px;
+    border-top: 1px solid rgba(24, 24, 27, 0.075);
+    text-align: center;
+}
+
+.closing-signature p {
+    margin: 0;
+    color: rgba(21, 21, 21, 0.68);
+    font-size: clamp(1rem, 1.25vw, 1.16rem);
+    font-weight: 450;
+    line-height: 1.65;
+}
+
+.closing-signature cite {
+    display: block;
+    margin-top: 8px;
+    color: var(--color-muted);
+    font-size: 0.86rem;
+    font-style: normal;
+    font-weight: 600;
+}
+
 .about-panel {
     padding: 28px;
     border-radius: 24px;
@@ -216,7 +250,8 @@
     }
 
     .featured-project-grid,
-    .project-card-grid {
+    .project-card-grid,
+    .contact-info-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -241,7 +276,8 @@
 
     .experience-meta-grid,
     .featured-project-grid,
-    .project-card-grid {
+    .project-card-grid,
+    .contact-info-grid {
         grid-template-columns: 1fr;
     }
 
