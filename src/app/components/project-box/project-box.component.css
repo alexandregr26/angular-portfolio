@@ -36,6 +36,22 @@
     color: var(--color-ink-soft);
 }
 
+.project-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.project-labels span {
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.62);
+    color: var(--color-ink);
+    font-size: 0.8rem;
+    font-weight: 650;
+}
+
 .subtitle {
     padding: 0;
     margin: 0;

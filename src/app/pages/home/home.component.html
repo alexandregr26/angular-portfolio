@@ -7,9 +7,9 @@
             <p class="section-intro">Technology shapes how people think, work, and interact with the world. I care about building systems that do that thoughtfully.</p>
         </div>
         <div class="about-panel">
-            <p>My background sits across engineering, business, and artificial intelligence. I studied Electrical and Computer Engineering at the University of Toronto and have worked at Amazon, Thomson Reuters, and Coinbase, where I’ve been exposed to production infrastructure, product engineering, financial technology, and user-facing software.</p>
-            <p>What ties those experiences together is the kind of engineer I want to become: someone who can build deeply, think clearly, and communicate across technical and human contexts. I care about systems that are reliable under pressure, products that feel intentional, and technology worthy of the people who depend on them.</p>
-            <p>The work I want to do is simple to say and difficult to execute: build systems that matter. To me, good engineering is not only about performance or scale, but also judgment, elegance, and the ability to create technology people genuinely trust and enjoy using. That is the standard I build toward.</p>
+            <p>I studied Electrical and Computer Engineering at the University of Toronto, with a minor in Business and Artificial Intelligence. Since then, my work has moved through product, platform, and infrastructure — from financial technology and operational systems at Coinbase, to developer tooling at Thomson Reuters, to customer-facing systems at Amazon.</p>
+            <p>What interests me is not software in the abstract. It is software as part of something larger: the systems people use to work, decide, trust, and move through complexity. Software is never just software. It lives inside the world, and at its best, it makes that world clearer, more reliable, and easier to act within. To me, good engineering is not only about performance or scale, but about judgment, elegance, and the ability to create technology people can genuinely trust.</p>
+            <p>That is the standard I care about. I want to build systems that matter — systems whose value is felt beyond the codebase. I am not interested in technology as decoration. I want my work to hold its weight in the world outside it.</p>
         </div>
     </div>
 </section>
@@ -18,7 +18,7 @@
     <div class="container box credibility-box">
         <div class="section-heading">
             <p class="section-eyebrow">Work Experience</p>
-            <p class="section-intro">From financial infrastructure to developer platforms and product interfaces, I’ve worked on systems where reliability, clarity, and execution matter.</p>
+            <p class="section-intro">From blockchain infrastructure to developer platforms and product interfaces, I’ve worked on systems where reliability, clarity, and execution matter.</p>
         </div>
         <div class="experience-list">
             <ng-container *ngFor="let experience of professionalExperiences">
@@ -66,17 +66,16 @@
     <div class="container box credibility-box">
         <div class="section-heading">
             <p class="section-eyebrow">Technical Projects</p>
-            <p class="section-intro">A curated set of projects showing range across product-facing software, applied machine learning, systems programming, and technical architecture.</p>
+            <p class="section-intro">A collection of projects shaped by curiosity and the pursuit of creative, practical solutions to complex technical problems.</p>
         </div>
         <div class="featured-project-grid">
             <a *ngFor="let project of featuredProjects" [routerLink]="project.route" class="featured-project-card liquid-card" (pointermove)="moveLiquidGlass($event)" (pointerleave)="resetLiquidGlass($event)">
                 <div class="featured-project-image" [style.background-image]="'url(' + project.img + ')'"></div>
                 <div class="featured-project-content">
-                    <p>{{project.context}}</p>
                     <h2>{{project.title}}</h2>
                     <span>{{project.summary}}</span>
-                    <div class="credibility-tags">
-                        <span *ngFor="let tech of project.technologies">{{tech}}</span>
+                    <div class="credibility-tags project-labels" *ngIf="project.labels?.length">
+                        <span *ngFor="let label of project.labels">{{label}}</span>
                     </div>
                 </div>
             </a>
@@ -91,7 +90,7 @@
     <div class="container box credibility-box">
         <div class="section-heading">
             <p class="section-eyebrow">Engineering Toolkit</p>
-            <p class="section-intro">Grouped around practical engineering capability: core systems, product development, AI/data workflows, infrastructure, and communication.</p>
+            <p class="section-intro">A growing toolkit shaped through industry experience, deliberate exploration, and a constant drive to deepen my understanding of modern technology.</p>
         </div>
         <div class="skills-system">
             <div class="skills-cluster" *ngFor="let group of skillGroups">
@@ -111,7 +110,7 @@
     <div class="container box credibility-box">
         <div class="section-heading">
             <p class="section-eyebrow">Community Involvement</p>
-            <p class="section-intro">Community work has shaped how I lead, communicate, and build trust across groups with different backgrounds, goals, and constraints.</p>
+            <p class="section-intro">A large part of who I am was shaped outside the codebase, through communities that taught me of leadership not as a title, but as a responsibility to serve, organize, and contribute to a greater purpose in life.</p>
         </div>
         <div class="community-list">
             <app-community-box [communitybox]="brasa"></app-community-box>

@@ -22,10 +22,10 @@ export class HomeComponent {
       img: this.projects['coinbase'].img,
       logoDesktop: "assets/img/experience/coinbase/logo-desktop.png",
       route: null,
-      date: "Jan 2025 – Present",
-      summary: "Software engineering experience in a high-stakes financial technology environment.",
-      scope: "Product engineering, developer platforms, production infrastructure, and AI-powered operational tooling.",
-      impact: "Built in environments where reliability, clarity, and execution quality matter.",
+      date: "Jan 2025 - Present",
+      summary: "Managing blockchain infrastructure and internal operational systems across a high-stakes financial technology environment.",
+      scope: "Blockchain node infrastructure management for 60+ protocols, LLM-powered operational tooling, and incident response mitigation improvements.",
+      impact: "Improved operational visibility and incident response while strengthening the reliability and scalability of production blockchain infrastructure.",
       technologies: ["Ansible", "AWS", "Datadog", "Docker", "Go", "Kubernetes", "LangGraph", "MCPs", "Python"]
     },
     {
@@ -35,23 +35,23 @@ export class HomeComponent {
       img: this.projects['tr'].img,
       logoDesktop: "assets/img/experience/ThomsonReuters/logo-desktop.png",
       route: this.projects['tr'].route,
-      date: "Sep 2021 – Sep 2022",
-      summary: "Worked across backend APIs, authorization flows, onboarding automation, and responsive interfaces.",
-      scope: "REST APIs, OAuth-oriented identity work, user session management, Angular UI development, and Agile delivery.",
-      impact: "Improved usability, performance, and onboarding workflows across internal and user-facing services.",
+      date: "Sep 2021 - Sep 2022",
+      summary: "Building internal platforms and automation tools to streamlinne onboarding, authorization testing, and developer workflows.",
+      scope: "REST APIs, OAuth-oriented identity work, user session management, full-stack development with ASP.NET Core and Angular, and Agile team delivery.",
+      impact: "Reduced manual operational work and improved the speed, reliability, and usability of internal developer workflows + platform integrations.",
       technologies: ["Angular", "AWS", "C#", "Docker", ".NET", "OAuth", "Swagger"]
     },
     {
       company: "Amazon",
-      role: "Software Engineer Intern",
+      role: "Software Development Engineer Intern",
       type: "Internship",
       img: this.projects['amazon'].img,
       logoDesktop: "assets/img/experience/Amazon/logo-desktop.png",
       route: this.projects['amazon'].route,
-      date: "May 2021 – Aug 2021",
-      summary: "Built a React and Redux web feature for advertisers to visualize campaign performance.",
-      scope: "Frontend feature development, design reviews, UAT, UI testing, and post-launch performance analysis.",
-      impact: "Improved user engagement and conversion rates by 10%, based on the existing case-study writeup.",
+      date: "May 2021 - Aug 2021",
+      summary: "Developing customer-facing mobile web features that helped advertisers interpret campaign performance.",
+      scope: "React and Redux feature development, campaign performance visualization, design reviews, UAT and UI testing, and post-launch performance analysis.",
+      impact: "Delivered a production feature that contributed to a +10% lift in advertiser engagement and conversion on Amazon.",
       technologies: ["Figma", "React", "Redux"]
     }
   ];
@@ -59,21 +59,18 @@ export class HomeComponent {
   featuredProjects = [
     {
       ...this.projects['blockchain'],
-      context: "Capstone · Healthcare systems",
-      summary: "Patient-centric electronic health record sharing with Hyperledger Fabric and encrypted file distribution.",
-      technologies: ["Hyperledger Fabric", "JavaScript", "API design", "Encryption"]
+      summary: "A blockchain-based electronic health record exchange system designed to let healthcare organizations securely share, validate, and access patient records across a permissioned network.",
+      labels: ["Healthcare Systems", "Blockchain Infrastructure"]
     },
     {
       ...this.projects['aps360'],
-      context: "Applied machine learning",
-      summary: "Neural network model for predicting song popularity from audio features and dataset preparation.",
-      technologies: ["PyTorch", "Python", "NumPy", "Data modeling"]
+      summary: "A predictive ML model that evaluated structured audio and metadata features from Spotify to forecast song popularity and identify patterns associated with commercial performance.",
+      labels: ["Applied ML", "Predictive Modeling"]
     },
     {
       ...this.projects['ece297'],
-      context: "GIS application",
-      summary: "A desktop mapping application focused on search, visualization, route interaction, and user-centered design.",
-      technologies: ["C++", "GIS", "UI design", "Algorithms"]
+      summary: "A geospatial mapping system that supported real-time city map exploration, geographic data visualization, and optimized routes through algorithmic pathfinding.",
+      labels: ["Geospatial Software", "Mapping Systems"]
     }
   ];
 
@@ -353,22 +350,22 @@ export class HomeComponent {
   skillGroups = [
     {
       title: "Core Engineering",
-      description: "Languages and systems foundations used to reason about performance, correctness, and architecture.",
+      description: "Foundational tools for understanding how software behaves beneath the surface, from system performance and memory to data, structure, and correctness.",
       skills: [this.assembly, this.c, this.csharp, this.cpp, this.css, this.html, this.javascript, this.postgresql, this.python, this.typescript]
     },
     {
       title: "Application Development",
-      description: "Frameworks and tools for building polished, maintainable web and application experiences.",
-      skills: [this.dotnet, this.angular, this.express, this.figma, this.flask, this.node, this.postman, this.react, this.redux, this.swagger]
+      description: "Frameworks and tools for building applications that are clear, maintainable, and considered from both an engineering and user perspective.",
+      skills: [this.dotnet, this.angular, this.expo, this.express, this.figma, this.flask, this.node, this.postman, this.react, this.redux, this.swagger]
     },
     {
       title: "AI, Data & Infrastructure",
-      description: "Practical tooling for AI workflows, cloud systems, deployment, observability, and platform work.",
+      description: "Technologies I use to build, deploy, and understand modern systems across AI workflows, cloud environments, infrastructure, and operational visibility.",
       skills: [this.ansible, this.aws, this.datadog, this.docker, this.kubernetes, this.langgraph, this.mcp, this.numpy, this.pytorch]
     },
     {
       title: "Communication",
-      description: "Languages that support collaboration across teams, users, and international environments.",
+      description: "Languages that help me work across cultures, teams, and contexts, making collaboration more natural and ideas easier to carry across borders.",
       skills: [this.english, this.french, this.portuguese]
     }
   ];

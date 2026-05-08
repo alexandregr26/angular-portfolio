@@ -1,8 +1,8 @@
 footer{
     margin-top: 40px;
     padding: 26px 0;
-    background: rgba(255, 255, 255, 0.52);
-    border-top: 1px solid rgba(24, 24, 27, 0.08);
+    background: var(--color-ink);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer-inner {
@@ -15,7 +15,7 @@ footer{
 p,
 a{
     margin: 0;
-    color: var(--color-ink-soft);
+    color: rgba(255, 255, 255, 0.72);
     font-size: 0.92rem;
     font-weight: 600;
     text-decoration: none;
@@ -24,11 +24,20 @@ a{
 .footer-links {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 18px;
 }
 
+.footer-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
 a:hover {
-    color: var(--color-ink);
+    color: #ffffff;
 }
 
 @media (max-width: 767px) {

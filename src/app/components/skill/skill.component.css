@@ -1,24 +1,24 @@
 .skill-box {
-    min-height: 42px;
+    min-height: 46px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 11px;
     width: 100%;
-    padding: 10px 13px;
+    padding: 11px 14px;
     border: 1px solid rgba(24, 24, 27, 0.08);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.52);
 }
 
 .skill-icon {
-    width: 20px;
-    max-height: 20px;
+    width: 22px;
+    max-height: 22px;
 }
 
 .mini-title {
     padding: 0;
     margin: 0;
-    font-size: 0.86rem;
+    font-size: 0.9rem;
     line-height: 1.1;
     white-space: nowrap;
 }

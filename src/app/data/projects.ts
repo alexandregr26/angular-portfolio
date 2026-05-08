@@ -20,21 +20,21 @@ export const projects: { [key: string]: ProjectBox } = {
         route: "/work/ece243"
     },
     splitz: {
-        title: "Chrome Extension",
+        title: "Chrome Browser Extension",
         company: "Personal Project",
         img: "assets/img/experience/Splitz/banner.png",
         route: "/work/splitz"
     },
     ece297: {
-        title: "GIS Application",
+        title: "Geographic Information System Application",
         company: "ECE297",
         img: "assets/img/experience/ECE297/banner.png",
         route: "/work/ece297"
     },
     blockchain: {
-        title: "Blockchain Application",
+        title: "Blockchain for Electronic Health Records in Ontario",
         company: "UofT Engineering Capstone",
-        img: "assets/img/experience/Capstone/banner.png",
+        img: "assets/img/experience/Capstone/header.png",
         route: "/work/capstone"
     },
     tr: {
@@ -44,7 +44,7 @@ export const projects: { [key: string]: ProjectBox } = {
         route: "/work/tr"
     },
     amazon: {
-        title: "Software Engineer Intern",
+        title: "Software Development Engineer Intern",
         company: "Amazon",
         img: "assets/img/experience/Amazon/blue.png",
         route: "/work/amazon"
@@ -56,7 +56,7 @@ export const projects: { [key: string]: ProjectBox } = {
         route: "/work/ece344"
     },
     aps360: {
-        title: "Song Popularity Predictor",
+        title: "Deep Learning Model for Predicting Song Popularity",
         company: "APS360",
         img: "assets/img/experience/Spotify/black-banner.png",
         route: "/work/aps360"

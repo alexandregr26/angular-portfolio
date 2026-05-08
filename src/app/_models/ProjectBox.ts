@@ -3,4 +3,5 @@ export interface ProjectBox {
     title: string;
     company: string;
     route: string;
+    labels?: string[];
 }
