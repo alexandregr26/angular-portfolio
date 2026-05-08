@@ -41,7 +41,7 @@ const appRoutes: Routes = [
     title: 'Amazon | Alexandre Gouveia Rodrigues'
   },
   {
-    path: 'work/tr',
+    path: 'work/thomson-reuters',
     component: ThomsonReutersComponent,
     title: 'Thomson Reuters | Alexandre Gouveia Rodrigues'
   },
