@@ -55,14 +55,7 @@
                 <p class="section-intro">More projects and professional experiences across infrastructure, product systems, applied AI, and software engineering.</p>
             </div>
             <div class="related-work-grid">
-                <app-project-box [projectbox]="projects['blockchain']"></app-project-box>
-                <app-project-box [projectbox]="projects['tr']"></app-project-box>
-                <app-project-box [projectbox]="projects['aps360']"></app-project-box>
-                <app-project-box [projectbox]="projects['ece297']"></app-project-box>
-                <app-project-box [projectbox]="projects['splitz']"></app-project-box>
-                <app-project-box [projectbox]="projects['ece344']"></app-project-box>
-                <app-project-box [projectbox]="projects['ece243']"></app-project-box>
-                <app-project-box [projectbox]="projects['utat']"></app-project-box>
+                <app-project-box *ngFor="let project of otherWorks" [projectbox]="project"></app-project-box>
             </div>
         </div>
     </section>

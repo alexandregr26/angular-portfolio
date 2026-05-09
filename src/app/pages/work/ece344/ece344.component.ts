@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { WorkHeader } from '../../../_models/WorkHeader';
-import { projects } from 'src/app/data/projects';
+import { getOtherWorks, projects } from 'src/app/data/projects';
 
 @Component({
   selector: 'app-ece344',
@@ -14,5 +14,6 @@ export class Ece344Component {
   };
 
   projects = projects;
+  otherWorks = getOtherWorks('ece344');
 
 }

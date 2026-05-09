@@ -62,3 +62,23 @@ export const projects: { [key: string]: ProjectBox } = {
         route: "/project/aps360"
     }
 };
+
+export const orderedOtherWorkKeys = [
+    'coinbase',
+    'tr',
+    'amazon',
+    'blockchain',
+    'aps360',
+    'ece297',
+    'ece344',
+    'splitz',
+    'utat',
+    'ece243'
+];
+
+export function getOtherWorks(currentKey: string): ProjectBox[] {
+    return orderedOtherWorkKeys
+        .filter(key => key !== currentKey)
+        .slice(0, 8)
+        .map(key => projects[key]);
+}

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Skill } from 'src/app/_models/Skill';
 import { WorkHeader } from 'src/app/_models/WorkHeader';
-import { projects } from 'src/app/data/projects';
+import { getOtherWorks, projects } from 'src/app/data/projects';
 
 @Component({
   selector: 'app-coinbase',
@@ -27,5 +27,6 @@ export class CoinbaseComponent {
   ];
 
   projects = projects;
+  otherWorks = getOtherWorks('coinbase');
 
 }

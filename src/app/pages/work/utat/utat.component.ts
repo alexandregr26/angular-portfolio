@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { WorkHeader } from '../../../_models/WorkHeader';
-import { projects } from 'src/app/data/projects';
+import { getOtherWorks, projects } from 'src/app/data/projects';
 
 @Component({
   selector: 'app-utat',
@@ -14,5 +14,6 @@ export class UtatComponent {
   };
 
   projects = projects;
+  otherWorks = getOtherWorks('utat');
 
 }

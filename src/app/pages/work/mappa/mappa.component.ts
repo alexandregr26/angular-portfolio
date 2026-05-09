@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { projects } from 'src/app/data/projects';
+import { getOtherWorks, projects } from 'src/app/data/projects';
 
 @Component({
   selector: 'app-mappa',
@@ -9,5 +9,6 @@ import { projects } from 'src/app/data/projects';
 export class MappaComponent {
 
   projects = projects;
+  otherWorks = getOtherWorks('ece297');
 
 }

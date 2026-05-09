@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { projects } from 'src/app/data/projects';
+import { getOtherWorks, projects } from 'src/app/data/projects';
 
 @Component({
   selector: 'app-portfolio',
@@ -9,5 +9,6 @@ import { projects } from 'src/app/data/projects';
 export class PortfolioComponent {
 
   projects = projects;
+  otherWorks = getOtherWorks('portfolio');
 
 }
