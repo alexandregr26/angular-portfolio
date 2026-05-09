@@ -45,7 +45,7 @@ export class HomeComponent implements AfterViewInit {
       type: "Professional experience",
       img: this.projects['coinbase'].img,
       logoDesktop: "assets/img/experience/coinbase/logo-desktop.png",
-      route: null,
+      route: this.projects['coinbase'].route,
       date: "Jan 2025 - Present",
       summary: "Managing blockchain infrastructure and internal operational systems across a high-stakes financial technology environment.",
       scope: "Blockchain node infrastructure management for 60+ protocols, LLM-powered operational tooling, and incident response mitigation improvements.",

@@ -20,14 +20,14 @@
 .work-banner {
     height: 340px;
     margin: -34px -34px 0;
-    background: #232f3f;
+    background: #0052ff;
     overflow: hidden;
 }
 
 .work-banner img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .work-hero-copy {
@@ -57,10 +57,10 @@
 }
 
 .work-hero-copy h1 {
-    max-width: 980px;
+    max-width: 900px;
     margin: 0 auto;
     color: var(--color-ink);
-    font-size: clamp(2.75rem, 3.15vw, 3.35rem);
+    font-size: clamp(3.1rem, 4vw, 4.15rem);
     font-weight: 780;
     line-height: 0.98;
     letter-spacing: 0;
@@ -144,7 +144,7 @@
     }
 
     .work-hero-copy h1 {
-        font-size: 2.35rem;
+        font-size: 2.45rem;
         line-height: 1.04;
         max-width: 12ch;
     }

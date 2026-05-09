@@ -1,0 +1,64 @@
+<main class="work-page">
+    <section class="work-hero">
+        <div class="container">
+            <div class="work-hero-copy">
+                <div class="work-banner">
+                    <img [src]="header.img" alt="Coinbase">
+                </div>
+                <div class="work-title-content">
+                    <div class="work-title-topline">
+                        <p class="work-eyebrow">Coinbase</p>
+                        <p class="work-date">Jan 2025 - Present</p>
+                    </div>
+                    <h1>Software Engineer</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="work-content-section">
+        <div class="container">
+            <article class="summary-panel">
+                <p class="section-eyebrow">Position Summary</p>
+                <p class="job-description">As a Software Engineer at Coinbase, I worked on blockchain infrastructure, internal engineering tools, and AI-assisted operational systems in a large-scale financial technology environment. My role sat close to the production layer of the business, where software needed to be reliable, observable, and able to support systems that people depended on continuously.</p>
+                <p class="job-description">A significant part of my work involved supporting node operations across multiple blockchain protocols. This included client upgrades, security patches, deployment workflow improvements, and managing network-level changes, with a continued focus on high availability and production readiness. Through this work, I gained deeper experience with Docker, Helm, Kubernetes, and Datadog, while learning the practical discipline required to operate distributed services where downtime, misconfiguration, or delayed response can carry meaningful consequences.</p>
+                <p class="job-description">AI also became a defining part of my engineering work for the first time at Coinbase. I used AI tools to move faster through development, debugging, system exploration, and implementation planning, but the experience also taught me their limits. AI was most valuable when guided by someone who understood the architecture, constraints, failure modes, and operational context of the system. It helped me become a faster and more productive engineer, but only because I learned how to direct it with technical judgment rather than treat it as a complete substitute for software development.</p>
+                <p class="job-description">That perspective shaped one of my main projects: an LLM-powered operational knowledge system that unified protocol, incident, and infrastructure data from multiple sources into a single interface for engineers. I worked across MCP-based integrations, REST API endpoints, scheduled ingestion workflows, a React frontend, and LangGraph orchestration to make operational knowledge easier to access when it mattered most. I also built internal incident response tooling that used Datadog integrations to connect infrastructure metrics, service health, and alerts into a clearer investigation workflow, reducing the time on-call engineers spent moving between disconnected systems and helping them understand production issues faster.</p>
+                <p class="job-description">Together, these projects taught me that operational tooling is most valuable when it reduces uncertainty. The best internal systems do not simply expose more data; they help engineers find the right context, understand what matters, and act with greater confidence when production systems are under pressure.</p>
+                <p class="job-description">Reflecting on my time at Coinbase, one of the clearest lessons I took away is that AI is now part of the reality of software engineering. It can accelerate development, improve debugging, and help engineers move through unfamiliar systems faster, but only when it is guided by someone with the technical judgment to question, verify, and direct its output. My experience taught me how to use AI as a serious engineering tool rather than a shortcut: something that can increase speed, but still depends on fundamentals, context, and accountability. I left Coinbase with a stronger foundation in production infrastructure, a more disciplined approach to building reliable systems, and a clearer understanding of how to use AI to become a more capable engineer — not a less necessary one.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="technologies-section">
+        <div class="container">
+            <div class="technologies-panel">
+                <div class="section-heading">
+                    <p class="section-eyebrow">Technologies Used:</p>
+                </div>
+                <div class="technology-grid">
+                    <app-skill *ngFor="let tool of technologies" [skill]="tool"></app-skill>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-work-section">
+        <div class="container">
+            <div class="section-heading">
+                <p class="section-eyebrow">Other Works</p>
+                <p class="section-intro">More projects and professional experiences across infrastructure, product systems, applied AI, and software engineering.</p>
+            </div>
+            <div class="related-work-grid">
+                <app-project-box [projectbox]="projects['tr']"></app-project-box>
+                <app-project-box [projectbox]="projects['amazon']"></app-project-box>
+                <app-project-box [projectbox]="projects['blockchain']"></app-project-box>
+                <app-project-box [projectbox]="projects['aps360']"></app-project-box>
+                <app-project-box [projectbox]="projects['ece297']"></app-project-box>
+                <app-project-box [projectbox]="projects['splitz']"></app-project-box>
+                <app-project-box [projectbox]="projects['ece344']"></app-project-box>
+                <app-project-box [projectbox]="projects['utat']"></app-project-box>
+            </div>
+        </div>
+    </section>
+</main>

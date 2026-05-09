@@ -11,6 +11,7 @@ import { CommunityBoxComponent } from './components/community-box/community-box.
 import { SkillComponent } from './components/skill/skill.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProjectBoxComponent } from './components/project-box/project-box.component';
+import { CoinbaseComponent } from './pages/work/coinbase/coinbase.component';
 import { AmazonComponent } from './pages/work/amazon/amazon.component';
 import { ThomsonReutersComponent } from './pages/work/thomson-reuters/thomson-reuters.component';
 import { SplitzComponent } from './pages/work/splitz/splitz.component';
@@ -33,6 +34,11 @@ const appRoutes: Routes = [
     path: 'contact',
     component: HomeComponent,
     title: 'Contact Me | Alexandre Gouveia Rodrigues'
+  },
+  {
+    path: 'work/coinbase',
+    component: CoinbaseComponent,
+    title: 'Coinbase | Alexandre Gouveia Rodrigues'
   },
   {
     path: 'work/amazon',
@@ -126,6 +132,7 @@ const appRoutes: Routes = [
     SkillComponent,
     FooterComponent,
     ProjectBoxComponent,
+    CoinbaseComponent,
     AmazonComponent,
     ThomsonReutersComponent,
     SplitzComponent,
