@@ -1,62 +1,91 @@
-<!-- Header -->
-<section class="work-header-section">
-    <app-work-header [header]="header"></app-work-header>
-</section>
-<!-- Summary -->
-<section>
-    <div class="container box">
-        <h1 class="title">Splitz</h1>
-        <h1 class="subtitle">Project Description</h1>
-        <p class="project-description">In my quest for a more organized browsing experience, I found myself frustrated
-            with
-            the clutter of disorganized, open tabs in Google Chrome. Unable to find a suitable solution, I decided to
-            take matters into my own hands and created Splitz, a Chrome extension designed to help users manage tabs
-            efficiently and have a better experience browsing the Internet. Creating Splitz wasn't just about tidying up
-            my tabs, however; it was also about my commitment to continual learning and professional growth.
-            Independently exploring new technologies and expanding my skill set, I poured my enthusiasm into crafting a
-            tool that uncovered a whole new world of possibilities in web development. As my first personal project,
-            this experience fundamentally changed how I viewed software engineering, making me realize the endless
-            potential that lies in creating things that seamlessly work together on the web. The eventual, successful
-            publication of Splitz on the Chrome Web Store marks not just a project but a milestone in my journey as a
-            software engineer, reflecting my dedication to innovation and problem-solving.</p>
-        <div class="row">
-            <div class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <h1 class="subtitle">Features</h1>
-                <ul>
-                    <li>Create categories to organize your tabs</li>
-                    <li>Drag and drop tabs to the desired category</li>
-                    <li>Quickly switch between categories using keyboard shortcuts</li>
-                    <li>Add and remove tabs</li>
-                    <li>Light & Dark Modes</li>
-                </ul>
-                <div class="splitz-button">
-                    <a target="_blank"
-                        href="https://chrome.google.com/webstore/detail/splitz/kbepjlbbljaidojicmmjafnolfipokmf">
-                        <button class="action-button">Download Splitz</button>
+<main class="splitz-page">
+    <section class="splitz-hero">
+        <div class="container">
+            <div class="splitz-hero-panel">
+                <div class="splitz-hero-copy">
+                    <p class="project-kicker">PROJECT SHOWCASE</p>
+                    <img class="splitz-title-image" src="assets/img/experience/Splitz/header.png" alt="Splitz">
+                    <p class="splitz-tagline">Chrome Browser Extension</p>
+                    <p class="splitz-hero-text">A minimal Google Chrome extension that helps users manage tabs efficiently and reduce browsing clutter.</p>
+                    <a class="splitz-link" target="_blank" rel="noopener noreferrer" href="https://chrome.google.com/webstore/detail/splitz/kbepjlbbljaidojicmmjafnolfipokmf">
+                        <lucide-icon [img]="downloadIcon" [size]="18" [strokeWidth]="2"></lucide-icon>
+                        Download Splitz
                     </a>
                 </div>
-            </div>
-            <div id="splitz-design" class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <img src="assets/img/experience/Splitz/Screenshot2ResizedCropped.png" alt="">
-            </div>
-        </div>
-        <h1 class="subtitle">Tools Used</h1>
-        <div class="tools">
-            <div class="tool">CSS</div>
-            <div class="tool">GIT</div>
-            <div class="tool">HTML</div>
-            <div class="tool">JavaScript</div>
-        </div>
-    </div>
-</section>
-<!-- Other Works -->
-<section>
-    <div class="container box">
-        <h1 class="title">Other Works</h1>
-        <div class="row">
-            <div *ngFor="let project of otherWorks" id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="project"></app-project-box>
+                <div class="splitz-hero-preview">
+                    <img src="assets/img/experience/Splitz/Screenshot2ResizedCropped.png" alt="Splitz extension interface">
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section class="splitz-content-section">
+        <div class="container">
+            <div class="splitz-body">
+                <section class="splitz-section splitz-overview">
+                    <div class="splitz-description">
+                        <p class="section-eyebrow">PROJECT DESCRIPTION</p>
+                        <p>In my quest for a more organized browsing experience, I found myself frustrated with the clutter of disorganized, open tabs in Google Chrome. Unable to find a suitable solution, I decided to take matters into my own hands and created Splitz, a Chrome extension designed to help users manage tabs efficiently and have a better experience browsing the Internet.</p>
+                        <p>Creating Splitz wasn't just about tidying up my tabs, however; it was also about my commitment to continual learning and professional growth. As my first personal project, this experience fundamentally changed how I viewed software engineering, making me realize the endless potential that lies in creating things that seamlessly work together on the web.</p>
+                    </div>
+                    <div class="splitz-features">
+                        <div class="section-heading">
+                            <p class="section-eyebrow">FEATURES</p>
+                            <p class="section-intro">Core browser workflows supported by the extension.</p>
+                        </div>
+                        <div class="feature-grid">
+                            <article *ngFor="let feature of features">
+                                <span class="feature-icon">
+                                    <lucide-icon [img]="feature.icon" [size]="21" [strokeWidth]="1.9"></lucide-icon>
+                                </span>
+                                <h2>{{ feature.title }}</h2>
+                                <p>{{ feature.body }}</p>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <section class="splitz-why-section">
+        <div class="container">
+            <article class="splitz-why-card">
+                <span class="why-icon">
+                    <lucide-icon [img]="whyIcon" [size]="30" [strokeWidth]="1.9"></lucide-icon>
+                </span>
+                <div>
+                    <h2>Why I Built Splitz</h2>
+                    <p>I built Splitz to solve a problem I faced every day: too many open tabs and no good way to organize them.</p>
+                    <p>This project taught me how powerful small tools can be when they solve real problems. It was my first personal project, and publishing it on the Chrome Web Store was a major milestone in my journey as a developer.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="technologies-section">
+        <div class="container">
+            <div class="technologies-panel">
+                <div class="section-heading compact-heading">
+                    <p class="section-eyebrow">TECHNICAL STACK</p>
+                    <p class="section-intro">Technologies and tools used to build and ship the extension.</p>
+                </div>
+                <div class="technology-grid">
+                    <app-skill *ngFor="let tool of technologies" [skill]="tool"></app-skill>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-work-section">
+        <div class="container">
+            <div class="section-heading">
+                <p class="section-eyebrow">OTHER WORKS</p>
+                <p class="section-intro">More projects and professional experiences across infrastructure, product systems, applied AI, and software engineering.</p>
+            </div>
+            <div class="related-work-grid">
+                <app-project-box *ngFor="let project of otherWorks" [projectbox]="project"></app-project-box>
+            </div>
+        </div>
+    </section>
+</main>

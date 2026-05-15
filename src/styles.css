@@ -431,6 +431,84 @@ body:has(app-capstone) .related-work-grid {
     gap: 16px;
 }
 
+body:has(app-splitz) .splitz-why-section {
+    padding: 30px 0;
+}
+
+body:has(app-splitz) .splitz-why-card {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 18px;
+    align-items: start;
+    padding: 26px;
+    border: 1px solid rgba(24, 24, 27, 0.07);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(18px) saturate(150%);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+}
+
+body:has(app-splitz) .why-icon {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: #272727;
+    color: #f6d365;
+}
+
+body:has(app-splitz) .splitz-why-card h2 {
+    align-self: center;
+    margin: 0;
+    color: var(--color-ink);
+    font-size: 1.16rem;
+    font-weight: 760;
+}
+
+body:has(app-splitz) .splitz-why-card p {
+    grid-column: 1 / -1;
+    margin: 0;
+    color: var(--color-ink-soft);
+    font-size: 1rem;
+    line-height: 1.58;
+}
+
+body:has(app-splitz) .splitz-why-card > div {
+    display: contents;
+}
+
+body:has(app-splitz) .splitz-why-card p:first-of-type {
+    margin-top: 2px;
+}
+
+@media (max-width: 767px) {
+    body:has(app-splitz) .splitz-hero-copy {
+        width: 100%;
+        max-width: none;
+        justify-self: center;
+        text-align: center;
+    }
+
+    body:has(app-splitz) .splitz-title-image,
+    body:has(app-splitz) .splitz-hero-text {
+        margin-inline: auto;
+    }
+
+    body:has(app-splitz) .feature-grid h2 {
+        min-height: 42px;
+        display: flex;
+        align-items: center;
+    }
+
+    body:has(app-splitz) .splitz-why-card {
+        grid-template-columns: 60px 1fr;
+        padding: 24px;
+    }
+
+}
+
 body:has(app-capstone) .blockchain-section {
     padding: 30px 0;
 }
