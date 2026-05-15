@@ -228,12 +228,6 @@ main {
     border-radius: 18px
 }
 
-.technology-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
-    gap: 13px
-}
-
 @media(max-width:991px) {
     .hero-panel {
         padding: 32px;
@@ -289,6 +283,19 @@ main {
 
     .hero-panel {
         padding: 24px
+    }
+
+    .hero-flow {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden
+    }
+
+    .flow-step {
+        min-width: 0;
+        overflow: visible
     }
 
     .hero-copy h1 {
