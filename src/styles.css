@@ -404,3 +404,217 @@ a {
         font-size: 2rem;
     }
 }
+
+body:has(app-capstone) header .navbar {
+    background: #fff !important;
+    border-color: #fff;
+}
+
+body:has(app-capstone) .technologies-section,
+body:has(app-capstone) .related-work-section {
+    padding: 30px 0;
+}
+
+body:has(app-capstone) .technologies-panel {
+    padding: 34px;
+    border-radius: 28px;
+    border: 1px solid rgba(24, 24, 27, .07);
+    background: rgba(255, 255, 255, .72);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(18px) saturate(150%);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+}
+
+body:has(app-capstone) .related-work-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+body:has(app-capstone) .blockchain-section {
+    padding: 30px 0;
+}
+
+body:has(app-capstone) .blockchain-intro {
+    max-width: none;
+    margin: 0 0 30px;
+    color: var(--color-ink-soft);
+    font-size: 1.02rem;
+    line-height: 1.72;
+}
+
+body:has(app-capstone) .blockchain-reasons {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 50px minmax(0, 1fr) 50px minmax(0, 1fr);
+    align-items: center;
+    gap: 16px;
+}
+
+body:has(app-capstone) .blockchain-card {
+    min-height: 250px;
+    padding: 26px;
+    border: 1px solid rgba(24, 24, 27, .12);
+    border-radius: 22px;
+    background: #fff;
+}
+
+body:has(app-capstone) .blockchain-card-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+body:has(app-capstone) .blockchain-card h2 {
+    margin: 0;
+    color: var(--color-ink);
+    font-size: 1.12rem;
+    font-weight: 760;
+}
+
+body:has(app-capstone) .blockchain-card p {
+    margin: 0;
+    color: var(--color-ink-soft);
+    line-height: 1.72;
+}
+
+body:has(app-capstone) .blockchain-card .icon-well {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: rgba(7, 81, 61, .08);
+    color: #07513d;
+}
+
+body:has(app-capstone) .blockchain-connector {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    color: #08714f;
+}
+
+body:has(app-capstone) .blockchain-connector span {
+    border-top: 1px dashed rgba(8, 113, 79, .55);
+}
+
+body:has(app-capstone) .hero-flow {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 670px;
+    margin-top: 24px;
+}
+
+body:has(app-capstone) .flow-step:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 44px;
+    right: 28px;
+    top: 17px;
+    border-top: 2px dashed rgba(115, 229, 173, .78);
+}
+
+body:has(app-capstone) .flow-step {
+    position: relative;
+    z-index: 1;
+    padding-right: 18px;
+    color: #eefcf5;
+}
+
+body:has(app-capstone) .flow-step:not(:last-child):after {
+    content: '›';
+    position: absolute;
+    top: 4px;
+    right: 23px;
+    color: rgba(115, 229, 173, .94); font-weight: 800;
+}
+
+body:has(app-capstone) .flow-step .icon-well {
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    background: rgba(115, 229, 173, .14);
+    color: #8df2bd;
+}
+
+body:has(app-capstone) .flow-step h2 {
+    margin: 10px 0 4px;
+    font-size: .96rem;
+    font-weight: 740;
+}
+
+body:has(app-capstone) .flow-step p {
+    max-width: 128px;
+    margin: 0;
+    color: rgba(236, 253, 245, .68);
+    font-size: .78rem;
+    line-height: 1.35;
+}
+
+body:has(app-capstone) .hero-map-mobile {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    body:has(app-capstone) .related-work-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    body:has(app-capstone) .hero-panel {
+        display: flex;
+        flex-direction: column;
+    }
+
+    body:has(app-capstone) .blockchain-reasons {
+        grid-template-columns: 1fr;
+    }
+
+    body:has(app-capstone) .blockchain-connector {
+        display: none;
+    }
+
+    body:has(app-capstone) .hero-map-mobile {
+        display: block;
+        min-height: 300px;
+        margin: 50px 0 10px;
+    }
+
+    body:has(app-capstone) .hero-flow {
+        grid-template-columns: repeat(4, minmax(112px, 1fr));
+        gap: 0;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        padding-bottom: 4px;
+    }
+
+    body:has(app-capstone) .flow-step {
+        min-width: 112px;
+    }
+
+    body:has(app-capstone) .flow-step:not(:last-child)::before {
+        left: 44px;
+        right: 20px;
+        display: block;
+    }
+
+    body:has(app-capstone) .flow-step:not(:last-child):after {
+        right: 17px;
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    body:has(app-capstone) .blockchain-card {
+        min-height: auto;
+        padding: 22px;
+    }
+
+    body:has(app-capstone) .technologies-panel {
+        padding: 24px;
+    }
+
+    body:has(app-capstone) .related-work-grid {
+        grid-template-columns: 1fr;
+    }
+}

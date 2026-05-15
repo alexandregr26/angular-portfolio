@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { LucideAngularModule } from 'lucide-angular';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -148,6 +149,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    LucideAngularModule,
     RouterModule.forRoot(appRoutes, {
       anchorScrolling: 'enabled',
       scrollPositionRestoration: 'enabled'

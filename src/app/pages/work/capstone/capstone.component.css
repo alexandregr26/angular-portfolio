@@ -1,16 +1,311 @@
-.work-header-section {
-    background-color: #095e41;
+main {
+    background: transparent
 }
 
-li {
-    font-weight: bold;
+.project-hero {
+    padding: 62px 0 0
 }
 
-img {
-    max-width: 100%;
+.project-section {
+    padding: 60px 0 42px
 }
 
-#capstone-team {
-    max-width: 75%;
-    border-radius:12px; 
+.hero-panel {
+    position: relative;
+    overflow: hidden;
+    padding: 44px 34px;
+    border-radius: 32px;
+    background: linear-gradient(90deg,
+            rgba(0, 28, 24, .95) 0%,
+            rgba(1, 60, 50, .42) 48%,
+            rgba(1, 60, 50, .05) 100%), url(/assets/img/experience/Capstone/hero-ontario-background.png) 99% center/cover;
+    color: #fff
+}
+
+.hero-copy h1 {
+    margin: 6px 0 0;
+    font-size: clamp(2.7rem, 4.05vw, 4.25rem);
+    line-height: .95
+}
+
+.hero-tagline {
+    margin: 14px 0 0;
+    color: #73e5ad;
+    font-size: clamp(1.08rem, 1.28vw, 1.3rem);
+    font-weight: 750
+}
+
+.hero-body {
+    max-width: 545px;
+    font-size: 1.04rem;
+    margin: 10px 0 0;
+    color: #d7eee5
+}
+
+.hero-support {
+    position: absolute;
+    right: 26px;
+    top: 42px;
+    width: 188px;
+    padding: 13px;
+    border: 1px solid #65dca34a;
+    border-radius: 18px;
+    background: #022d2548
+}
+
+.hero-support h2 {
+    margin: 0 0 5px;
+    text-align: center;
+    font-size: 1.04rem;
+    font-weight: 820
+}
+
+.hero-support p {
+    margin: 0
+}
+
+.icon-well {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: #06432f14;
+    color: #07513d
+}
+
+.project-body {
+    padding: 34px;
+    border-radius: 34px;
+    background: #fff
+}
+
+.body-section {
+    padding: 30px 0;
+    border-bottom: 1px solid #1b1b1f12
+}
+
+.body-section:first-child {
+    padding-top: 0
+}
+
+.overview-card {
+    display: grid;
+    grid-template-columns: .26fr .74fr;
+    align-items: stretch
+}
+
+.overview-copy {
+    padding-right: 26px;
+    border-right: 1px solid #1b1b1f12
+}
+
+.overview-copy,
+.problem-area {
+    display: flex;
+    flex-direction: column
+}
+
+.problem-area {
+    padding-left: 26px
+}
+
+.problem-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px
+}
+
+.problem-list div,
+.module-strip article {
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 8px 12px
+}
+
+.problem-list div {
+    padding: 16px;
+    border: 1px solid #1b1b1f10;
+    border-radius: 20px
+}
+
+.problem-list h2,
+.module-strip h2,
+.contribution-list h2 {
+    margin: 7px 0 0;
+    font-size: 1rem
+}
+
+.problem-list p,
+.module-strip p {
+    grid-column: 1/-1
+}
+
+.problem-list p,
+.module-strip p,
+.contribution-list p,
+.blockchain-section p,
+.overview-copy p {
+    color: #3f3f46
+}
+
+.architecture-card img {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0 18px;
+    border: 1px solid #1b1b1f14;
+    border-radius: 22px
+}
+
+.module-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr)
+}
+
+.module-strip article {
+    padding: 20px;
+    background: #fff;
+    align-content: center
+}
+
+.module-strip article:not(:last-child) {
+    border-right: 1px solid #1b1b1f14
+}
+
+.contribution-list {
+    position: relative
+}
+
+.contribution-list:before {
+    content: "";
+    position: absolute;
+    left: 35px;
+    top: 32px;
+    bottom: 32px;
+    border-left: 1px dashed #07513d73
+}
+
+.contribution-list article {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 10px 16px;
+    padding: 18px 20px
+}
+
+.contribution-list article:not(:last-child) {
+    border-bottom: 1px solid #1b1b1f12
+}
+
+.contribution-list article>span {
+    position: relative;
+    z-index: 1;
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    background: #07513d;
+    color: #fff;
+    font-weight: 800
+}
+
+.contribution-list h2 {
+    margin-top: 0
+}
+
+.body-section:last-child {
+    border-bottom: 0
+}
+
+.poster-panel {
+    padding: 14px;
+    border: 1px solid #1b1b1f14;
+    border-radius: 28px
+}
+
+.poster-panel img {
+    width: 100%;
+    border-radius: 18px
+}
+
+.technology-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+    gap: 13px
+}
+
+@media(max-width:991px) {
+    .hero-panel {
+        padding: 32px;
+        background-image: linear-gradient(180deg, #001c18e8 0%, #013c3230 55%, #001c1880 100%), url(/assets/img/experience/Capstone/hero-ontario-background-mobile.png)
+    }
+
+    .hero-support {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: auto;
+        margin-top: 22px
+    }
+
+    .overview-card {
+        grid-template-columns: 1fr
+    }
+
+    .problem-list,
+    .module-strip {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .overview-copy {
+        padding: 0 0 20px;
+        border: 0;
+        border-bottom: 1px solid #1b1b1f12
+    }
+
+    .problem-area {
+        padding: 20px 0 0
+    }
+
+    .contribution-list:before {
+        display: none
+    }
+}
+
+@media(max-width:767px) {
+    .project-hero {
+        padding: 28px 0 0
+    }
+
+    .project-section {
+        padding: 30px 0 42px
+    }
+
+    main .container {
+        width: calc(100vw - 40px);
+        padding: 0;
+        overflow: hidden
+    }
+
+    .hero-panel {
+        padding: 24px
+    }
+
+    .hero-copy h1 {
+        font-size: 2.45rem
+    }
+
+    .problem-list,
+    .module-strip {
+        grid-template-columns: 1fr
+    }
+
+    .module-strip article:not(:last-child) {
+        border-right: 0
+    }
+
+    .project-body {
+        padding: 24px
+    }
+
 }
