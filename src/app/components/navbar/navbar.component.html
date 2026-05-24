@@ -1,10 +1,20 @@
 <header>
     <nav class="navbar navbar-expand navbar-light" aria-label="Primary navigation">
         <div id="navbar-container" class="container">
-            <a class="navbar-brand" href="#">
-                <span class="nav-mark" aria-hidden="true">AGR</span>
-                <span class="nav-logo">Alexandre Gouveia Rodrigues</span>
-            </a>
+            <div class="navbar-brand">
+                <div class="language-selector" (click)="$event.stopPropagation()">
+                    <button class="nav-mark language-trigger" type="button" [attr.aria-label]="'Select language. Current language: ' + selectedLanguage.label" [attr.aria-expanded]="isLanguageMenuOpen" aria-haspopup="menu" (click)="toggleLanguageMenu($event)">
+                        <img [src]="selectedLanguage.flag" [alt]="selectedLanguage.label + ' flag'">
+                    </button>
+                    <div class="language-menu" *ngIf="isLanguageMenuOpen" role="menu">
+                        <button *ngFor="let language of languages" class="language-option" type="button" role="menuitem" [class.active]="language.code === selectedLanguage.code" (click)="selectLanguage(language, $event)">
+                            <img [src]="language.flag" [alt]="language.label + ' flag'">
+                            <span>{{ language.label }}</span>
+                        </button>
+                    </div>
+                </div>
+                <a class="nav-logo" href="#">Alexandre Gouveia Rodrigues</a>
+            </div>
             <div class="navbar-collapse desktop-nav" id="navbarNav">
                 <div class="mr-auto"></div>
                 <ul class="navbar-nav">
@@ -29,12 +39,12 @@
                 </ul>
                 <a class="nav-resume" href="assets/pdf/AlexandreGouveiaRodriguesResume.pdf" target="_blank">Resume</a>
                 <li class="nav-icon">
-                    <a target="_blank" href="https://github.com/alexandregr26/"><i
-                            class='bx bxl-github'></i><span class="sr-only">GitHub</span></a>
-                </li>
-                <li class="nav-icon">
                     <a target="_blank" href="https://www.linkedin.com/in/alexandre-gouveia-r/"><i
                             class='bx bxl-linkedin-square'></i><span class="sr-only">LinkedIn</span></a>
+                </li>
+                <li class="nav-icon">
+                    <a target="_blank" href="https://github.com/alexandregr26/"><i
+                            class='bx bxl-github'></i><span class="sr-only">GitHub</span></a>
                 </li>
             </div>
             <details class="mobile-nav">
@@ -51,8 +61,8 @@
                     <a href="#community">Community</a>
                     <a routerLink="/" fragment="contact">Contact</a>
                     <a href="assets/pdf/AlexandreGouveiaRodriguesResume.pdf" target="_blank">Resume</a>
-                    <a target="_blank" href="https://github.com/alexandregr26/">GitHub</a>
                     <a target="_blank" href="https://www.linkedin.com/in/alexandre-gouveia-r/">LinkedIn</a>
+                    <a target="_blank" href="https://github.com/alexandregr26/">GitHub</a>
                 </div>
             </details>
         </div>
