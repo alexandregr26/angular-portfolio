@@ -2,7 +2,6 @@ import { AfterViewInit, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommunityBox } from '../../_models/CommunityBox';
 import { Skill } from '../../_models/Skill';
-import { ProjectBox } from '../../_models/ProjectBox';
 import { projects } from 'src/app/data/projects';
 
 @Component({
@@ -95,14 +94,22 @@ export class HomeComponent implements AfterViewInit {
       ...this.projects['ece297'],
       summary: "A geospatial mapping system that supported real-time city map exploration, geographic data visualization, and optimized routes through algorithmic pathfinding.",
       labels: ["Geospatial Software", "Mapping Systems"]
+    },
+    {
+      ...this.projects['splitz'],
+      summary: "A Chrome extension built to organize browser tabs into custom categories, reduce visual clutter, and make everyday web navigation easier to manage.",
+      labels: ["Browser Extension", "Productivity Tool"]
+    },
+    {
+      ...this.projects['ece243'],
+      summary: "A first-person shooter built for the DE1-SoC platform, combining low-level hardware control, VGA rendering, game logic, and responsive embedded input handling.",
+      labels: ["Embedded Systems", "Game Development"]
+    },
+    {
+      ...this.projects['utat'],
+      summary: "A low-power sensor circuit for a rocket ground station, designed to monitor battery voltage, trigger automatic shutoff, and protect critical electrical systems.",
+      labels: ["Circuit Design", "Aerospace Systems"]
     }
-  ];
-
-  secondaryProjects: ProjectBox[] = [
-    this.projects['ece344'],
-    this.projects['splitz'],
-    this.projects['ece243'],
-    this.projects['utat']
   ];
 
   moveLiquidGlass(event: PointerEvent): void {

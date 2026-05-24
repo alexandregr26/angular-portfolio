@@ -142,9 +142,8 @@
 
 .featured-project-grid {
     display: grid;
-    grid-template-columns: 1.15fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
-    margin-bottom: 20px;
 }
 
 .featured-project-card {
@@ -169,6 +168,8 @@
 }
 
 .featured-project-content {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     padding: 22px;
 }
@@ -186,12 +187,6 @@
 .featured-project-content > span {
     display: block;
     line-height: 1.55;
-}
-
-.project-card-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 16px;
 }
 
 .skills-system {
@@ -249,7 +244,6 @@
     }
 
     .featured-project-grid,
-    .project-card-grid,
     .contact-info-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -275,7 +269,6 @@
 
     .experience-meta-grid,
     .featured-project-grid,
-    .project-card-grid,
     .contact-info-grid {
         grid-template-columns: 1fr;
     }

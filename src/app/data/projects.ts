@@ -49,12 +49,6 @@ export const projects: { [key: string]: ProjectBox } = {
         img: "assets/img/experience/Amazon/blue.png",
         route: "/work/amazon"
     },
-    ece344: {
-        title: "Multithreaded Web Server",
-        company: "ECE344",
-        img: "assets/img/experience/ECE344/banner.png",
-        route: "/project/ece344"
-    },
     aps360: {
         title: "Deep Learning Model for Predicting Song Popularity",
         company: "APS360",
@@ -70,7 +64,6 @@ export const orderedOtherWorkKeys = [
     'blockchain',
     'aps360',
     'ece297',
-    'ece344',
     'splitz',
     'utat',
     'ece243'

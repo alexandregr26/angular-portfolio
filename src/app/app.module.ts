@@ -20,7 +20,6 @@ import { UtatComponent } from './pages/work/utat/utat.component';
 import { WorkHeaderComponent } from './components/work-header/work-header.component';
 import { FpsComponent } from './pages/work/fps/fps.component';
 import { MappaComponent } from './pages/work/mappa/mappa.component';
-import { Ece344Component } from './pages/work/ece344/ece344.component';
 import { PortfolioComponent } from './pages/work/portfolio/portfolio.component';
 import { CapstoneComponent } from './pages/work/capstone/capstone.component';
 import { Aps360Component } from './pages/work/aps360/aps360.component';
@@ -72,11 +71,6 @@ const appRoutes: Routes = [
     title: 'Mappa | Alexandre Gouveia Rodrigues'
   },
   {
-    path: 'project/ece344',
-    component: Ece344Component,
-    title: 'ECE344 | Alexandre Gouveia Rodrigues'
-  },
-  {
     path: 'project/capstone',
     component: CapstoneComponent,
     title: 'Capstone | Alexandre Gouveia Rodrigues'
@@ -104,11 +98,6 @@ const appRoutes: Routes = [
   {
     path: 'work/ece297',
     redirectTo: 'project/ece297',
-    pathMatch: 'full'
-  },
-  {
-    path: 'work/ece344',
-    redirectTo: 'project/ece344',
     pathMatch: 'full'
   },
   {
@@ -141,7 +130,6 @@ const appRoutes: Routes = [
     WorkHeaderComponent,
     FpsComponent,
     MappaComponent,
-    Ece344Component,
     PortfolioComponent,
     CapstoneComponent,
     Aps360Component
