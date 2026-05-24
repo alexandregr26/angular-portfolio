@@ -8,7 +8,7 @@ export const projects: { [key: string]: ProjectBox } = {
         route: "/work/coinbase"
     },
     utat: {
-        title: "Low Power Sensor",
+        title: "Low Power Sensor for Rocket Ground Station",
         company: "UTAT",
         img: "assets/img/experience/UTAT/banner.png",
         route: "/project/utat"

@@ -1,12 +1,266 @@
-.work-header-section {
-    background-color: #00002F;
+.utat-page {
+    padding-top: 28px;
+    overflow-x: hidden
 }
 
-li{
-    font-size: 18px;
-    padding-top: 10px;
+.utat-hero,
+.utat-content-section {
+    padding: 30px 0
 }
 
-#final-design {
+.utat-hero-panel,
+.utat-body,
+.technologies-panel {
+    border: 1px solid #18181b12;
+    box-shadow: var(--shadow-soft)
+}
+
+.utat-hero-panel {
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+    gap: 36px;
     align-items: center;
+    overflow: hidden;
+    padding: 34px;
+    border-radius: 32px;
+    color: #fff;
+    background: repeating-linear-gradient(0deg, #5b91bb12 0 1px, transparent 1px 28px), linear-gradient(135deg, #00002f, #020a35 48%, #061742)
+}
+
+.project-kicker {
+    margin: 0 0 13px;
+    color: #ffffffb8;
+    font-weight: 760;
+    letter-spacing: .08em
+}
+
+.utat-logo {
+    display: block;
+    width: min(250px, 78%);
+    margin: 0 0 13px;
+    mix-blend-mode: lighten;
+    filter: brightness(1.05) contrast(1.08)
+}
+
+.utat-hero-copy h1 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(1.85rem, 2.8vw, 2.65rem);
+    font-weight: 790;
+    line-height: 1.04
+}
+
+.utat-hero-text {
+    margin: 13px 0 0;
+    color: #e5f1ffd1;
+    font-size: 1rem;
+    line-height: 1.64
+}
+
+.circuit-panel {
+    justify-self: stretch;
+    width: 100%
+}
+
+.circuit-frame {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #82b9e730;
+    border-radius: 20px;
+    background: #05143d57
+}
+
+.circuit-frame img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    background: #0004183d
+}
+
+.utat-body {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    border-radius: 28px;
+    background: #ffffffd1
+}
+
+.utat-section {
+    padding: 34px
+}
+
+.overview-section,
+.requirements-section,
+.components-section {
+    border-bottom: 1px solid #18181b17
+}
+
+.overview-section,
+.components-section {
+    border-right: 1px solid #18181b17
+}
+
+.components-section {
+    border-bottom: 0
+}
+
+.utat-section .section-eyebrow {
+    margin: 0 0 18px;
+    font-size: clamp(1.16rem, 1.55vw, 1.42rem);
+    font-weight: 790
+}
+
+.utat-section p:not(.section-eyebrow),
+.requirement-list p,
+.component-grid p {
+    margin: 0;
+    color: var(--color-ink-soft);
+    line-height: 1.66
+}
+
+.overview-section p:not(.section-eyebrow):not(:last-child) {
+    margin-bottom: 18px
+}
+
+.requirement-list {
+    display: grid;
+    gap: 12px
+}
+
+.requirement-list article {
+    display: grid;
+    grid-template-columns: 54px 1fr;
+    gap: 15px;
+    align-items: center;
+    padding: 18px;
+    border: 1px solid #18181b14;
+    border-radius: 18px;
+    background: #ffffffad
+}
+
+.section-icon {
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border-radius: 17px;
+    color: #b7d64a;
+    background: #00002f
+}
+
+.requirement-list h2,
+.component-grid h2 {
+    margin: 0 0 4px;
+    color: var(--color-ink);
+    font-size: .98rem;
+    font-weight: 760;
+    line-height: 1.28
+}
+
+.requirement-list p {
+    font-size: .88rem;
+    line-height: 1.5
+}
+
+.component-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px
+}
+
+.component-grid article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 12px;
+    border: 1px solid #18181b14;
+    border-radius: 17px;
+    background: #ffffffad;
+    text-align: center
+}
+
+.component-image {
+    height: 86px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 12px
+}
+
+.component-image img {
+    max-width: 104px;
+    max-height: 82px;
+    object-fit: contain
+}
+
+.component-grid p {
+    font-size: .86rem;
+    line-height: 1.35
+}
+
+@media(max-width:991px) {
+
+    .utat-hero-panel,
+    .utat-body {
+        grid-template-columns: 1fr
+    }
+
+    .overview-section,
+    .components-section {
+        border-right: 0
+    }
+
+    .components-section {
+        border-bottom: 1px solid #18181b17
+    }
+}
+
+@media(max-width:767px) {
+    .utat-hero {
+        padding: 28px 0 24px
+    }
+
+    .utat-hero-panel,
+    .utat-section,
+    .technologies-panel {
+        padding: 24px
+    }
+
+    .utat-logo {
+        width: min(230px, 86%);
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .project-kicker {
+        text-align: center
+    }
+
+    .utat-hero-copy h1 {
+        font-size: 2.05rem
+    }
+
+    .requirement-list article {
+        grid-template-columns: 48px 1fr;
+        padding: 16px
+    }
+
+    .section-icon {
+        width: 48px;
+        height: 48px
+    }
+
+    .component-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .component-image {
+        height: 78px
+    }
+
+    .component-image img {
+        max-width: 96px;
+        max-height: 74px
+    }
 }

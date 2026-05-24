@@ -1,52 +1,91 @@
-<!-- Header -->
-<section class="work-header-section">
-    <app-work-header [header]="header"></app-work-header>
-</section>
-<!-- Summary -->
-<section>
-    <div class="container box">
-        <h1 class="title">UTAT</h1>
-        <h1 class="subtitle">Project Description</h1>
-        <p class="project-description">In 2020, as a member of the University of Toronto Aerospace Team (UTAT), I
-            designed a low-power sensor for the Ground Station of the Defiance Rocket Project - a rocket developed by
-            UTAT that aimed to surpass the Canadian amateur altitude record at 13.4 km. The Ground Station was a crucial
-            part of the Defiance rocket that managed critical test and fill procedures at the launch pad. One of its
-            integral components was this low-power sensor, which was intended to address potential emergencies that
-            might lead to the rocket's launch abortion. Unfortunately, this sensor design was never fully tested or
-            integrated into the Defiance rocket since its development came to a complete standstill due to the COVID-19
-            pandemic, which imposed strict access restrictions on essential components stored at the UofT campus.</p>
+<main class="utat-page">
+    <section class="utat-hero">
+        <div class="container">
+            <div class="utat-hero-panel">
+                <div class="utat-hero-copy">
+                    <p class="project-kicker">PROJECT SHOWCASE</p>
+                    <img class="utat-logo" src="assets/img/experience/UTAT/utatlogo.jpg" alt="UTAT">
+                    <h1>Low Power Sensor for Rocket Ground Station</h1>
+                    <p class="utat-hero-text">A low-power sensor designed for the Defiance Rocket Project ground station to protect critical systems by automatically shutting down when the 22V battery voltage drops to 18V, minimizing power draw and preserving essential components.</p>
+                </div>
 
-        <div class="row">
-            <div class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <h1 class="subtitle">Requirements</h1>
-                <ul>
-                    <li>Automatically turn off the circuit when the 22V battery reaches 18V to protect the circuit's
-                        components.
-                    </li>
-                    <li>Have a minimum amount of current flowing in the circuit once it is turned off.</li>
-                </ul>
-                <h1 class="subtitle">Components</h1>
-                <ul>
-                    <li>22.2 Lithium-Ion Battery </li>
-                    <li>LT1495 Op Amp</li>
-                    <li>LT1389 Zener Diode (Voltage Reference)</li>
-                    <li>MOSFET Transistor</li>
-                </ul>
-            </div>
-            <div id="final-design" class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <img src="assets/img/experience/UTAT/sensor.png" alt="">
+                <div class="circuit-panel">
+                    <div class="circuit-frame">
+                        <img src="assets/img/experience/UTAT/sensor-ai-cropped.png" alt="Low power sensor circuit diagram">
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Other Works -->
-<section>
-    <div class="container box">
-        <h1 class="title">Other Works</h1>
-        <div class="row">
-            <div *ngFor="let project of otherWorks" id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="project"></app-project-box>
+    </section>
+
+    <section class="utat-content-section">
+        <div class="container">
+            <div class="utat-body">
+                <section class="utat-section overview-section">
+                    <p class="section-eyebrow">OVERVIEW</p>
+                    <p>Developed for the Defiance Rocket Project, this low-power sensor monitors the ground station’s 22V battery and automatically disconnects the circuit when the voltage drops to 18V. This protects sensitive components from undervoltage conditions and reduces unnecessary power consumption once the system is shut down.</p>
+                    <p>The design emphasizes simplicity, reliability, and minimal current draw in the off state, which are critical for mission readiness and long-duration ground operations.</p>
+                </section>
+
+                <section class="utat-section requirements-section">
+                    <p class="section-eyebrow">REQUIREMENTS</p>
+                    <div class="requirement-list">
+                        <article *ngFor="let requirement of requirements">
+                            <span class="section-icon">
+                                <lucide-icon [img]="requirement.icon" [size]="23" [strokeWidth]="1.9"></lucide-icon>
+                            </span>
+                            <div>
+                                <h2>{{ requirement.title }}</h2>
+                                <p>{{ requirement.body }}</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="utat-section components-section">
+                    <p class="section-eyebrow">CORE COMPONENTS</p>
+                    <div class="component-grid">
+                        <article *ngFor="let component of coreComponents">
+                            <span class="component-image">
+                                <img [src]="component.img" [alt]="component.name + ' ' + component.label">
+                            </span>
+                            <h2>{{ component.name }}</h2>
+                            <p>{{ component.label }}</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="utat-section approach-section">
+                    <p class="section-eyebrow">DESIGN APPROACH</p>
+                    <p>The circuit uses a precision voltage reference and comparator to monitor the battery voltage. When the battery drops to the 18V threshold, the comparator output drives the MOSFET gate to cut power to the load. A high-value resistor network keeps current draw extremely low once the circuit is off, helping preserve battery life and protect the rocket ground station’s electronics.</p>
+                </section>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section class="technologies-section">
+        <div class="container">
+            <div class="technologies-panel">
+                <div class="section-heading compact-heading">
+                    <p class="section-eyebrow">TECHNICAL STACK</p>
+                    <p class="section-intro">Tools and languages used for the low-power sensor project.</p>
+                </div>
+                <div class="technology-grid">
+                    <app-skill *ngFor="let tool of technologies" [skill]="tool"></app-skill>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-work-section">
+        <div class="container">
+            <div class="section-heading">
+                <p class="section-eyebrow">OTHER WORKS</p>
+                <p class="section-intro">More projects and professional experiences across infrastructure, product systems, applied AI, and software engineering.</p>
+            </div>
+            <div class="related-work-grid">
+                <app-project-box *ngFor="let project of otherWorks" [projectbox]="project"></app-project-box>
+            </div>
+        </div>
+    </section>
+</main>
