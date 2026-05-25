@@ -40,7 +40,7 @@ export const projects: { [key: string]: ProjectBox } = {
     tr: {
         title: "Software Developer Intern",
         company: "Thomson Reuters",
-        img: "assets/img/experience/ThomsonReuters/banner.png",
+        img: "assets/img/experience/ThomsonReuters/orange.png",
         route: "/work/thomson-reuters"
     },
     amazon: {

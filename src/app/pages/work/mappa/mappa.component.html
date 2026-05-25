@@ -1,99 +1,119 @@
-<!-- Header -->
-<section class="work-header-section">
-    <img src="assets/img/experience/ECE297/GoogleMapsHeaderLarge.png" alt="">
-</section>
-<!-- Summary -->
-<section>
-    <div class="container box">
-        <h1 class="title">Mappa</h1>
-        <h1 class="subtitle">Project Description</h1>
-        <p class="project-description">As part of my second-year engineering design course at the University of Toronto,
-            ECE297, I was part of a team that took on a project to build a Geographic Information System (GIS)
-            application. Working exclusively with C++, we aimed to create an application similar to Google Maps. We did
-            this by leveraging APIs to query a geographic information database and employing a graphics library to
-            display such information to the users, thus bringing the GIS application to life. Throughout the project, my
-            biggest priority was designing a user-friendly interface and creating a seamless user experience, reflecting
-            my belief in the significance of aesthetics and functionality in the engineering design process.</p>
-        <h1 class="subtitle">The Team</h1>
-        <p class="project-description">The first stage of the project was team formation. In this stage, all team
-            members gathered to align on project goals, draft a team charter, and assign individual roles. We
-            prioritized open communication and quickly established weekly meetings to ensure everyone was on the same
-            page and to address any challenges as soon as possible. Regarding code management, we all used Git - for the
-            first time, preventing conflicts in the project's source code. This focus on communication and collaboration
-            laid a strong foundation for our journey throughout the GIS application development.</p>
-        <div class="row">
-            <div class="work-block col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <img src="assets/img/experience/ECE297/pratish.png" alt="">
-                <h1 class="mini-title">Pratish Dalal</h1>
-            </div>
-            <div class="work-block col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <img src="assets/img/experience/ECE297/alexandre.png" alt="">
-                <h1 class="mini-title">Me</h1>
-            </div>
-            <div class="work-block col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <img src="assets/img/experience/ECE297/marcos.png" alt="">
-                <h1 class="mini-title">Marcos Madrigal</h1>
+<main class="mappa-page">
+    <section class="mappa-hero">
+        <div class="container">
+            <div class="mappa-hero-panel" style="grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:32px;background:#fcfdfc;">
+                <div class="mappa-hero-copy">
+                    <p class="project-kicker" style="display:flex;gap:11px;align-items:center;margin:0 0 18px;color:#1a73e8;font-weight:800;letter-spacing:.09em;">
+                        <span style="width:12px;height:12px;border-radius:50%;background:#1a73e8;box-shadow:0 0 0 8px #1a73e81a;"></span>
+                        PROJECT SHOWCASE
+                    </p>
+                    <h1 style="margin:0;color:#07142f;font-size:clamp(2.7rem,4.05vw,4.25rem);font-weight:800;line-height:.95;">Mappa</h1>
+                    <p class="mappa-tagline" style="margin:14px 0 0;color:#596275;font-size:clamp(1.08rem,1.28vw,1.3rem);font-weight:750;">Intuitive. Exploratory. Geospatial.</p>
+                    <div class="google-accent" aria-hidden="true" style="display:flex;width:142px;height:4px;margin:22px 0 22px;">
+                        <span style="flex:1;background:#4285f4"></span><span style="flex:1;background:#ea4335"></span><span style="flex:1;background:#fbbc04"></span><span style="flex:1;background:#34a853"></span>
+                    </div>
+                    <p class="mappa-hero-text" style="max-width:545px;font-size:1.04rem;">A lightweight geographic information system (GIS) application that helps users search for locations, compute optimal routes, and visualize spatial data with an interactive and fully customizable map experience.</p>
+                    <div class="mappa-meta">
+                        <span *ngFor="let item of heroMeta; let i = index" [style.color]="['#4285f4','#159947','#ea4335','#dc9200'][i]" [style.border-color]="['#4285f480','#34a85380','#ea433580','#fbbc048c'][i]" style="padding:9px 15px;border:1px solid #18181b18;border-radius:9px;background:#fff;font-size:.84rem;font-weight:800;">{{ item }}</span>
+                    </div>
+                </div>
+                <div class="map-preview" style="border-radius:24px;background:#fff;box-shadow:0 20px 44px #1822381a;">
+                    <div class="browser-bar" aria-hidden="true" style="height:46px;display:flex;gap:9px;align-items:center;padding:0 18px;border-bottom:1px solid #18181b0d;background:#f8fafc;">
+                        <span style="width:13px;height:13px;border-radius:50%;background:#ff5f57;"></span><span style="width:13px;height:13px;border-radius:50%;background:#ffbd2e;"></span><span style="width:13px;height:13px;border-radius:50%;background:#28c840;"></span>
+                    </div>
+                    <img src="assets/img/experience/ECE297/mappa-hero-ai.png" alt="Mappa map interface preview">
+                </div>
             </div>
         </div>
-        <h1 class="subtitle">Development</h1>
-        <p class="project-description">With the support of a Teaching Assistant (TA), who provided guidance and reviewed
-            our work at every milestone, we ensured our technical decisions aligned with project goals. This iterative
-            feedback loop enhanced our communication with technical supervisors. Simultaneously, under the guidance of a
-            Communication Instructor, we learned to present our progress and final project to less technical clients.
-            This instructor bridged the gap, helping us convey complex technical aspects in an accessible way. This dual
-            guidance prepared us for real-world scenarios, emphasizing the importance of effective communication in
-            software engineering projects.</p>
-        <div class="row">
-            <div class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <h1 class="subtitle">Powerful Search Bar</h1>
-                <p>We built a search bar with the following capabilities:</p>
-                <ul>
-                    <li>Allow users to find their destination using partial street names or misspelled names</li>
-                    <li>Locate and highlight the intersection of two given streets</li>
-                    <li>Find the shortest driving or walking path between two locations</li>
-                    <li>Delete any past search-related data to improve the map's responsiveness</li>
-                </ul>
-            </div>
-            <div id="splitz-design" class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <img src="assets/img/experience/ECE297/search.png" alt="">
-            </div>
-            <div id="splitz-design" class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <img src="assets/img/experience/ECE297/customizable.png" alt="">
-            </div>
-            <div class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <h1 class="subtitle">100% Customizable</h1>
-                <p>We wanted to give complete control to the user by making every feature on the map customizable. One
-                    of our ideas as a result of this was a mode that allows the user to fully customize the map colour
-                    scheme and filter specific content from the map.</p>
-            </div>
-            <div class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <h1 class="subtitle">Visual Features</h1>
-                <ul>
-                    <li>Street names displayed at proper zoom levels</li>
-                    <li>Major roads are differentiated from minor roads</li>
-                    <li>Colour-coded points of interest</li>
-                    <li>Visible street directions</li>
-                </ul>
-            </div>
-            <div id="splitz-design" class="work-block col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <img src="assets/img/experience/ECE297/visual.png" alt="">
+    </section>
+
+    <section class="mappa-content-section">
+        <div class="container">
+            <div class="mappa-body">
+                <section class="mappa-section overview-section">
+                    <div class="overview-copy">
+                        <span class="section-icon">
+                            <lucide-icon [img]="overviewIcon" [size]="21" [strokeWidth]="1.9"></lucide-icon>
+                        </span>
+                        <div>
+                            <p class="section-eyebrow">OVERVIEW</p>
+                        </div>
+                        <p>Mappa is a desktop GIS application built in C++ with the OpenStreetMap API and EZGL graphics library, allowing users to load and interact with global city maps in real time. The project was designed around the challenge of turning complex geographic data into an experience that feels clear, responsive, and easy to control. Through efficient map rendering, intuitive search, route-finding, and customizable visual layers, Mappa makes spatial information more accessible without sacrificing performance or usability.</p>
+                    </div>
+                    <div class="highlight-list">
+                        <span class="section-icon">
+                            <lucide-icon [img]="highlightsIcon" [size]="21" [strokeWidth]="1.9"></lucide-icon>
+                        </span>
+                        <div>
+                            <p class="section-eyebrow">PROJECT HIGHLIGHTS</p>
+                        </div>
+                        <ul>
+                            <li *ngFor="let item of highlights">
+                                <lucide-icon [img]="checkIcon" [size]="16" [strokeWidth]="2.2"></lucide-icon>
+                                <span>{{ item }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="engineering-card">
+                    <span class="engineering-icon">
+                        <lucide-icon [img]="engineeringIcon" [size]="36" [strokeWidth]="1.9"></lucide-icon>
+                    </span>
+                    <div>
+                        <p class="section-eyebrow">ENGINEERING CONTEXT</p>
+                        <p>This project was developed as part of a collaborative second-year engineering course, ECE297, at the University of Toronto. The course gave students the opportunity to design, build, and iterate on a complex software system from the ground up, applying core concepts in data structures, algorithms, graphics, and software design.</p>
+                    </div>
+                </section>
+
+                <section class="mappa-section key-features-section">
+                    <div class="section-heading development-heading">
+                        <span class="section-icon">
+                            <lucide-icon [img]="developmentIcon" [size]="21" [strokeWidth]="1.9"></lucide-icon>
+                        </span>
+                        <div>
+                            <p class="section-eyebrow">KEY FEATURES</p>
+                        </div>
+                    </div>
+                    <div class="feature-showcase">
+                        <article *ngFor="let feature of features; let i = index" [class.image-right]="i === 1">
+                            <img [src]="feature.img" [alt]="feature.title + ' preview'">
+                            <div class="feature-detail">
+                                <h2>{{ feature.title }}</h2>
+                                <ul>
+                                    <li *ngFor="let point of feature.points">{{ point }}</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </section>
             </div>
         </div>
-        <h1 class="subtitle">Tools Used</h1>
-        <div class="tools">
-            <div class="tool">C++</div>
-            <div class="tool">GIT</div>
-        </div>
-    </div>
-</section>
-<!-- Other Works -->
-<section>
-    <div class="container box">
-        <h1 class="title">Other Works</h1>
-        <div class="row">
-            <div *ngFor="let project of otherWorks" id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="project"></app-project-box>
+    </section>
+
+    <section class="technologies-section">
+        <div class="container">
+            <div class="technologies-panel">
+                <div class="section-heading compact-heading">
+                    <p class="section-eyebrow">TECHNICAL STACK</p>
+                    <p class="section-intro">Technologies and tools used to build the desktop GIS application.</p>
+                </div>
+                <div class="technology-grid">
+                    <app-skill *ngFor="let tool of technologies" [skill]="tool"></app-skill>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section class="related-work-section">
+        <div class="container">
+            <div class="section-heading">
+                <p class="section-eyebrow">OTHER WORKS</p>
+                <p class="section-intro">More projects and professional experiences across infrastructure, product systems, applied AI, and software engineering.</p>
+            </div>
+            <div class="related-work-grid">
+                <app-project-box *ngFor="let project of otherWorks" [projectbox]="project"></app-project-box>
+            </div>
+        </div>
+    </section>
+</main>

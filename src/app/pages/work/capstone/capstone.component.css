@@ -145,9 +145,6 @@ main {
 .module-strip p,
 .contribution-list p,
 .blockchain-section p,
-.overview-copy p {
-    color: #3f3f46
-}
 
 .architecture-card img {
     width: 100%;
