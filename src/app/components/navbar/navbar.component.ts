@@ -1,7 +1,9 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { LanguageCode, TranslationService } from 'src/app/services/translation.service';
 
 type LanguageOption = {
-  code: string;
+  code: LanguageCode;
   label: string;
   flag: string;
 };
@@ -11,7 +13,7 @@ type LanguageOption = {
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnDestroy {
   readonly languages: LanguageOption[] = [
     {
       code: 'en',
@@ -32,12 +34,13 @@ export class NavbarComponent {
 
   selectedLanguage = this.languages[0];
   isLanguageMenuOpen = false;
+  private readonly languageSubscription: Subscription;
 
-  constructor() {
-    const savedLanguage = this.getSavedLanguage();
-    if (savedLanguage) {
-      this.selectedLanguage = savedLanguage;
-    }
+  constructor(private readonly translationService: TranslationService) {
+    this.selectedLanguage = this.getLanguageOption(this.translationService.currentLanguage);
+    this.languageSubscription = this.translationService.language$.subscribe((languageCode) => {
+      this.selectedLanguage = this.getLanguageOption(languageCode);
+    });
   }
 
   @HostListener('document:click')
@@ -54,10 +57,7 @@ export class NavbarComponent {
     event.stopPropagation();
     this.selectedLanguage = language;
     this.isLanguageMenuOpen = false;
-
-    if (typeof window !== 'undefined') {
-      window.localStorage.setItem('portfolio-language', language.code);
-    }
+    this.translationService.setLanguage(language.code);
   }
 
   moveLiquidGlass(event: PointerEvent): void {
@@ -73,12 +73,11 @@ export class NavbarComponent {
     target.style.setProperty('--my', '50%');
   }
 
-  private getSavedLanguage(): LanguageOption | undefined {
-    if (typeof window === 'undefined') {
-      return undefined;
-    }
+  ngOnDestroy(): void {
+    this.languageSubscription.unsubscribe();
+  }
 
-    const savedCode = window.localStorage.getItem('portfolio-language');
-    return this.languages.find((language) => language.code === savedCode);
+  private getLanguageOption(languageCode: LanguageCode): LanguageOption {
+    return this.languages.find((language) => language.code === languageCode) ?? this.languages[0];
   }
 }

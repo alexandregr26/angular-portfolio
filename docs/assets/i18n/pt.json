@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "work": "Experiência",
+    "projects": "Projetos",
+    "skills": "Competências",
+    "community": "Comunidade",
+    "contact": "Contato",
+    "resume": "Currículo",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "selectLanguage": "Selecionar idioma. Idioma atual: {{language}}"
+  }
+}

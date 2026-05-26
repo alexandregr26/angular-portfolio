@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
 
@@ -23,6 +24,7 @@ import { MappaComponent } from './pages/work/mappa/mappa.component';
 import { PortfolioComponent } from './pages/work/portfolio/portfolio.component';
 import { CapstoneComponent } from './pages/work/capstone/capstone.component';
 import { Aps360Component } from './pages/work/aps360/aps360.component';
+import { TranslatePipe } from './pipes/translate.pipe';
 
 const appRoutes: Routes = [
   {
@@ -132,10 +134,12 @@ const appRoutes: Routes = [
     MappaComponent,
     PortfolioComponent,
     CapstoneComponent,
-    Aps360Component
+    Aps360Component,
+    TranslatePipe
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     LucideAngularModule,
     RouterModule.forRoot(appRoutes, {
