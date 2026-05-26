@@ -1,16 +1,16 @@
 <footer>
     <div class="container footer-inner">
-        <p>© 2026 Alexandre Gouveia Rodrigues</p>
+        <p>{{ 'footer.copyright' | translate }}</p>
         <div class="footer-links">
-            <a href="#about">About</a>
-            <a href="#work">Work</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#community">Community</a>
-            <a class="footer-icon-link" target="_blank" href="https://www.linkedin.com/in/alexandre-gouveia-r/" aria-label="LinkedIn">
+            <a href="#about">{{ 'footer.about' | translate }}</a>
+            <a href="#work">{{ 'footer.work' | translate }}</a>
+            <a href="#projects">{{ 'footer.projects' | translate }}</a>
+            <a href="#skills">{{ 'footer.skills' | translate }}</a>
+            <a href="#community">{{ 'footer.community' | translate }}</a>
+            <a class="footer-icon-link" target="_blank" href="https://www.linkedin.com/in/alexandre-gouveia-r/" [attr.aria-label]="'footer.linkedin' | translate">
                 <i class='bx bxl-linkedin-square'></i>
             </a>
-            <a class="footer-icon-link" target="_blank" href="https://github.com/alexandregr26/" aria-label="GitHub">
+            <a class="footer-icon-link" target="_blank" href="https://github.com/alexandregr26/" [attr.aria-label]="'footer.github' | translate">
                 <i class='bx bxl-github'></i>
             </a>
         </div>

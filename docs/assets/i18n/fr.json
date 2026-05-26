@@ -10,5 +10,15 @@
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "selectLanguage": "Sélectionner la langue. Langue actuelle : {{language}}"
+  },
+  "footer": {
+    "copyright": "© 2026 Alexandre Gouveia Rodrigues",
+    "about": "À propos",
+    "work": "Expérience",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "community": "Communauté",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
   }
 }
