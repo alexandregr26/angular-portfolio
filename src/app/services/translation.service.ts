@@ -1,7 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, firstValueFrom } from 'rxjs';
 
 export type LanguageCode = 'en' | 'pt' | 'fr';
 
@@ -41,7 +41,10 @@ export class TranslationService {
     @Inject(DOCUMENT) private readonly document: Document
   ) {
     this.applyDocumentLanguage(this.currentLanguage);
-    this.loadLanguage(this.currentLanguage);
+  }
+
+  init(): Promise<void> {
+    return this.loadLanguage(this.currentLanguage);
   }
 
   get currentLanguage(): LanguageCode {
@@ -53,7 +56,7 @@ export class TranslationService {
       return;
     }
 
-    this.loadLanguage(language);
+    void this.loadLanguage(language);
   }
 
   translate(key: string, params: Record<string, string> = {}): string {
@@ -75,21 +78,20 @@ export class TranslationService {
     );
   }
 
-  private loadLanguage(language: LanguageCode): void {
-    this.http.get<TranslationMap>(`assets/i18n/${language}.json`).subscribe({
-      next: (translations) => {
+  private loadLanguage(language: LanguageCode): Promise<void> {
+    return firstValueFrom(this.http.get<TranslationMap>(`assets/i18n/${language}.json`))
+      .then((translations) => {
         this.translations = translations;
         this.languageSubject.next(language);
         this.persistLanguage(language);
         this.applyDocumentLanguage(language);
-      },
-      error: () => {
+      })
+      .catch(() => {
         this.translations = DEFAULT_TRANSLATIONS;
         this.languageSubject.next('en');
         this.persistLanguage('en');
         this.applyDocumentLanguage('en');
-      }
-    });
+      });
   }
 
   private getInitialLanguage(): LanguageCode {

@@ -20,5 +20,192 @@
     "community": "Comunidade",
     "linkedin": "LinkedIn",
     "github": "GitHub"
+  },
+  "home": {
+    "hero": {
+      "kicker": "Olá, meu nome é",
+      "description": "Sou engenheiro de computação interessado nos sistemas que moldam a vida moderna, guiado pela disciplina da engenharia e pela perspectiva de alguém que se importa com os caminhos que a tecnologia abre.",
+      "detailsLabel": "Detalhes pessoais",
+      "portraitAlt": "Retrato de Alexandre Gouveia Rodrigues",
+      "details": {
+        "location": "Toronto, Canadá",
+        "financialSystems": "Sistemas Financeiros",
+        "digitalHealth": "Saúde Digital",
+        "blockchain": "Entusiasta de Blockchain",
+        "smartCities": "Cidades Inteligentes",
+        "environmentalist": "Ambientalista"
+      }
+    },
+    "about": {
+      "title": "Sobre Mim",
+      "intro": "A tecnologia molda como as pessoas pensam, trabalham e interagem com o mundo. Eu me importo em construir sistemas que façam isso com intenção.",
+      "body1": "Estudei Engenharia Elétrica e de Computação na Universidade de Toronto, com minor em Negócios e Inteligência Artificial. Desde então, meu trabalho passou por produto, plataforma e infraestrutura — de tecnologia financeira e sistemas operacionais na Coinbase, a ferramentas para desenvolvedores na Thomson Reuters e sistemas voltados ao cliente na Amazon.",
+      "body2": "O que me interessa não é software de forma abstrata. É software como parte de algo maior: os sistemas que as pessoas usam para trabalhar, decidir, confiar e navegar pela complexidade. Software nunca é apenas software. Ele vive dentro do mundo e, no seu melhor, torna esse mundo mais claro, confiável e fácil de agir. Para mim, boa engenharia não é apenas desempenho ou escala, mas julgamento, elegância e a capacidade de criar tecnologia em que as pessoas possam realmente confiar.",
+      "body3": "Esse é o padrão que me importa. Quero construir sistemas que tenham significado — sistemas cujo valor seja sentido além do código. Não me interessa tecnologia como decoração. Quero que meu trabalho tenha peso no mundo fora dele."
+    },
+    "work": {
+      "title": "Experiência Profissional",
+      "intro": "De infraestrutura blockchain a plataformas para desenvolvedores e interfaces de produto, trabalhei em sistemas onde confiabilidade, clareza e execução importam.",
+      "summaryLabel": "Resumo",
+      "scopeLabel": "Escopo",
+      "impactLabel": "Impacto",
+      "items": {
+        "coinbase": {
+          "role": "Engenheiro de Software",
+          "date": "Jan 2025 - Presente",
+          "summary": "Gerenciamento de infraestrutura blockchain e sistemas operacionais internos em um ambiente financeiro de alta responsabilidade.",
+          "scope": "Gestão de infraestrutura de nós blockchain para mais de 60 protocolos, ferramentas operacionais com LLMs e melhorias para mitigação de resposta a incidentes.",
+          "impact": "Melhorei a visibilidade operacional e a resposta a incidentes, fortalecendo a confiabilidade e a escalabilidade da infraestrutura blockchain em produção."
+        },
+        "thomsonReuters": {
+          "role": "Estagiário de Desenvolvimento de Software",
+          "date": "Set 2021 - Set 2022",
+          "summary": "Construção de plataformas internas e ferramentas de automação para simplificar onboarding, testes de autorização e fluxos de trabalho de desenvolvedores.",
+          "scope": "APIs REST, trabalho de identidade orientado a OAuth, gerenciamento de sessão de usuário, desenvolvimento full-stack com ASP.NET Core e Angular, e entrega em equipe Agile.",
+          "impact": "Reduzi trabalho operacional manual e melhorei a velocidade, confiabilidade e usabilidade de fluxos internos para desenvolvedores e integrações de plataforma."
+        },
+        "amazon": {
+          "role": "Estagiário de Engenharia de Software",
+          "date": "Mai 2021 - Ago 2021",
+          "summary": "Desenvolvimento de recursos mobile web voltados ao cliente para ajudar anunciantes a interpretar o desempenho de campanhas.",
+          "scope": "Desenvolvimento com React e Redux, visualização de desempenho de campanhas, revisões de design, UAT, testes de UI e análise pós-lançamento.",
+          "impact": "Entreguei uma funcionalidade em produção que contribuiu para um aumento de +10% no engajamento e conversão de anunciantes na Amazon."
+        }
+      }
+    },
+    "projects": {
+      "title": "Projetos Técnicos",
+      "intro": "Uma coleção de projetos moldados pela curiosidade e pela busca de soluções criativas e práticas para problemas técnicos complexos.",
+      "items": {
+        "blockchain": {
+          "summary": "Um sistema de troca de prontuários eletrônicos baseado em blockchain, projetado para permitir que organizações de saúde compartilhem, validem e acessem registros de pacientes com segurança em uma rede permissionada.",
+          "labels": {
+            "healthcare": "Sistemas de Saúde",
+            "blockchain": "Infraestrutura Blockchain"
+          }
+        },
+        "aps360": {
+          "summary": "Um modelo preditivo de ML que avaliou recursos estruturados de áudio e metadados do Spotify para prever popularidade de músicas e identificar padrões ligados ao desempenho comercial.",
+          "labels": {
+            "ml": "ML Aplicado",
+            "predictive": "Modelagem Preditiva"
+          }
+        },
+        "ece297": {
+          "summary": "Um sistema geoespacial de mapas com exploração de cidades em tempo real, visualização de dados geográficos e rotas otimizadas por pathfinding algorítmico.",
+          "labels": {
+            "geospatial": "Software Geoespacial",
+            "mapping": "Sistemas de Mapas"
+          }
+        },
+        "splitz": {
+          "summary": "Uma extensão do Chrome criada para organizar abas em categorias personalizadas, reduzir poluição visual e facilitar a navegação diária na web.",
+          "labels": {
+            "extension": "Extensão de Navegador",
+            "productivity": "Ferramenta de Produtividade"
+          }
+        },
+        "ece243": {
+          "summary": "Um jogo de tiro em primeira pessoa para a plataforma DE1-SoC, combinando controle de hardware de baixo nível, renderização VGA, lógica de jogo e entrada embarcada responsiva.",
+          "labels": {
+            "embedded": "Sistemas Embarcados",
+            "game": "Desenvolvimento de Jogos"
+          }
+        },
+        "utat": {
+          "summary": "Um circuito sensor de baixa potência para uma estação terrestre de foguete, projetado para monitorar tensão de bateria, acionar desligamento automático e proteger sistemas elétricos críticos.",
+          "labels": {
+            "circuit": "Projeto de Circuitos",
+            "aerospace": "Sistemas Aeroespaciais"
+          }
+        }
+      }
+    },
+    "skills": {
+      "title": "Ferramentas de Engenharia",
+      "intro": "Um conjunto de ferramentas em crescimento, moldado por experiência na indústria, exploração deliberada e uma busca constante por aprofundar meu entendimento da tecnologia moderna.",
+      "items": {
+        "english": "Inglês",
+        "portuguese": "Português",
+        "french": "Francês"
+      },
+      "groups": {
+        "core": {
+          "title": "Engenharia Fundamental",
+          "description": "Ferramentas fundamentais para entender como software se comporta abaixo da superfície, de desempenho e memória a dados, estrutura e correção."
+        },
+        "application": {
+          "title": "Desenvolvimento de Aplicações",
+          "description": "Frameworks e ferramentas para construir aplicações claras, sustentáveis e pensadas tanto pela perspectiva de engenharia quanto pela experiência do usuário."
+        },
+        "infrastructure": {
+          "title": "IA, Dados e Infraestrutura",
+          "description": "Tecnologias que uso para construir, implantar e entender sistemas modernos em fluxos de IA, ambientes cloud, infraestrutura e visibilidade operacional."
+        },
+        "communication": {
+          "title": "Comunicação",
+          "description": "Idiomas que me ajudam a trabalhar entre culturas, equipes e contextos, tornando a colaboração mais natural e as ideias mais fáceis de atravessar fronteiras."
+        }
+      }
+    },
+    "community": {
+      "title": "Envolvimento Comunitário",
+      "intro": "Grande parte de quem sou foi moldada fora do código, por comunidades que me ensinaram liderança não como um título, mas como uma responsabilidade de servir, organizar e contribuir para um propósito maior na vida.",
+      "items": {
+        "brasa": {
+          "title": "Presidente - BRASA UofT",
+          "date": "Setembro 2018 - Abril 2023",
+          "description": "Minha trajetória com a BRASA UofT foi uma jornada marcante de crescimento e conexão cultural. Meu papel ativo na promoção da cultura brasileira foi uma experiência gratificante e uma fonte de conforto que me permitiu permanecer próximo das minhas raízes mesmo longe de casa. Tenho orgulho de ter ampliado o alcance da BRASA UofT na GTA e em todo o Canadá, fortalecendo uma rede vibrante de brasileiros. O crescimento que testemunhei, de 10 participantes para mais de 150, mostra nosso impacto coletivo e a força duradoura da comunidade."
+        },
+        "frosh": {
+          "title": "Líder de Orientação - Engineering Frosh Week",
+          "date": "Abril 2020 - Setembro 2022",
+          "description": "Como líder de orientação na Universidade de Toronto, tive o prazer de receber novos estudantes no campus e apresentá-los aos valores e à cultura da Faculdade de Ciências Aplicadas e Engenharia. Guiando um grupo de 44 alunos do primeiro ano durante o programa de orientação, atuei como modelo positivo e ajudei na transição do ensino médio para a vida universitária."
+        },
+        "smc": {
+          "title": "Presidente de Residência - Sorbara Hall (SMC)",
+          "date": "Setembro 2019 - Abril 2020",
+          "description": "Como presidente do andar da minha residência, organizei e liderei eventos e reuniões para fortalecer o ambiente social da comunidade. Em colaboração com outros líderes residenciais, trabalhei para criar um ambiente acolhedor e inclusivo que incentivasse participação e respeito mútuo entre os residentes do St. Michael's College."
+        },
+        "ece": {
+          "title": "Diretor Financeiro - ECE Club",
+          "date": "Setembro 2018 - Abril 2019",
+          "description": "Como diretor financeiro do ECE Club, tive um papel importante na estabilidade e responsabilidade financeira do clube. Criei e gerenciei cuidadosamente um orçamento de 40 mil dólares, supervisionando despesas com precisão e diligência. Esse trabalho ajudou a manter a saúde financeira do clube e apoiar diversas iniciativas estudantis."
+        },
+        "notl": {
+          "title": "Capitão - Niagara-On-The-Lake Soccer Club",
+          "date": "Maio 2016 - Setembro 2018",
+          "description": "Meu papel como capitão de futebol reforçou minha crença na harmonia entre esforço individual e coletivo. Como jogador, desenvolvi ética de trabalho e perseverança. Essas qualidades foram essenciais na nossa vitória na Niagara Region Cup de 2017, uma conquista coletiva marcante. Essa experiência mostrou o poder da união e que liderança envolve inspirar outros a alcançar seu potencial."
+        },
+        "hc": {
+          "title": "Assistente de Arrecadação - NCDSB",
+          "date": "Setembro 2014 - Setembro 2018",
+          "description": "Participei de uma caminhada anual para arrecadar fundos destinados à construção de escolas e apoio a projetos de infraestrutura no Haiti, contribuindo para esforços de combate ao ciclo da pobreza. O evento reuniu estudantes, funcionários e comunidades locais de Niagara em torno do objetivo comum de gerar impacto positivo em países em desenvolvimento."
+        }
+      }
+    },
+    "contact": {
+      "title": "Contato",
+      "intro": "Para oportunidades, colaborações ou conversas reflexivas, a melhor forma de entrar em contato comigo é pelo LinkedIn ou por email.",
+      "linkedin": {
+        "title": "LinkedIn",
+        "subtitle": "Perfil profissional"
+      },
+      "email": {
+        "title": "Email"
+      },
+      "github": {
+        "title": "GitHub",
+        "subtitle": "Código e projetos"
+      },
+      "resume": {
+        "title": "Currículo",
+        "subtitle": "Ver PDF"
+      }
+    },
+    "quote": {
+      "text": "“A perfeição é alcançada não quando não há mais nada a acrescentar, mas quando não há mais nada a retirar.”",
+      "author": "— Antoine de Saint-Exupéry"
+    }
   }
 }

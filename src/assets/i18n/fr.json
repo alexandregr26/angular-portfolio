@@ -20,5 +20,192 @@
     "community": "Communauté",
     "linkedin": "LinkedIn",
     "github": "GitHub"
+  },
+  "home": {
+    "hero": {
+      "kicker": "Bonjour, je m'appelle",
+      "description": "Je suis ingénieur en informatique, intéressé par les systèmes qui façonnent la vie moderne, guidé par la discipline de l'ingénierie et par le regard de quelqu'un qui se soucie de la direction que prend la technologie.",
+      "detailsLabel": "Détails personnels",
+      "portraitAlt": "Portrait d'Alexandre Gouveia Rodrigues",
+      "details": {
+        "location": "Toronto, Canada",
+        "financialSystems": "Systèmes financiers",
+        "digitalHealth": "Santé numérique",
+        "blockchain": "Passionné de blockchain",
+        "smartCities": "Villes intelligentes",
+        "environmentalist": "Environnementaliste"
+      }
+    },
+    "about": {
+      "title": "À propos de moi",
+      "intro": "La technologie façonne la manière dont les gens pensent, travaillent et interagissent avec le monde. Je tiens à construire des systèmes qui le font avec intention.",
+      "body1": "J'ai étudié le génie électrique et informatique à l'Université de Toronto, avec une mineure en affaires et en intelligence artificielle. Depuis, mon travail a traversé le produit, les plateformes et l'infrastructure — des systèmes financiers et opérationnels chez Coinbase, aux outils pour développeurs chez Thomson Reuters, jusqu'aux systèmes orientés client chez Amazon.",
+      "body2": "Ce qui m'intéresse n'est pas le logiciel de manière abstraite. C'est le logiciel comme partie d'un ensemble plus vaste : les systèmes que les gens utilisent pour travailler, décider, faire confiance et avancer dans la complexité. Un logiciel n'est jamais seulement un logiciel. Il vit dans le monde et, au mieux, rend ce monde plus clair, plus fiable et plus facile à comprendre. Pour moi, une bonne ingénierie ne concerne pas seulement la performance ou l'échelle, mais aussi le jugement, l'élégance et la capacité de créer une technologie en laquelle les gens peuvent réellement avoir confiance.",
+      "body3": "C'est le niveau d'exigence qui m'importe. Je veux construire des systèmes qui comptent — des systèmes dont la valeur se ressent au-delà du code. La technologie comme décoration ne m'intéresse pas. Je veux que mon travail ait du poids dans le monde qui l'entoure."
+    },
+    "work": {
+      "title": "Expérience professionnelle",
+      "intro": "De l'infrastructure blockchain aux plateformes pour développeurs et aux interfaces produit, j'ai travaillé sur des systèmes où la fiabilité, la clarté et l'exécution sont essentielles.",
+      "summaryLabel": "Résumé",
+      "scopeLabel": "Portée",
+      "impactLabel": "Impact",
+      "items": {
+        "coinbase": {
+          "role": "Ingénieur logiciel",
+          "date": "Janv. 2025 - Présent",
+          "summary": "Gestion de l'infrastructure blockchain et de systèmes opérationnels internes dans un environnement de technologie financière à forts enjeux.",
+          "scope": "Gestion d'infrastructure de nœuds blockchain pour plus de 60 protocoles, outils opérationnels alimentés par LLM et améliorations de la réponse aux incidents.",
+          "impact": "Amélioration de la visibilité opérationnelle et de la réponse aux incidents tout en renforçant la fiabilité et l'évolutivité de l'infrastructure blockchain en production."
+        },
+        "thomsonReuters": {
+          "role": "Stagiaire développeur logiciel",
+          "date": "Sept. 2021 - Sept. 2022",
+          "summary": "Création de plateformes internes et d'outils d'automatisation pour simplifier l'onboarding, les tests d'autorisation et les flux de travail des développeurs.",
+          "scope": "API REST, travail d'identité autour d'OAuth, gestion de sessions utilisateur, développement full-stack avec ASP.NET Core et Angular, et livraison en équipe Agile.",
+          "impact": "Réduction du travail opérationnel manuel et amélioration de la rapidité, de la fiabilité et de l'utilisabilité des flux internes et des intégrations de plateforme."
+        },
+        "amazon": {
+          "role": "Stagiaire ingénieur logiciel",
+          "date": "Mai 2021 - Août 2021",
+          "summary": "Développement de fonctionnalités web mobiles destinées aux clients pour aider les annonceurs à interpréter la performance de leurs campagnes.",
+          "scope": "Développement avec React et Redux, visualisation de performance de campagnes, revues de conception, UAT, tests d'interface et analyse post-lancement.",
+          "impact": "Livraison d'une fonctionnalité en production ayant contribué à une hausse de +10 % de l'engagement et de la conversion des annonceurs sur Amazon."
+        }
+      }
+    },
+    "projects": {
+      "title": "Projets techniques",
+      "intro": "Une collection de projets façonnés par la curiosité et par la recherche de solutions créatives et pratiques à des problèmes techniques complexes.",
+      "items": {
+        "blockchain": {
+          "summary": "Un système d'échange de dossiers médicaux électroniques basé sur la blockchain, conçu pour permettre aux organisations de santé de partager, valider et accéder aux dossiers des patients de manière sécurisée sur un réseau permissionné.",
+          "labels": {
+            "healthcare": "Systèmes de santé",
+            "blockchain": "Infrastructure blockchain"
+          }
+        },
+        "aps360": {
+          "summary": "Un modèle prédictif de ML évaluant des caractéristiques audio structurées et des métadonnées Spotify afin de prévoir la popularité des chansons et d'identifier les tendances liées à la performance commerciale.",
+          "labels": {
+            "ml": "ML appliqué",
+            "predictive": "Modélisation prédictive"
+          }
+        },
+        "ece297": {
+          "summary": "Un système de cartographie géospatiale permettant l'exploration de cartes urbaines en temps réel, la visualisation de données géographiques et des itinéraires optimisés par pathfinding algorithmique.",
+          "labels": {
+            "geospatial": "Logiciel géospatial",
+            "mapping": "Systèmes cartographiques"
+          }
+        },
+        "splitz": {
+          "summary": "Une extension Chrome conçue pour organiser les onglets en catégories personnalisées, réduire l'encombrement visuel et simplifier la navigation web quotidienne.",
+          "labels": {
+            "extension": "Extension de navigateur",
+            "productivity": "Outil de productivité"
+          }
+        },
+        "ece243": {
+          "summary": "Un jeu de tir à la première personne conçu pour la plateforme DE1-SoC, combinant contrôle matériel bas niveau, rendu VGA, logique de jeu et entrées embarquées réactives.",
+          "labels": {
+            "embedded": "Systèmes embarqués",
+            "game": "Développement de jeu"
+          }
+        },
+        "utat": {
+          "summary": "Un circuit capteur basse consommation pour une station sol de fusée, conçu pour surveiller la tension de la batterie, déclencher un arrêt automatique et protéger les systèmes électriques critiques.",
+          "labels": {
+            "circuit": "Conception de circuits",
+            "aerospace": "Systèmes aérospatiaux"
+          }
+        }
+      }
+    },
+    "skills": {
+      "title": "Boîte à outils d'ingénierie",
+      "intro": "Une boîte à outils en constante évolution, façonnée par l'expérience professionnelle, l'exploration délibérée et le désir continu d'approfondir ma compréhension des technologies modernes.",
+      "items": {
+        "english": "Anglais",
+        "portuguese": "Portugais",
+        "french": "Français"
+      },
+      "groups": {
+        "core": {
+          "title": "Ingénierie fondamentale",
+          "description": "Outils fondamentaux pour comprendre le comportement du logiciel sous la surface, de la performance et de la mémoire aux données, à la structure et à la correction."
+        },
+        "application": {
+          "title": "Développement d'applications",
+          "description": "Frameworks et outils pour construire des applications claires, maintenables et pensées à la fois du point de vue de l'ingénierie et de l'utilisateur."
+        },
+        "infrastructure": {
+          "title": "IA, données et infrastructure",
+          "description": "Technologies que j'utilise pour construire, déployer et comprendre des systèmes modernes liés aux workflows d'IA, aux environnements cloud, à l'infrastructure et à la visibilité opérationnelle."
+        },
+        "communication": {
+          "title": "Communication",
+          "description": "Langues qui m'aident à travailler entre cultures, équipes et contextes, en rendant la collaboration plus naturelle et les idées plus faciles à transmettre."
+        }
+      }
+    },
+    "community": {
+      "title": "Engagement communautaire",
+      "intro": "Une grande partie de ce que je suis s'est formée en dehors du code, à travers des communautés qui m'ont appris que le leadership n'est pas un titre, mais une responsabilité de servir, d'organiser et de contribuer à un objectif plus grand.",
+      "items": {
+        "brasa": {
+          "title": "Président - BRASA UofT",
+          "date": "Septembre 2018 - Avril 2023",
+          "description": "Mon parcours avec BRASA UofT a été une remarquable aventure de croissance et de connexion culturelle. Mon rôle actif dans la promotion de la culture brésilienne a été une expérience enrichissante et une source de réconfort qui m'a permis de rester proche de mes racines malgré la distance. Je suis fier d'avoir élargi la portée de BRASA UofT dans la région du Grand Toronto et à travers le Canada, en renforçant un réseau dynamique de Brésiliens."
+        },
+        "frosh": {
+          "title": "Leader d'orientation - Engineering Frosh Week",
+          "date": "Avril 2020 - Septembre 2022",
+          "description": "En tant que leader d'orientation à l'Université de Toronto, j'ai eu le plaisir d'accueillir les nouveaux étudiants sur le campus et de leur présenter les valeurs et la culture de la Faculté des sciences appliquées et de génie. J'ai guidé un groupe de 44 étudiants de première année pendant le programme d'orientation et les ai aidés à faire la transition vers la vie universitaire."
+        },
+        "smc": {
+          "title": "Président de résidence - Sorbara Hall (SMC)",
+          "date": "Septembre 2019 - Avril 2020",
+          "description": "Comme président de l'étage de ma résidence, j'ai organisé et animé des événements et réunions pour renforcer l'atmosphère sociale de notre communauté. En collaboration avec d'autres responsables de résidence, j'ai travaillé à créer un environnement accueillant et inclusif favorisant la participation et le respect mutuel."
+        },
+        "ece": {
+          "title": "Directeur financier - ECE Club",
+          "date": "Septembre 2018 - Avril 2019",
+          "description": "Comme directeur financier de l'ECE Club, j'ai joué un rôle important dans la stabilité et la responsabilité financière du club. J'ai créé et géré avec soin un budget de 40 000 $, en supervisant les dépenses avec précision et rigueur, ce qui a permis au club de soutenir de nombreuses initiatives étudiantes."
+        },
+        "notl": {
+          "title": "Capitaine - Niagara-On-The-Lake Soccer Club",
+          "date": "Mai 2016 - Septembre 2018",
+          "description": "Mon rôle de capitaine de soccer a renforcé ma conviction dans l'harmonie entre les efforts individuels et collectifs. Comme joueur, j'ai développé une éthique de travail et une persévérance constantes. Ces qualités ont été essentielles à notre victoire à la Niagara Region Cup en 2017 et ont montré que le leadership consiste aussi à inspirer les autres à atteindre leur potentiel."
+        },
+        "hc": {
+          "title": "Assistant de collecte de fonds - NCDSB",
+          "date": "Septembre 2014 - Septembre 2018",
+          "description": "J'ai participé à une marche annuelle visant à recueillir des fonds pour construire des écoles et soutenir des projets d'infrastructure en Haïti, contribuant aux efforts pour briser le cycle de la pauvreté. Cet événement rassemblait étudiants, personnel et communautés locales de Niagara autour d'un objectif commun d'impact positif."
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "intro": "Pour des opportunités, des collaborations ou des conversations réfléchies, la meilleure façon de me joindre est LinkedIn ou le courriel.",
+      "linkedin": {
+        "title": "LinkedIn",
+        "subtitle": "Profil professionnel"
+      },
+      "email": {
+        "title": "Courriel"
+      },
+      "github": {
+        "title": "GitHub",
+        "subtitle": "Code et projets"
+      },
+      "resume": {
+        "title": "CV",
+        "subtitle": "Voir le PDF"
+      }
+    },
+    "quote": {
+      "text": "« La perfection est atteinte, non pas lorsqu'il n'y a plus rien à ajouter, mais lorsqu'il n'y a plus rien à retirer. »",
+      "author": "— Antoine de Saint-Exupéry"
+    }
   }
 }

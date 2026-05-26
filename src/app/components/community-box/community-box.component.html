@@ -1,10 +1,10 @@
 <article class="community-card">
-    <div class="community-media" [class.bottom-priority]="communitybox.title.includes('Orientation Leader') || communitybox.title.includes('Captain')">
+    <div class="community-media" [class.bottom-priority]="communitybox.bottomPriority || communitybox.title.includes('Orientation Leader') || communitybox.title.includes('Captain')">
         <img src={{communitybox.img}} alt="">
     </div>
     <div class="community-content">
-        <h2 class="subtitle">{{communitybox.title}}</h2>
-        <p class="date">{{communitybox.date}}</p>
-        <p class="mini-description">{{communitybox.description}}</p>
+        <h2 class="subtitle">{{ communitybox.titleKey ? (communitybox.titleKey | translate) : communitybox.title }}</h2>
+        <p class="date">{{ communitybox.dateKey ? (communitybox.dateKey | translate) : communitybox.date }}</p>
+        <p class="mini-description">{{ communitybox.descriptionKey ? (communitybox.descriptionKey | translate) : communitybox.description }}</p>
     </div>
 </article>

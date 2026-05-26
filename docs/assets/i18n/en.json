@@ -20,5 +20,192 @@
     "community": "Community",
     "linkedin": "LinkedIn",
     "github": "GitHub"
+  },
+  "home": {
+    "hero": {
+      "kicker": "Hello, my name is",
+      "description": "I'm a computer engineer interested in the systems that shape modern life, guided by the discipline of engineering and the perspective of someone who cares where technology leads.",
+      "detailsLabel": "Personal details",
+      "portraitAlt": "Portrait of Alexandre Gouveia Rodrigues",
+      "details": {
+        "location": "Toronto, Canada",
+        "financialSystems": "Financial Systems",
+        "digitalHealth": "Digital Health",
+        "blockchain": "Blockchain Enthusiast",
+        "smartCities": "Smart Cities",
+        "environmentalist": "Environmentalist"
+      }
+    },
+    "about": {
+      "title": "About Me",
+      "intro": "Technology shapes how people think, work, and interact with the world. I care about building systems that do that thoughtfully.",
+      "body1": "I studied Electrical and Computer Engineering at the University of Toronto, with a minor in Business and Artificial Intelligence. Since then, my work has moved through product, platform, and infrastructure — from financial technology and operational systems at Coinbase, to developer tooling at Thomson Reuters, to customer-facing systems at Amazon.",
+      "body2": "What interests me is not software in the abstract. It is software as part of something larger: the systems people use to work, decide, trust, and move through complexity. Software is never just software. It lives inside the world, and at its best, it makes that world clearer, more reliable, and easier to act within. To me, good engineering is not only about performance or scale, but about judgment, elegance, and the ability to create technology people can genuinely trust.",
+      "body3": "That is the standard I care about. I want to build systems that matter — systems whose value is felt beyond the codebase. I am not interested in technology as decoration. I want my work to hold its weight in the world outside it."
+    },
+    "work": {
+      "title": "Work Experience",
+      "intro": "From blockchain infrastructure to developer platforms and product interfaces, I’ve worked on systems where reliability, clarity, and execution matter.",
+      "summaryLabel": "Summary",
+      "scopeLabel": "Scope",
+      "impactLabel": "Impact",
+      "items": {
+        "coinbase": {
+          "role": "Software Engineer",
+          "date": "Jan 2025 - Present",
+          "summary": "Managing blockchain infrastructure and internal operational systems across a high-stakes financial technology environment.",
+          "scope": "Blockchain node infrastructure management for 60+ protocols, LLM-powered operational tooling, and incident response mitigation improvements.",
+          "impact": "Improved operational visibility and incident response while strengthening the reliability and scalability of production blockchain infrastructure."
+        },
+        "thomsonReuters": {
+          "role": "Software Developer Intern",
+          "date": "Sep 2021 - Sep 2022",
+          "summary": "Building internal platforms and automation tools to streamline onboarding, authorization testing, and developer workflows.",
+          "scope": "REST APIs, OAuth-oriented identity work, user session management, full-stack development with ASP.NET Core and Angular, and Agile team delivery.",
+          "impact": "Reduced manual operational work and improved the speed, reliability, and usability of internal developer workflows and platform integrations."
+        },
+        "amazon": {
+          "role": "Software Development Engineer Intern",
+          "date": "May 2021 - Aug 2021",
+          "summary": "Developing customer-facing mobile web features that helped advertisers interpret campaign performance.",
+          "scope": "React and Redux feature development, campaign performance visualization, design reviews, UAT and UI testing, and post-launch performance analysis.",
+          "impact": "Delivered a production feature that contributed to a +10% lift in advertiser engagement and conversion on Amazon."
+        }
+      }
+    },
+    "projects": {
+      "title": "Technical Projects",
+      "intro": "A collection of projects shaped by curiosity and the pursuit of creative, practical solutions to complex technical problems.",
+      "items": {
+        "blockchain": {
+          "summary": "A blockchain-based electronic health record exchange system designed to let healthcare organizations securely share, validate, and access patient records across a permissioned network.",
+          "labels": {
+            "healthcare": "Healthcare Systems",
+            "blockchain": "Blockchain Infrastructure"
+          }
+        },
+        "aps360": {
+          "summary": "A predictive ML model that evaluated structured audio and metadata features from Spotify to forecast song popularity and identify patterns associated with commercial performance.",
+          "labels": {
+            "ml": "Applied ML",
+            "predictive": "Predictive Modeling"
+          }
+        },
+        "ece297": {
+          "summary": "A geospatial mapping system that supported real-time city map exploration, geographic data visualization, and optimized routes through algorithmic pathfinding.",
+          "labels": {
+            "geospatial": "Geospatial Software",
+            "mapping": "Mapping Systems"
+          }
+        },
+        "splitz": {
+          "summary": "A Chrome extension built to organize browser tabs into custom categories, reduce visual clutter, and make everyday web navigation easier to manage.",
+          "labels": {
+            "extension": "Browser Extension",
+            "productivity": "Productivity Tool"
+          }
+        },
+        "ece243": {
+          "summary": "A first-person shooter built for the DE1-SoC platform, combining low-level hardware control, VGA rendering, game logic, and responsive embedded input handling.",
+          "labels": {
+            "embedded": "Embedded Systems",
+            "game": "Game Development"
+          }
+        },
+        "utat": {
+          "summary": "A low-power sensor circuit for a rocket ground station, designed to monitor battery voltage, trigger automatic shutoff, and protect critical electrical systems.",
+          "labels": {
+            "circuit": "Circuit Design",
+            "aerospace": "Aerospace Systems"
+          }
+        }
+      }
+    },
+    "skills": {
+      "title": "Engineering Toolkit",
+      "intro": "A growing toolkit shaped through industry experience, deliberate exploration, and a constant drive to deepen my understanding of modern technology.",
+      "items": {
+        "english": "English",
+        "portuguese": "Portuguese",
+        "french": "French"
+      },
+      "groups": {
+        "core": {
+          "title": "Core Engineering",
+          "description": "Foundational tools for understanding how software behaves beneath the surface, from system performance and memory to data, structure, and correctness."
+        },
+        "application": {
+          "title": "Application Development",
+          "description": "Frameworks and tools for building applications that are clear, maintainable, and considered from both an engineering and user perspective."
+        },
+        "infrastructure": {
+          "title": "AI, Data & Infrastructure",
+          "description": "Technologies I use to build, deploy, and understand modern systems across AI workflows, cloud environments, infrastructure, and operational visibility."
+        },
+        "communication": {
+          "title": "Communication",
+          "description": "Languages that help me work across cultures, teams, and contexts, making collaboration more natural and ideas easier to carry across borders."
+        }
+      }
+    },
+    "community": {
+      "title": "Community Involvement",
+      "intro": "A large part of who I am was shaped outside the codebase, through communities that taught me of leadership not as a title, but as a responsibility to serve, organize, and contribute to a greater purpose in life.",
+      "items": {
+        "brasa": {
+          "title": "President - BRASA UofT",
+          "date": "September 2018 - April 2023",
+          "description": "My journey with BRASA UofT has been a remarkable odyssey of growth and cultural connection. My active role in promoting Brazilian culture was a rewarding experience and a great source of solace that allowed me to stay close to my roots despite being far from home. I'm proud to have increased BRASA UofT's reach within the GTA and across Canada, fostering a vibrant network of Brazilians. The growth I've witnessed during my time with BRASA, from 10 participants to 150+, stands as a testament to our collective impact on the organization and the enduring strength of our community."
+        },
+        "frosh": {
+          "title": "Orientation Leader - Engineering Frosh Week",
+          "date": "April 2020 - September 2022",
+          "description": "As an orientation leader at the University of Toronto, I had the pleasure of welcoming incoming students to campus and introducing them to the values and culture of the Faculty of Applied Science & Engineering. Guiding a group of 44 first-year students through the Orientation program, I served as a positive role model, helping them transition smoothly from high school to university life."
+        },
+        "smc": {
+          "title": "House President - Sorbara Hall (SMC)",
+          "date": "September 2019 - April 2020",
+          "description": "As House President of my residence floor, I organized and led events and meetings to enhance our community's social atmosphere. Collaborating with other residence leaders, I focused on fostering a welcoming and inclusive environment that encouraged participation and mutual respect among all St. Michael's College residents."
+        },
+        "ece": {
+          "title": "Finance Director - ECE Club",
+          "date": "September 2018 - April 2019",
+          "description": "As Finance Director for the ECE Club, I played a crucial role in maintaining the club's financial stability and accountability. I carefully created and managed a $40K budget, overseeing all expenses with precision and diligence. My efforts ensured the club's financial health, enabling it to carry out its mission and support many student initiatives."
+        },
+        "notl": {
+          "title": "Captain - Niagara-On-The-Lake Soccer Club",
+          "date": "May 2016 - September 2018",
+          "description": "My role as soccer captain reinforced my belief in the harmony of individual and collective efforts. As a player, I cultivated an unwavering work ethic and perseverance. These qualities were pivotal in our 2017 Niagara Region Cup win, a remarkable collective achievement. This experience highlighted the power of unity, showcasing that leadership involves inspiring others to reach their potential and fostering a culture where each player's strengths contribute to shared success."
+        },
+        "hc": {
+          "title": "Fundraising Assistant - NCDSB",
+          "date": "September 2014 - September 2018",
+          "description": "I participated in an annual walk to raise funds for building schools and supporting infrastructure projects in Haiti, contributing to efforts to break the cycle of poverty. This event brought together students, staff, and local communities across Niagara with the shared goal of making a positive impact in developing countries."
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "intro": "For opportunities, collaborations, or thoughtful conversations, the best way to reach me is through LinkedIn or email.",
+      "linkedin": {
+        "title": "LinkedIn",
+        "subtitle": "Professional profile"
+      },
+      "email": {
+        "title": "Email"
+      },
+      "github": {
+        "title": "GitHub",
+        "subtitle": "Code and projects"
+      },
+      "resume": {
+        "title": "Resume",
+        "subtitle": "View PDF"
+      }
+    },
+    "quote": {
+      "text": "“Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.”",
+      "author": "— Antoine de Saint-Exupéry"
+    }
   }
 }

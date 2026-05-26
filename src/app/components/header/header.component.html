@@ -2,23 +2,23 @@
     <div class="container">
         <div class="hero-grid">
             <div class="hero-copy">
-                <p class="hero-kicker">Hello, my name is</p>
+                <p class="hero-kicker">{{ 'home.hero.kicker' | translate }}</p>
                 <h1 class="hero-name" aria-label="Alexandre Gouveia Rodrigues">
                     <span class="name-word name-alexandre">Alexandre</span>
                     <span class="name-word name-gouveia">Gouveia</span>
                     <span class="name-word name-rodrigues">Rodrigues</span>
                 </h1>
-                <p class="intro-description">I'm a computer engineer interested in the systems that shape modern life, guided by the discipline of engineering and the perspective of someone who cares where technology leads.</p>
-                <div class="hero-actions" aria-label="Personal details">
-                    <span class="hero-detail-pill">📍 Toronto, Canada</span>
-                    <span class="hero-detail-pill">🌐 Financial Systems</span>
-                    <span class="hero-detail-pill">🧬 Digital Health</span>
-                    <span class="hero-detail-pill">⛓️ Blockchain Enthusiast</span>
-                    <span class="hero-detail-pill">🏙 Smart Cities</span>
-                    <span class="hero-detail-pill">🌱 Environmentalist</span>
+                <p class="intro-description">{{ 'home.hero.description' | translate }}</p>
+                <div class="hero-actions" [attr.aria-label]="'home.hero.detailsLabel' | translate">
+                    <span class="hero-detail-pill">📍 {{ 'home.hero.details.location' | translate }}</span>
+                    <span class="hero-detail-pill">🌐 {{ 'home.hero.details.financialSystems' | translate }}</span>
+                    <span class="hero-detail-pill">🧬 {{ 'home.hero.details.digitalHealth' | translate }}</span>
+                    <span class="hero-detail-pill">⛓️ {{ 'home.hero.details.blockchain' | translate }}</span>
+                    <span class="hero-detail-pill">🏙 {{ 'home.hero.details.smartCities' | translate }}</span>
+                    <span class="hero-detail-pill">🌱 {{ 'home.hero.details.environmentalist' | translate }}</span>
                 </div>
             </div>
-            <div class="hero-visual" aria-label="Portrait of Alexandre Gouveia Rodrigues">
+            <div class="hero-visual" [attr.aria-label]="'home.hero.portraitAlt' | translate">
                 <img class="hero-profile" src="assets/img/header/new-profile.jpg" alt="Alexandre Gouveia Rodrigues">
             </div>
         </div>

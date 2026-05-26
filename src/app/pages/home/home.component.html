@@ -3,13 +3,13 @@
 <section id="about" class="info credibility-section">
     <div class="container box credibility-box">
         <div class="section-heading">
-            <p class="section-eyebrow">About Me</p>
-            <p class="section-intro">Technology shapes how people think, work, and interact with the world. I care about building systems that do that thoughtfully.</p>
+            <p class="section-eyebrow">{{ 'home.about.title' | translate }}</p>
+            <p class="section-intro">{{ 'home.about.intro' | translate }}</p>
         </div>
         <div class="about-panel">
-            <p>I studied Electrical and Computer Engineering at the University of Toronto, with a minor in Business and Artificial Intelligence. Since then, my work has moved through product, platform, and infrastructure — from financial technology and operational systems at Coinbase, to developer tooling at Thomson Reuters, to customer-facing systems at Amazon.</p>
-            <p>What interests me is not software in the abstract. It is software as part of something larger: the systems people use to work, decide, trust, and move through complexity. Software is never just software. It lives inside the world, and at its best, it makes that world clearer, more reliable, and easier to act within. To me, good engineering is not only about performance or scale, but about judgment, elegance, and the ability to create technology people can genuinely trust.</p>
-            <p>That is the standard I care about. I want to build systems that matter — systems whose value is felt beyond the codebase. I am not interested in technology as decoration. I want my work to hold its weight in the world outside it.</p>
+            <p>{{ 'home.about.body1' | translate }}</p>
+            <p>{{ 'home.about.body2' | translate }}</p>
+            <p>{{ 'home.about.body3' | translate }}</p>
         </div>
     </div>
 </section>
@@ -17,8 +17,8 @@
 <section id="work" class="credibility-section">
     <div class="container box credibility-box">
         <div class="section-heading">
-            <p class="section-eyebrow">Work Experience</p>
-            <p class="section-intro">From blockchain infrastructure to developer platforms and product interfaces, I’ve worked on systems where reliability, clarity, and execution matter.</p>
+            <p class="section-eyebrow">{{ 'home.work.title' | translate }}</p>
+            <p class="section-intro">{{ 'home.work.intro' | translate }}</p>
         </div>
         <div class="experience-list">
             <ng-container *ngFor="let experience of professionalExperiences">
@@ -36,21 +36,21 @@
                 <div class="experience-media experience-media-mobile" [style.background-image]="'url(' + experience.img + ')'"></div>
                 <div class="experience-content">
                     <div class="experience-topline">
-                        <p class="experience-company">{{experience.company}} | {{experience.role}}</p>
-                        <span>{{experience.date}}</span>
+                        <p class="experience-company">{{experience.company}} | {{experience.roleKey | translate}}</p>
+                        <span>{{experience.dateKey | translate}}</span>
                     </div>
                     <div class="experience-summary">
-                        <span>Summary</span>
-                        <p>{{experience.summary}}</p>
+                        <span>{{ 'home.work.summaryLabel' | translate }}</span>
+                        <p>{{experience.summaryKey | translate}}</p>
                     </div>
                     <div class="experience-meta-grid">
                         <div>
-                            <span>Scope</span>
-                            <p>{{experience.scope}}</p>
+                            <span>{{ 'home.work.scopeLabel' | translate }}</span>
+                            <p>{{experience.scopeKey | translate}}</p>
                         </div>
                         <div>
-                            <span>Impact</span>
-                            <p>{{experience.impact}}</p>
+                            <span>{{ 'home.work.impactLabel' | translate }}</span>
+                            <p>{{experience.impactKey | translate}}</p>
                         </div>
                     </div>
                     <div class="credibility-tags">
@@ -65,17 +65,17 @@
 <section id="projects" class="credibility-section">
     <div class="container box credibility-box">
         <div class="section-heading">
-            <p class="section-eyebrow">Technical Projects</p>
-            <p class="section-intro">A collection of projects shaped by curiosity and the pursuit of creative, practical solutions to complex technical problems.</p>
+            <p class="section-eyebrow">{{ 'home.projects.title' | translate }}</p>
+            <p class="section-intro">{{ 'home.projects.intro' | translate }}</p>
         </div>
         <div class="featured-project-grid">
             <a *ngFor="let project of featuredProjects" [routerLink]="project.route" class="featured-project-card liquid-card" (pointermove)="moveLiquidGlass($event)" (pointerleave)="resetLiquidGlass($event)">
                 <div class="featured-project-image" [style.background-image]="'url(' + project.img + ')'"></div>
                 <div class="featured-project-content">
                     <h2>{{project.title}}</h2>
-                    <span>{{project.summary}}</span>
-                    <div class="credibility-tags project-labels" *ngIf="project.labels?.length">
-                        <span *ngFor="let label of project.labels">{{label}}</span>
+                    <span>{{project.summaryKey | translate}}</span>
+                    <div class="credibility-tags project-labels" *ngIf="project.labelKeys?.length">
+                        <span *ngFor="let label of project.labelKeys">{{label | translate}}</span>
                     </div>
                 </div>
             </a>
@@ -86,14 +86,14 @@
 <section id="skills" class="credibility-section">
     <div class="container box credibility-box">
         <div class="section-heading">
-            <p class="section-eyebrow">Engineering Toolkit</p>
-            <p class="section-intro">A growing toolkit shaped through industry experience, deliberate exploration, and a constant drive to deepen my understanding of modern technology.</p>
+            <p class="section-eyebrow">{{ 'home.skills.title' | translate }}</p>
+            <p class="section-intro">{{ 'home.skills.intro' | translate }}</p>
         </div>
         <div class="skills-system">
             <div class="skills-cluster" *ngFor="let group of skillGroups">
                 <div class="skills-cluster-header">
-                    <h2>{{group.title}}</h2>
-                    <p>{{group.description}}</p>
+                    <h2>{{group.titleKey | translate}}</h2>
+                    <p>{{group.descriptionKey | translate}}</p>
                 </div>
                 <div class="skills-grid">
                     <app-skill *ngFor="let skill of group.skills" [skill]="skill"></app-skill>
@@ -106,8 +106,8 @@
 <section id="community" class="credibility-section">
     <div class="container box credibility-box">
         <div class="section-heading">
-            <p class="section-eyebrow">Community Involvement</p>
-            <p class="section-intro">A large part of who I am was shaped outside the codebase, through communities that taught me of leadership not as a title, but as a responsibility to serve, organize, and contribute to a greater purpose in life.</p>
+            <p class="section-eyebrow">{{ 'home.community.title' | translate }}</p>
+            <p class="section-intro">{{ 'home.community.intro' | translate }}</p>
         </div>
         <div class="community-list">
             <app-community-box [communitybox]="brasa"></app-community-box>
@@ -123,36 +123,36 @@
 <section id="contact" class="credibility-section">
     <div class="container box credibility-box">
         <div class="section-heading">
-            <p class="section-eyebrow">Contact</p>
-            <p class="section-intro">For opportunities, collaborations, or thoughtful conversations, the best way to reach me is through LinkedIn or email.</p>
+            <p class="section-eyebrow">{{ 'home.contact.title' | translate }}</p>
+            <p class="section-intro">{{ 'home.contact.intro' | translate }}</p>
         </div>
         <div class="contact-info-grid">
             <a class="contact-info-card" target="_blank" href="https://www.linkedin.com/in/alexandre-gouveia-r/">
                 <span class="contact-info-icon"><i class='bx bxl-linkedin-square'></i></span>
                 <span>
-                    <strong>LinkedIn</strong>
-                    <small>Professional profile</small>
+                    <strong>{{ 'home.contact.linkedin.title' | translate }}</strong>
+                    <small>{{ 'home.contact.linkedin.subtitle' | translate }}</small>
                 </span>
             </a>
             <a class="contact-info-card" href="mailto:alexandre.gouveiarodrigues@mail.utoronto.ca">
                 <span class="contact-info-icon"><i class='bx bx-envelope'></i></span>
                 <span>
-                    <strong>Email</strong>
+                    <strong>{{ 'home.contact.email.title' | translate }}</strong>
                     <small>alexandre.gouveiarodrigues@mail.utoronto.ca</small>
                 </span>
             </a>
             <a class="contact-info-card" target="_blank" href="https://github.com/alexandregr26/">
                 <span class="contact-info-icon"><i class='bx bxl-github'></i></span>
                 <span>
-                    <strong>GitHub</strong>
-                    <small>Code and projects</small>
+                    <strong>{{ 'home.contact.github.title' | translate }}</strong>
+                    <small>{{ 'home.contact.github.subtitle' | translate }}</small>
                 </span>
             </a>
             <a class="contact-info-card" target="_blank" href="assets/pdf/AlexandreGouveiaRodriguesResume.pdf">
                 <span class="contact-info-icon"><i class='bx bx-file'></i></span>
                 <span>
-                    <strong>Resume</strong>
-                    <small>View PDF</small>
+                    <strong>{{ 'home.contact.resume.title' | translate }}</strong>
+                    <small>{{ 'home.contact.resume.subtitle' | translate }}</small>
                 </span>
             </a>
         </div>
@@ -160,7 +160,7 @@
 </section>
 <div class="container closing-signature">
     <blockquote>
-        <p>“Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.”</p>
-        <cite>— Antoine de Saint-Exupéry</cite>
+        <p>{{ 'home.quote.text' | translate }}</p>
+        <cite>{{ 'home.quote.author' | translate }}</cite>
     </blockquote>
 </div>

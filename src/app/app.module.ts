@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
@@ -25,6 +25,7 @@ import { PortfolioComponent } from './pages/work/portfolio/portfolio.component';
 import { CapstoneComponent } from './pages/work/capstone/capstone.component';
 import { Aps360Component } from './pages/work/aps360/aps360.component';
 import { TranslatePipe } from './pipes/translate.pipe';
+import { TranslationService } from './services/translation.service';
 
 const appRoutes: Routes = [
   {
@@ -114,6 +115,10 @@ const appRoutes: Routes = [
   }
 ]
 
+function initializeTranslations(translationService: TranslationService): () => Promise<void> {
+  return () => translationService.init();
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -147,7 +152,14 @@ const appRoutes: Routes = [
       scrollPositionRestoration: 'enabled'
     })
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeTranslations,
+      deps: [TranslationService],
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
