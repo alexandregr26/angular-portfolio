@@ -1,6 +1,8 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ThomsonReutersComponent } from './thomson-reuters.component';
+import { MockTranslatePipe } from '../../../testing/test-doubles';
 
 describe('ThomsonReutersComponent', () => {
   let component: ThomsonReutersComponent;
@@ -8,7 +10,8 @@ describe('ThomsonReutersComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ThomsonReutersComponent]
+      declarations: [ThomsonReutersComponent, MockTranslatePipe],
+      schemas: [NO_ERRORS_SCHEMA]
     });
     fixture = TestBed.createComponent(ThomsonReutersComponent);
     component = fixture.componentInstance;

@@ -1,27 +1,33 @@
-import { TestBed } from '@angular/core/testing';
+import { NavigationEnd, Router } from '@angular/router';
+import { Subject } from 'rxjs';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    declarations: [AppComponent]
-  }));
+  let routerEvents: Subject<NavigationEnd>;
+  let component: AppComponent;
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+  beforeEach(() => {
+    routerEvents = new Subject<NavigationEnd>();
+    component = new AppComponent({ events: routerEvents } as unknown as Router);
   });
 
-  it(`should have as title 'angular-portfolio'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-portfolio');
+  afterEach(() => {
+    delete (globalThis as typeof globalThis & { gtag?: jasmine.Spy }).gtag;
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-portfolio app is running!');
+  it('should create with the portfolio title', () => {
+    expect(component).toBeTruthy();
+    expect(component.title).toBe('angular-portfolio');
+  });
+
+  it('should track completed route navigation', () => {
+    const gtag = jasmine.createSpy('gtag');
+    (globalThis as typeof globalThis & { gtag: jasmine.Spy }).gtag = gtag;
+
+    routerEvents.next(new NavigationEnd(1, '/project/capstone', '/project/capstone'));
+
+    expect(gtag).toHaveBeenCalledWith('config', 'MEASUREMENT-ID', {
+      page_path: '/project/capstone'
+    });
   });
 });

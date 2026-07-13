@@ -1,6 +1,8 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UtatComponent } from './utat.component';
+import { MockTranslatePipe } from '../../../testing/test-doubles';
 
 describe('UtatComponent', () => {
   let component: UtatComponent;
@@ -8,7 +10,8 @@ describe('UtatComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [UtatComponent]
+      declarations: [UtatComponent, MockTranslatePipe],
+      schemas: [NO_ERRORS_SCHEMA]
     });
     fixture = TestBed.createComponent(UtatComponent);
     component = fixture.componentInstance;

@@ -1,6 +1,8 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CapstoneComponent } from './capstone.component';
+import { MockTranslatePipe } from '../../../testing/test-doubles';
 
 describe('CapstoneComponent', () => {
   let component: CapstoneComponent;
@@ -8,7 +10,8 @@ describe('CapstoneComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CapstoneComponent]
+      declarations: [CapstoneComponent, MockTranslatePipe],
+      schemas: [NO_ERRORS_SCHEMA]
     });
     fixture = TestBed.createComponent(CapstoneComponent);
     component = fixture.componentInstance;

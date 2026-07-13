@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { ProjectBoxComponent } from './project-box.component';
+import { MockTranslatePipe } from '../../testing/test-doubles';
 
 describe('ProjectBoxComponent', () => {
   let component: ProjectBoxComponent;
@@ -8,7 +10,8 @@ describe('ProjectBoxComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ProjectBoxComponent]
+      declarations: [ProjectBoxComponent, MockTranslatePipe],
+      imports: [RouterTestingModule]
     });
     fixture = TestBed.createComponent(ProjectBoxComponent);
     component = fixture.componentInstance;
