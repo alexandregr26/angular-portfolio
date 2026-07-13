@@ -3,23 +3,23 @@
         <div class="container">
             <div class="hero-panel">
                 <div class="hero-copy">
-                    <p class="project-kicker">PROJECT SHOWCASE</p>
+                    <p class="project-kicker">{{ 'caseStudies.common.projectShowcase' | translate }}</p>
                     <h1>HealthChainON</h1>
-                    <p class="hero-tagline">Decentralized. Transparent. Reliable.</p>
-                    <p class="hero-body">A healthcare record system that puts patients at the center, protects sensitive data, and builds trust through blockchain technology.</p>
+                    <p class="hero-tagline">{{ 'caseStudies.capstone.tagline' | translate }}</p>
+                    <p class="hero-body">{{ 'caseStudies.capstone.hero' | translate }}</p>
                 </div>
                 <div class="hero-map-mobile" aria-hidden="true"></div>
                 <div class="hero-support">
-                    <h2>Built for Ontario</h2>
-                    <p>Designed to support secure health data exchange across healthcare organizations.</p>
+                    <h2>{{ 'caseStudies.capstone.builtFor' | translate }}</h2>
+                    <p>{{ 'caseStudies.capstone.builtForBody' | translate }}</p>
                 </div>
                 <div class="hero-flow">
                     <div *ngFor="let step of heroFlow" class="flow-step">
                         <span class="icon-well">
                             <lucide-icon [img]="step.icon" [size]="22" [strokeWidth]="1.9"></lucide-icon>
                         </span>
-                        <h2>{{ step.title }}</h2>
-                        <p>{{ step.description }}</p>
+                        <h2>{{ step.titleKey | translate }}</h2>
+                        <p>{{ step.descriptionKey | translate }}</p>
                     </div>
                 </div>
             </div>
@@ -31,25 +31,24 @@
             <div class="project-body">
                 <section class="body-section overview-card">
                     <div class="overview-copy">
-                        <p class="section-eyebrow">OVERVIEW</p>
-                        <p>HealthChainON is a blockchain-powered proof of concept for a secure, interoperable, and patient-centric electronic health record system in Ontario. It was designed to explore how blockchain technology could address limitations in traditional Electronic Health Record (EHR) systems by improving transparency, strengthening patient control, and creating a more accountable way for health information to be stored, accessed, and shared.</p>
+                        <p class="section-eyebrow">{{ 'caseStudies.common.overview' | translate }}</p>
+                        <p>{{ 'caseStudies.capstone.overview' | translate }}</p>
                     </div>
                     <div class="problem-area">
-                        <p class="section-eyebrow">THE PROBLEM</p>
-                        <p>Ontario's health record systems remain fragmented across different healthcare providers, making it difficult for patients to access, control, and share their complete medical history. Records are often stored by individual institutions, which can lead to repeated data collection, delayed access, duplicated tests, and incomplete information during care. Existing EHR platforms improve parts of this process, but they do not fully solve three core issues:</p>
+                        <p class="section-eyebrow">{{ 'caseStudies.capstone.problemTitle' | translate }}</p>
+                        <p>{{ 'caseStudies.capstone.problem' | translate }}</p>
                         <div class="problem-list">
                             <div *ngFor="let problem of problemPillars">
                                 <span class="icon-well"><lucide-icon [img]="problem.icon" [size]="21" [strokeWidth]="1.9"></lucide-icon></span>
-                                <h2>{{ problem.title }}</h2>
-                                <p>{{ problem.detail }}</p>
+                                <h2>{{ problem.titleKey | translate }}</h2>
+                                <p>{{ problem.detailKey | translate }}</p>
                             </div>
                         </div>
                     </div>
                 </section>
                 <section class="body-section blockchain-section">
-                    <p class="section-eyebrow">WHY BLOCKCHAIN TECHNOLOGY?</p>
-                    <p class="blockchain-intro">Blockchain is an electronic ledger where transactions are grouped into blocks and linked through cryptographic hashes, creating a secure and tamper-evident record of activity. Because health records contain highly sensitive personal information, they require a system that can verify access, preserve a reliable history of actions, and reduce dependence on any single institution to control patient data. Blockchain supports this by providing a transparent, immutable, and decentralized foundation for managing trusted record activity.
-                    </p>
+                    <p class="section-eyebrow">{{ 'caseStudies.capstone.whyBlockchain' | translate }}</p>
+                    <p class="blockchain-intro">{{ 'caseStudies.capstone.blockchainIntro' | translate }}</p>
                     <div class="blockchain-reasons">
                         <ng-container *ngFor="let reason of blockchainReasons; let last = last">
                             <article class="blockchain-card">
@@ -57,9 +56,9 @@
                                     <span class="icon-well">
                                         <lucide-icon [img]="reason.icon" [size]="24" [strokeWidth]="1.9"></lucide-icon>
                                     </span>
-                                    <h2>{{ reason.title }}</h2>
+                                    <h2>{{ reason.titleKey | translate }}</h2>
                                 </div>
-                                <p>{{ reason.text }}</p>
+                                <p>{{ reason.textKey | translate }}</p>
                             </article>
                             <div *ngIf="!last" class="blockchain-connector" aria-hidden="true">
                                 <span></span>
@@ -71,31 +70,31 @@
                 </section>
 
                 <section class="body-section architecture-card">
-                    <p class="section-eyebrow">SYSTEM ARCHITECTURE</p>
-                    <p class="section-intro">HealthChainON is organized around a Web API that connects the user-facing application to the system’s storage, encryption, and blockchain components.</p>
-                    <img src="assets/img/experience/Capstone/finalDesign.png" alt="Final system design diagram">
+                    <p class="section-eyebrow">{{ 'caseStudies.common.systemArchitecture' | translate }}</p>
+                    <p class="section-intro">{{ 'caseStudies.capstone.architectureIntro' | translate }}</p>
+                    <img src="assets/img/experience/Capstone/finalDesign.png" [alt]="'caseStudies.capstone.designAlt' | translate">
                     <div class="module-strip">
                         <article *ngFor="let module of systemModules">
                             <span class="icon-well module-icon">
                                 <lucide-icon [img]="module.icon" [size]="20" [strokeWidth]="1.9"></lucide-icon>
                             </span>
-                            <h2>{{ module.title }}</h2>
-                            <p>{{ module.body }}</p>
+                            <h2>{{ module.titleKey | translate }}</h2>
+                            <p>{{ module.bodyKey | translate }}</p>
                         </article>
                     </div>
                 </section>
 
                 <section class="body-section">
                     <div class="section-heading">
-                        <p class="section-eyebrow">MY CONTRIBUTIONS</p>
-                        <p class="section-intro">Four key areas where I led development and delivered impact.</p>
+                        <p class="section-eyebrow">{{ 'caseStudies.common.myContributions' | translate }}</p>
+                        <p class="section-intro">{{ 'caseStudies.capstone.contributionsIntro' | translate }}</p>
                     </div>
                     <div class="contribution-list">
                         <article *ngFor="let contribution of contributions; let i = index">
                             <span>{{ i + 1 }}</span>
                             <div>
-                                <h2>{{ contribution.title }}</h2>
-                                <p>{{ contribution.summary }}</p>
+                                <h2>{{ contribution.titleKey | translate }}</h2>
+                                <p>{{ contribution.summaryKey | translate }}</p>
                             </div>
                         </article>
                     </div>
@@ -103,11 +102,11 @@
 
                 <section class="body-section">
                     <div class="section-heading">
-                        <p class="section-eyebrow">FINAL PRESENTATION POSTER</p>
-                        <p class="section-intro">The scientific poster created for the capstone presentation and evaluation.</p>
+                        <p class="section-eyebrow">{{ 'caseStudies.common.finalPoster' | translate }}</p>
+                        <p class="section-intro">{{ 'caseStudies.capstone.posterIntro' | translate }}</p>
                     </div>
                     <div class="poster-panel">
-                        <img src="assets/img/experience/Capstone/poster.png" alt="Final presentation poster">
+                        <img src="assets/img/experience/Capstone/poster.png" [alt]="'caseStudies.capstone.posterAlt' | translate">
                     </div>
                 </section>
             </div>
@@ -118,8 +117,8 @@
         <div class="container">
             <div class="technologies-panel">
                 <div class="section-heading compact-heading">
-                    <p class="section-eyebrow">TECHNICAL STACK</p>
-                    <p class="section-intro">Technologies and tools used across the system.</p>
+                    <p class="section-eyebrow">{{ 'caseStudies.common.technicalStack' | translate }}</p>
+                    <p class="section-intro">{{ 'caseStudies.capstone.stackIntro' | translate }}</p>
                 </div>
                 <div class="technology-grid">
                     <app-skill *ngFor="let tool of stackSummary" [skill]="tool"></app-skill>
@@ -131,8 +130,8 @@
     <section class="related-work-section">
         <div class="container">
             <div class="section-heading">
-                <p class="section-eyebrow">OTHER WORKS</p>
-                <p class="section-intro">More projects and professional experiences across infrastructure, product systems, applied AI, and software engineering.</p>
+                <p class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</p>
+                <p class="section-intro">{{ 'caseStudies.common.relatedIntro' | translate }}</p>
             </div>
             <div class="related-work-grid">
                 <app-project-box *ngFor="let project of otherWorks" [projectbox]="project"></app-project-box>

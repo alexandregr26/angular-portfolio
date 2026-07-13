@@ -23,23 +23,23 @@ export class SplitzComponent {
 
   features = [
     {
-      title: 'Categories for tab organization',
-      body: 'Create custom categories to group your tabs and keep everything in order.',
+      titleKey: 'caseStudies.splitz.feature1Title',
+      bodyKey: 'caseStudies.splitz.feature1Body',
       icon: FolderPlus
     },
     {
-      title: 'Drag-and-drop tab movement',
-      body: 'Easily move tabs into the right category with a simple drag and drop.',
+      titleKey: 'caseStudies.splitz.feature2Title',
+      bodyKey: 'caseStudies.splitz.feature2Body',
       icon: MousePointer2
     },
     {
-      title: 'Keyboard shortcuts',
-      body: 'Quickly switch between categories and manage tabs using shortcuts.',
+      titleKey: 'caseStudies.splitz.feature3Title',
+      bodyKey: 'caseStudies.splitz.feature3Body',
       icon: Keyboard
     },
     {
-      title: 'Light and dark modes',
-      body: 'Choose between light and dark themes for a comfortable experience.',
+      titleKey: 'caseStudies.splitz.feature4Title',
+      bodyKey: 'caseStudies.splitz.feature4Body',
       icon: MoonStar
     }
   ];

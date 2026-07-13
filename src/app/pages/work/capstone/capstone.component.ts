@@ -26,42 +26,42 @@ export class CapstoneComponent {
 
   heroFlow = [
     {
-      title: 'Upload',
-      description: 'Records are encrypted and prepared.',
+      titleKey: 'caseStudies.capstone.flow1Title',
+      descriptionKey: 'caseStudies.capstone.flow1Body',
       icon: FileUp
     },
     {
-      title: 'Store',
-      description: 'Encrypted files are stored on IPFS.',
+      titleKey: 'caseStudies.capstone.flow2Title',
+      descriptionKey: 'caseStudies.capstone.flow2Body',
       icon: Database
     },
     {
-      title: 'Record',
-      description: 'Transactions are recorded on Hyperledger Fabric.',
+      titleKey: 'caseStudies.capstone.flow3Title',
+      descriptionKey: 'caseStudies.capstone.flow3Body',
       icon: Blocks
     },
     {
-      title: 'Share',
-      description: 'Access is granted with permissions.',
+      titleKey: 'caseStudies.capstone.flow4Title',
+      descriptionKey: 'caseStudies.capstone.flow4Body',
       icon: Share2
     }
   ];
 
   problemPillars = [
     {
-      title: 'Patient Centricity',
+      titleKey: 'caseStudies.capstone.pillar1Title',
       icon: UserRound,
-      detail: 'Patients often lack direct control over where their records are stored, who can access them, and how easily they can share them across providers.'
+      detailKey: 'caseStudies.capstone.pillar1Body'
     },
     {
-      title: 'Security Concerns',
+      titleKey: 'caseStudies.capstone.pillar2Title',
       icon: ShieldCheck,
-      detail: 'Health records contain sensitive personal information that must be protected from unauthorized access, tampering, and improper disclosure.'
+      detailKey: 'caseStudies.capstone.pillar2Body'
     },
     {
-      title: 'Interoperability',
+      titleKey: 'caseStudies.capstone.pillar3Title',
       icon: Network,
-      detail: 'Healthcare providers often rely on separate systems, making it difficult to exchange records cleanly across hospitals, labs, clinics, and patients.'
+      detailKey: 'caseStudies.capstone.pillar3Body'
     }
   ];
 
@@ -69,66 +69,66 @@ export class CapstoneComponent {
 
   blockchainReasons = [
     {
-      title: 'Transparency',
+      titleKey: 'caseStudies.capstone.reason1Title',
       icon: Eye,
-      text: 'All transactions are visible and verifiable across the network, ensuring that information flows openly and can be independently validated. This enhances accountability and prevents information blockage.'
+      textKey: 'caseStudies.capstone.reason1Body'
     },
     {
-      title: 'Immutability',
+      titleKey: 'caseStudies.capstone.reason2Title',
       icon: Fingerprint,
-      text: 'Once a record is written to the blockchain, it cannot be altered or deleted. This preserves the integrity of past records, ensuring a trustworthy history and preventing information corruption.'
+      textKey: 'caseStudies.capstone.reason2Body'
     },
     {
-      title: 'Decentralization',
+      titleKey: 'caseStudies.capstone.reason3Title',
       icon: Blocks,
-      text: 'Data is distributed across multiple nodes rather than stored in a single central authority. This removes single points of failure, reduces dependency on one entity, and improves resilience and information security.'
+      textKey: 'caseStudies.capstone.reason3Body'
     }
   ];
 
   systemModules = [
     {
-      title: 'Front End',
+      titleKey: 'caseStudies.capstone.module1Title',
       icon: Monitor,
-      body: 'Web interface for users to interact with the system securely.'
+      bodyKey: 'caseStudies.capstone.module1Body'
     },
     {
-      title: 'File Encryption',
+      titleKey: 'caseStudies.capstone.module2Title',
       icon: FileLock,
-      body: 'AES256 + HMAC encryption for secure file & data protection.'
+      bodyKey: 'caseStudies.capstone.module2Body'
     },
     {
-      title: 'IPFS Storage',
+      titleKey: 'caseStudies.capstone.module3Title',
       icon: Database,
-      body: 'Decentralized file storage for encrypted health records.'
+      bodyKey: 'caseStudies.capstone.module3Body'
     },
     {
-      title: 'Hyperledger Fabric',
+      titleKey: 'caseStudies.capstone.module4Title',
       icon: Blocks,
-      body: 'Permissioned blockchain layer for immutable and verifiable records.'
+      bodyKey: 'caseStudies.capstone.module4Body'
     },
     {
-      title: 'Web API',
+      titleKey: 'caseStudies.capstone.module5Title',
       icon: Route,
-      body: 'Exposes blockchain functions through a RESTful API.'
+      bodyKey: 'caseStudies.capstone.module5Body'
     }
   ];
 
   contributions = [
     {
-      title: 'Blockchain Research',
-      summary: 'Researched Hyperledger Fabrics architecture, transaction flow, user authentication model, and chaincode execution process to define how a permissioned blockchain layer could support the application.'
+      titleKey: 'caseStudies.capstone.contribution1Title',
+      summaryKey: 'caseStudies.capstone.contribution1Body'
     },
     {
-      title: 'Hyperledger Fabric Network Setup',
-      summary: 'Configured and adapted a Hyperledger Fabric sample network for the project by modifying organizations, removing unnecessary resources, and resolving compatibility issues so the blockchain layer could support healthcare record workflows.'
+      titleKey: 'caseStudies.capstone.contribution2Title',
+      summaryKey: 'caseStudies.capstone.contribution2Body'
     },
     {
-      title: 'Chaincode Development',
-      summary: 'Implemented the blockchain business logic for registration, authentication, record transactions, and data retrieval, creating 16 deterministic chaincode functions for network validation.'
+      titleKey: 'caseStudies.capstone.contribution3Title',
+      summaryKey: 'caseStudies.capstone.contribution3Body'
     },
     {
-      title: 'API Integration',
-      summary: 'Built a 14-endpoint API that connected the web application to the Hyperledger Fabric chaincode, exposed blockchain actions to the front end, and enforced JWT-based role access control.'
+      titleKey: 'caseStudies.capstone.contribution4Title',
+      summaryKey: 'caseStudies.capstone.contribution4Body'
     }
   ];
 

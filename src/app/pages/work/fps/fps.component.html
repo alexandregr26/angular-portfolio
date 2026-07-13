@@ -3,32 +3,32 @@
         <div class="container">
             <div class="fps-hero-card">
                 <div class="fps-hero-copy">
-                    <p class="fps-kicker"><span></span>PROJECT SHOWCASE</p>
-                    <h1>FPS Game</h1>
-                    <p class="fps-subtitle">A RETRO RAY-TRACED EXPERIMENT IN LOW-LEVEL GAME DEVELOPMENT</p>
+                    <p class="fps-kicker"><span></span>{{ 'caseStudies.common.projectShowcase' | translate }}</p>
+                    <h1>{{ 'caseStudies.fps.title' | translate }}</h1>
+                    <p class="fps-subtitle">{{ 'caseStudies.fps.subtitle' | translate }}</p>
                     <div class="fps-accent" aria-hidden="true"></div>
-                    <p class="fps-hero-text">A first-person shooter built from the ground up in C for the Altera DE1-SoC board. The game renders a 3D maze-like environment from a 2D map using a lightweight ray-tracing approach, with player movement, collision detection, enemy sprites, fireballs, and VGA output all handled directly through low-level hardware interaction.</p>
+                    <p class="fps-hero-text">{{ 'caseStudies.fps.hero' | translate }}</p>
 
                     <div class="source-note">
                         <span class="source-icon" aria-hidden="true">
                             <lucide-icon [img]="sourceIcon" [size]="22" [strokeWidth]="1.9"></lucide-icon>
                         </span>
                         <div>
-                            <h2 style="margin:0 0 4px;color:var(--color-ink);font-size:.94rem;font-weight:760;line-height:1.25;">Source code available on request.</h2>
-                            <p style="margin:0;color:var(--color-ink-soft);font-size:.88rem;line-height:1.5;">This project is hosted in a private repository to support academic integrity.</p>
+                            <h2 style="margin:0 0 4px;color:var(--color-ink);font-size:.94rem;font-weight:760;line-height:1.25;">{{ 'caseStudies.fps.sourceTitle' | translate }}</h2>
+                            <p style="margin:0;color:var(--color-ink-soft);font-size:.88rem;line-height:1.5;">{{ 'caseStudies.fps.sourceBody' | translate }}</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="crt-shell" aria-label="FPS live demo feed">
+                <div class="crt-shell" [attr.aria-label]="'caseStudies.fps.demoLabel' | translate">
                     <div class="crt-bezel">
                         <div class="crt-screen">
-                            <img src="assets/img/experience/ECE243/fps.gif" alt="FPS Game live demo">
+                            <img src="assets/img/experience/ECE243/fps.gif" [alt]="'caseStudies.fps.demoAlt' | translate">
                         </div>
                     </div>
                     <div class="crt-status">
-                        <span><i aria-hidden="true"></i>LIVE DEMO FEED</span>
-                        <span>RESOLUTION: 320x240</span>
+                        <span><i aria-hidden="true"></i>{{ 'caseStudies.fps.liveDemo' | translate }}</span>
+                        <span>{{ 'caseStudies.fps.resolution' | translate }}</span>
                     </div>
                     <div class="crt-vents" style="height:12px;width:76px;margin:12px 0 -16px auto;background:repeating-linear-gradient(0deg,#3e372c99 0 1px,transparent 1px 4px);" aria-hidden="true"></div>
                 </div>
@@ -44,10 +44,10 @@
                         <span class="section-icon plain-section-icon" style="color:#df3a24;">
                             <lucide-icon [img]="overviewIcon" [size]="34" [strokeWidth]="2"></lucide-icon>
                         </span>
-                        <p class="section-eyebrow">OVERVIEW</p>
+                        <p class="section-eyebrow">{{ 'caseStudies.common.overview' | translate }}</p>
                     </div>
-                    <p>Developed for the University of Toronto's second-year Computer Engineering course, Computer Organization (ECE243), this project was my first complete game development experience and an introduction to graphics programming. The game uses a ray-based rendering system to project a simple 2D map into a first-person 3D view, drawing walls, floors, enemies, and projectiles in real time.</p>
-                    <p>The project was designed specifically for the Altera DE1-SoC board, using memory-mapped I/O to read hardware switches and push buttons, drive LED feedback, and render directly to the VGA pixel buffer. Beyond the visual renderer, the game includes player navigation, wall collision handling, sprite-based enemies, projectile firing, depth-based occlusion, and double-buffered rendering for smoother gameplay.</p>
+                    <p>{{ 'caseStudies.fps.overview1' | translate }}</p>
+                    <p>{{ 'caseStudies.fps.overview2' | translate }}</p>
                 </article>
 
                 <article class="info-card">
@@ -55,10 +55,10 @@
                         <span class="section-icon plain-section-icon" style="color:#2f6fcd;">
                             <span style="display:block;color:#2f6fcd;font-size:34px;line-height:1;">★</span>
                         </span>
-                        <p class="section-eyebrow">KEY CONTRIBUTIONS</p>
+                        <p class="section-eyebrow">{{ 'caseStudies.common.keyContributions' | translate }}</p>
                     </div>
                     <ul class="contribution-list">
-                        <li *ngFor="let contribution of contributions">{{ contribution }}</li>
+                        <li *ngFor="let contribution of contributions">{{ contribution | translate }}</li>
                     </ul>
                 </article>
             </div>
@@ -66,14 +66,14 @@
             <div class="feature-rows">
                 <article class="feature-row">
                     <div class="feature-visual image-visual">
-                        <img src="assets/img/experience/ECE243/ray-traced.png" alt="FPS Game code, controls, and VGA output">
+                        <img src="assets/img/experience/ECE243/ray-traced.png" [alt]="'caseStudies.fps.renderingAlt' | translate">
                     </div>
                     <div class="feature-copy" style="padding-right:42px;">
                         <span class="feature-icon" style="background:#fff7e8;color:#b66a2e;">
                             <lucide-icon [img]="renderingIcon" [size]="31" [strokeWidth]="2.35"></lucide-icon>
                         </span>
-                        <h2>Ray-Traced Rendering</h2>
-                        <p>The game renders its 3D view by casting rays across the player’s field of view and stepping each ray forward until it reaches a wall or exceeds the visible depth range. The measured distance is then used to determine the height and shade of each wall column, creating a first-person perspective from a 16x16 map.</p>
+                        <h2>{{ 'caseStudies.fps.renderingTitle' | translate }}</h2>
+                        <p>{{ 'caseStudies.fps.renderingBody' | translate }}</p>
                     </div>
                 </article>
 
@@ -82,24 +82,24 @@
                         <span class="feature-icon" style="background:#fff7e8;color:#b66a2e;">
                             <lucide-icon [img]="controlsIcon" [size]="31" [strokeWidth]="2.35"></lucide-icon>
                         </span>
-                        <h2>DE1-SoC Controls</h2>
-                        <p>Player input is mapped directly to the board's physical switches and push buttons. The switches control movement, rotation, and strafing, while push buttons handle shooting and game-state actions.</p>
+                        <h2>{{ 'caseStudies.fps.controlsTitle' | translate }}</h2>
+                        <p>{{ 'caseStudies.fps.controlsBody' | translate }}</p>
                     </div>
                     <div class="feature-visual image-visual">
-                        <img src="assets/img/experience/ECE243/de1-soc.png" alt="Altera DE1-SoC board with switches and push buttons">
+                        <img src="assets/img/experience/ECE243/de1-soc.png" [alt]="'caseStudies.fps.controlsAlt' | translate">
                     </div>
                 </article>
 
                 <article class="feature-row">
                     <div class="feature-visual image-visual">
-                        <img src="assets/img/experience/ECE243/gameplay-objects.png" alt="Placeholder">
+                        <img src="assets/img/experience/ECE243/gameplay-objects.png" [alt]="'caseStudies.fps.objectsAlt' | translate">
                     </div>
                     <div class="feature-copy" style="padding-right:42px;">
                         <span class="feature-icon" style="background:#fff7e8;color:#b66a2e;">
                             <lucide-icon [img]="gameplayIcon" [size]="31" [strokeWidth]="2.35"></lucide-icon>
                         </span>
-                        <h2>Gameplay Objects</h2>
-                        <p>The game includes two main object types: enemy sprites and fireball projectiles. Both types of objects are updated every frame, checked against the map for wall collisions, projected into screen space, and drawn only when they fall inside the player’s field of view.</p>
+                        <h2>{{ 'caseStudies.fps.objectsTitle' | translate }}</h2>
+                        <p>{{ 'caseStudies.fps.objectsBody' | translate }}</p>
                     </div>
                 </article>
 
@@ -108,24 +108,24 @@
                         <span class="feature-icon" style="background:#fff7e8;color:#b66a2e;">
                             <lucide-icon [img]="vgaIcon" [size]="31" [strokeWidth]="2.35"></lucide-icon>
                         </span>
-                        <h2>VGA Rendering & Performance</h2>
-                        <p>The game outputs directly to a VGA display and is optimized to run reliably within the limited resources of the DE1-SoC platform. The final result is intentionally minimal, but technically complete: a playable FPS-style renderer built close to the hardware.</p>
+                        <h2>{{ 'caseStudies.fps.vgaTitle' | translate }}</h2>
+                        <p>{{ 'caseStudies.fps.vgaBody' | translate }}</p>
                     </div>
                     <div class="feature-visual image-visual">
-                        <img src="assets/img/experience/ECE243/vga2.png" alt="Placeholder">
+                        <img src="assets/img/experience/ECE243/vga2.png" [alt]="'caseStudies.fps.vgaAlt' | translate">
                     </div>
                 </article>
 
                 <article class="feature-row">
                     <div class="feature-visual image-visual arcade-visual">
-                        <img src="assets/img/experience/ECE243/arcade-inspiration.png" alt="Retro FPS Game start screen">
+                        <img src="assets/img/experience/ECE243/arcade-inspiration.png" [alt]="'caseStudies.fps.arcadeAlt' | translate">
                     </div>
                     <div class="feature-copy" style="padding-right:42px;">
                         <span class="feature-icon" style="background:#fff7e8;color:#b66a2e;">
                             <lucide-icon [img]="arcadeIcon" [size]="31" [strokeWidth]="2.35"></lucide-icon>
                         </span>
-                        <h2>Arcade Influence</h2>
-                        <p>Inspired by early arcade shooters, this project captures the spirit of building a game from limited resources. The visuals are simple and the controls hardware-driven, but the project brings together the essential parts of an FPS: movement, perspective, enemies, collision, and real-time display.</p>
+                        <h2>{{ 'caseStudies.fps.arcadeTitle' | translate }}</h2>
+                        <p>{{ 'caseStudies.fps.arcadeBody' | translate }}</p>
                     </div>
                 </article>
             </div>
@@ -136,8 +136,8 @@
         <div class="container">
             <div class="technologies-panel">
                 <div class="section-heading compact-heading">
-                    <p class="section-eyebrow">TECHNICAL STACK</p>
-                    <p class="section-intro">Tools and hardware used to build, test, and tune the FPS for real-time execution on the DE1-SoC board. The source code is private to support academic integrity.</p>
+                    <p class="section-eyebrow">{{ 'caseStudies.common.technicalStack' | translate }}</p>
+                    <p class="section-intro">{{ 'caseStudies.fps.stackIntro' | translate }}</p>
                 </div>
                 <div class="technology-grid">
                     <app-skill *ngFor="let item of technologies" [skill]="item"></app-skill>
@@ -149,8 +149,8 @@
     <section class="related-work-section fps-related-section">
         <div class="container">
             <div class="section-heading">
-                <p class="section-eyebrow">OTHER WORKS</p>
-                <p class="section-intro">More projects and professional experiences across infrastructure, product systems, applied AI, and software engineering.</p>
+                <p class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</p>
+                <p class="section-intro">{{ 'caseStudies.common.relatedIntro' | translate }}</p>
             </div>
             <div class="related-work-grid">
                 <app-project-box *ngFor="let project of otherWorks" [projectbox]="project"></app-project-box>

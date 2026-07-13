@@ -72,7 +72,7 @@
             <a *ngFor="let project of featuredProjects" [routerLink]="project.route" class="featured-project-card liquid-card" (pointermove)="moveLiquidGlass($event)" (pointerleave)="resetLiquidGlass($event)">
                 <div class="featured-project-image" [style.background-image]="'url(' + project.img + ')'"></div>
                 <div class="featured-project-content">
-                    <h2>{{project.title}}</h2>
+                    <h2>{{ project.titleKey ? (project.titleKey | translate) : project.title }}</h2>
                     <span>{{project.summaryKey | translate}}</span>
                     <div class="credibility-tags project-labels" *ngIf="project.labelKeys?.length">
                         <span *ngFor="let label of project.labelKeys">{{label | translate}}</span>

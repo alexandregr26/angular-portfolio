@@ -8,9 +8,9 @@
                 <div class="work-title-content">
                     <div class="work-title-topline">
                         <p class="work-eyebrow">Thomson Reuters</p>
-                        <p class="work-date">Sep 2021 - Sep 2022</p>
+                        <p class="work-date">{{ 'caseStudies.thomsonReuters.date' | translate }}</p>
                     </div>
-                    <h1>Software Developer Intern</h1>
+                    <h1>{{ 'caseStudies.thomsonReuters.title' | translate }}</h1>
                 </div>
             </div>
         </div>
@@ -19,25 +19,10 @@
     <section class="work-content-section">
         <div class="container">
             <article class="summary-panel">
-                <p class="section-eyebrow">Position Summary</p>
-                <p class="job-description">As a Software Developer Intern at Thomson Reuters, I contributed to developing web
-                    applications using modern technologies such as AWS, C#, .NET, and Angular. My role primarily focused on
-                    building and revamping REST APIs, ensuring they adhered to industry best practices. This effort enhanced
-                    usability and performance across various services and laid the foundation for further work in backend
-                    development.</p>
-                <p class="job-description">As I advanced in this area, I took on the challenge of automating onboarding
-                    processes, optimizing workflows, implementing secure token exchange systems, and managing user sessions,
-                    which deepened my understanding of modern authorization protocols like OAuth and best practices in identity
-                    and access management. However, my responsibilities did not stop at the backend; I was also involved in
-                    designing and developing responsive, user-friendly interfaces that ensured a seamless experience for
-                    end-users. This hands-on work in full-stack development equipped me with a well-rounded technical
-                    knowledge, which I continue to build upon.</p>
-                <p class="job-description">Beyond technical contributions, I actively participated in Agile development
-                    processes. I frequently led daily stand-up meetings, sprint planning sessions, and retrospective
-                    discussions, strengthening my teamwork and project management skills. Reflecting on this internship, I
-                    realize it not only refined my software engineering skills but also improved my ability to collaborate
-                    effectively in a
-                    dynamic, international setting.</p>
+                <p class="section-eyebrow">{{ 'caseStudies.common.positionSummary' | translate }}</p>
+                <p class="job-description">{{ 'caseStudies.thomsonReuters.summary1' | translate }}</p>
+                <p class="job-description">{{ 'caseStudies.thomsonReuters.summary2' | translate }}</p>
+                <p class="job-description">{{ 'caseStudies.thomsonReuters.summary3' | translate }}</p>
             </article>
         </div>
     </section>
@@ -46,7 +31,7 @@
         <div class="container">
             <div class="technologies-panel">
                 <div class="section-heading">
-                    <p class="section-eyebrow">Technologies Used:</p>
+                    <p class="section-eyebrow">{{ 'caseStudies.common.technologiesUsed' | translate }}</p>
                 </div>
                 <div class="technology-grid">
                     <app-skill *ngFor="let tool of technologies" [skill]="tool"></app-skill>
@@ -58,8 +43,8 @@
     <section class="related-work-section">
         <div class="container">
             <div class="section-heading">
-                <p class="section-eyebrow">Other Works</p>
-                <p class="section-intro">More projects and professional experiences across infrastructure, product systems, applied AI, and software engineering.</p>
+                <p class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</p>
+                <p class="section-intro">{{ 'caseStudies.common.relatedIntro' | translate }}</p>
             </div>
             <div class="related-work-grid">
                 <app-project-box *ngFor="let project of otherWorks" [projectbox]="project"></app-project-box>

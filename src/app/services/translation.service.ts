@@ -79,9 +79,14 @@ export class TranslationService {
   }
 
   private loadLanguage(language: LanguageCode): Promise<void> {
-    return firstValueFrom(this.http.get<TranslationMap>(`assets/i18n/${language}.json`))
-      .then((translations) => {
-        this.translations = translations;
+    const englishTranslations = firstValueFrom(this.http.get<TranslationMap>('assets/i18n/en.json'));
+    const selectedTranslations = language === 'en'
+      ? englishTranslations
+      : firstValueFrom(this.http.get<TranslationMap>(`assets/i18n/${language}.json`));
+
+    return Promise.all([englishTranslations, selectedTranslations])
+      .then(([english, selected]) => {
+        this.translations = this.mergeTranslations(english, selected);
         this.languageSubject.next(language);
         this.persistLanguage(language);
         this.applyDocumentLanguage(language);
@@ -92,6 +97,19 @@ export class TranslationService {
         this.persistLanguage('en');
         this.applyDocumentLanguage('en');
       });
+  }
+
+  private mergeTranslations(base: TranslationMap, overrides: TranslationMap): TranslationMap {
+    const merged: TranslationMap = { ...base };
+
+    Object.entries(overrides).forEach(([key, value]) => {
+      const baseValue = merged[key];
+      merged[key] = typeof baseValue === 'object' && typeof value === 'object'
+        ? this.mergeTranslations(baseValue, value)
+        : value;
+    });
+
+    return merged;
   }
 
   private getInitialLanguage(): LanguageCode {

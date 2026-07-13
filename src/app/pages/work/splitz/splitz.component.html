@@ -3,17 +3,17 @@
         <div class="container">
             <div class="splitz-hero-panel">
                 <div class="splitz-hero-copy">
-                    <p class="project-kicker">PROJECT SHOWCASE</p>
+                    <p class="project-kicker">{{ 'caseStudies.common.projectShowcase' | translate }}</p>
                     <img class="splitz-title-image" src="assets/img/experience/Splitz/header.png" alt="Splitz">
-                    <p class="splitz-tagline">Chrome Browser Extension</p>
-                    <p class="splitz-hero-text">A minimal Google Chrome extension that helps users manage tabs efficiently and reduce browsing clutter.</p>
+                    <p class="splitz-tagline">{{ 'caseStudies.splitz.tagline' | translate }}</p>
+                    <p class="splitz-hero-text">{{ 'caseStudies.splitz.hero' | translate }}</p>
                     <a class="splitz-link" target="_blank" rel="noopener noreferrer" href="https://chrome.google.com/webstore/detail/splitz/kbepjlbbljaidojicmmjafnolfipokmf">
                         <lucide-icon [img]="downloadIcon" [size]="18" [strokeWidth]="2"></lucide-icon>
-                        Download Splitz
+                        {{ 'caseStudies.splitz.download' | translate }}
                     </a>
                 </div>
                 <div class="splitz-hero-preview">
-                    <img src="assets/img/experience/Splitz/Screenshot2ResizedCropped.png" alt="Splitz extension interface">
+                    <img src="assets/img/experience/Splitz/Screenshot2ResizedCropped.png" [alt]="'caseStudies.splitz.previewAlt' | translate">
                 </div>
             </div>
         </div>
@@ -24,22 +24,22 @@
             <div class="splitz-body">
                 <section class="splitz-section splitz-overview">
                     <div class="splitz-description">
-                        <p class="section-eyebrow">PROJECT DESCRIPTION</p>
-                        <p>In my quest for a more organized browsing experience, I found myself frustrated with the clutter of disorganized, open tabs in Google Chrome. Unable to find a suitable solution, I decided to take matters into my own hands and created Splitz, a Chrome extension designed to help users manage tabs efficiently and have a better experience browsing the Internet.</p>
-                        <p>Creating Splitz wasn't just about tidying up my tabs, however; it was also about my commitment to continual learning and professional growth. As my first personal project, this experience fundamentally changed how I viewed software engineering, making me realize the endless potential that lies in creating things that seamlessly work together on the web.</p>
+                        <p class="section-eyebrow">{{ 'caseStudies.common.projectDescription' | translate }}</p>
+                        <p>{{ 'caseStudies.splitz.description1' | translate }}</p>
+                        <p>{{ 'caseStudies.splitz.description2' | translate }}</p>
                     </div>
                     <div class="splitz-features">
                         <div class="section-heading">
-                            <p class="section-eyebrow">FEATURES</p>
-                            <p class="section-intro">Core browser workflows supported by the extension.</p>
+                            <p class="section-eyebrow">{{ 'caseStudies.common.features' | translate }}</p>
+                            <p class="section-intro">{{ 'caseStudies.common.featuresIntro' | translate }}</p>
                         </div>
                         <div class="feature-grid">
                             <article *ngFor="let feature of features">
                                 <span class="feature-icon">
                                     <lucide-icon [img]="feature.icon" [size]="21" [strokeWidth]="1.9"></lucide-icon>
                                 </span>
-                                <h2>{{ feature.title }}</h2>
-                                <p>{{ feature.body }}</p>
+                                <h2>{{ feature.titleKey | translate }}</h2>
+                                <p>{{ feature.bodyKey | translate }}</p>
                             </article>
                         </div>
                     </div>
@@ -55,9 +55,9 @@
                     <lucide-icon [img]="whyIcon" [size]="30" [strokeWidth]="1.9"></lucide-icon>
                 </span>
                 <div>
-                    <h2>Why I Built Splitz</h2>
-                    <p>I built Splitz to solve a problem I faced every day: too many open tabs and no good way to organize them.</p>
-                    <p>This project taught me how powerful small tools can be when they solve real problems. It was my first personal project, and publishing it on the Chrome Web Store was a major milestone in my journey as a developer.</p>
+                    <h2>{{ 'caseStudies.splitz.whyTitle' | translate }}</h2>
+                    <p>{{ 'caseStudies.splitz.why1' | translate }}</p>
+                    <p>{{ 'caseStudies.splitz.why2' | translate }}</p>
                 </div>
             </article>
         </div>
@@ -67,8 +67,8 @@
         <div class="container">
             <div class="technologies-panel">
                 <div class="section-heading compact-heading">
-                    <p class="section-eyebrow">TECHNICAL STACK</p>
-                    <p class="section-intro">Technologies and tools used to build and ship the extension.</p>
+                    <p class="section-eyebrow">{{ 'caseStudies.common.technicalStack' | translate }}</p>
+                    <p class="section-intro">{{ 'caseStudies.splitz.stackIntro' | translate }}</p>
                 </div>
                 <div class="technology-grid">
                     <app-skill *ngFor="let tool of technologies" [skill]="tool"></app-skill>
@@ -80,8 +80,8 @@
     <section class="related-work-section">
         <div class="container">
             <div class="section-heading">
-                <p class="section-eyebrow">OTHER WORKS</p>
-                <p class="section-intro">More projects and professional experiences across infrastructure, product systems, applied AI, and software engineering.</p>
+                <p class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</p>
+                <p class="section-intro">{{ 'caseStudies.common.relatedIntro' | translate }}</p>
             </div>
             <div class="related-work-grid">
                 <app-project-box *ngFor="let project of otherWorks" [projectbox]="project"></app-project-box>

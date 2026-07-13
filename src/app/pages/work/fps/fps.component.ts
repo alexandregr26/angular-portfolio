@@ -27,12 +27,12 @@ export class FpsComponent {
   arcadeIcon = Gamepad2;
 
   contributions = [
-    'Implemented a ray tracing engine in C for a 3D FPS game',
-    'Developed hardware-level input handling through DE1-SoC switches and push buttons for movement, rotation, strafing, shooting, and game-state control',
-    'Implemented distance-based wall and floor shading to create depth, perspective, and a clearer sense of movement through the environment',
-    'Created sprite-based game objects for enemies and fireballs, including sampling logic, screen projection, object movement, and visibility checks',
-    'Implemented collision behavior for both the player and moving objects, including wall blocking, projectile removal, and enemy movement reversal',
-    'Tuned rendering resolution, movement speed, field of view, and distance stepping to balance performance and playability on limited embedded hardware'
+    'caseStudies.fps.contribution1',
+    'caseStudies.fps.contribution2',
+    'caseStudies.fps.contribution3',
+    'caseStudies.fps.contribution4',
+    'caseStudies.fps.contribution5',
+    'caseStudies.fps.contribution6'
   ];
 
   technologies: Skill[] = [

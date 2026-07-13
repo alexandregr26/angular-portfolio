@@ -3,15 +3,15 @@
         <div class="container">
             <div class="utat-hero-panel">
                 <div class="utat-hero-copy">
-                    <p class="project-kicker">PROJECT SHOWCASE</p>
+                    <p class="project-kicker">{{ 'caseStudies.common.projectShowcase' | translate }}</p>
                     <img class="utat-logo" src="assets/img/experience/UTAT/utatlogo.jpg" alt="UTAT">
-                    <h1>Low Power Sensor for Rocket Ground Station</h1>
-                    <p class="utat-hero-text">A low-power sensor designed for the Defiance Rocket Project ground station to protect critical systems by automatically shutting down when the 22V battery voltage drops to 18V, minimizing power draw and preserving essential components.</p>
+                    <h1>{{ 'caseStudies.utat.title' | translate }}</h1>
+                    <p class="utat-hero-text">{{ 'caseStudies.utat.hero' | translate }}</p>
                 </div>
 
                 <div class="circuit-panel">
                     <div class="circuit-frame">
-                        <img src="assets/img/experience/UTAT/sensor-ai-cropped.png" alt="Low power sensor circuit diagram">
+                        <img src="assets/img/experience/UTAT/sensor-ai-cropped.png" [alt]="'caseStudies.utat.circuitAlt' | translate">
                     </div>
                 </div>
             </div>
@@ -22,42 +22,42 @@
         <div class="container">
             <div class="utat-body">
                 <section class="utat-section overview-section">
-                    <p class="section-eyebrow">OVERVIEW</p>
-                    <p>Developed for the Defiance Rocket Project, this low-power sensor monitors the ground station’s 22V battery and automatically disconnects the circuit when the voltage drops to 18V. This protects sensitive components from undervoltage conditions and reduces unnecessary power consumption once the system is shut down.</p>
-                    <p>The design emphasizes simplicity, reliability, and minimal current draw in the off state, which are critical for mission readiness and long-duration ground operations.</p>
+                    <p class="section-eyebrow">{{ 'caseStudies.common.overview' | translate }}</p>
+                    <p>{{ 'caseStudies.utat.overview1' | translate }}</p>
+                    <p>{{ 'caseStudies.utat.overview2' | translate }}</p>
                 </section>
 
                 <section class="utat-section requirements-section">
-                    <p class="section-eyebrow">REQUIREMENTS</p>
+                    <p class="section-eyebrow">{{ 'caseStudies.common.requirements' | translate }}</p>
                     <div class="requirement-list">
                         <article *ngFor="let requirement of requirements">
                             <span class="section-icon">
                                 <lucide-icon [img]="requirement.icon" [size]="23" [strokeWidth]="1.9"></lucide-icon>
                             </span>
                             <div>
-                                <h2>{{ requirement.title }}</h2>
-                                <p>{{ requirement.body }}</p>
+                                <h2>{{ requirement.titleKey | translate }}</h2>
+                                <p>{{ requirement.bodyKey | translate }}</p>
                             </div>
                         </article>
                     </div>
                 </section>
 
                 <section class="utat-section components-section">
-                    <p class="section-eyebrow">CORE COMPONENTS</p>
+                    <p class="section-eyebrow">{{ 'caseStudies.common.coreComponents' | translate }}</p>
                     <div class="component-grid">
                         <article *ngFor="let component of coreComponents">
                             <span class="component-image">
-                                <img [src]="component.img" [alt]="component.name + ' ' + component.label">
+                                <img [src]="component.img" [alt]="component.name">
                             </span>
                             <h2>{{ component.name }}</h2>
-                            <p>{{ component.label }}</p>
+                            <p>{{ component.labelKey | translate }}</p>
                         </article>
                     </div>
                 </section>
 
                 <section class="utat-section approach-section">
-                    <p class="section-eyebrow">DESIGN APPROACH</p>
-                    <p>The circuit uses a precision voltage reference and comparator to monitor the battery voltage. When the battery drops to the 18V threshold, the comparator output drives the MOSFET gate to cut power to the load. A high-value resistor network keeps current draw extremely low once the circuit is off, helping preserve battery life and protect the rocket ground station’s electronics.</p>
+                    <p class="section-eyebrow">{{ 'caseStudies.common.designApproach' | translate }}</p>
+                    <p>{{ 'caseStudies.utat.approach' | translate }}</p>
                 </section>
             </div>
         </div>
@@ -67,8 +67,8 @@
         <div class="container">
             <div class="technologies-panel">
                 <div class="section-heading compact-heading">
-                    <p class="section-eyebrow">TECHNICAL STACK</p>
-                    <p class="section-intro">Tools and languages used for the low-power sensor project.</p>
+                    <p class="section-eyebrow">{{ 'caseStudies.common.technicalStack' | translate }}</p>
+                    <p class="section-intro">{{ 'caseStudies.utat.stackIntro' | translate }}</p>
                 </div>
                 <div class="technology-grid">
                     <app-skill *ngFor="let tool of technologies" [skill]="tool"></app-skill>
@@ -80,8 +80,8 @@
     <section class="related-work-section">
         <div class="container">
             <div class="section-heading">
-                <p class="section-eyebrow">OTHER WORKS</p>
-                <p class="section-intro">More projects and professional experiences across infrastructure, product systems, applied AI, and software engineering.</p>
+                <p class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</p>
+                <p class="section-intro">{{ 'caseStudies.common.relatedIntro' | translate }}</p>
             </div>
             <div class="related-work-grid">
                 <app-project-box *ngFor="let project of otherWorks" [projectbox]="project"></app-project-box>

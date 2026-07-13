@@ -8,8 +8,8 @@
         (mouseleave)="onPointerLeave()">
         <div class="project-media" [style.background-image]="'url(' + projectbox.img + ')'"></div>
         <div class="project-content">
-            <p>{{projectbox.company}}</p>
-            <h2 class="subtitle">{{projectbox.title}}</h2>
+            <p>{{ projectbox.companyKey ? (projectbox.companyKey | translate) : projectbox.company }}</p>
+            <h2 class="subtitle">{{ projectbox.titleKey ? (projectbox.titleKey | translate) : projectbox.title }}</h2>
             <div class="project-labels" *ngIf="projectbox.labels?.length">
                 <span *ngFor="let label of projectbox.labels">{{label}}</span>
             </div>

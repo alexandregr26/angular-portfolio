@@ -15,13 +15,13 @@ export class UtatComponent {
 
   requirements = [
     {
-      title: 'Automatically shut off at 18V',
-      body: 'Turn off the circuit when the 22V battery voltage reaches 18V to protect components.',
+      titleKey: 'caseStudies.utat.requirement1Title',
+      bodyKey: 'caseStudies.utat.requirement1Body',
       icon: Zap
     },
     {
-      title: 'Minimize current draw once off',
-      body: 'Ensure the circuit draws only a minimal amount of current after shutdown.',
+      titleKey: 'caseStudies.utat.requirement2Title',
+      bodyKey: 'caseStudies.utat.requirement2Body',
       icon: Waves
     }
   ];
@@ -29,22 +29,22 @@ export class UtatComponent {
   coreComponents = [
     {
       name: '22.2V',
-      label: 'Lithium-Ion Battery',
+      labelKey: 'caseStudies.utat.battery',
       img: 'assets/img/experience/UTAT/battery.png'
     },
     {
       name: 'LT1495',
-      label: 'Op Amp',
+      labelKey: 'caseStudies.utat.opAmp',
       img: 'assets/img/experience/UTAT/op-amp.png'
     },
     {
       name: 'LT1389',
-      label: 'Zener Diode',
+      labelKey: 'caseStudies.utat.zener',
       img: 'assets/img/experience/UTAT/diode.png'
     },
     {
       name: 'MOSFET',
-      label: 'Transistor',
+      labelKey: 'caseStudies.utat.transistor',
       img: 'assets/img/experience/UTAT/mosfet.png'
     }
   ];

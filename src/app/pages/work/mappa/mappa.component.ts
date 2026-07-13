@@ -27,41 +27,41 @@ export class MappaComponent {
   heroMeta = ['C++', 'OpenStreetMap API', 'EZGL', 'A*'];
 
   highlights = [
-    'Fast and intelligent search with partial and misspelled-name support',
-    'Locate intersections and compute shortest paths',
-    'Delete past search data to keep the map clean and responsive',
-    '100% customizable map with colour schemes and filters',
-    'Clear visual hierarchy with zoom-aware details and directions'
+    'caseStudies.mappa.highlight1',
+    'caseStudies.mappa.highlight2',
+    'caseStudies.mappa.highlight3',
+    'caseStudies.mappa.highlight4',
+    'caseStudies.mappa.highlight5'
   ];
 
   features = [
     {
-      title: 'Powerful Search and Map Interaction',
-      points: [
-        'Find locations using partial or misspelled queries',
-        'Fast map loading and smooth navigation across large urban areas',
-        'Responsive panning, zooming, and selection for an intuitive experience'
+      titleKey: 'caseStudies.mappa.feature1Title',
+      pointKeys: [
+        'caseStudies.mappa.feature1Point1',
+        'caseStudies.mappa.feature1Point2',
+        'caseStudies.mappa.feature1Point3'
       ],
       img: 'assets/img/experience/ECE297/search.png',
       icon: Search
     },
     {
-      title: 'Routing Algorithms',
-      points: [
-        'Implemented Dijkstras and A* to compute optimal routes',
-        'Supports complex travel queries with high accuracy and efficiency',
-        'Visualizes shortest paths with distance and estimated travel time'
+      titleKey: 'caseStudies.mappa.feature2Title',
+      pointKeys: [
+        'caseStudies.mappa.feature2Point1',
+        'caseStudies.mappa.feature2Point2',
+        'caseStudies.mappa.feature2Point3'
       ],
       img: 'assets/img/experience/ECE297/customizable.png',
       icon: Palette
     },
     {
-      title: 'Customization & Visualization',
-      points: [
-        'Customize colour schemes and map style',
-        'Filter specific content and highlight features of interest',
-        'Zoom-aware clarity at every scale',
-        'Preserve visible street directions and clear visual hierarchy'
+      titleKey: 'caseStudies.mappa.feature3Title',
+      pointKeys: [
+        'caseStudies.mappa.feature3Point1',
+        'caseStudies.mappa.feature3Point2',
+        'caseStudies.mappa.feature3Point3',
+        'caseStudies.mappa.feature3Point4'
       ],
       img: 'assets/img/experience/ECE297/visual.png',
       icon: Layers

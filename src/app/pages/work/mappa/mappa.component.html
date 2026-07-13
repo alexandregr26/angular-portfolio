@@ -5,14 +5,14 @@
                 <div class="mappa-hero-copy">
                     <p class="project-kicker" style="display:flex;gap:11px;align-items:center;margin:0 0 18px;color:#1a73e8;font-weight:800;letter-spacing:.09em;">
                         <span style="width:12px;height:12px;border-radius:50%;background:#1a73e8;box-shadow:0 0 0 8px #1a73e81a;"></span>
-                        PROJECT SHOWCASE
+                        {{ 'caseStudies.common.projectShowcase' | translate }}
                     </p>
                     <h1 style="margin:0;color:#07142f;font-size:clamp(2.7rem,4.05vw,4.25rem);font-weight:800;line-height:.95;">Mappa</h1>
-                    <p class="mappa-tagline" style="margin:14px 0 0;color:#596275;font-size:clamp(1.08rem,1.28vw,1.3rem);font-weight:750;">Intuitive. Exploratory. Geospatial.</p>
+                    <p class="mappa-tagline" style="margin:14px 0 0;color:#596275;font-size:clamp(1.08rem,1.28vw,1.3rem);font-weight:750;">{{ 'caseStudies.mappa.tagline' | translate }}</p>
                     <div class="google-accent" aria-hidden="true" style="display:flex;width:275px;max-width:100%;height:4px;margin:22px 0 22px;">
                         <span style="flex:1;background:#4285f4"></span><span style="flex:1;background:#ea4335"></span><span style="flex:1;background:#fbbc04"></span><span style="flex:1;background:#34a853"></span>
                     </div>
-                    <p class="mappa-hero-text" style="max-width:545px;font-size:1.04rem;">A lightweight geographic information system (GIS) application that helps users search for locations, compute optimal routes, and visualize spatial data with an interactive and fully customizable map experience.</p>
+                    <p class="mappa-hero-text" style="max-width:545px;font-size:1.04rem;">{{ 'caseStudies.mappa.hero' | translate }}</p>
                     <div class="mappa-meta">
                         <span *ngFor="let item of heroMeta; let i = index" [style.color]="['#4285f4','#159947','#ea4335','#dc9200'][i]" [style.border-color]="['#4285f480','#34a85380','#ea433580','#fbbc048c'][i]" style="padding:9px 15px;border:1px solid #18181b18;border-radius:9px;background:#fff;font-size:.84rem;font-weight:800;">{{ item }}</span>
                     </div>
@@ -21,7 +21,7 @@
                     <div class="browser-bar" aria-hidden="true" style="height:46px;display:flex;gap:9px;align-items:center;padding:0 18px;border-bottom:1px solid #18181b0d;background:#f8fafc;">
                         <span style="width:13px;height:13px;border-radius:50%;background:#ff5f57;"></span><span style="width:13px;height:13px;border-radius:50%;background:#ffbd2e;"></span><span style="width:13px;height:13px;border-radius:50%;background:#28c840;"></span>
                     </div>
-                    <img src="assets/img/experience/ECE297/mappa-hero-ai.png" alt="Mappa map interface preview">
+                    <img src="assets/img/experience/ECE297/mappa-hero-ai.png" [alt]="'caseStudies.mappa.previewAlt' | translate">
                 </div>
             </div>
         </div>
@@ -36,21 +36,21 @@
                             <lucide-icon [img]="overviewIcon" [size]="21" [strokeWidth]="1.9"></lucide-icon>
                         </span>
                         <div>
-                            <p class="section-eyebrow">OVERVIEW</p>
+                            <p class="section-eyebrow">{{ 'caseStudies.common.overview' | translate }}</p>
                         </div>
-                        <p>Mappa is a desktop GIS application built in C++ with the OpenStreetMap API and EZGL graphics library, allowing users to load and interact with global city maps in real time. The project was designed around the challenge of turning complex geographic data into an experience that feels clear, responsive, and easy to control. Through efficient map rendering, intuitive search, route-finding, and customizable visual layers, Mappa makes spatial information more accessible without sacrificing performance or usability.</p>
+                        <p>{{ 'caseStudies.mappa.overview' | translate }}</p>
                     </div>
                     <div class="highlight-list">
                         <span class="section-icon">
                             <lucide-icon [img]="highlightsIcon" [size]="21" [strokeWidth]="1.9"></lucide-icon>
                         </span>
                         <div>
-                            <p class="section-eyebrow">PROJECT HIGHLIGHTS</p>
+                            <p class="section-eyebrow">{{ 'caseStudies.common.projectHighlights' | translate }}</p>
                         </div>
                         <ul>
                             <li *ngFor="let item of highlights">
                                 <lucide-icon [img]="checkIcon" [size]="16" [strokeWidth]="2.2"></lucide-icon>
-                                <span>{{ item }}</span>
+                                <span>{{ item | translate }}</span>
                             </li>
                         </ul>
                     </div>
@@ -61,9 +61,9 @@
                         <span class="engineering-icon">
                             <lucide-icon [img]="engineeringIcon" [size]="36" [strokeWidth]="1.9"></lucide-icon>
                         </span>
-                        <p class="section-eyebrow">ENGINEERING CONTEXT</p>
+                        <p class="section-eyebrow">{{ 'caseStudies.common.engineeringContext' | translate }}</p>
                     </div>
-                    <p>This project was developed as part of a collaborative second-year engineering course, ECE297, at the University of Toronto. The course gave students the opportunity to design, build, and iterate on a complex software system from the ground up, applying core concepts in data structures, algorithms, graphics, and software design.</p>
+                    <p>{{ 'caseStudies.mappa.engineering' | translate }}</p>
                 </section>
 
                 <section class="mappa-section key-features-section">
@@ -72,16 +72,16 @@
                             <lucide-icon [img]="developmentIcon" [size]="21" [strokeWidth]="1.9"></lucide-icon>
                         </span>
                         <div>
-                            <p class="section-eyebrow">KEY FEATURES</p>
+                            <p class="section-eyebrow">{{ 'caseStudies.common.keyFeatures' | translate }}</p>
                         </div>
                     </div>
                     <div class="feature-showcase">
                         <article *ngFor="let feature of features; let i = index" [class.image-right]="i === 1">
-                            <img [src]="feature.img" [alt]="feature.title + ' preview'">
+                            <img [src]="feature.img" alt="Mappa">
                             <div class="feature-detail">
-                                <h2>{{ feature.title }}</h2>
+                                <h2>{{ feature.titleKey | translate }}</h2>
                                 <ul>
-                                    <li *ngFor="let point of feature.points">{{ point }}</li>
+                                    <li *ngFor="let point of feature.pointKeys">{{ point | translate }}</li>
                                 </ul>
                             </div>
                         </article>
@@ -95,8 +95,8 @@
         <div class="container">
             <div class="technologies-panel">
                 <div class="section-heading compact-heading">
-                    <p class="section-eyebrow">TECHNICAL STACK</p>
-                    <p class="section-intro">Technologies and tools used to build the desktop GIS application.</p>
+                    <p class="section-eyebrow">{{ 'caseStudies.common.technicalStack' | translate }}</p>
+                    <p class="section-intro">{{ 'caseStudies.mappa.stackIntro' | translate }}</p>
                 </div>
                 <div class="technology-grid">
                     <app-skill *ngFor="let tool of technologies" [skill]="tool"></app-skill>
@@ -108,8 +108,8 @@
     <section class="related-work-section">
         <div class="container">
             <div class="section-heading">
-                <p class="section-eyebrow">OTHER WORKS</p>
-                <p class="section-intro">More projects and professional experiences across infrastructure, product systems, applied AI, and software engineering.</p>
+                <p class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</p>
+                <p class="section-intro">{{ 'caseStudies.common.relatedIntro' | translate }}</p>
             </div>
             <div class="related-work-grid">
                 <app-project-box *ngFor="let project of otherWorks" [projectbox]="project"></app-project-box>

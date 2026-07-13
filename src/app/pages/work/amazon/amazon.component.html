@@ -8,9 +8,9 @@
                 <div class="work-title-content">
                     <div class="work-title-topline">
                         <p class="work-eyebrow">Amazon</p>
-                        <p class="work-date">May 2021 - Aug 2021</p>
+                        <p class="work-date">{{ 'caseStudies.amazon.date' | translate }}</p>
                     </div>
-                    <h1>Software Developer Engineer Intern</h1>
+                    <h1>{{ 'caseStudies.amazon.title' | translate }}</h1>
                 </div>
             </div>
         </div>
@@ -19,18 +19,8 @@
     <section class="work-content-section">
         <div class="container">
             <article class="summary-panel">
-                <p class="section-eyebrow">Position Summary</p>
-                <p class="job-description">As a Software Developer Engineer Intern at Amazon, I led the creation of a mobile web
-                    feature using React and Redux to help advertisers visualize campaign performance, boosting user engagement
-                    and conversion rates by 10%. In addition to development, I conducted comprehensive design reviews,
-                    facilitated User Acceptance Testing (UAT), and executed UI tests to ensure an optimal user experience and
-                    the successful release of a bug-free feature. After its launch, I evaluated the feature's impact on user
-                    engagement and load times using Weblab, which revealed widespread adoption and minimal latency across
-                    different regions. This experience allowed me to engage deeply with the entire software development
-                    lifecycle, from initial concept and design to post-launch maintenance and performance analysis. It equipped
-                    me with the skills necessary to effectively create and develop new software solutions. The positive outcomes
-                    for customers and the feature's permanent integration into Amazon's website stand as a testament to the
-                    value and impact of this work.</p>
+                <p class="section-eyebrow">{{ 'caseStudies.common.positionSummary' | translate }}</p>
+                <p class="job-description">{{ 'caseStudies.amazon.summary' | translate }}</p>
             </article>
         </div>
     </section>
@@ -39,7 +29,7 @@
         <div class="container">
             <div class="technologies-panel">
                 <div class="section-heading">
-                    <p class="section-eyebrow">Technologies Used:</p>
+                    <p class="section-eyebrow">{{ 'caseStudies.common.technologiesUsed' | translate }}</p>
                 </div>
                 <div class="technology-grid">
                     <app-skill *ngFor="let tool of technologies" [skill]="tool"></app-skill>
@@ -51,8 +41,8 @@
     <section class="related-work-section">
         <div class="container">
             <div class="section-heading">
-                <p class="section-eyebrow">Other Works</p>
-                <p class="section-intro">More projects and professional experiences across infrastructure, product systems, applied AI, and software engineering.</p>
+                <p class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</p>
+                <p class="section-intro">{{ 'caseStudies.common.relatedIntro' | translate }}</p>
             </div>
             <div class="related-work-grid">
                 <app-project-box *ngFor="let project of otherWorks" [projectbox]="project"></app-project-box>
