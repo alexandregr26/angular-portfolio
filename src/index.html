@@ -10,6 +10,25 @@
 
     gtag('config', 'G-5V86R1NRPZ');
   </script>
+  <script>
+    (function (location) {
+      if (location.search.slice(0, 2) !== '?/') {
+        return;
+      }
+
+      var restoredPath = location.search
+        .slice(2)
+        .split('&')
+        .map(function (segment) { return segment.replace(/~and~/g, '&'); })
+        .join('?');
+
+      window.history.replaceState(
+        null,
+        '',
+        '/' + restoredPath + location.hash
+      );
+    }(window.location));
+  </script>
   <meta charset="utf-8">
   <title>Alexandre Gouveia Rodrigues</title>
   <base href="/">

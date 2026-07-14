@@ -26,8 +26,9 @@ import { CapstoneComponent } from './pages/work/capstone/capstone.component';
 import { Aps360Component } from './pages/work/aps360/aps360.component';
 import { TranslatePipe } from './pipes/translate.pipe';
 import { TranslationService } from './services/translation.service';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
   {
     path: '',
     component: HomeComponent,
@@ -112,8 +113,13 @@ const appRoutes: Routes = [
     path: 'work/aps360',
     redirectTo: 'project/aps360',
     pathMatch: 'full'
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
+    title: 'Page Not Found | Alexandre Gouveia Rodrigues'
   }
-]
+];
 
 function initializeTranslations(translationService: TranslationService): () => Promise<void> {
   return () => translationService.init();
@@ -140,6 +146,7 @@ function initializeTranslations(translationService: TranslationService): () => P
     PortfolioComponent,
     CapstoneComponent,
     Aps360Component,
+    NotFoundComponent,
     TranslatePipe
   ],
   imports: [

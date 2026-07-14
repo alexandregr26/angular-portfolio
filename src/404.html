@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Page Not Found | Alexandre Gouveia Rodrigues</title>
+  <script>
+    (function (location) {
+      var path = location.pathname.slice(1);
+      var query = location.search
+        ? '&' + location.search.slice(1).replace(/&/g, '~and~')
+        : '';
+
+      location.replace(
+        location.protocol + '//' + location.host + '/?/' +
+        path.replace(/&/g, '~and~') + query + location.hash
+      );
+    }(window.location));
+  </script>
+</head>
+<body>
+  <p><a href="/">Return to alexandregr.com</a></p>
+</body>
+</html>

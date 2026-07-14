@@ -1,0 +1,61 @@
+<main class="not-found-page">
+  <section class="not-found-section">
+    <div class="container">
+      <header class="not-found-heading">
+        <h1 class="desktop-not-found-title">{{ 'notFound.title' | translate }}</h1>
+        <h1 class="mobile-not-found-title">
+          <span>404</span>
+          <span>{{ 'notFound.mobileTitle' | translate }}</span>
+        </h1>
+        <p>
+          <span>{{ 'notFound.descriptionIntro' | translate }}</span>
+          <span class="desktop-description-prompt"> {{ 'notFound.descriptionPrompt' | translate }}</span>
+        </p>
+      </header>
+
+      <div class="portfolio-map">
+        <h2 class="mobile-destination-title">{{ 'notFound.chooseDestination' | translate }}</h2>
+        <img class="map-image" src="assets/img/404/portfolio-map.png" [alt]="'notFound.mapAlt' | translate">
+
+        <div class="map-compass" aria-hidden="true"><span>N</span><i></i></div>
+
+        <a class="map-marker map-destination" routerLink="/">
+          <span class="map-pin"><i class="bx bxs-map"></i></span>
+          <span>
+            <strong class="desktop-marker-title">{{ 'notFound.youAreHere' | translate }}</strong>
+            <strong class="mobile-marker-title">{{ 'notFound.destinations.home' | translate }}</strong>
+            <small>{{ 'notFound.destinations.homeBody' | translate }}</small>
+          </span>
+        </a>
+
+        <nav class="map-navigation" [attr.aria-label]="'notFound.mapLabel' | translate">
+          <a class="map-place map-destination place-projects" routerLink="/" fragment="projects">
+            <span class="place-icon"><i class="bx bx-code-block"></i></span>
+            <span><strong>{{ 'notFound.destinations.projects' | translate }}</strong><small>{{ 'notFound.destinations.projectsBody' | translate }}</small></span>
+          </a>
+          <a class="map-place map-destination place-skills" routerLink="/" fragment="skills">
+            <span class="place-icon"><i class="bx bx-wrench"></i></span>
+            <span><strong>{{ 'notFound.destinations.skills' | translate }}</strong><small>{{ 'notFound.destinations.skillsBody' | translate }}</small></span>
+          </a>
+          <a class="map-place map-destination place-work" routerLink="/" fragment="work">
+            <span class="place-icon"><i class="bx bx-briefcase-alt-2"></i></span>
+            <span><strong>{{ 'notFound.destinations.work' | translate }}</strong><small>{{ 'notFound.destinations.workBody' | translate }}</small></span>
+          </a>
+          <a class="map-place map-destination place-community" routerLink="/" fragment="community">
+            <span class="place-icon"><i class="bx bx-group"></i></span>
+            <span><strong>{{ 'notFound.destinations.community' | translate }}</strong><small>{{ 'notFound.destinations.communityBody' | translate }}</small></span>
+          </a>
+          <a class="map-place map-destination place-linkedin" href="https://www.linkedin.com/in/alexandre-gouveia-r/" target="_blank" rel="noopener noreferrer">
+            <span class="place-icon"><i class="bx bxl-linkedin-square"></i></span>
+            <span><strong>LinkedIn</strong><small>{{ 'notFound.destinations.linkedinBody' | translate }}</small></span>
+          </a>
+          <a class="map-place map-destination place-github" href="https://github.com/alexandregr26/" target="_blank" rel="noopener noreferrer">
+            <span class="place-icon"><i class="bx bxl-github"></i></span>
+            <span><strong>GitHub</strong><small>{{ 'notFound.destinations.githubBody' | translate }}</small></span>
+          </a>
+        </nav>
+      </div>
+
+    </div>
+  </section>
+</main>
