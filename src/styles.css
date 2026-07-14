@@ -317,12 +317,18 @@ app-not-found .not-found-heading {
 
 app-not-found .mobile-not-found-title,
 app-not-found .mobile-destination-title,
-app-not-found .mobile-marker-title {
+app-not-found .mobile-marker-title,
+app-not-found .mobile-description-intro {
     display: none;
 }
 
 app-not-found .not-found-heading h1 {
     font-size: clamp(2.7rem, 5.5vw, 5rem);
+}
+
+html[lang='pt'] app-not-found .desktop-not-found-title {
+    font-size: clamp(2.6rem, 4.3vw, 4rem);
+    white-space: nowrap;
 }
 
 app-not-found .not-found-heading > p {
@@ -440,6 +446,9 @@ app-not-found .place-github { bottom: 8.5%; left: 47%; animation-delay: .25s; }
 
 @media (max-width: 767px) {
     app-not-found .desktop-not-found-title,
+    app-not-found .desktop-description-intro,
+    app-not-found .desktop-description-prompt,
+    app-not-found .not-found-closing,
     app-not-found .map-image,
     app-not-found .map-compass { display: none; }
 
@@ -448,6 +457,8 @@ app-not-found .place-github { bottom: 8.5%; left: 47%; animation-delay: .25s; }
     app-not-found .mobile-not-found-title,
     app-not-found .mobile-destination-title,
     app-not-found .mobile-marker-title { display: block; }
+
+    app-not-found .mobile-description-intro { display: inline; }
 
     app-not-found .not-found-heading .mobile-not-found-title { font-size: clamp(4.25rem, 20vw, 5.5rem); }
     app-not-found .mobile-not-found-title span { display: block; }
@@ -458,9 +469,12 @@ app-not-found .place-github { bottom: 8.5%; left: 47%; animation-delay: .25s; }
         white-space: nowrap;
     }
 
-    app-not-found .not-found-heading > p { max-width: 460px; margin-top: 20px; line-height: 1.65; }
-    app-not-found .desktop-description-prompt { display: none; }
+    html[lang='pt'] app-not-found .mobile-not-found-title span + span {
+        font-size: clamp(1.35rem, 5.5vw, 1.8rem);
+        letter-spacing: .015em;
+    }
 
+    app-not-found .not-found-heading > p { max-width: 460px; margin-top: 20px; line-height: 1.65; }
     app-not-found .portfolio-map {
         aspect-ratio: auto;
         padding: 0 20px;

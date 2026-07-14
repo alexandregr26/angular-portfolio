@@ -8,7 +8,8 @@
           <span>{{ 'notFound.mobileTitle' | translate }}</span>
         </h1>
         <p>
-          <span>{{ 'notFound.descriptionIntro' | translate }}</span>
+          <span class="desktop-description-intro">{{ 'notFound.descriptionIntro' | translate }}</span>
+          <span class="mobile-description-intro">{{ 'notFound.mobileDescriptionIntro' | translate }}</span>
           <span class="desktop-description-prompt"> {{ 'notFound.descriptionPrompt' | translate }}</span>
         </p>
       </header>
@@ -56,6 +57,7 @@
         </nav>
       </div>
 
+      <p class="not-found-closing">{{ 'notFound.closing' | translate }}</p>
     </div>
   </section>
 </main>
