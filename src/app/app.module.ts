@@ -2,7 +2,6 @@ import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-import { LucideAngularModule } from 'lucide-angular';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,23 +9,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CommunityBoxComponent } from './components/community-box/community-box.component';
-import { SkillComponent } from './components/skill/skill.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ProjectBoxComponent } from './components/project-box/project-box.component';
-import { CoinbaseComponent } from './pages/work/coinbase/coinbase.component';
-import { AmazonComponent } from './pages/work/amazon/amazon.component';
-import { ThomsonReutersComponent } from './pages/work/thomson-reuters/thomson-reuters.component';
-import { SplitzComponent } from './pages/work/splitz/splitz.component';
-import { UtatComponent } from './pages/work/utat/utat.component';
 import { WorkHeaderComponent } from './components/work-header/work-header.component';
-import { FpsComponent } from './pages/work/fps/fps.component';
-import { MappaComponent } from './pages/work/mappa/mappa.component';
-import { PortfolioComponent } from './pages/work/portfolio/portfolio.component';
-import { CapstoneComponent } from './pages/work/capstone/capstone.component';
-import { Aps360Component } from './pages/work/aps360/aps360.component';
-import { TranslatePipe } from './pipes/translate.pipe';
 import { TranslationService } from './services/translation.service';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { PortfolioSharedModule } from './shared/portfolio-shared.module';
 
 export const appRoutes: Routes = [
   {
@@ -38,51 +25,6 @@ export const appRoutes: Routes = [
     path: 'contact',
     component: HomeComponent,
     title: 'Contact Me | Alexandre Gouveia Rodrigues'
-  },
-  {
-    path: 'work/coinbase',
-    component: CoinbaseComponent,
-    title: 'Coinbase | Alexandre Gouveia Rodrigues'
-  },
-  {
-    path: 'work/amazon',
-    component: AmazonComponent,
-    title: 'Amazon | Alexandre Gouveia Rodrigues'
-  },
-  {
-    path: 'work/thomson-reuters',
-    component: ThomsonReutersComponent,
-    title: 'Thomson Reuters | Alexandre Gouveia Rodrigues'
-  },
-  {
-    path: 'project/splitz',
-    component: SplitzComponent,
-    title: 'Splitz | Alexandre Gouveia Rodrigues'
-  },
-  {
-    path: 'project/utat',
-    component: UtatComponent,
-    title: 'UTAT | Alexandre Gouveia Rodrigues'
-  },
-  {
-    path: 'project/ece243',
-    component: FpsComponent,
-    title: 'FPS | Alexandre Gouveia Rodrigues'
-  },
-  {
-    path: 'project/ece297',
-    component: MappaComponent,
-    title: 'Mappa | Alexandre Gouveia Rodrigues'
-  },
-  {
-    path: 'project/capstone',
-    component: CapstoneComponent,
-    title: 'Capstone | Alexandre Gouveia Rodrigues'
-  },
-  {
-    path: 'project/aps360',
-    component: Aps360Component,
-    title: 'Deep Learning Model for Predicting Song Popularity | Alexandre Gouveia Rodrigues'
   },
   {
     path: 'work/splitz',
@@ -115,6 +57,14 @@ export const appRoutes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'work',
+    loadChildren: () => import('./pages/work/work-experience.module').then(module => module.WorkExperienceModule)
+  },
+  {
+    path: 'project',
+    loadChildren: () => import('./pages/work/project-pages.module').then(module => module.ProjectPagesModule)
+  },
+  {
     path: '**',
     component: NotFoundComponent,
     title: 'Page Not Found | Alexandre Gouveia Rodrigues'
@@ -132,28 +82,15 @@ function initializeTranslations(translationService: TranslationService): () => P
     NavbarComponent,
     HomeComponent,
     CommunityBoxComponent,
-    SkillComponent,
     FooterComponent,
-    ProjectBoxComponent,
-    CoinbaseComponent,
-    AmazonComponent,
-    ThomsonReutersComponent,
-    SplitzComponent,
-    UtatComponent,
     WorkHeaderComponent,
-    FpsComponent,
-    MappaComponent,
-    PortfolioComponent,
-    CapstoneComponent,
-    Aps360Component,
-    NotFoundComponent,
-    TranslatePipe
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    LucideAngularModule,
+    PortfolioSharedModule,
     RouterModule.forRoot(appRoutes, {
       anchorScrolling: 'enabled',
       scrollPositionRestoration: 'enabled'

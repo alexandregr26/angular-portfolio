@@ -18,4 +18,12 @@ describe('Application routes', () => {
       redirectTo: 'project/capstone'
     }));
   });
+
+  it('should lazy-load work experience and project pages', () => {
+    const workRoute = appRoutes.find(route => route.path === 'work');
+    const projectRoute = appRoutes.find(route => route.path === 'project');
+
+    expect(workRoute?.loadChildren).toEqual(jasmine.any(Function));
+    expect(projectRoute?.loadChildren).toEqual(jasmine.any(Function));
+  });
 });

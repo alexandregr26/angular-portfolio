@@ -689,6 +689,37 @@ a {
     padding-right: 0;
 }
 
+app-navbar .navbar,
+app-navbar #navbar-container,
+app-navbar .navbar-collapse,
+app-navbar .navbar-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+app-navbar .navbar {
+    justify-content: space-between;
+}
+
+app-navbar #navbar-container {
+    justify-content: space-between;
+}
+
+app-navbar .navbar-brand {
+    white-space: nowrap;
+}
+
+app-navbar .navbar-collapse {
+    flex-basis: auto;
+    flex-grow: 1;
+}
+
+app-navbar .navbar-nav {
+    flex-direction: row;
+    list-style: none;
+}
+
 .language-selector {
     position: relative;
     display: inline-flex;
