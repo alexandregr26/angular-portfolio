@@ -1,51 +1,228 @@
-<!-- Header -->
-<section class="work-header-section">
-    <app-work-header [header]="header"></app-work-header>
-</section>
-<!-- Summary -->
-<section>
-    <div class="container box">
-        <h1 class="title">{{ 'caseStudies.aps360.title' | translate }}</h1>
-        <h1 class="subtitle">{{ 'caseStudies.common.projectDescription' | translate }}</h1>
-        <p class="project-description">{{ 'caseStudies.aps360.description' | translate }}</p>
-        <div class="img-container">
-            <img src="assets/img/experience/Spotify/illustration.png" alt="">
-        </div>
-        <h1 class="subtitle">{{ 'caseStudies.aps360.dataProcessing' | translate }}</h1>
-        <p class="project-description">{{ 'caseStudies.aps360.data1' | translate }}</p>
-        <p class="project-description">{{ 'caseStudies.aps360.data2' | translate }}</p>
-        <div class="img-container">
-            <img src="assets/img/experience/Spotify/dataset.png" alt="">
-        </div>
-        <h1 class="subtitle">{{ 'caseStudies.aps360.modelTitle' | translate }}</h1>
-        <p class="project-description">{{ 'caseStudies.aps360.model1' | translate }}</p>
-        <p class="project-description">{{ 'caseStudies.aps360.model2' | translate }}</p>
-        <div class="img-container">
-            <img src="assets/img/experience/Spotify/ANN.png" alt="">
-        </div>
-        <h1 class="subtitle">{{ 'caseStudies.aps360.resultsTitle' | translate }}</h1>
-        <p class="project-description">{{ 'caseStudies.aps360.results1' | translate }}</p>
-        <div class="img-container">
-            <img src="assets/img/experience/Spotify/results.png" alt="">
-        </div>
-        <p class="project-description">{{ 'caseStudies.aps360.results2' | translate }}</p>
-        <h1 class="subtitle">{{ 'caseStudies.common.toolsUsed' | translate }}</h1>
-        <div class="tools">
-            <div class="tool">Python</div>
-            <div class="tool">PyTorch</div>
-            <div class="tool">NumPy</div>
-            <div class="tool">Git</div>
-        </div>
-    </div>
-</section>
-<!-- Other Works -->
-<section>
-    <div class="container box">
-        <h1 class="title">{{ 'caseStudies.common.otherWorks' | translate }}</h1>
-        <div class="row">
-            <div *ngFor="let project of otherWorks" id="project-struct" class="col-lg-3 col-md-6 col-sm-12 col-12">
-                <app-project-box [projectbox]="project"></app-project-box>
+<main class="aps-page">
+  <section class="aps-hero-section">
+    <div class="container">
+      <div class="aps-hero-card">
+        <div class="aps-hero-copy">
+          <p class="aps-kicker"><span></span>{{ 'caseStudies.common.projectShowcase' | translate }}</p>
+          <div class="aps-hero-copy-main">
+            <div class="aps-title-row">
+              <h1><span>{{ 'caseStudies.aps360.titleLine1' | translate }}</span> <span>{{ 'caseStudies.aps360.titleLine2' | translate }}</span></h1>
             </div>
+            <p class="aps-hero-description">{{ 'caseStudies.aps360.heroDescription' | translate }}</p>
+          </div>
+          <div class="aps-playback">
+            <audio #previewAudio src="assets/mp3/rick-rolled.mp3" preload="metadata" aria-hidden="true" (timeupdate)="syncPlaybackProgress()" (ended)="onPlaybackEnded()"></audio>
+            <div class="aps-playback-progress"><span [style.width.%]="playbackProgress"><i></i></span></div>
+            <div class="aps-playback-controls">
+              <span aria-hidden="true"><i class="bx bx-menu"></i></span>
+              <span aria-hidden="true"><i class="bx bx-skip-previous"></i></span>
+              <button type="button" class="aps-playback-primary" [class.is-playing]="isPlaying" [attr.aria-pressed]="isPlaying" [attr.aria-label]="(isPlaying ? 'caseStudies.aps360.pausePreview' : 'caseStudies.aps360.playPreview') | translate" (click)="togglePlayback()">
+                <i class="bx" [class.bx-play]="!isPlaying" [class.bx-pause]="isPlaying"></i>
+              </button>
+              <span aria-hidden="true"><i class="bx bx-skip-next"></i></span>
+              <span aria-hidden="true"><i class="bx bx-heart"></i></span>
+            </div>
+          </div>
         </div>
+
+        <div class="aps-dashboard" aria-label="Machine learning analytics dashboard illustration">
+          <div class="dashboard-title"><span></span>{{ 'caseStudies.aps360.trackAnalysis' | translate }}</div>
+          <div class="dashboard-metrics">
+            <article class="score-metric">
+              <small>{{ 'caseStudies.aps360.popularityScore' | translate }}</small>
+              <strong>3<em>/4</em></strong>
+              <span class="score-ring"></span>
+            </article>
+            <article>
+              <small>Danceability</small><strong>0.72</strong>
+              <svg viewBox="0 0 110 32" aria-hidden="true"><path d="M2 27 14 24 24 26 34 16 44 21 55 11 66 15 78 8 90 13 108 4"/></svg>
+            </article>
+            <article>
+              <small>Energy</small><strong>0.81</strong>
+              <svg viewBox="0 0 110 32" aria-hidden="true"><path d="M2 27 12 25 20 27 29 22 37 24 45 18 53 22 61 15 70 21 80 12 91 17 108 6"/></svg>
+            </article>
+          </div>
+
+          <div class="dashboard-visuals">
+            <article class="mini-network-card">
+              <small>{{ 'caseStudies.aps360.neuralNetwork' | translate }}</small>
+              <svg viewBox="0 0 230 125" aria-hidden="true">
+                <g class="network-lines"><path d="M25 25 82 17M25 25 82 47M25 25 82 77M25 62 82 17M25 62 82 47M25 62 82 77M25 99 82 47M25 99 82 107M82 17 139 27M82 47 139 27M82 47 139 62M82 77 139 62M82 107 139 97M139 27 205 17M139 27 205 40M139 62 205 62M139 62 205 85M139 97 205 107"/></g>
+                <g class="network-nodes"><circle cx="25" cy="25" r="6"/><circle cx="25" cy="62" r="6"/><circle cx="25" cy="99" r="6"/><circle cx="82" cy="17" r="6"/><circle cx="82" cy="47" r="6"/><circle cx="82" cy="77" r="6"/><circle cx="82" cy="107" r="6"/><circle cx="139" cy="27" r="6"/><circle cx="139" cy="62" r="6"/><circle cx="139" cy="97" r="6"/><circle cx="205" cy="17" r="5"/><circle cx="205" cy="40" r="5"/><circle cx="205" cy="62" r="5"/><circle cx="205" cy="85" r="5"/><circle cx="205" cy="107" r="5"/></g>
+              </svg>
+            </article>
+            <article class="mini-distribution-card">
+              <small>{{ 'caseStudies.aps360.popularityDistribution' | translate }}</small>
+              <svg class="mini-distribution" viewBox="0 0 180 120" aria-hidden="true">
+                <path d="M25 12V98H172M25 12H172M25 55H172"/>
+                <g><rect x="31" y="94" width="7" height="4"/><rect x="41" y="89" width="7" height="9"/><rect x="51" y="81" width="7" height="17"/><rect x="61" y="69" width="7" height="29"/><rect x="71" y="54" width="7" height="44"/><rect x="81" y="38" width="7" height="60"/><rect x="91" y="25" width="7" height="73"/><rect x="101" y="18" width="7" height="80"/><rect x="111" y="29" width="7" height="69"/><rect x="121" y="45" width="7" height="53"/><rect x="131" y="62" width="7" height="36"/><rect x="141" y="77" width="7" height="21"/><rect x="151" y="87" width="7" height="11"/><rect x="161" y="93" width="7" height="5"/></g>
+                <g class="mini-chart-labels"><text x="21" y="101">0</text><text x="21" y="58">2K</text><text x="21" y="16">4K</text><text x="25" y="112">0</text><text x="98" y="112">50</text><text x="172" y="112">100</text></g>
+              </svg>
+            </article>
+          </div>
+
+          <div class="prediction-card">
+            <small>{{ 'caseStudies.aps360.modelPrediction' | translate }}</small>
+            <div><span></span><i></i><strong>3</strong></div>
+            <footer><small>0</small><small>4</small></footer>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
+
+  <section class="aps-section">
+    <div class="container aps-two-column">
+      <article class="aps-card overview-card">
+        <div class="aps-card-title"><span><i class="bx bx-file"></i></span><h2>{{ 'caseStudies.common.overview' | translate }}</h2></div>
+        <div class="card-copy">
+          <p>{{ 'caseStudies.aps360.overview1' | translate }}</p>
+          <p>{{ 'caseStudies.aps360.overview2' | translate }}</p>
+        </div>
+      </article>
+      <article class="aps-card highlights-card">
+        <div class="aps-card-title"><span><i class="bx bxs-star"></i></span><h2>{{ 'caseStudies.common.projectHighlights' | translate }}</h2></div>
+        <ul><li *ngFor="let item of highlights"><i class="bx bxs-check-circle"></i>{{ ('caseStudies.aps360.highlight' + item) | translate }}</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="aps-section compact-section">
+    <div class="container">
+      <article class="aps-card pipeline-card">
+        <div class="aps-card-title"><span><i class="bx bx-git-branch"></i></span><h2>{{ 'caseStudies.aps360.pipelineTitle' | translate }}</h2></div>
+        <div class="pipeline-flow">
+          <ng-container *ngFor="let step of pipelineSteps; let last = last">
+            <article class="pipeline-step">
+              <div class="pipeline-step-heading">
+                <span class="pipeline-icon"><i [class]="step === 1 ? 'bx bxl-spotify' : step === 2 ? 'bx bx-data' : step === 3 ? 'bx bx-network-chart' : 'bx bx-bar-chart-alt-2'"></i></span>
+                <h3>{{ ('caseStudies.aps360.pipeline' + step + 'Title') | translate }}</h3>
+              </div>
+              <p>{{ ('caseStudies.aps360.pipeline' + step + 'Body') | translate }}</p>
+            </article>
+            <i *ngIf="!last" class="bx bx-right-arrow-alt pipeline-arrow" aria-hidden="true"></i>
+          </ng-container>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="aps-section compact-section">
+    <div class="container aps-analysis-grid">
+      <article class="aps-card data-card">
+        <div class="aps-card-title"><span><i class="bx bx-data"></i></span><h2>{{ 'caseStudies.aps360.dataTitle' | translate }}</h2></div>
+        <div class="card-copy card-intro">
+          <p>{{ 'caseStudies.aps360.dataIntro1' | translate }}</p>
+          <p>{{ 'caseStudies.aps360.dataIntro2' | translate }}</p>
+          <p>{{ 'caseStudies.aps360.dataIntro3' | translate }}</p>
+        </div>
+        <div class="data-visuals">
+          <table>
+            <thead><tr><th>{{ 'caseStudies.aps360.metric' | translate }}</th><th>{{ 'caseStudies.aps360.count' | translate }}</th></tr></thead>
+            <tbody><tr *ngFor="let row of datasetRows"><td>{{ ('caseStudies.aps360.' + row.labelKey) | translate }}</td><td>{{ row.value }}</td></tr></tbody>
+          </table>
+        </div>
+        <aside class="explanation-note data-note"><i class="bx bx-info-circle"></i><p><strong>{{ 'caseStudies.aps360.keyStepsLabel' | translate }}</strong> {{ 'caseStudies.aps360.keySteps' | translate }}</p></aside>
+      </article>
+
+      <article class="aps-card ann-card">
+        <div class="aps-card-title"><span><i class="bx bx-network-chart"></i></span><h2>{{ 'caseStudies.aps360.annTitle' | translate }}</h2></div>
+        <div class="card-copy card-intro">
+          <p>{{ 'caseStudies.aps360.annIntro1' | translate }}</p>
+          <p>{{ 'caseStudies.aps360.annIntro2' | translate }}</p>
+        </div>
+        <div class="ann-diagram">
+          <div class="layer-labels"><span>{{ 'caseStudies.aps360.inputLayer' | translate }}</span><span>{{ 'caseStudies.aps360.hidden1' | translate }}</span><span>{{ 'caseStudies.aps360.hidden2' | translate }}</span><span>{{ 'caseStudies.aps360.hidden3' | translate }}</span><span>{{ 'caseStudies.aps360.outputLayer' | translate }}</span></div>
+          <svg viewBox="0 0 760 330" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <g class="ann-lines">
+              <path d="M70 45 220 35M70 45 220 80M70 45 220 125M70 90 220 35M70 90 220 80M70 90 220 170M70 135 220 80M70 135 220 125M70 230 220 170M70 230 220 260M70 275 220 215M70 275 220 305"/>
+              <path d="M220 35 380 25M220 35 380 65M220 80 380 25M220 80 380 105M220 125 380 65M220 125 380 145M220 170 380 105M220 170 380 185M220 215 380 145M220 215 380 225M220 260 380 225M220 260 380 265M220 305 380 265M220 305 380 305"/>
+              <path d="M380 25 540 25M380 25 540 65M380 65 540 25M380 65 540 105M380 105 540 65M380 105 540 145M380 145 540 105M380 145 540 185M380 185 540 145M380 185 540 225M380 225 540 185M380 225 540 265M380 265 540 225M380 265 540 305M380 305 540 265M380 305 540 305"/>
+              <path d="M540 25 690 85M540 25 690 125M540 65 690 85M540 105 690 125M540 105 690 165M540 145 690 165M540 185 690 165M540 185 690 205M540 225 690 205M540 265 690 245M540 305 690 245"/>
+            </g>
+            <g class="ann-nodes input-nodes"><circle cx="70" cy="45" r="9"/><circle cx="70" cy="90" r="9"/><circle cx="70" cy="135" r="9"/><circle cx="70" cy="230" r="9"/><circle cx="70" cy="275" r="9"/><circle class="ellipsis" cx="70" cy="170" r="3"/><circle class="ellipsis" cx="70" cy="183" r="3"/><circle class="ellipsis" cx="70" cy="196" r="3"/></g>
+            <g class="ann-nodes"><circle cx="220" cy="35" r="9"/><circle cx="220" cy="80" r="9"/><circle cx="220" cy="125" r="9"/><circle cx="220" cy="170" r="9"/><circle cx="220" cy="215" r="9"/><circle cx="220" cy="260" r="9"/><circle cx="220" cy="305" r="9"/><circle cx="380" cy="25" r="9"/><circle cx="380" cy="65" r="9"/><circle cx="380" cy="105" r="9"/><circle cx="380" cy="145" r="9"/><circle cx="380" cy="185" r="9"/><circle cx="380" cy="225" r="9"/><circle cx="380" cy="265" r="9"/><circle cx="380" cy="305" r="9"/><circle cx="540" cy="25" r="9"/><circle cx="540" cy="65" r="9"/><circle cx="540" cy="105" r="9"/><circle cx="540" cy="145" r="9"/><circle cx="540" cy="185" r="9"/><circle cx="540" cy="225" r="9"/><circle cx="540" cy="265" r="9"/><circle cx="540" cy="305" r="9"/></g>
+            <g class="ann-nodes output-nodes"><circle cx="690" cy="85" r="10"/><circle cx="690" cy="125" r="10"/><circle cx="690" cy="165" r="10"/><circle cx="690" cy="205" r="10"/><circle cx="690" cy="245" r="10"/></g>
+          </svg>
+        </div>
+        <div class="model-meta"><span><strong>{{ 'caseStudies.aps360.activationLabel' | translate }}</strong> ReLU</span><i></i><span><strong>{{ 'caseStudies.aps360.lossFunctionLabel' | translate }}</strong> {{ 'caseStudies.aps360.weightedCrossEntropy' | translate }}</span><i></i><span><strong>{{ 'caseStudies.aps360.bestEpochLabel' | translate }}</strong> 35</span><i></i><span><strong>{{ 'caseStudies.aps360.outputLabel' | translate }}</strong> {{ 'caseStudies.aps360.fiveClasses' | translate }}</span></div>
+        <aside class="explanation-note"><i class="bx bx-info-circle"></i><p><strong>{{ 'caseStudies.aps360.annNoteLabel' | translate }}</strong> {{ 'caseStudies.aps360.annNote' | translate }}</p></aside>
+      </article>
+    </div>
+  </section>
+
+  <section class="aps-section compact-section">
+    <div class="container">
+      <article class="aps-card results-card">
+        <div class="aps-card-title"><span><i class="bx bx-line-chart"></i></span><h2>{{ 'caseStudies.aps360.resultsTitle' | translate }}</h2></div>
+        <p class="results-intro">{{ 'caseStudies.aps360.resultsIntro' | translate }}</p>
+        <div class="results-layout">
+          <div class="result-chart training-chart">
+            <h3>{{ 'caseStudies.aps360.accuracyChart' | translate }}</h3>
+            <svg viewBox="0 0 340 225" role="img" [attr.aria-label]="'caseStudies.aps360.accuracyChart' | translate">
+              <path class="chart-grid" d="M45 20V180H315M45 20H315M45 60H315M45 100H315M45 140H315M99 20V180M153 20V180M207 20V180M261 20V180M315 20V180"/>
+              <g class="chart-ticks"><text x="37" y="24">0.59</text><text x="37" y="64">0.57</text><text x="37" y="104">0.55</text><text x="37" y="144">0.53</text><text x="37" y="184">0.51</text><text x="45" y="197">0</text><text x="99" y="197">10</text><text x="153" y="197">20</text><text x="207" y="197">30</text><text x="261" y="197">40</text><text x="315" y="197">50</text></g>
+              <text class="axis-label y-label" transform="translate(12 112) rotate(-90)">{{ 'caseStudies.aps360.accuracyAxis' | translate }}</text><text class="axis-label" x="180" y="219">{{ 'caseStudies.aps360.epochAxis' | translate }}</text>
+              <path class="train" d="M45 162L51 116 57 97 63 86 69 91 75 76 81 81 87 69 93 72 99 59 105 54 111 64 117 63 123 46 129 47 135 49 141 39 147 43 153 53 159 37 165 32 171 39 177 34 183 31 189 30 195 27 201 26 207 24 213 34 219 22 225 18 231 27 237 20 243 21 249 18 255 20 261 17 267 15 273 17 279 13 285 14 291 12 297 23 303 9 309 15 315 3"/>
+              <path class="validation" d="M45 178L51 137 57 111 63 93 69 87 75 80 81 86 87 72 93 78 99 114 105 83 111 75 117 72 123 78 129 70 135 74 141 61 147 82 153 65 159 88 165 74 171 72 177 65 183 68 189 61 195 59 201 75 207 66 213 64 219 58 225 79 231 62 237 67 243 60 249 65 255 74 261 57 267 61 273 69 279 75 285 65 291 55 297 63 303 73 309 80 315 59"/>
+              <g class="svg-legend"><line class="train" x1="55" y1="33" x2="72" y2="33"/><text x="77" y="36">{{ 'caseStudies.aps360.train' | translate }}</text><line class="validation" x1="55" y1="47" x2="72" y2="47"/><text x="77" y="50">{{ 'caseStudies.aps360.validation' | translate }}</text></g>
+            </svg>
+            <p class="chart-note">{{ 'caseStudies.aps360.accuracyChartNote' | translate }}</p>
+          </div>
+          <div class="result-chart loss-chart">
+            <h3>{{ 'caseStudies.aps360.lossChart' | translate }}</h3>
+            <svg viewBox="0 0 340 225" role="img" [attr.aria-label]="'caseStudies.aps360.lossChart' | translate">
+              <path class="chart-grid" d="M45 20V180H315M45 20H315M45 52H315M45 84H315M45 116H315M45 148H315M90 20V180M158 20V180M225 20V180M293 20V180"/>
+              <g class="chart-ticks"><text x="37" y="24">.016</text><text x="37" y="56">.014</text><text x="37" y="88">.012</text><text x="37" y="120">.010</text><text x="37" y="152">.008</text><text x="37" y="184">.006</text><text x="45" y="197">0</text><text x="108" y="197">500</text><text x="174" y="197">1000</text><text x="238" y="197">1500</text><text x="298" y="197">2000</text></g>
+              <text class="axis-label y-label" transform="translate(12 112) rotate(-90)">{{ 'caseStudies.aps360.lossAxis' | translate }}</text><text class="axis-label" x="180" y="219">{{ 'caseStudies.aps360.iterationAxis' | translate }}</text>
+              <path class="loss-band" d="M47 54L50 126 53 68 56 147 59 82 62 154 65 96 68 145 71 112 74 159 77 128 80 152 84 137 88 161 92 142 96 156 101 146 106 163 111 149 116 158 121 151 126 165 131 147 136 160 141 150 146 166 151 153 156 162 161 148 166 164 171 151 176 166 181 154 186 160 191 149 196 164 201 154 206 167 211 150 216 163 221 153 226 168 231 151 236 165 241 156 246 166 251 149 256 163 261 155 266 168 271 152 276 165 281 151 286 162 291 154 296 168 301 150 306 166 311 153 315 163"/>
+            </svg>
+            <p class="chart-note">{{ 'caseStudies.aps360.lossChartNote' | translate }}</p>
+          </div>
+          <div class="result-metrics"><article *ngFor="let metric of resultMetrics"><strong>{{ metric.value }}</strong><h3>{{ ('caseStudies.aps360.' + metric.titleKey) | translate }}</h3><p>{{ ('caseStudies.aps360.' + metric.bodyKey) | translate }}</p></article></div>
+          <div class="results-details">
+            <section class="class-performance-panel">
+              <h3>{{ 'caseStudies.aps360.classPerformanceTitle' | translate }}</h3>
+              <p>{{ 'caseStudies.aps360.classPerformanceIntro' | translate }}</p>
+              <div class="class-bars">
+                <div *ngFor="let item of classPerformance"><span>{{ 'caseStudies.aps360.classLabel' | translate }} {{ item.classNumber }}</span><div><i [style.width.%]="item.value"></i></div><strong>{{ item.value }}%</strong></div>
+              </div>
+              <p class="class-performance-insight"><i class="bx bx-trending-up"></i>{{ 'caseStudies.aps360.classPerformanceInsight' | translate }}</p>
+            </section>
+            <section class="class-ranges-panel">
+              <h3>{{ 'caseStudies.aps360.classRangesTitle' | translate }}</h3>
+              <p>{{ 'caseStudies.aps360.classRangesIntro' | translate }}</p>
+              <table>
+                <thead><tr><th>{{ 'caseStudies.aps360.popularityRange' | translate }}</th><th>{{ 'caseStudies.aps360.classLabel' | translate }}</th></tr></thead>
+                <tbody><tr *ngFor="let item of popularityClasses"><td>{{ item.range }}</td><td>{{ item.classNumber }}</td></tr></tbody>
+              </table>
+            </section>
+          </div>
+        </div>
+        <aside class="results-takeaway"><span><i class="bx bx-bulb"></i></span><div><h3>{{ 'caseStudies.aps360.takeawayTitle' | translate }}</h3><p>{{ 'caseStudies.aps360.takeawayBody' | translate }}</p></div></aside>
+      </article>
+    </div>
+  </section>
+
+  <section class="technologies-section aps-stack-section">
+    <div class="container">
+      <div class="technologies-panel aps-card">
+        <div class="section-heading"><p class="section-eyebrow">{{ 'caseStudies.common.technicalStack' | translate }}</p><p class="section-intro">{{ 'caseStudies.aps360.stackIntro' | translate }}</p></div>
+        <div class="aps-stack-grid">
+          <span class="aps-stack-pill" *ngFor="let tool of technicalStack">
+            <img *ngIf="tool.img" [src]="tool.img" alt="">
+            <i *ngIf="tool.icon" [class]="tool.icon"></i>
+            {{ tool.name }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="related-work-section">
+    <div class="container">
+      <div class="section-heading"><p class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</p><p class="section-intro">{{ 'caseStudies.common.relatedIntro' | translate }}</p></div>
+      <div class="related-work-grid"><app-project-box *ngFor="let project of otherWorks" [projectbox]="project"></app-project-box></div>
+    </div>
+  </section>
+</main>

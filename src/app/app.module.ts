@@ -82,7 +82,7 @@ export const appRoutes: Routes = [
   {
     path: 'project/aps360',
     component: Aps360Component,
-    title: 'Song Popularity Predictor | Alexandre Gouveia Rodrigues'
+    title: 'Deep Learning Model for Predicting Song Popularity | Alexandre Gouveia Rodrigues'
   },
   {
     path: 'work/splitz',

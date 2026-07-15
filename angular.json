@@ -37,7 +37,8 @@
             "styles": [
               "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/app/pages/work/aps360/aps360.component.css"
             ],
             "scripts": []
           },

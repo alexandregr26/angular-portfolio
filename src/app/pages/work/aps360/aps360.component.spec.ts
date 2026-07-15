@@ -21,4 +21,40 @@ describe('Aps360Component', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('toggles the playback control between play and pause', () => {
+    const button: HTMLButtonElement = fixture.nativeElement.querySelector('.aps-playback-primary');
+    const icon: HTMLElement = button.querySelector('i')!;
+    const audio = component.previewAudio.nativeElement;
+    const playSpy = spyOn(audio, 'play').and.returnValue(Promise.resolve());
+    const pauseSpy = spyOn(audio, 'pause');
+
+    expect(component.isPlaying).toBeFalse();
+    expect(icon.classList).toContain('bx-play');
+
+    button.click();
+    fixture.detectChanges();
+
+    expect(component.isPlaying).toBeTrue();
+    expect(playSpy).toHaveBeenCalled();
+    expect(button.getAttribute('aria-pressed')).toBe('true');
+    expect(icon.classList).toContain('bx-pause');
+
+    button.click();
+    fixture.detectChanges();
+
+    expect(component.isPlaying).toBeFalse();
+    expect(pauseSpy).toHaveBeenCalled();
+    expect(icon.classList).toContain('bx-play');
+  });
+
+  it('resets the player state when playback ends', () => {
+    component.isPlaying = true;
+    component.playbackProgress = 84;
+
+    component.onPlaybackEnded();
+
+    expect(component.isPlaying).toBeFalse();
+    expect(component.playbackProgress).toBe(0);
+  });
 });
