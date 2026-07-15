@@ -150,6 +150,10 @@
         padding: 38px 0 18px;
     }
 
+    .hero-actions {
+        display: none;
+    }
+
     .hero-name {
         width: min(100%, 410px);
         font-size: 3.28rem;

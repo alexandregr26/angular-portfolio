@@ -226,8 +226,11 @@
         text-align: center
     }
 
-    .mappa-hero-copy .project-kicker,
     .mappa-meta {
+        display: none
+    }
+
+    .mappa-hero-copy .project-kicker {
         justify-content: center
     }
 
