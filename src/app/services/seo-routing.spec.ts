@@ -57,6 +57,9 @@ describe('Routed SEO metadata', () => {
     expect(title.getTitle()).withContext(path).toBe(page.title);
     expect(meta.getTag("property='og:title'")?.content).withContext(path).toBe(page.title);
     expect(meta.getTag("name='twitter:title'")?.content).withContext(path).toBe(page.title);
+    expect(meta.getTag("name='description'")?.content).withContext(path).toBe(page.description);
+    expect(meta.getTag("property='og:description'")?.content).withContext(path).toBe(page.description);
+    expect(meta.getTag("name='twitter:description'")?.content).withContext(path).toBe(page.description);
     expect(fixture.nativeElement.querySelector('app-not-found')).withContext(path).toBeNull();
     expect(fixture.nativeElement.querySelector('main')).withContext(path).not.toBeNull();
   }

@@ -25,6 +25,14 @@ function replaceTag(html, pattern, replacement) {
   return html.replace(pattern, replacement);
 }
 
+function setDescription(html, attribute, description) {
+  const tag = `<meta ${attribute} content="${description}">`;
+  const pattern = new RegExp(`<meta ${attribute} content="[^"]*">`);
+  return pattern.test(html)
+    ? html.replace(pattern, tag)
+    : replaceTag(html, /<\/head>/, `  ${tag}\n</head>`);
+}
+
 function renderPage(page) {
   const url = `${siteUrl}${page.path}`;
   const title = escapeHtml(page.title);
@@ -40,14 +48,14 @@ function renderPage(page) {
 
   let html = template;
   html = replaceTag(html, /<title>[^<]*<\/title>/, `<title>${title}</title>`);
-  html = replaceTag(html, /<meta name="description" content="[^"]*">/, `<meta name="description" content="${description}">`);
+  html = setDescription(html, 'name="description"', description);
   html = replaceTag(html, /<link rel="canonical" href="[^"]*">/, `<link rel="canonical" href="${escapedUrl}">`);
   html = replaceTag(html, /<meta property="og:type" content="[^"]*">/, `<meta property="og:type" content="${escapeHtml(page.kind)}">`);
   html = replaceTag(html, /<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${title}">`);
-  html = replaceTag(html, /<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${description}">`);
+  html = setDescription(html, 'property="og:description"', description);
   html = replaceTag(html, /<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${escapedUrl}">`);
   html = replaceTag(html, /<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${title}">`);
-  html = replaceTag(html, /<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${description}">`);
+  html = setDescription(html, 'name="twitter:description"', description);
   html = replaceTag(html, /<app-root><\/app-root>/, `<app-root><noscript>${fallback}</noscript></app-root>`);
   html = replaceTag(html, /<\/head>/, `  <script id="${structuredDataId}" type="application/ld+json">${jsonLd}</script>\n</head>`);
   return html;

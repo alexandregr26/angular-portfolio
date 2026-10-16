@@ -9,6 +9,9 @@ const { siteUrl, siteName, pages } = JSON.parse(
 );
 const sitemap = await readFile(new URL('sitemap.xml', outputDirectory), 'utf8');
 const robots = await readFile(new URL('robots.txt', outputDirectory), 'utf8');
+const sourceTemplate = await readFile(new URL('../src/index.html', import.meta.url), 'utf8');
+assert(!/<meta\s+(?:name|property)="(?:description|og:description|twitter:description)"/.test(sourceTemplate),
+  'Author descriptions in src/seo-pages.json, not src/index.html');
 const seenUrls = new Set();
 const escapeHtml = value => value.replace(/[&<>"']/g, character => ({
   '&': '&amp;',
@@ -28,6 +31,11 @@ for (const page of pages) {
   assert(html.includes(`<link rel="canonical" href="${url}">`), `Wrong canonical: ${page.path}`);
   assert(html.includes(`<meta property="og:url" content="${url}">`), `Wrong social URL: ${page.path}`);
   assert(html.includes(`<meta name="description" content="${escapeHtml(page.description)}">`), `Missing description: ${page.path}`);
+  for (const attribute of ['name="description"', 'property="og:description"', 'name="twitter:description"']) {
+    const tags = html.match(new RegExp(`<meta ${attribute} content="[^"]*">`, 'g')) ?? [];
+    assert.deepEqual(tags, [`<meta ${attribute} content="${escapeHtml(page.description)}">`],
+      `Expected one manifest description for ${attribute}: ${page.path}`);
+  }
   assert(html.includes(`<app-root><noscript><main class="seo-fallback"><h1>${escapeHtml(page.heading)}</h1>`), `Missing no-JavaScript fallback: ${page.path}`);
   assert(!html.includes('<app-root><main class="seo-fallback">'), `Visible loading text: ${page.path}`);
   const scripts = [...html.matchAll(/<script id="page-structured-data" type="application\/ld\+json">([^<]*)<\/script>/g)];
