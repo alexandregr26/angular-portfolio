@@ -2,6 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { BehaviorSubject, firstValueFrom } from 'rxjs';
+import englishTranslations from '../../assets/i18n/en.json';
 
 export type LanguageCode = 'en' | 'pt' | 'fr';
 
@@ -12,27 +13,14 @@ type TranslationMap = {
 
 const STORAGE_KEY = 'portfolio-language';
 
-const DEFAULT_TRANSLATIONS: TranslationMap = {
-  nav: {
-    about: 'About',
-    work: 'Work',
-    projects: 'Projects',
-    skills: 'Skills',
-    community: 'Community',
-    contact: 'Contact',
-    resume: 'Resume',
-    linkedin: 'LinkedIn',
-    github: 'GitHub',
-    selectLanguage: 'Select language. Current language: {{language}}'
-  }
-};
-
 @Injectable({
   providedIn: 'root'
 })
 export class TranslationService {
-  private translations: TranslationMap = DEFAULT_TRANSLATIONS;
-  private readonly languageSubject = new BehaviorSubject<LanguageCode>(this.getInitialLanguage());
+  private translations: TranslationMap = englishTranslations;
+  private readonly languageSubject = new BehaviorSubject<LanguageCode>('en');
+  private requestedLanguage = this.getInitialLanguage();
+  private languageRequestId = 0;
 
   readonly language$ = this.languageSubject.asObservable();
 
@@ -44,7 +32,7 @@ export class TranslationService {
   }
 
   init(): Promise<void> {
-    return this.loadLanguage(this.currentLanguage);
+    return this.loadLanguage(this.requestedLanguage);
   }
 
   get currentLanguage(): LanguageCode {
@@ -52,7 +40,7 @@ export class TranslationService {
   }
 
   setLanguage(language: LanguageCode): void {
-    if (language === this.currentLanguage) {
+    if (language === this.requestedLanguage) {
       return;
     }
 
@@ -78,25 +66,31 @@ export class TranslationService {
     );
   }
 
-  private loadLanguage(language: LanguageCode): Promise<void> {
-    const englishTranslations = firstValueFrom(this.http.get<TranslationMap>('assets/i18n/en.json'));
-    const selectedTranslations = language === 'en'
-      ? englishTranslations
-      : firstValueFrom(this.http.get<TranslationMap>(`assets/i18n/${language}.json`));
+  private async loadLanguage(language: LanguageCode): Promise<void> {
+    const requestId = ++this.languageRequestId;
+    this.requestedLanguage = language;
 
-    return Promise.all([englishTranslations, selectedTranslations])
-      .then(([english, selected]) => {
-        this.translations = this.mergeTranslations(english, selected);
-        this.languageSubject.next(language);
-        this.persistLanguage(language);
-        this.applyDocumentLanguage(language);
-      })
-      .catch(() => {
-        this.translations = DEFAULT_TRANSLATIONS;
-        this.languageSubject.next('en');
-        this.persistLanguage('en');
-        this.applyDocumentLanguage('en');
-      });
+    try {
+      // English is bundled so readable content never depends on a locale request.
+      const selected = language === 'en' ? englishTranslations
+        : await firstValueFrom(this.http.get<TranslationMap>(`assets/i18n/${language}.json`));
+      if (requestId !== this.languageRequestId) {
+        return;
+      }
+
+      this.translations = this.mergeTranslations(englishTranslations, selected);
+      this.applyDocumentLanguage(language);
+      this.persistLanguage(language);
+      this.languageSubject.next(language);
+    } catch {
+      if (requestId !== this.languageRequestId) {
+        return;
+      }
+
+      // Keep the last usable dictionary and allow retrying the failed choice.
+      this.requestedLanguage = this.currentLanguage;
+      this.persistLanguage(this.currentLanguage);
+    }
   }
 
   private mergeTranslations(base: TranslationMap, overrides: TranslationMap): TranslationMap {
@@ -117,8 +111,12 @@ export class TranslationService {
       return 'en';
     }
 
-    const savedLanguage = window.localStorage.getItem(STORAGE_KEY);
-    return this.isSupportedLanguage(savedLanguage) ? savedLanguage : 'en';
+    try {
+      const savedLanguage = window.localStorage.getItem(STORAGE_KEY);
+      return this.isSupportedLanguage(savedLanguage) ? savedLanguage : 'en';
+    } catch {
+      return 'en';
+    }
   }
 
   private isSupportedLanguage(language: string | null): language is LanguageCode {
@@ -127,7 +125,11 @@ export class TranslationService {
 
   private persistLanguage(language: LanguageCode): void {
     if (typeof window !== 'undefined') {
-      window.localStorage.setItem(STORAGE_KEY, language);
+      try {
+        window.localStorage.setItem(STORAGE_KEY, language);
+      } catch {
+        // Storage is optional; the active preference still works in memory.
+      }
     }
   }
 

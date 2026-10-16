@@ -55,7 +55,6 @@ export class NavbarComponent implements OnDestroy {
 
   selectLanguage(language: LanguageOption, event: MouseEvent): void {
     event.stopPropagation();
-    this.selectedLanguage = language;
     this.isLanguageMenuOpen = false;
     this.translationService.setLanguage(language.code);
   }

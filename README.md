@@ -9,6 +9,10 @@ Run `npm run build` to compile the Angular app and generate static HTML for each
 
 Structured data uses the shared builder in `src/seo-structured-data.mjs`. The build embeds it in each page, and `SeoService` updates the same `page-structured-data` script after navigation. The homepage describes a Person, projects a CreativeWork, and work experience a WebPage. Unknown routes remove this script so they do not retain the previous page's structured data.
 
+## Languages
+
+English translations are bundled from `src/assets/i18n/en.json`, so the default language needs no network request. Portuguese and French load on demand and use English for missing strings. Failed requests preserve the last working language; the flag and document language change only after a successful load. Superseded responses are ignored, including when switching back to English while another language loads. Saving the preference is optional: if browser storage is blocked, selection still works for the current session.
+
 ## Google Analytics
 
 The Google tag loads in `src/index.html`. `AppComponent` configures property `G-5V86R1NRPZ` once, after the first successful Angular navigation, so the initial page view uses the resolved URL. GA4 Enhanced measurement handles later browser-history changes, including back and forward navigation. Do not add manual page-view events alongside it.

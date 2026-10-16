@@ -38,4 +38,16 @@ describe('NavbarComponent', () => {
     expect(component.selectedLanguage.code).toBe('pt');
     expect(component.isLanguageMenuOpen).toBeFalse();
   });
+
+  it('keeps the flag on the displayed language until a requested language is applied', () => {
+    const applyLanguage = translationService.setLanguage.bind(translationService);
+    spyOn(translationService, 'setLanguage');
+    const portuguese = component.languages.find(language => language.code === 'pt')!;
+
+    component.selectLanguage(portuguese, new MouseEvent('click'));
+    expect(component.selectedLanguage.code).toBe('en');
+
+    applyLanguage('pt');
+    expect(component.selectedLanguage.code).toBe('pt');
+  });
 });
