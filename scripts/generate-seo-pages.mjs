@@ -1,5 +1,6 @@
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import { createStructuredData, structuredDataId } from '../src/seo-structured-data.mjs';
 
 const outputDirectory = new URL('../docs/', import.meta.url);
 const { siteUrl, siteName, defaultImage, pages } = JSON.parse(
@@ -34,9 +35,7 @@ function renderPage(page) {
     .map(candidate => `<a href="${escapeHtml(candidate.path)}">${escapeHtml(candidate.heading)}</a>`)
     .join(' ');
   const fallback = `<main class="seo-fallback"><h1>${escapeHtml(page.heading)}</h1><p>${description}</p><nav aria-label="Portfolio pages">${links}</nav></main>`;
-  const structuredData = page.path === '/'
-    ? { '@context': 'https://schema.org', '@type': 'Person', name: siteName, url: siteUrl, sameAs: ['https://linkedin.com/in/alexandre-gouveia-rodrigues', 'https://github.com/alexandregr26/'] }
-    : { '@context': 'https://schema.org', '@type': page.path.startsWith('/project/') ? 'CreativeWork' : 'WebPage', name: page.heading, description: page.description, url, author: { '@type': 'Person', name: siteName, url: siteUrl } };
+  const structuredData = createStructuredData(page, { siteUrl, siteName });
   const jsonLd = JSON.stringify(structuredData).replace(/</g, '\\u003c');
 
   let html = template;
@@ -50,7 +49,7 @@ function renderPage(page) {
   html = replaceTag(html, /<meta name="twitter:title" content="[^"]*">/, `<meta name="twitter:title" content="${title}">`);
   html = replaceTag(html, /<meta name="twitter:description" content="[^"]*">/, `<meta name="twitter:description" content="${description}">`);
   html = replaceTag(html, /<app-root><\/app-root>/, `<app-root><noscript>${fallback}</noscript></app-root>`);
-  html = replaceTag(html, /<\/head>/, `  <script type="application/ld+json">${jsonLd}</script>\n</head>`);
+  html = replaceTag(html, /<\/head>/, `  <script id="${structuredDataId}" type="application/ld+json">${jsonLd}</script>\n</head>`);
   return html;
 }
 

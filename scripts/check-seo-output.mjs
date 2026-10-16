@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import { createStructuredData, structuredDataId } from '../src/seo-structured-data.mjs';
 
 const outputDirectory = new URL('../docs/', import.meta.url);
-const { siteUrl, pages } = JSON.parse(
+const { siteUrl, siteName, pages } = JSON.parse(
   await readFile(new URL('../src/seo-pages.json', import.meta.url), 'utf8')
 );
 const sitemap = await readFile(new URL('sitemap.xml', outputDirectory), 'utf8');
@@ -29,8 +30,13 @@ for (const page of pages) {
   assert(html.includes(`<meta name="description" content="${escapeHtml(page.description)}">`), `Missing description: ${page.path}`);
   assert(html.includes(`<app-root><noscript><main class="seo-fallback"><h1>${escapeHtml(page.heading)}</h1>`), `Missing no-JavaScript fallback: ${page.path}`);
   assert(!html.includes('<app-root><main class="seo-fallback">'), `Visible loading text: ${page.path}`);
-  assert(html.includes('type="application/ld+json"'), `Missing structured data: ${page.path}`);
-  const structuredData = JSON.parse(html.match(/<script type="application\/ld\+json">([^<]*)<\/script>/)?.[1] ?? 'null');
+  const scripts = [...html.matchAll(/<script id="page-structured-data" type="application\/ld\+json">([^<]*)<\/script>/g)];
+  assert.equal(scripts.length, 1, `Expected one ${structuredDataId} script: ${page.path}`);
+  const structuredData = JSON.parse(scripts[0][1]);
+  assert.deepEqual(structuredData, createStructuredData(page, { siteUrl, siteName }), `Wrong structured data: ${page.path}`);
+  assert.equal(structuredData['@context'], 'https://schema.org');
+  assert.equal(structuredData['@type'], page.path === '/' ? 'Person' : page.path.startsWith('/project/') ? 'CreativeWork' : 'WebPage');
+  assert.equal(structuredData.name, page.heading);
   assert.equal(structuredData.url, page.path === '/' ? siteUrl : url);
   assert(sitemap.includes(`<loc>${url}</loc>`), `Missing sitemap URL: ${page.path}`);
 }

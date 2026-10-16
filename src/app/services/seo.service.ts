@@ -2,6 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import { Inject, Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import seoPages from '../../seo-pages.json';
+import { createStructuredData, structuredDataId } from '../../seo-structured-data.mjs';
 
 type SeoPage = (typeof seoPages.pages)[number];
 
@@ -23,6 +24,7 @@ export class SeoService {
       this.title.setTitle('Page Not Found | Alexandre Gouveia Rodrigues');
       this.meta.updateTag({ name: 'robots', content: 'noindex, follow' });
       this.removeCanonical();
+      this.document.getElementById(structuredDataId)?.remove();
       return;
     }
 
@@ -36,6 +38,18 @@ export class SeoService {
     this.meta.updateTag({ name: 'twitter:title', content: page.title });
     this.meta.updateTag({ name: 'twitter:description', content: page.description });
     this.setCanonical(page);
+    this.setStructuredData(page);
+  }
+
+  private setStructuredData(page: SeoPage): void {
+    const script = this.document.getElementById(structuredDataId)
+      ?? this.document.createElement('script');
+    script.id = structuredDataId;
+    script.setAttribute('type', 'application/ld+json');
+    script.textContent = JSON.stringify(createStructuredData(page, seoPages)).replace(/</g, '\\u003c');
+    if (!script.parentNode) {
+      this.document.head.appendChild(script);
+    }
   }
 
   private absoluteUrl(path: string): string {
