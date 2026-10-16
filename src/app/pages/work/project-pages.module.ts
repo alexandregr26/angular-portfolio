@@ -15,32 +15,32 @@ const routes: Routes = [
   {
     path: 'splitz',
     component: SplitzComponent,
-    title: 'Splitz | Alexandre Gouveia Rodrigues'
+    title: 'Splitz | Chrome Tab Organizer Extension'
   },
   {
     path: 'utat',
     component: UtatComponent,
-    title: 'UTAT | Alexandre Gouveia Rodrigues'
+    title: 'UTAT | Low-Power Rocket Ground Station Sensor'
   },
   {
     path: 'ece243',
     component: FpsComponent,
-    title: 'FPS | Alexandre Gouveia Rodrigues'
+    title: 'FPGA First-Person Shooter Game | DE1-SoC Project'
   },
   {
     path: 'ece297',
     component: MappaComponent,
-    title: 'Mappa | Alexandre Gouveia Rodrigues'
+    title: 'Mappa | Geographic Information System'
   },
   {
     path: 'capstone',
     component: CapstoneComponent,
-    title: 'Capstone | Alexandre Gouveia Rodrigues'
+    title: 'HealthChainON | Blockchain Electronic Health Records'
   },
   {
     path: 'aps360',
     component: Aps360Component,
-    title: 'Deep Learning Model for Predicting Song Popularity | Alexandre Gouveia Rodrigues'
+    title: 'Predicting Song Popularity with Deep Learning'
   }
 ];
 

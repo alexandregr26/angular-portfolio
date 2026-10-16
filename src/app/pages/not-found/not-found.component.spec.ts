@@ -34,7 +34,7 @@ describe('NotFoundComponent', () => {
       '/#skills',
       '/#work',
       '/#community',
-      'https://www.linkedin.com/in/alexandre-gouveia-r/',
+      'https://linkedin.com/in/alexandre-gouveia-rodrigues',
       'https://github.com/alexandregr26/'
     ]);
   });

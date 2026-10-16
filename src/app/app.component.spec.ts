@@ -1,14 +1,17 @@
 import { NavigationEnd, Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { AppComponent } from './app.component';
+import { SeoService } from './services/seo.service';
 
 describe('AppComponent', () => {
   let routerEvents: Subject<NavigationEnd>;
   let component: AppComponent;
+  let seo: jasmine.SpyObj<SeoService>;
 
   beforeEach(() => {
     routerEvents = new Subject<NavigationEnd>();
-    component = new AppComponent({ events: routerEvents } as unknown as Router);
+    seo = jasmine.createSpyObj<SeoService>('SeoService', ['update']);
+    component = new AppComponent({ events: routerEvents } as unknown as Router, seo);
   });
 
   afterEach(() => {
@@ -29,5 +32,6 @@ describe('AppComponent', () => {
     expect(gtag).toHaveBeenCalledWith('config', 'MEASUREMENT-ID', {
       page_path: '/project/capstone'
     });
+    expect(seo.update).toHaveBeenCalledWith('/project/capstone');
   });
 });

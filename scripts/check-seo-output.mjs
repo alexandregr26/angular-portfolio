@@ -1,0 +1,42 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import { join } from 'node:path';
+
+const outputDirectory = new URL('../docs/', import.meta.url);
+const { siteUrl, pages } = JSON.parse(
+  await readFile(new URL('../src/seo-pages.json', import.meta.url), 'utf8')
+);
+const sitemap = await readFile(new URL('sitemap.xml', outputDirectory), 'utf8');
+const robots = await readFile(new URL('robots.txt', outputDirectory), 'utf8');
+const seenUrls = new Set();
+const escapeHtml = value => value.replace(/[&<>"']/g, character => ({
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#39;'
+})[character]);
+
+for (const page of pages) {
+  const url = `${siteUrl}${page.path}`;
+  assert(!seenUrls.has(url), `Duplicate URL: ${url}`);
+  seenUrls.add(url);
+  const html = await readFile(join(outputDirectory.pathname, page.path, 'index.html'), 'utf8');
+
+  assert(html.includes(`<title>${page.title}</title>`), `Missing title: ${page.path}`);
+  assert(html.includes(`<link rel="canonical" href="${url}">`), `Wrong canonical: ${page.path}`);
+  assert(html.includes(`<meta property="og:url" content="${url}">`), `Wrong social URL: ${page.path}`);
+  assert(html.includes(`<meta name="description" content="${escapeHtml(page.description)}">`), `Missing description: ${page.path}`);
+  assert(html.includes(`<app-root><noscript><main class="seo-fallback"><h1>${escapeHtml(page.heading)}</h1>`), `Missing no-JavaScript fallback: ${page.path}`);
+  assert(!html.includes('<app-root><main class="seo-fallback">'), `Visible loading text: ${page.path}`);
+  assert(html.includes('type="application/ld+json"'), `Missing structured data: ${page.path}`);
+  const structuredData = JSON.parse(html.match(/<script type="application\/ld\+json">([^<]*)<\/script>/)?.[1] ?? 'null');
+  assert.equal(structuredData.url, page.path === '/' ? siteUrl : url);
+  assert(sitemap.includes(`<loc>${url}</loc>`), `Missing sitemap URL: ${page.path}`);
+}
+
+assert.equal((sitemap.match(/<loc>/g) ?? []).length, pages.length);
+assert(robots.includes(`Sitemap: ${siteUrl}/sitemap.xml`));
+assert((await readFile(new URL('404.html', outputDirectory), 'utf8')).includes('name="robots" content="noindex"'));
+
+console.log(`Checked SEO output for ${pages.length} pages.`);

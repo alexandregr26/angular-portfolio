@@ -10,17 +10,17 @@ const routes: Routes = [
   {
     path: 'coinbase',
     component: CoinbaseComponent,
-    title: 'Coinbase | Alexandre Gouveia Rodrigues'
+    title: 'Software Engineer at Coinbase'
   },
   {
     path: 'amazon',
     component: AmazonComponent,
-    title: 'Amazon | Alexandre Gouveia Rodrigues'
+    title: 'Software Development Engineer Intern at Amazon'
   },
   {
     path: 'thomson-reuters',
     component: ThomsonReutersComponent,
-    title: 'Thomson Reuters | Alexandre Gouveia Rodrigues'
+    title: 'Software Developer Intern at Thomson Reuters'
   }
 ];
 

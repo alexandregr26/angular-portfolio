@@ -1,0 +1,77 @@
+{
+  "siteUrl": "https://alexandregr.com",
+  "siteName": "Alexandre Gouveia Rodrigues",
+  "defaultImage": "/assets/img/social-preview.jpg",
+  "pages": [
+    {
+      "path": "/",
+      "title": "Alexandre Gouveia Rodrigues | Computer Engineer",
+      "description": "Portfolio of Alexandre Gouveia Rodrigues, a computer engineer working across financial systems, blockchain infrastructure, digital health, and intelligent software.",
+      "heading": "Alexandre Gouveia Rodrigues",
+      "kind": "website"
+    },
+    {
+      "path": "/project/capstone/",
+      "title": "HealthChainON | Blockchain Electronic Health Records",
+      "description": "Explore HealthChainON, an Ontario electronic health records proof of concept built with Hyperledger Fabric, IPFS, encryption, and a role-based API.",
+      "heading": "HealthChainON",
+      "kind": "article"
+    },
+    {
+      "path": "/project/aps360/",
+      "title": "Predicting Song Popularity with Deep Learning",
+      "description": "A neural network project that predicts Spotify song popularity from audio features, trained on about 174,000 tracks and compared with a decision tree baseline.",
+      "heading": "Deep Learning Model for Predicting Song Popularity",
+      "kind": "article"
+    },
+    {
+      "path": "/project/ece297/",
+      "title": "Mappa | Geographic Information System",
+      "description": "Mappa is a geographic information system for exploring city maps and finding optimized routes with pathfinding algorithms.",
+      "heading": "Mappa",
+      "kind": "article"
+    },
+    {
+      "path": "/project/splitz/",
+      "title": "Splitz | Chrome Tab Organizer Extension",
+      "description": "Splitz is a Chrome extension for organizing open tabs into categories, reducing browser clutter, and moving tabs with drag-and-drop.",
+      "heading": "Splitz",
+      "kind": "article"
+    },
+    {
+      "path": "/project/ece243/",
+      "title": "FPGA First-Person Shooter | DE1-SoC Project",
+      "description": "An embedded first-person shooter for the DE1-SoC platform, combining low-level hardware control, VGA rendering, and responsive game input.",
+      "heading": "FPGA First-Person Shooter",
+      "kind": "article"
+    },
+    {
+      "path": "/project/utat/",
+      "title": "Low-Power Rocket Ground Station Sensor",
+      "description": "A low-power sensor circuit for a rocket ground station that monitors battery voltage and automatically shuts down to protect the system.",
+      "heading": "Low-Power Rocket Ground Station Sensor",
+      "kind": "article"
+    },
+    {
+      "path": "/work/coinbase/",
+      "title": "Software Engineer at Coinbase | Blockchain Infrastructure",
+      "description": "Alexandre Gouveia Rodrigues's Coinbase work spans blockchain node infrastructure across 60+ protocols, operational tooling, and production reliability.",
+      "heading": "Software Engineer at Coinbase",
+      "kind": "article"
+    },
+    {
+      "path": "/work/thomson-reuters/",
+      "title": "Software Developer Intern at Thomson Reuters",
+      "description": "Alexandre Gouveia Rodrigues built APIs, authorization workflows, and developer tools using .NET, Angular, and AWS at Thomson Reuters.",
+      "heading": "Software Developer Intern at Thomson Reuters",
+      "kind": "article"
+    },
+    {
+      "path": "/work/amazon/",
+      "title": "Software Development Engineer Intern at Amazon",
+      "description": "Alexandre Gouveia Rodrigues developed customer-facing advertising features with React and Redux during a software engineering internship at Amazon.",
+      "heading": "Software Development Engineer Intern at Amazon",
+      "kind": "article"
+    }
+  ]
+}

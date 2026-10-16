@@ -6,21 +6,21 @@ export const projects: { [key: string]: ProjectBox } = {
         titleKey: "caseStudies.coinbase.title",
         company: "Coinbase",
         img: "assets/img/experience/coinbase/logo.png",
-        route: "/work/coinbase"
+        route: "/work/coinbase/"
     },
     utat: {
         title: "Low Power Sensor for Rocket Ground Station",
         titleKey: "caseStudies.utat.title",
         company: "UTAT",
         img: "assets/img/experience/UTAT/banner.png",
-        route: "/project/utat"
+        route: "/project/utat/"
     },
     ece243: {
         title: "FPS Game",
         titleKey: "caseStudies.fps.title",
         company: "ECE243",
         img: "assets/img/experience/ECE243/banner.png",
-        route: "/project/ece243"
+        route: "/project/ece243/"
     },
     splitz: {
         title: "Chrome Browser Extension",
@@ -28,14 +28,14 @@ export const projects: { [key: string]: ProjectBox } = {
         company: "Personal Project",
         companyKey: "caseStudies.projectCards.personalProject",
         img: "assets/img/experience/Splitz/banner.png",
-        route: "/project/splitz"
+        route: "/project/splitz/"
     },
     ece297: {
         title: "Geographic Information System Application",
         titleKey: "caseStudies.projectCards.mappaTitle",
         company: "ECE297",
         img: "assets/img/experience/ECE297/banner.png",
-        route: "/project/ece297"
+        route: "/project/ece297/"
     },
     blockchain: {
         title: "Blockchain for Electronic Health Records in Ontario",
@@ -43,28 +43,28 @@ export const projects: { [key: string]: ProjectBox } = {
         company: "UofT Engineering Capstone",
         companyKey: "caseStudies.projectCards.capstoneCompany",
         img: "assets/img/experience/Capstone/header.png",
-        route: "/project/capstone"
+        route: "/project/capstone/"
     },
     tr: {
         title: "Software Developer Intern",
         titleKey: "caseStudies.thomsonReuters.title",
         company: "Thomson Reuters",
         img: "assets/img/experience/ThomsonReuters/orange.png",
-        route: "/work/thomson-reuters"
+        route: "/work/thomson-reuters/"
     },
     amazon: {
         title: "Software Development Engineer Intern",
         titleKey: "caseStudies.amazon.title",
         company: "Amazon",
         img: "assets/img/experience/Amazon/blue.png",
-        route: "/work/amazon"
+        route: "/work/amazon/"
     },
     aps360: {
         title: "Deep Learning Model for Predicting Song Popularity",
         titleKey: "caseStudies.projectCards.aps360Title",
         company: "APS360",
         img: "assets/img/experience/Spotify/black-banner.png",
-        route: "/project/aps360"
+        route: "/project/aps360/"
     }
 };
 

@@ -1,7 +1,7 @@
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, UrlSerializer } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,6 +14,7 @@ import { WorkHeaderComponent } from './components/work-header/work-header.compon
 import { TranslationService } from './services/translation.service';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { PortfolioSharedModule } from './shared/portfolio-shared.module';
+import { CanonicalUrlSerializer } from './services/canonical-url-serializer';
 
 export const appRoutes: Routes = [
   {
@@ -97,6 +98,7 @@ function initializeTranslations(translationService: TranslationService): () => P
     })
   ],
   providers: [
+    { provide: UrlSerializer, useClass: CanonicalUrlSerializer },
     {
       provide: APP_INITIALIZER,
       useFactory: initializeTranslations,
