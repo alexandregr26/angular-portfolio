@@ -466,7 +466,7 @@ app-not-found .place-github { bottom: 8.5%; left: 47%; animation-delay: .25s; }
         margin-top: 7px;
         font-size: clamp(1.75rem, 8vw, 2.75rem);
         letter-spacing: .025em;
-        white-space: nowrap;
+        white-space: normal;
     }
 
     html[lang='pt'] app-not-found .mobile-not-found-title span + span {
@@ -720,6 +720,28 @@ app-navbar #navbar-container {
 
 app-navbar .navbar-brand {
     white-space: nowrap;
+    min-width: 0;
+}
+
+app-navbar .nav-logo {
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+app-navbar .language-selector,
+app-navbar .mobile-nav {
+    flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+    app-navbar #navbar-container {
+        gap: 12px;
+    }
+
+    app-navbar .navbar-brand {
+        flex: 1;
+    }
 }
 
 app-navbar .navbar-collapse {
@@ -1268,6 +1290,21 @@ app-navbar .navbar-nav {
     gap: 13px;
 }
 
+/* Keep nested FPS content inside its grid tracks at narrow reflow widths. */
+app-fps .fps-hero-copy,
+app-fps .source-note > div,
+app-fps .card-heading > h2,
+app-fps .feature-copy,
+app-fps .feature-copy > h2 {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+app-fps .crt-shell {
+    min-width: 0;
+    width: 100%;
+}
+
 .related-work-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1648,4 +1685,21 @@ body:has(app-capstone) .hero-map-mobile {
         padding: 22px;
     }
 
+}
+
+@media (max-width: 430px) {
+    body:has(app-capstone) .hero-flow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 12px;
+    }
+
+    body:has(app-capstone) .flow-step:nth-child(2n)::before,
+    body:has(app-capstone) .flow-step:nth-child(2n)::after {
+        display: none;
+    }
+
+    body:has(app-capstone) .flow-step p {
+        font-size: .78rem;
+        overflow-wrap: anywhere;
+    }
 }

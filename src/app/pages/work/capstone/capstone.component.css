@@ -316,3 +316,9 @@ main {
     }
 
 }
+
+@media(max-width:360px) {
+    .hero-copy h1 {
+        font-size: clamp(1.75rem, 9.5vw, 2.45rem)
+    }
+}

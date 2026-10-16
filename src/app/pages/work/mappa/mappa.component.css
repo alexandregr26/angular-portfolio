@@ -223,7 +223,8 @@
     }
 
     .mappa-hero-copy {
-        text-align: center
+        text-align: center;
+        min-width: 0
     }
 
     .mappa-meta {
