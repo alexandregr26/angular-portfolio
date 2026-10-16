@@ -82,8 +82,8 @@
       "items": {
         "coinbase": {
           "role": "Software Engineer",
-          "date": "Jan 2025 - Present",
-          "summary": "Managing blockchain infrastructure and internal operational systems across a high-stakes financial technology environment.",
+          "date": "Jan 2025 - Jun 2026",
+          "summary": "Managed blockchain infrastructure and internal operational systems across a high-stakes financial technology environment.",
           "scope": "Blockchain node infrastructure management for 60+ protocols, LLM-powered operational tooling, and incident response mitigation improvements.",
           "impact": "Improved operational visibility and incident response while strengthening the reliability and scalability of production blockchain infrastructure."
         },
@@ -270,14 +270,14 @@
       "aps360Title": "Deep Learning Model for Predicting Song Popularity"
     },
     "coinbase": {
-      "date": "Jan 2025 - Present",
+      "date": "Jan 2025 - Jun 2026",
       "title": "Software Engineer",
       "summary1": "As a Software Engineer at Coinbase, I worked on blockchain infrastructure, internal engineering tools, and AI-assisted systems for operations in a large-scale financial technology environment. Much of my work sat close to the production layer of the business, where software needed to be reliable, observable, and capable of supporting customers’ needs around the clock.",
       "summary2": "A significant part of my role involved supporting node operations across more than 60 blockchain protocols—this included handling client upgrades and security patches, improving deployment workflows, and coordinating network-level changes. Through this work, I gained much deeper experience with Docker, Helm, Kubernetes, and Datadog, while learning the practical discipline required to operate distributed services where downtime, misconfiguration, or delayed response can carry meaningful consequences.",
       "summary3": "Coinbase was also the first place where AI became a meaningful part of my daily work as an engineer. I used it to help with debugging, planning implementations, exploring unfamiliar systems, and moving through development tasks more quickly. At the same time, I became very aware of its limitations. AI was most valuable when guided by someone who understood the architecture, constraints, failure modes, nuances, and operational context of the domain. That insight made me a more effective engineer and reinforced my belief that no machine can replace the judgment of someone who has lived with the consequences of the systems they build.",
       "summary4": "Building on those lessons, I led one of my main projects: an LLM-powered operational knowledge system that unified protocol, incident, and infrastructure data from multiple sources into a single interface for engineers. To achieve this, I worked on MCP integrations, REST APIs, scheduled ingestion workflows, a React frontend, and LangGraph orchestration. The aim was simple: make it easier for engineers to find the information they needed without searching across a collection of disconnected tools.",
       "summary5": "During my time there, I also built an internal incident response tool that used Datadog integrations to connect infrastructure metrics, service health, and alerts into a clearer investigation workflow. These two projects arose from the same problem I observed repeatedly: during incidents, engineers often had plenty of data points at their disposal but insufficient meaningful context. The real value was not in showing more information, but in helping people understand what mattered and act faster with greater confidence.",
-      "summary6": "All in all, I leave Coinbase with a stronger foundation in production infrastructure, a more disciplined approach to building and operating reliable systems, and a clearer understanding of how to use AI to become a more capable engineer—not a less necessary one."
+      "summary6": "All in all, I left Coinbase with a stronger foundation in production infrastructure, a more disciplined approach to building and operating reliable systems, and a clearer understanding of how to use AI to become a more capable engineer—not a less necessary one."
     },
     "amazon": {
       "date": "May 2021 - Aug 2021",

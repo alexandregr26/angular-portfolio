@@ -82,7 +82,7 @@
       "items": {
         "coinbase": {
           "role": "Engenheiro de Software",
-          "date": "Jan 2025 - Presente",
+          "date": "Jan 2025 - Jun 2026",
           "summary": "Gerenciamento de infraestrutura blockchain e sistemas operacionais internos em um ambiente financeiro de alta responsabilidade.",
           "scope": "Gestão de infraestrutura de nós blockchain para mais de 60 protocolos, ferramentas operacionais com LLMs e melhorias para mitigação de resposta a incidentes.",
           "impact": "Melhorei a visibilidade operacional e a resposta a incidentes, fortalecendo a confiabilidade e a escalabilidade da infraestrutura blockchain em produção."
@@ -270,14 +270,14 @@
       "aps360Title": "Modelo de aprendizado profundo para prever a popularidade de músicas"
     },
     "coinbase": {
-      "date": "Jan 2025 - Atualmente",
+      "date": "Jan 2025 - Jun 2026",
       "title": "Engenheiro de Software",
       "summary1": "Como engenheiro de software na Coinbase, trabalhei com infraestrutura de blockchain, ferramentas internas de engenharia e sistemas para operações com apoio de IA em um ambiente de tecnologia financeira de grande escala. Boa parte do meu trabalho acontecia muito perto da camada de produção do negócio, onde o software precisava ser confiável, observável e capaz de atender às necessidades dos clientes a qualquer hora do dia.",
       "summary2": "Uma parte importante da minha função envolvia dar suporte à operação de nós em mais de 60 protocolos de blockchain—desde atualizações de clientes e correções de segurança até melhorias nos processos de implantação e coordenação de mudanças nas redes. Com esse trabalho, aprofundei muito minha experiência com Docker, Helm, Kubernetes e Datadog, ao mesmo tempo em que aprendi a disciplina prática necessária para operar serviços distribuídos, nos quais indisponibilidade, configurações incorretas ou uma resposta tardia podem trazer consequências relevantes.",
       "summary3": "A Coinbase também foi o primeiro lugar onde a IA passou a fazer parte de forma significativa do meu dia a dia como engenheiro. Usei essas ferramentas para ajudar na depuração, planejar implementações, explorar sistemas que eu ainda não conhecia e avançar com mais rapidez nas tarefas de desenvolvimento. Ao mesmo tempo, passei a entender muito bem suas limitações. A IA gerava mais valor quando era orientada por alguém que conhecia a arquitetura, as restrições, os possíveis modos de falha, as nuances e o contexto operacional daquele domínio. Essa percepção me tornou um engenheiro mais eficaz e reforçou minha convicção de que nenhuma máquina pode substituir o julgamento de quem já viveu as consequências dos sistemas que constrói.",
       "summary4": "A partir desses aprendizados, liderei um dos meus principais projetos: um sistema de conhecimento operacional baseado em LLM que reuniu dados de protocolos, incidentes e infraestrutura de diferentes fontes em uma única interface para engenheiros. Para construir essa solução, trabalhei com integrações MCP, APIs REST, fluxos agendados de ingestão de dados, uma interface em React e orquestração com LangGraph. O objetivo era simples: facilitar o acesso às informações necessárias sem obrigar os engenheiros a procurar em uma coleção de ferramentas desconectadas.",
       "summary5": "Durante meu período na empresa, também desenvolvi uma ferramenta interna de resposta a incidentes que usava integrações com o Datadog para conectar métricas de infraestrutura, saúde dos serviços e alertas em um fluxo de investigação mais claro. Os dois projetos nasceram do mesmo problema que observei repetidas vezes: durante um incidente, os engenheiros muitas vezes tinham inúmeros dados à disposição, mas não o contexto necessário para dar sentido a eles. O verdadeiro valor não estava em mostrar mais informações, e sim em ajudar as pessoas a entender o que importava e agir com mais rapidez e confiança.",
-      "summary6": "No fim das contas, deixo a Coinbase com uma base mais sólida em infraestrutura de produção, uma abordagem mais disciplinada para construir e operar sistemas confiáveis e uma compreensão mais clara de como usar a IA para me tornar um engenheiro mais capaz—e não menos necessário."
+      "summary6": "No fim das contas, saí da Coinbase com uma base mais sólida em infraestrutura de produção, uma abordagem mais disciplinada para construir e operar sistemas confiáveis e uma compreensão mais clara de como usar a IA para me tornar um engenheiro mais capaz—e não menos necessário."
     },
     "amazon": {
       "date": "Mai 2021 - Ago 2021",

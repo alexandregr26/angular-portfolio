@@ -54,7 +54,7 @@
       "items": {
         "coinbase": {
           "role": "Ingénieur logiciel",
-          "date": "Janv. 2025 - Présent",
+          "date": "Janv. 2025 - Juin 2026",
           "summary": "Gestion de l'infrastructure blockchain et de systèmes opérationnels internes dans un environnement de technologie financière à forts enjeux.",
           "scope": "Gestion d'infrastructure de nœuds blockchain pour plus de 60 protocoles, outils opérationnels alimentés par LLM et améliorations de la réponse aux incidents.",
           "impact": "Amélioration de la visibilité opérationnelle et de la réponse aux incidents tout en renforçant la fiabilité et l'évolutivité de l'infrastructure blockchain en production."
@@ -270,14 +270,14 @@
       "aps360Title": "Modèle d’apprentissage profond pour prédire la popularité des chansons"
     },
     "coinbase": {
-      "date": "Janv. 2025 - Présent",
+      "date": "Janv. 2025 - Juin 2026",
       "title": "Ingénieur logiciel",
       "summary1": "En tant qu’ingénieur logiciel chez Coinbase, j’ai travaillé sur l’infrastructure blockchain, les outils internes d’ingénierie et les systèmes d’aide aux opérations reposant sur l’IA, dans un environnement de technologie financière à grande échelle. Une grande partie de mon travail concernait directement les systèmes en production, où le logiciel devait être fiable, observable et capable de répondre aux besoins des clients à toute heure.",
       "summary2": "Une part importante de mon rôle consistait à soutenir les opérations de nœuds pour plus de 60 protocoles blockchain : mises à niveau des clients, correctifs de sécurité, amélioration des processus de déploiement et coordination des changements à l’échelle des réseaux. Ce travail m’a permis d’approfondir mon expérience avec Docker, Helm, Kubernetes et Datadog, tout en acquérant la rigueur nécessaire pour exploiter des services distribués où une panne, une mauvaise configuration ou une intervention tardive peuvent avoir de réelles conséquences.",
       "summary3": "Coinbase a également été le premier endroit où l’IA a pris une place importante dans mon travail quotidien d’ingénieur. Je l’utilisais pour déboguer, planifier des implémentations, explorer des systèmes inconnus et avancer plus rapidement dans le développement. J’ai aussi pris pleinement conscience de ses limites. L’IA apportait le plus de valeur lorsqu’elle était guidée par quelqu’un qui comprenait l’architecture, les contraintes, les modes de défaillance, les nuances et le contexte opérationnel du domaine. Ce constat a fait de moi un ingénieur plus efficace et a renforcé ma conviction qu’aucune machine ne peut remplacer le jugement de quelqu’un qui a vécu les conséquences des systèmes qu’il construit.",
       "summary4": "Fort de ces enseignements, j’ai dirigé l’un de mes principaux projets : un système de connaissances opérationnelles reposant sur des grands modèles de langage (LLM), qui réunissait des données sur les protocoles, les incidents et l’infrastructure provenant de plusieurs sources dans une interface unique pour les ingénieurs. Pour y parvenir, j’ai développé des intégrations MCP, des API REST, des processus planifiés d’ingestion de données, une interface React et une orchestration avec LangGraph. L’objectif était simple : permettre aux ingénieurs de trouver plus facilement les informations nécessaires sans devoir chercher dans une multitude d’outils isolés.",
       "summary5": "J’ai aussi développé un outil interne de réponse aux incidents qui utilisait des intégrations Datadog pour réunir les métriques d’infrastructure, l’état des services et les alertes dans un processus d’investigation plus clair. Ces deux projets répondaient au même problème, observé à plusieurs reprises : lors d’un incident, les ingénieurs disposaient souvent de nombreuses données, mais de trop peu de contexte utile. La valeur ne résidait pas dans l’affichage d’informations supplémentaires, mais dans la capacité à aider les équipes à comprendre l’essentiel et à agir plus vite avec davantage de confiance.",
-      "summary6": "Je quitte Coinbase avec des bases plus solides en infrastructure de production, une approche plus rigoureuse de la conception et de l’exploitation de systèmes fiables, et une meilleure compréhension de la manière d’utiliser l’IA pour devenir un ingénieur plus compétent, sans rendre mon rôle moins nécessaire."
+      "summary6": "J’ai quitté Coinbase avec des bases plus solides en infrastructure de production, une approche plus rigoureuse de la conception et de l’exploitation de systèmes fiables, et une meilleure compréhension de la manière d’utiliser l’IA pour devenir un ingénieur plus compétent, sans rendre mon rôle moins nécessaire."
     },
     "amazon": {
       "date": "Mai 2021 - Août 2021",
