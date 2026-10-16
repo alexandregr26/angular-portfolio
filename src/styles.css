@@ -716,17 +716,18 @@ app-navbar .navbar {
 
 app-navbar #navbar-container {
     justify-content: space-between;
+    gap: 12px;
 }
 
 app-navbar .navbar-brand {
     white-space: nowrap;
-    min-width: 0;
+    min-width: calc(12rem + 46px);
 }
 
 app-navbar .nav-logo {
-    min-width: 0;
+    min-width: 12rem;
     white-space: normal;
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
 }
 
 app-navbar .language-selector,
@@ -734,13 +735,15 @@ app-navbar .mobile-nav {
     flex-shrink: 0;
 }
 
-@media (max-width: 767px) {
-    app-navbar #navbar-container {
-        gap: 12px;
-    }
-
+@media (max-width: 1239px) {
     app-navbar .navbar-brand {
         flex: 1;
+        min-width: 0;
+    }
+
+    app-navbar .nav-logo {
+        min-width: 0;
+        overflow-wrap: break-word;
     }
 }
 
