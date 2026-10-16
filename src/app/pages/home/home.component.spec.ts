@@ -33,4 +33,13 @@ describe('HomeComponent', () => {
     expect(component.professionalExperiences.length).toBe(3);
     expect(component.featuredProjects.length).toBe(6);
   });
+
+  it('places the homepage content in one main landmark with section headings', () => {
+    const main = fixture.nativeElement.querySelector('main');
+    expect(fixture.nativeElement.querySelectorAll('main').length).toBe(1);
+    expect(main.querySelector('app-header')).not.toBeNull();
+    for (const id of ['about', 'work', 'projects', 'skills', 'community', 'contact']) {
+      expect(main.querySelector(`#${id} h2.section-eyebrow`)).withContext(id).not.toBeNull();
+    }
+  });
 });

@@ -5,7 +5,7 @@
   "pages": [
     {
       "path": "/",
-      "title": "Alexandre Gouveia Rodrigues | Computer Engineer",
+      "title": "Alexandre Gouveia Rodrigues | Software Engineer",
       "description": "Portfolio of Alexandre Gouveia Rodrigues, a computer engineer working across financial systems, blockchain infrastructure, digital health, and intelligent software.",
       "heading": "Alexandre Gouveia Rodrigues",
       "kind": "website"
@@ -40,35 +40,35 @@
     },
     {
       "path": "/project/ece243/",
-      "title": "FPGA First-Person Shooter | DE1-SoC Project",
+      "title": "DE1-SoC | FPGA First-Person Shooter",
       "description": "An embedded first-person shooter for the DE1-SoC platform, combining low-level hardware control, VGA rendering, and responsive game input.",
       "heading": "FPGA First-Person Shooter",
       "kind": "article"
     },
     {
       "path": "/project/utat/",
-      "title": "Low-Power Rocket Ground Station Sensor",
+      "title": "UTAT | Low-Power Rocket Ground Station Sensor",
       "description": "A low-power sensor circuit for a rocket ground station that monitors battery voltage and automatically shuts down to protect the system.",
       "heading": "Low-Power Rocket Ground Station Sensor",
       "kind": "article"
     },
     {
       "path": "/work/coinbase/",
-      "title": "Software Engineer at Coinbase | Blockchain Infrastructure",
+      "title": "Coinbase | Software Engineer at Coinbase",
       "description": "Alexandre Gouveia Rodrigues's Coinbase work spans blockchain node infrastructure across 60+ protocols, operational tooling, and production reliability.",
       "heading": "Software Engineer at Coinbase",
       "kind": "article"
     },
     {
       "path": "/work/thomson-reuters/",
-      "title": "Software Developer Intern at Thomson Reuters",
+      "title": "Thomson Reuters | Software Developer Intern",
       "description": "Alexandre Gouveia Rodrigues built APIs, authorization workflows, and developer tools using .NET, Angular, and AWS at Thomson Reuters.",
       "heading": "Software Developer Intern at Thomson Reuters",
       "kind": "article"
     },
     {
       "path": "/work/amazon/",
-      "title": "Software Development Engineer Intern at Amazon",
+      "title": "Amazon | Software Development Engineer Intern",
       "description": "Alexandre Gouveia Rodrigues developed customer-facing advertising features with React and Redux during a software engineering internship at Amazon.",
       "heading": "Software Development Engineer Intern at Amazon",
       "kind": "article"

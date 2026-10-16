@@ -619,7 +619,7 @@ body:has(app-mappa) .feature-showcase img {
     object-position: center
 }
 
-body:has(app-mappa) .feature-detail h2 {
+body:has(app-mappa) .feature-detail h3 {
     margin: 0 0 12px;
     font-size: 1.08rem;
     font-weight: 790;
@@ -656,6 +656,18 @@ body:has(app-mappa) .feature-detail ul {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
 }
 
 html {
@@ -765,6 +777,15 @@ app-navbar .navbar-nav {
     -webkit-backdrop-filter: blur(18px) saturate(160%);
 }
 
+.language-menu[hidden] {
+    display: none;
+}
+
+.language-option:focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: -2px;
+}
+
 .language-option {
     width: 100%;
     display: grid;
@@ -827,9 +848,9 @@ app-navbar .navbar-nav {
     color: var(--color-ink);
 }
 
-.experience-content h2,
-.featured-project-content h2,
-.skills-cluster-header h2 {
+.experience-content h3,
+.featured-project-content h3,
+.skills-cluster-header h3 {
     margin: 0;
     color: var(--color-ink);
     font-size: 1.28rem;
@@ -845,7 +866,7 @@ app-navbar .navbar-nav {
     color: var(--color-ink-soft);
 }
 
-.featured-project-content h2 {
+.featured-project-content h3 {
     margin: 8px 0;
     font-size: 1.3rem;
 }
@@ -1388,7 +1409,7 @@ body:has(app-splitz) .splitz-why-card p:first-of-type {
         margin-inline: auto;
     }
 
-    body:has(app-splitz) .feature-grid h2 {
+    body:has(app-splitz) .feature-grid h3 {
         min-height: 42px;
         display: flex;
         align-items: center;
@@ -1435,7 +1456,7 @@ body:has(app-capstone) .blockchain-card-title {
     margin-bottom: 22px;
 }
 
-body:has(app-capstone) .blockchain-card h2 {
+body:has(app-capstone) .blockchain-card h3 {
     margin: 0;
     color: var(--color-ink);
     font-size: 1.12rem;

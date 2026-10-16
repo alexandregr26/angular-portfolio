@@ -113,6 +113,11 @@
     text-transform: uppercase;
 }
 
+.experience-topline .experience-company {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
 .experience-summary {
     margin: 16px 0;
     color: var(--color-ink-soft);

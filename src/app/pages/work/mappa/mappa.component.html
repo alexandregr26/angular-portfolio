@@ -3,7 +3,7 @@
         <div class="container">
             <div class="mappa-hero-panel" style="grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:32px;background:#fcfdfc;">
                 <div class="mappa-hero-copy">
-                    <p class="project-kicker" style="display:flex;gap:11px;align-items:center;margin:0 0 18px;color:#1a73e8;font-weight:800;letter-spacing:.09em;">
+                    <p class="project-kicker" style="display:flex;gap:11px;align-items:center;margin:0 0 18px;color:#1967d2;font-weight:800;letter-spacing:.09em;">
                         <span style="width:12px;height:12px;border-radius:50%;background:#1a73e8;box-shadow:0 0 0 8px #1a73e81a;"></span>
                         {{ 'caseStudies.common.projectShowcase' | translate }}
                     </p>
@@ -14,7 +14,7 @@
                     </div>
                     <p class="mappa-hero-text" style="max-width:545px;font-size:1.04rem;">{{ 'caseStudies.mappa.hero' | translate }}</p>
                     <div class="mappa-meta">
-                        <span *ngFor="let item of heroMeta; let i = index" [style.color]="['#4285f4','#159947','#ea4335','#dc9200'][i]" [style.border-color]="['#4285f480','#34a85380','#ea433580','#fbbc048c'][i]" style="padding:9px 15px;border:1px solid #18181b18;border-radius:9px;background:#fff;font-size:.84rem;font-weight:800;">{{ item }}</span>
+                        <span *ngFor="let item of heroMeta; let i = index" [style.color]="['#1967d2','#137333','#b3261e','#8a5700'][i]" [style.border-color]="['#4285f480','#34a85380','#ea433580','#fbbc048c'][i]" style="padding:9px 15px;border:1px solid #18181b18;border-radius:9px;background:#fff;font-size:.84rem;font-weight:800;">{{ item }}</span>
                     </div>
                 </div>
                 <div class="map-preview" style="border-radius:24px;background:#fff;box-shadow:0 20px 44px #1822381a;">
@@ -36,7 +36,7 @@
                             <lucide-icon [img]="overviewIcon" [size]="21" [strokeWidth]="1.9"></lucide-icon>
                         </span>
                         <div>
-                            <p class="section-eyebrow">{{ 'caseStudies.common.overview' | translate }}</p>
+                            <h2 class="section-eyebrow">{{ 'caseStudies.common.overview' | translate }}</h2>
                         </div>
                         <p>{{ 'caseStudies.mappa.overview' | translate }}</p>
                     </div>
@@ -45,7 +45,7 @@
                             <lucide-icon [img]="highlightsIcon" [size]="21" [strokeWidth]="1.9"></lucide-icon>
                         </span>
                         <div>
-                            <p class="section-eyebrow">{{ 'caseStudies.common.projectHighlights' | translate }}</p>
+                            <h2 class="section-eyebrow">{{ 'caseStudies.common.projectHighlights' | translate }}</h2>
                         </div>
                         <ul>
                             <li *ngFor="let item of highlights">
@@ -61,7 +61,7 @@
                         <span class="engineering-icon">
                             <lucide-icon [img]="engineeringIcon" [size]="36" [strokeWidth]="1.9"></lucide-icon>
                         </span>
-                        <p class="section-eyebrow">{{ 'caseStudies.common.engineeringContext' | translate }}</p>
+                        <h2 class="section-eyebrow">{{ 'caseStudies.common.engineeringContext' | translate }}</h2>
                     </div>
                     <p>{{ 'caseStudies.mappa.engineering' | translate }}</p>
                 </section>
@@ -72,14 +72,14 @@
                             <lucide-icon [img]="developmentIcon" [size]="21" [strokeWidth]="1.9"></lucide-icon>
                         </span>
                         <div>
-                            <p class="section-eyebrow">{{ 'caseStudies.common.keyFeatures' | translate }}</p>
+                            <h2 class="section-eyebrow">{{ 'caseStudies.common.keyFeatures' | translate }}</h2>
                         </div>
                     </div>
                     <div class="feature-showcase">
                         <article *ngFor="let feature of features; let i = index" [class.image-right]="i === 1">
                             <img [src]="feature.img" alt="Mappa">
                             <div class="feature-detail">
-                                <h2>{{ feature.titleKey | translate }}</h2>
+                                <h3>{{ feature.titleKey | translate }}</h3>
                                 <ul>
                                     <li *ngFor="let point of feature.pointKeys">{{ point | translate }}</li>
                                 </ul>
@@ -95,7 +95,7 @@
         <div class="container">
             <div class="technologies-panel">
                 <div class="section-heading compact-heading">
-                    <p class="section-eyebrow">{{ 'caseStudies.common.technicalStack' | translate }}</p>
+                    <h2 class="section-eyebrow">{{ 'caseStudies.common.technicalStack' | translate }}</h2>
                     <p class="section-intro">{{ 'caseStudies.mappa.stackIntro' | translate }}</p>
                 </div>
                 <div class="technology-grid">
@@ -108,7 +108,7 @@
     <section class="related-work-section">
         <div class="container">
             <div class="section-heading">
-                <p class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</p>
+                <h2 class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</h2>
                 <p class="section-intro">{{ 'caseStudies.common.relatedIntro' | translate }}</p>
             </div>
             <div class="related-work-grid">

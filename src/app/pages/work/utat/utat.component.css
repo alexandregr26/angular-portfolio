@@ -148,8 +148,8 @@
     background: #00002f
 }
 
-.requirement-list h2,
-.component-grid h2 {
+.requirement-list h3,
+.component-grid h3 {
     margin: 0 0 4px;
     color: var(--color-ink);
     font-size: .98rem;

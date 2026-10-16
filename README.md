@@ -7,6 +7,8 @@ URL: www.alexandregr.com
 
 Run `npm run build` to compile the Angular app and generate static HTML for each project and work page in `docs/`. GitHub Pages serves `docs/` directly. The page titles, descriptions, and canonical URLs are defined in `src/seo-pages.json`; the build also creates `sitemap.xml` and `robots.txt`. Run `npm run test:seo` after building to check the generated files.
 
+`SeoService` sets browser titles and social metadata from that same manifest after completed navigation. Route definitions intentionally omit `title` so Angular's default title strategy does not overwrite them. Routing integration tests check the final metadata after the real router finishes navigation, including home, Coinbase, legacy redirects and the contact alias.
+
 Structured data uses the shared builder in `src/seo-structured-data.mjs`. The build embeds it in each page, and `SeoService` updates the same `page-structured-data` script after navigation. The homepage describes a Person, projects a CreativeWork, and work experience a WebPage. Unknown routes remove this script so they do not retain the previous page's structured data.
 
 ## Languages

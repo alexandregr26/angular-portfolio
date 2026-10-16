@@ -1,9 +1,10 @@
+<main>
 <app-header></app-header>
 <!-- About Me -->
 <section id="about" class="info credibility-section">
     <div class="container box credibility-box">
         <div class="section-heading">
-            <p class="section-eyebrow">{{ 'home.about.title' | translate }}</p>
+            <h2 class="section-eyebrow">{{ 'home.about.title' | translate }}</h2>
             <p class="section-intro">{{ 'home.about.intro' | translate }}</p>
         </div>
         <div class="about-panel">
@@ -17,7 +18,7 @@
 <section id="work" class="credibility-section">
     <div class="container box credibility-box">
         <div class="section-heading">
-            <p class="section-eyebrow">{{ 'home.work.title' | translate }}</p>
+            <h2 class="section-eyebrow">{{ 'home.work.title' | translate }}</h2>
             <p class="section-intro">{{ 'home.work.intro' | translate }}</p>
         </div>
         <div class="experience-list">
@@ -36,7 +37,7 @@
                 <div class="experience-media experience-media-mobile" [style.background-image]="'url(' + experience.img + ')'"></div>
                 <div class="experience-content">
                     <div class="experience-topline">
-                        <p class="experience-company">{{experience.company}} | {{experience.roleKey | translate}}</p>
+                        <h3 class="experience-company">{{experience.company}} | {{experience.roleKey | translate}}</h3>
                         <span>{{experience.dateKey | translate}}</span>
                     </div>
                     <div class="experience-summary">
@@ -65,14 +66,14 @@
 <section id="projects" class="credibility-section">
     <div class="container box credibility-box">
         <div class="section-heading">
-            <p class="section-eyebrow">{{ 'home.projects.title' | translate }}</p>
+            <h2 class="section-eyebrow">{{ 'home.projects.title' | translate }}</h2>
             <p class="section-intro">{{ 'home.projects.intro' | translate }}</p>
         </div>
         <div class="featured-project-grid">
             <a *ngFor="let project of featuredProjects" [routerLink]="project.route" class="featured-project-card liquid-card" (pointermove)="moveLiquidGlass($event)" (pointerleave)="resetLiquidGlass($event)">
                 <div class="featured-project-image" [style.background-image]="'url(' + project.img + ')'"></div>
                 <div class="featured-project-content">
-                    <h2>{{ project.titleKey ? (project.titleKey | translate) : project.title }}</h2>
+                    <h3>{{ project.titleKey ? (project.titleKey | translate) : project.title }}</h3>
                     <span>{{project.summaryKey | translate}}</span>
                     <div class="credibility-tags project-labels" *ngIf="project.labelKeys?.length">
                         <span *ngFor="let label of project.labelKeys">{{label | translate}}</span>
@@ -86,13 +87,13 @@
 <section id="skills" class="credibility-section">
     <div class="container box credibility-box">
         <div class="section-heading">
-            <p class="section-eyebrow">{{ 'home.skills.title' | translate }}</p>
+            <h2 class="section-eyebrow">{{ 'home.skills.title' | translate }}</h2>
             <p class="section-intro">{{ 'home.skills.intro' | translate }}</p>
         </div>
         <div class="skills-system">
             <div class="skills-cluster" *ngFor="let group of skillGroups">
                 <div class="skills-cluster-header">
-                    <h2>{{group.titleKey | translate}}</h2>
+                    <h3>{{group.titleKey | translate}}</h3>
                     <p>{{group.descriptionKey | translate}}</p>
                 </div>
                 <div class="skills-grid">
@@ -106,7 +107,7 @@
 <section id="community" class="credibility-section">
     <div class="container box credibility-box">
         <div class="section-heading">
-            <p class="section-eyebrow">{{ 'home.community.title' | translate }}</p>
+            <h2 class="section-eyebrow">{{ 'home.community.title' | translate }}</h2>
             <p class="section-intro">{{ 'home.community.intro' | translate }}</p>
         </div>
         <div class="community-list">
@@ -123,7 +124,7 @@
 <section id="contact" class="credibility-section">
     <div class="container box credibility-box">
         <div class="section-heading">
-            <p class="section-eyebrow">{{ 'home.contact.title' | translate }}</p>
+            <h2 class="section-eyebrow">{{ 'home.contact.title' | translate }}</h2>
             <p class="section-intro">{{ 'home.contact.intro' | translate }}</p>
         </div>
         <div class="contact-info-grid">
@@ -164,3 +165,4 @@
         <cite>{{ 'home.quote.author' | translate }}</cite>
     </blockquote>
 </div>
+</main>

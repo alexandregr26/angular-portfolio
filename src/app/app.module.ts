@@ -19,13 +19,11 @@ import { CanonicalUrlSerializer } from './services/canonical-url-serializer';
 export const appRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-    title: 'Alexandre Gouveia Rodrigues'
+    component: HomeComponent
   },
   {
     path: 'contact',
-    component: HomeComponent,
-    title: 'Contact Me | Alexandre Gouveia Rodrigues'
+    component: HomeComponent
   },
   {
     path: 'work/splitz',
@@ -67,8 +65,7 @@ export const appRoutes: Routes = [
   },
   {
     path: '**',
-    component: NotFoundComponent,
-    title: 'Page Not Found | Alexandre Gouveia Rodrigues'
+    component: NotFoundComponent
   }
 ];
 

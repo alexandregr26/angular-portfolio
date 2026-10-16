@@ -2,13 +2,13 @@
     <nav class="navbar navbar-expand navbar-light" aria-label="Primary navigation">
         <div id="navbar-container" class="container">
             <div class="navbar-brand">
-                <div class="language-selector" (click)="$event.stopPropagation()">
-                    <button class="nav-mark language-trigger" type="button" [attr.aria-label]="'nav.selectLanguage' | translate: { language: selectedLanguage.label }" [attr.aria-expanded]="isLanguageMenuOpen" aria-haspopup="menu" (click)="toggleLanguageMenu($event)">
-                        <img [src]="selectedLanguage.flag" [alt]="selectedLanguage.label + ' flag'">
+                <div #languageSelector class="language-selector" (click)="$event.stopPropagation()" (focusout)="onLanguageFocusOut($event)">
+                    <button #languageTrigger id="language-trigger" class="nav-mark language-trigger" type="button" [attr.aria-label]="'nav.selectLanguage' | translate: { language: selectedLanguage.label }" [attr.aria-expanded]="isLanguageMenuOpen" aria-haspopup="menu" aria-controls="language-menu" (click)="toggleLanguageMenu($event)" (keydown)="onLanguageTriggerKeydown($event)">
+                        <img [src]="selectedLanguage.flag" alt="">
                     </button>
-                    <div class="language-menu" *ngIf="isLanguageMenuOpen" role="menu">
-                        <button *ngFor="let language of languages" class="language-option" type="button" role="menuitem" [class.active]="language.code === selectedLanguage.code" (click)="selectLanguage(language, $event)">
-                            <img [src]="language.flag" [alt]="language.label + ' flag'">
+                    <div id="language-menu" class="language-menu" [hidden]="!isLanguageMenuOpen" role="menu" aria-labelledby="language-trigger" (keydown)="onLanguageMenuKeydown($event)">
+                        <button #languageOption *ngFor="let language of languages" class="language-option" type="button" role="menuitemradio" tabindex="-1" [attr.aria-checked]="language.code === selectedLanguage.code" [class.active]="language.code === selectedLanguage.code" (click)="selectLanguage(language, $event)">
+                            <img [src]="language.flag" alt="">
                             <span>{{ language.label }}</span>
                         </button>
                     </div>
@@ -38,22 +38,22 @@
                     </li>
                 </ul>
                 <a class="nav-resume" href="assets/pdf/AlexandreGouveiaRodriguesResume.pdf" target="_blank">{{ 'nav.resume' | translate }}</a>
-                <li class="nav-icon">
+                <div class="nav-icon">
                     <a target="_blank" href="https://linkedin.com/in/alexandre-gouveia-rodrigues"><i
                             class='bx bxl-linkedin-square'></i><span class="sr-only">LinkedIn</span></a>
-                </li>
-                <li class="nav-icon">
+                </div>
+                <div class="nav-icon">
                     <a target="_blank" href="https://github.com/alexandregr26/"><i
                             class='bx bxl-github'></i><span class="sr-only">GitHub</span></a>
-                </li>
+                </div>
             </div>
-            <details class="mobile-nav">
+            <details #mobileNav class="mobile-nav">
                 <summary aria-label="Open navigation menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </summary>
-                <div class="mobile-panel">
+                <div class="mobile-panel" (click)="closeMobileNavigation($event, mobileNav)">
                     <a href="#about">{{ 'nav.about' | translate }}</a>
                     <a href="#work">{{ 'nav.work' | translate }}</a>
                     <a href="#projects">{{ 'nav.projects' | translate }}</a>

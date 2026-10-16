@@ -14,33 +14,27 @@ import { UtatComponent } from './utat/utat.component';
 const routes: Routes = [
   {
     path: 'splitz',
-    component: SplitzComponent,
-    title: 'Splitz | Chrome Tab Organizer Extension'
+    component: SplitzComponent
   },
   {
     path: 'utat',
-    component: UtatComponent,
-    title: 'UTAT | Low-Power Rocket Ground Station Sensor'
+    component: UtatComponent
   },
   {
     path: 'ece243',
-    component: FpsComponent,
-    title: 'FPGA First-Person Shooter Game | DE1-SoC Project'
+    component: FpsComponent
   },
   {
     path: 'ece297',
-    component: MappaComponent,
-    title: 'Mappa | Geographic Information System'
+    component: MappaComponent
   },
   {
     path: 'capstone',
-    component: CapstoneComponent,
-    title: 'HealthChainON | Blockchain Electronic Health Records'
+    component: CapstoneComponent
   },
   {
     path: 'aps360',
-    component: Aps360Component,
-    title: 'Predicting Song Popularity with Deep Learning'
+    component: Aps360Component
   }
 ];
 

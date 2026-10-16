@@ -24,4 +24,9 @@ describe('SkillComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('renders a readable skill label without adding a document heading', () => {
+    expect(fixture.nativeElement.querySelector('.mini-title').textContent.trim()).toBe('Test Skill');
+    expect(fixture.nativeElement.querySelector('h1,h2,h3,h4,h5,h6')).toBeNull();
+  });
 });

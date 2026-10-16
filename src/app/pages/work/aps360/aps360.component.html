@@ -207,7 +207,7 @@
   <section class="technologies-section aps-stack-section">
     <div class="container">
       <div class="technologies-panel aps-card">
-        <div class="section-heading"><p class="section-eyebrow">{{ 'caseStudies.common.technicalStack' | translate }}</p><p class="section-intro">{{ 'caseStudies.aps360.stackIntro' | translate }}</p></div>
+        <div class="section-heading"><h2 class="section-eyebrow">{{ 'caseStudies.common.technicalStack' | translate }}</h2><p class="section-intro">{{ 'caseStudies.aps360.stackIntro' | translate }}</p></div>
         <div class="aps-stack-grid">
           <span class="aps-stack-pill" *ngFor="let tool of technicalStack">
             <img *ngIf="tool.img" [src]="tool.img" alt="">
@@ -221,7 +221,7 @@
 
   <section class="related-work-section">
     <div class="container">
-      <div class="section-heading"><p class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</p><p class="section-intro">{{ 'caseStudies.common.relatedIntro' | translate }}</p></div>
+      <div class="section-heading"><h2 class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</h2><p class="section-intro">{{ 'caseStudies.common.relatedIntro' | translate }}</p></div>
       <div class="related-work-grid"><app-project-box *ngFor="let project of otherWorks" [projectbox]="project"></app-project-box></div>
     </div>
   </section>

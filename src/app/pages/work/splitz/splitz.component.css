@@ -39,6 +39,11 @@
     text-transform: uppercase;
 }
 
+.splitz-title {
+    margin: 0;
+    line-height: 0;
+}
+
 .splitz-title-image {
     display: block;
     width: min(390px, 100%);
@@ -184,7 +189,7 @@
     color: var(--color-ink);
 }
 
-.feature-grid h2 {
+.feature-grid h3 {
     margin: 0;
     color: var(--color-ink);
     font-size: 0.98rem;

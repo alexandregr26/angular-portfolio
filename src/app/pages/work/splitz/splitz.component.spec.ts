@@ -21,4 +21,11 @@ describe('SplitzComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('provides a textual page heading alongside the decorative title image', () => {
+    const headings = fixture.nativeElement.querySelectorAll('h1');
+    expect(headings.length).toBe(1);
+    expect(headings[0].textContent.trim()).toBe('Splitz');
+    expect(headings[0].querySelector('img').getAttribute('alt')).toBe('');
+  });
 });

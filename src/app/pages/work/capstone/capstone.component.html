@@ -31,23 +31,23 @@
             <div class="project-body">
                 <section class="body-section overview-card">
                     <div class="overview-copy">
-                        <p class="section-eyebrow">{{ 'caseStudies.common.overview' | translate }}</p>
+                        <h2 class="section-eyebrow">{{ 'caseStudies.common.overview' | translate }}</h2>
                         <p>{{ 'caseStudies.capstone.overview' | translate }}</p>
                     </div>
                     <div class="problem-area">
-                        <p class="section-eyebrow">{{ 'caseStudies.capstone.problemTitle' | translate }}</p>
+                        <h2 class="section-eyebrow">{{ 'caseStudies.capstone.problemTitle' | translate }}</h2>
                         <p>{{ 'caseStudies.capstone.problem' | translate }}</p>
                         <div class="problem-list">
                             <div *ngFor="let problem of problemPillars">
                                 <span class="icon-well"><lucide-icon [img]="problem.icon" [size]="21" [strokeWidth]="1.9"></lucide-icon></span>
-                                <h2>{{ problem.titleKey | translate }}</h2>
+                                <h3>{{ problem.titleKey | translate }}</h3>
                                 <p>{{ problem.detailKey | translate }}</p>
                             </div>
                         </div>
                     </div>
                 </section>
                 <section class="body-section blockchain-section">
-                    <p class="section-eyebrow">{{ 'caseStudies.capstone.whyBlockchain' | translate }}</p>
+                    <h2 class="section-eyebrow">{{ 'caseStudies.capstone.whyBlockchain' | translate }}</h2>
                     <p class="blockchain-intro">{{ 'caseStudies.capstone.blockchainIntro' | translate }}</p>
                     <div class="blockchain-reasons">
                         <ng-container *ngFor="let reason of blockchainReasons; let last = last">
@@ -56,7 +56,7 @@
                                     <span class="icon-well">
                                         <lucide-icon [img]="reason.icon" [size]="24" [strokeWidth]="1.9"></lucide-icon>
                                     </span>
-                                    <h2>{{ reason.titleKey | translate }}</h2>
+                                    <h3>{{ reason.titleKey | translate }}</h3>
                                 </div>
                                 <p>{{ reason.textKey | translate }}</p>
                             </article>
@@ -70,7 +70,7 @@
                 </section>
 
                 <section class="body-section architecture-card">
-                    <p class="section-eyebrow">{{ 'caseStudies.common.systemArchitecture' | translate }}</p>
+                    <h2 class="section-eyebrow">{{ 'caseStudies.common.systemArchitecture' | translate }}</h2>
                     <p class="section-intro">{{ 'caseStudies.capstone.architectureIntro' | translate }}</p>
                     <img src="assets/img/experience/Capstone/finalDesign.png" [alt]="'caseStudies.capstone.designAlt' | translate">
                     <div class="module-strip">
@@ -78,7 +78,7 @@
                             <span class="icon-well module-icon">
                                 <lucide-icon [img]="module.icon" [size]="20" [strokeWidth]="1.9"></lucide-icon>
                             </span>
-                            <h2>{{ module.titleKey | translate }}</h2>
+                            <h3>{{ module.titleKey | translate }}</h3>
                             <p>{{ module.bodyKey | translate }}</p>
                         </article>
                     </div>
@@ -86,14 +86,14 @@
 
                 <section class="body-section">
                     <div class="section-heading">
-                        <p class="section-eyebrow">{{ 'caseStudies.common.myContributions' | translate }}</p>
+                        <h2 class="section-eyebrow">{{ 'caseStudies.common.myContributions' | translate }}</h2>
                         <p class="section-intro">{{ 'caseStudies.capstone.contributionsIntro' | translate }}</p>
                     </div>
                     <div class="contribution-list">
                         <article *ngFor="let contribution of contributions; let i = index">
                             <span>{{ i + 1 }}</span>
                             <div>
-                                <h2>{{ contribution.titleKey | translate }}</h2>
+                                <h3>{{ contribution.titleKey | translate }}</h3>
                                 <p>{{ contribution.summaryKey | translate }}</p>
                             </div>
                         </article>
@@ -102,7 +102,7 @@
 
                 <section class="body-section">
                     <div class="section-heading">
-                        <p class="section-eyebrow">{{ 'caseStudies.common.finalPoster' | translate }}</p>
+                        <h2 class="section-eyebrow">{{ 'caseStudies.common.finalPoster' | translate }}</h2>
                         <p class="section-intro">{{ 'caseStudies.capstone.posterIntro' | translate }}</p>
                     </div>
                     <div class="poster-panel">
@@ -117,7 +117,7 @@
         <div class="container">
             <div class="technologies-panel">
                 <div class="section-heading compact-heading">
-                    <p class="section-eyebrow">{{ 'caseStudies.common.technicalStack' | translate }}</p>
+                    <h2 class="section-eyebrow">{{ 'caseStudies.common.technicalStack' | translate }}</h2>
                     <p class="section-intro">{{ 'caseStudies.capstone.stackIntro' | translate }}</p>
                 </div>
                 <div class="technology-grid">
@@ -130,7 +130,7 @@
     <section class="related-work-section">
         <div class="container">
             <div class="section-heading">
-                <p class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</p>
+                <h2 class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</h2>
                 <p class="section-intro">{{ 'caseStudies.common.relatedIntro' | translate }}</p>
             </div>
             <div class="related-work-grid">

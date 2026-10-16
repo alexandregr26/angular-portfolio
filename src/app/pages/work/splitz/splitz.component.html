@@ -4,7 +4,10 @@
             <div class="splitz-hero-panel">
                 <div class="splitz-hero-copy">
                     <p class="project-kicker">{{ 'caseStudies.common.projectShowcase' | translate }}</p>
-                    <img class="splitz-title-image" src="assets/img/experience/Splitz/header.png" alt="Splitz">
+                    <h1 class="splitz-title">
+                        <span class="visually-hidden">Splitz</span>
+                        <img class="splitz-title-image" src="assets/img/experience/Splitz/header.png" alt="">
+                    </h1>
                     <p class="splitz-tagline">{{ 'caseStudies.splitz.tagline' | translate }}</p>
                     <p class="splitz-hero-text">{{ 'caseStudies.splitz.hero' | translate }}</p>
                     <a class="splitz-link" target="_blank" rel="noopener noreferrer" href="https://chrome.google.com/webstore/detail/splitz/kbepjlbbljaidojicmmjafnolfipokmf">
@@ -24,13 +27,13 @@
             <div class="splitz-body">
                 <section class="splitz-section splitz-overview">
                     <div class="splitz-description">
-                        <p class="section-eyebrow">{{ 'caseStudies.common.projectDescription' | translate }}</p>
+                        <h2 class="section-eyebrow">{{ 'caseStudies.common.projectDescription' | translate }}</h2>
                         <p>{{ 'caseStudies.splitz.description1' | translate }}</p>
                         <p>{{ 'caseStudies.splitz.description2' | translate }}</p>
                     </div>
                     <div class="splitz-features">
                         <div class="section-heading">
-                            <p class="section-eyebrow">{{ 'caseStudies.common.features' | translate }}</p>
+                            <h2 class="section-eyebrow">{{ 'caseStudies.common.features' | translate }}</h2>
                             <p class="section-intro">{{ 'caseStudies.common.featuresIntro' | translate }}</p>
                         </div>
                         <div class="feature-grid">
@@ -38,7 +41,7 @@
                                 <span class="feature-icon">
                                     <lucide-icon [img]="feature.icon" [size]="21" [strokeWidth]="1.9"></lucide-icon>
                                 </span>
-                                <h2>{{ feature.titleKey | translate }}</h2>
+                                <h3>{{ feature.titleKey | translate }}</h3>
                                 <p>{{ feature.bodyKey | translate }}</p>
                             </article>
                         </div>
@@ -67,7 +70,7 @@
         <div class="container">
             <div class="technologies-panel">
                 <div class="section-heading compact-heading">
-                    <p class="section-eyebrow">{{ 'caseStudies.common.technicalStack' | translate }}</p>
+                    <h2 class="section-eyebrow">{{ 'caseStudies.common.technicalStack' | translate }}</h2>
                     <p class="section-intro">{{ 'caseStudies.splitz.stackIntro' | translate }}</p>
                 </div>
                 <div class="technology-grid">
@@ -80,7 +83,7 @@
     <section class="related-work-section">
         <div class="container">
             <div class="section-heading">
-                <p class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</p>
+                <h2 class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</h2>
                 <p class="section-intro">{{ 'caseStudies.common.relatedIntro' | translate }}</p>
             </div>
             <div class="related-work-grid">

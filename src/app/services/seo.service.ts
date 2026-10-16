@@ -21,7 +21,7 @@ export class SeoService {
     ) ?? (pathname === '/contact' ? seoPages.pages[0] : undefined);
 
     if (!page) {
-      this.title.setTitle('Page Not Found | Alexandre Gouveia Rodrigues');
+      this.title.setTitle('Page Not Found');
       this.meta.updateTag({ name: 'robots', content: 'noindex, follow' });
       this.removeCanonical();
       this.document.getElementById(structuredDataId)?.remove();

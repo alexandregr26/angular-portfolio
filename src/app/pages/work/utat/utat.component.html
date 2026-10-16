@@ -22,20 +22,20 @@
         <div class="container">
             <div class="utat-body">
                 <section class="utat-section overview-section">
-                    <p class="section-eyebrow">{{ 'caseStudies.common.overview' | translate }}</p>
+                    <h2 class="section-eyebrow">{{ 'caseStudies.common.overview' | translate }}</h2>
                     <p>{{ 'caseStudies.utat.overview1' | translate }}</p>
                     <p>{{ 'caseStudies.utat.overview2' | translate }}</p>
                 </section>
 
                 <section class="utat-section requirements-section">
-                    <p class="section-eyebrow">{{ 'caseStudies.common.requirements' | translate }}</p>
+                    <h2 class="section-eyebrow">{{ 'caseStudies.common.requirements' | translate }}</h2>
                     <div class="requirement-list">
                         <article *ngFor="let requirement of requirements">
                             <span class="section-icon">
                                 <lucide-icon [img]="requirement.icon" [size]="23" [strokeWidth]="1.9"></lucide-icon>
                             </span>
                             <div>
-                                <h2>{{ requirement.titleKey | translate }}</h2>
+                                <h3>{{ requirement.titleKey | translate }}</h3>
                                 <p>{{ requirement.bodyKey | translate }}</p>
                             </div>
                         </article>
@@ -43,20 +43,20 @@
                 </section>
 
                 <section class="utat-section components-section">
-                    <p class="section-eyebrow">{{ 'caseStudies.common.coreComponents' | translate }}</p>
+                    <h2 class="section-eyebrow">{{ 'caseStudies.common.coreComponents' | translate }}</h2>
                     <div class="component-grid">
                         <article *ngFor="let component of coreComponents">
                             <span class="component-image">
                                 <img [src]="component.img" [alt]="component.name">
                             </span>
-                            <h2>{{ component.name }}</h2>
+                            <h3>{{ component.name }}</h3>
                             <p>{{ component.labelKey | translate }}</p>
                         </article>
                     </div>
                 </section>
 
                 <section class="utat-section approach-section">
-                    <p class="section-eyebrow">{{ 'caseStudies.common.designApproach' | translate }}</p>
+                    <h2 class="section-eyebrow">{{ 'caseStudies.common.designApproach' | translate }}</h2>
                     <p>{{ 'caseStudies.utat.approach' | translate }}</p>
                 </section>
             </div>
@@ -67,7 +67,7 @@
         <div class="container">
             <div class="technologies-panel">
                 <div class="section-heading compact-heading">
-                    <p class="section-eyebrow">{{ 'caseStudies.common.technicalStack' | translate }}</p>
+                    <h2 class="section-eyebrow">{{ 'caseStudies.common.technicalStack' | translate }}</h2>
                     <p class="section-intro">{{ 'caseStudies.utat.stackIntro' | translate }}</p>
                 </div>
                 <div class="technology-grid">
@@ -80,7 +80,7 @@
     <section class="related-work-section">
         <div class="container">
             <div class="section-heading">
-                <p class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</p>
+                <h2 class="section-eyebrow">{{ 'caseStudies.common.otherWorks' | translate }}</h2>
                 <p class="section-intro">{{ 'caseStudies.common.relatedIntro' | translate }}</p>
             </div>
             <div class="related-work-grid">

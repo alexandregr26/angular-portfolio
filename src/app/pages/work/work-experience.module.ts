@@ -9,18 +9,15 @@ import { ThomsonReutersComponent } from './thomson-reuters/thomson-reuters.compo
 const routes: Routes = [
   {
     path: 'coinbase',
-    component: CoinbaseComponent,
-    title: 'Software Engineer at Coinbase'
+    component: CoinbaseComponent
   },
   {
     path: 'amazon',
-    component: AmazonComponent,
-    title: 'Software Development Engineer Intern at Amazon'
+    component: AmazonComponent
   },
   {
     path: 'thomson-reuters',
-    component: ThomsonReutersComponent,
-    title: 'Software Developer Intern at Thomson Reuters'
+    component: ThomsonReutersComponent
   }
 ];
 
