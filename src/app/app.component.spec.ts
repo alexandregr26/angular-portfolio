@@ -1,15 +1,15 @@
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { AppComponent } from './app.component';
 import { SeoService } from './services/seo.service';
 
 describe('AppComponent', () => {
-  let routerEvents: Subject<NavigationEnd>;
+  let routerEvents: Subject<NavigationEnd | NavigationStart>;
   let component: AppComponent;
   let seo: jasmine.SpyObj<SeoService>;
 
   beforeEach(() => {
-    routerEvents = new Subject<NavigationEnd>();
+    routerEvents = new Subject<NavigationEnd | NavigationStart>();
     seo = jasmine.createSpyObj<SeoService>('SeoService', ['update']);
     component = new AppComponent({ events: routerEvents } as unknown as Router, seo);
   });
@@ -23,15 +23,26 @@ describe('AppComponent', () => {
     expect(component.title).toBe('angular-portfolio');
   });
 
-  it('should track completed route navigation', () => {
+  it('initializes the real Analytics property once after the first completed navigation', () => {
     const gtag = jasmine.createSpy('gtag');
     (globalThis as typeof globalThis & { gtag: jasmine.Spy }).gtag = gtag;
 
-    routerEvents.next(new NavigationEnd(1, '/project/capstone', '/project/capstone'));
+    routerEvents.next(new NavigationStart(1, '/work/capstone'));
+    expect(gtag).not.toHaveBeenCalled();
 
-    expect(gtag).toHaveBeenCalledWith('config', 'MEASUREMENT-ID', {
-      page_path: '/project/capstone'
-    });
+    routerEvents.next(new NavigationEnd(1, '/work/capstone', '/project/capstone'));
+
+    expect(gtag).toHaveBeenCalledOnceWith('config', 'G-5V86R1NRPZ');
     expect(seo.update).toHaveBeenCalledWith('/project/capstone');
+
+    routerEvents.next(new NavigationEnd(2, '/work/coinbase/', '/work/coinbase/'));
+
+    expect(gtag).toHaveBeenCalledTimes(1);
+    expect(seo.update).toHaveBeenCalledWith('/work/coinbase/');
+  });
+
+  it('still updates page metadata when Analytics is unavailable', () => {
+    expect(() => routerEvents.next(new NavigationEnd(1, '/', '/'))).not.toThrow();
+    expect(seo.update).toHaveBeenCalledWith('/');
   });
 });
