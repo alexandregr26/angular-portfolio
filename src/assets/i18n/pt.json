@@ -9,7 +9,9 @@
     "resume": "Currículo",
     "linkedin": "LinkedIn",
     "github": "GitHub",
-    "selectLanguage": "Selecionar idioma. Idioma atual: {{language}}"
+    "selectLanguage": "Selecionar idioma. Idioma atual: {{language}}",
+    "primaryNavigation": "Navegação principal",
+    "openNavigation": "Abrir menu de navegação"
   },
   "footer": {
     "copyright": "© 2026 Alexandre Gouveia Rodrigues",
@@ -537,7 +539,10 @@
       "classRangesIntro": "Em vez de tentar adivinhar uma nota exata de 0 a 100, a rede coloca cada música em uma de cinco faixas de vinte pontos. Isso torna a tarefa mais viável, mas também reduz a precisão da previsão.",
       "takeawayTitle": "O que esses resultados significam",
       "takeawayBody": "Os atributos de áudio trouxeram sinais úteis, mas não foram suficientes para explicar a popularidade sozinhos. A rede neural superou a árvore de decisão e teve bom desempenho em várias faixas de popularidade baixa e intermediária, mas encontrou dificuldades nos extremos. Reconhecimento do artista, marketing, presença em playlists e exposição nas redes sociais podem influenciar muito o sucesso de uma música, e nenhum desses fatores foi incluído. O resultado mostra que o som contribui para a popularidade, mas não deve ser tratado como uma previsão confiável de sucesso comercial.",
-      "stackIntro": "Tecnologias e ferramentas utilizadas na preparação dos dados, no desenvolvimento do modelo, na avaliação e nos experimentos."
+      "stackIntro": "Tecnologias e ferramentas utilizadas na preparação dos dados, no desenvolvimento do modelo, na avaliação e nos experimentos.",
+      "dashboardLabel": "Ilustração de um painel de análise de aprendizado de máquina",
+      "danceability": "Dançabilidade",
+      "energy": "Energia"
     }
   }
 }

@@ -15,6 +15,8 @@ Structured data uses the shared builder in `src/seo-structured-data.mjs`. The bu
 
 English translations are bundled from `src/assets/i18n/en.json`, so the default language needs no network request. Portuguese and French load on demand and use English for missing strings. Failed requests preserve the last working language; the flag and document language change only after a successful load. Superseded responses are ignored, including when switching back to English while another language loads. Saving the preference is optional: if browser storage is blocked, selection still works for the current session.
 
+French covers every English translation key, including the case studies and 404 page. The unit suite checks key coverage, nonempty translations, interpolation parameters, and application of the real French dictionary. Add French translations whenever English keys are added. Language-menu options use their native names with explicit language annotations; the trigger announces the current language in the active interface language.
+
 ## Google Analytics
 
 The Google tag loads in `src/index.html`. `AppComponent` configures property `G-5V86R1NRPZ` once, after the first successful Angular navigation, so the initial page view uses the resolved URL. GA4 Enhanced measurement handles later browser-history changes, including back and forward navigation. Do not add manual page-view events alongside it.

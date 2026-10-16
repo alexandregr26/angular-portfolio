@@ -9,7 +9,9 @@
     "resume": "Resume",
     "linkedin": "LinkedIn",
     "github": "GitHub",
-    "selectLanguage": "Select language. Current language: {{language}}"
+    "selectLanguage": "Select language. Current language: {{language}}",
+    "primaryNavigation": "Primary navigation",
+    "openNavigation": "Open navigation menu"
   },
   "footer": {
     "copyright": "© 2026 Alexandre Gouveia Rodrigues",
@@ -537,7 +539,10 @@
       "classRangesIntro": "Instead of guessing an exact score from 0 to 100, the network places each song into one of five twenty-point ranges. This makes the task more manageable but also makes the prediction less precise.",
       "takeawayTitle": "What these results mean",
       "takeawayBody": "Audio features provided a useful signal, but they were not enough to explain popularity on their own. The neural network improved meaningfully over the decision tree and handled several low-to-mid popularity ranges well, yet it struggled at the class extremes. Artist recognition, marketing, playlist placement, and social-media exposure can strongly affect success, and none of those factors were included. The result is best understood as evidence that sound contributes to popularity—not as a dependable forecast of commercial success.",
-      "stackIntro": "Technologies and tools used across data preparation, model development, evaluation, and experimentation."
+      "stackIntro": "Technologies and tools used across data preparation, model development, evaluation, and experimentation.",
+      "dashboardLabel": "Machine learning analytics dashboard illustration",
+      "danceability": "Danceability",
+      "energy": "Energy"
     }
   }
 }

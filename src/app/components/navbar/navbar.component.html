@@ -1,15 +1,15 @@
 <header>
-    <nav class="navbar navbar-expand navbar-light" aria-label="Primary navigation">
+    <nav class="navbar navbar-expand navbar-light" [attr.aria-label]="'nav.primaryNavigation' | translate">
         <div id="navbar-container" class="container">
             <div class="navbar-brand">
                 <div #languageSelector class="language-selector" (click)="$event.stopPropagation()" (focusout)="onLanguageFocusOut($event)">
-                    <button #languageTrigger id="language-trigger" class="nav-mark language-trigger" type="button" [attr.aria-label]="'nav.selectLanguage' | translate: { language: selectedLanguage.label }" [attr.aria-expanded]="isLanguageMenuOpen" aria-haspopup="menu" aria-controls="language-menu" (click)="toggleLanguageMenu($event)" (keydown)="onLanguageTriggerKeydown($event)">
+                    <button #languageTrigger id="language-trigger" class="nav-mark language-trigger" type="button" [attr.aria-label]="'nav.selectLanguage' | translate: { language: (selectedLanguage.labelKey | translate) }" [attr.aria-expanded]="isLanguageMenuOpen" aria-haspopup="menu" aria-controls="language-menu" (click)="toggleLanguageMenu($event)" (keydown)="onLanguageTriggerKeydown($event)">
                         <img [src]="selectedLanguage.flag" alt="">
                     </button>
                     <div id="language-menu" class="language-menu" [hidden]="!isLanguageMenuOpen" role="menu" aria-labelledby="language-trigger" (keydown)="onLanguageMenuKeydown($event)">
                         <button #languageOption *ngFor="let language of languages" class="language-option" type="button" role="menuitemradio" tabindex="-1" [attr.aria-checked]="language.code === selectedLanguage.code" [class.active]="language.code === selectedLanguage.code" (click)="selectLanguage(language, $event)">
                             <img [src]="language.flag" alt="">
-                            <span>{{ language.label }}</span>
+                            <span [attr.lang]="language.code">{{ language.label }}</span>
                         </button>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <details #mobileNav class="mobile-nav">
-                <summary aria-label="Open navigation menu">
+                <summary [attr.aria-label]="'nav.openNavigation' | translate">
                     <span></span>
                     <span></span>
                     <span></span>

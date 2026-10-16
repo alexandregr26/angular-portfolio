@@ -5,6 +5,7 @@ import { LanguageCode, TranslationService } from 'src/app/services/translation.s
 type LanguageOption = {
   code: LanguageCode;
   label: string;
+  labelKey: string;
   flag: string;
 };
 
@@ -18,16 +19,19 @@ export class NavbarComponent implements OnDestroy {
     {
       code: 'en',
       label: 'English',
+      labelKey: 'home.skills.items.english',
       flag: 'assets/img/skills/languages/flags/canada.jpg'
     },
     {
       code: 'pt',
-      label: 'Portuguese',
+      label: 'Português',
+      labelKey: 'home.skills.items.portuguese',
       flag: 'assets/img/skills/languages/flags/brazil.png'
     },
     {
       code: 'fr',
-      label: 'French',
+      label: 'Français',
+      labelKey: 'home.skills.items.french',
       flag: 'assets/img/skills/languages/flags/france.png'
     }
   ];

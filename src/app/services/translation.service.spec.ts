@@ -2,6 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { fakeAsync, flushMicrotasks, TestBed } from '@angular/core/testing';
 import english from '../../assets/i18n/en.json';
+import french from '../../assets/i18n/fr.json';
 import { TranslationService } from './translation.service';
 
 describe('TranslationService', () => {
@@ -54,6 +55,30 @@ describe('TranslationService', () => {
     expect(initialized).toBeTrue();
     expectEnglishDictionary();
     http.expectNone('assets/i18n/en.json');
+  }));
+
+  it('applies the complete French dictionary and document language together', fakeAsync(() => {
+    createService();
+    service.setLanguage('fr');
+    expectEnglishDictionary();
+    http.expectOne('assets/i18n/fr.json').flush(french);
+    flushMicrotasks();
+
+    function check(dictionary: object, prefix = ''): void {
+      for (const [key, value] of Object.entries(dictionary)) {
+        const path = prefix ? `${prefix}.${key}` : key;
+        if (typeof value === 'string') {
+          expect(service.translate(path, { language: 'Français' })).withContext(path)
+            .toBe(value.replace('{{language}}', 'Français'));
+        } else {
+          check(value, path);
+        }
+      }
+    }
+    check(french);
+    expect(service.currentLanguage).toBe('fr');
+    expect(document.documentElement.lang).toBe('fr');
+    expect(writeStorage).toHaveBeenCalledWith('portfolio-language', 'fr');
   }));
 
   it('falls back to complete English when the saved locale fails at bootstrap', fakeAsync(() => {
