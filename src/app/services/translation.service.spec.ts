@@ -48,11 +48,9 @@ describe('TranslationService', () => {
   it('provides the complete English dictionary before initialization and without network access', fakeAsync(() => {
     createService();
     expectEnglishDictionary();
-    let initialized = false;
-    void service.init().then(() => initialized = true);
+    expect(service.init()).toBeUndefined();
     flushMicrotasks();
 
-    expect(initialized).toBeTrue();
     expectEnglishDictionary();
     http.expectNone('assets/i18n/en.json');
   }));
@@ -84,12 +82,11 @@ describe('TranslationService', () => {
   it('falls back to complete English when the saved locale fails at bootstrap', fakeAsync(() => {
     readStorage.and.returnValue('pt');
     createService();
-    let initialized = false;
-    void service.init().then(() => initialized = true);
+    expect(service.init()).toBeUndefined();
+    expectEnglishDictionary();
     http.expectOne('assets/i18n/pt.json').flush('Unavailable', { status: 503, statusText: 'Service Unavailable' });
     flushMicrotasks();
 
-    expect(initialized).toBeTrue();
     expectEnglishDictionary();
     expect(writeStorage).toHaveBeenCalledWith('portfolio-language', 'en');
     http.expectNone('assets/i18n/en.json');
@@ -119,6 +116,45 @@ describe('TranslationService', () => {
     flushMicrotasks();
     expectEnglishDictionary();
   }));
+
+  it('keeps a saved locale request from overriding English selected during startup', fakeAsync(() => {
+    readStorage.and.returnValue('pt');
+    createService();
+    expect(service.init()).toBeUndefined();
+    const saved = http.expectOne('assets/i18n/pt.json');
+    expectEnglishDictionary();
+    expect(writeStorage).not.toHaveBeenCalled();
+
+    service.setLanguage('en');
+    saved.flush({ nav: { about: 'Sobre' } });
+    flushMicrotasks();
+
+    expectEnglishDictionary();
+    expect(writeStorage.calls.allArgs()).toEqual([['portfolio-language', 'en']]);
+  }));
+
+  for (const fails of [false, true]) {
+    it(`ignores a superseded saved locale ${fails ? 'failure' : 'success'} after a newer language choice`, fakeAsync(() => {
+      readStorage.and.returnValue('pt');
+      createService();
+      service.init();
+      const saved = http.expectOne('assets/i18n/pt.json');
+      service.setLanguage('fr');
+      http.expectOne('assets/i18n/fr.json').flush(french);
+      flushMicrotasks();
+      if (fails) {
+        saved.flush('Unavailable', { status: 503, statusText: 'Service Unavailable' });
+      } else {
+        saved.flush({ nav: { about: 'Sobre' } });
+      }
+      flushMicrotasks();
+
+      expect(service.currentLanguage).toBe('fr');
+      expect(document.documentElement.lang).toBe('fr');
+      expect(service.translate('home.hero.description')).toBe(french.home.hero.description);
+      expect(writeStorage.calls.allArgs()).toEqual([['portfolio-language', 'fr']]);
+    }));
+  }
 
   it('preserves the last usable dictionary, language and storage when a later locale fails', fakeAsync(() => {
     createService();

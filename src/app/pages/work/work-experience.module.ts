@@ -8,6 +8,11 @@ import { ThomsonReutersComponent } from './thomson-reuters/thomson-reuters.compo
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/#work'
+  },
+  {
     path: 'coinbase',
     component: CoinbaseComponent
   },

@@ -31,8 +31,10 @@ export class TranslationService {
     this.applyDocumentLanguage(this.currentLanguage);
   }
 
-  init(): Promise<void> {
-    return this.loadLanguage(this.requestedLanguage);
+  init(): void {
+    // The bundled dictionary is ready now; an optional saved locale must not
+    // hold Angular bootstrap open while its network request is pending.
+    void this.loadLanguage(this.requestedLanguage);
   }
 
   get currentLanguage(): LanguageCode {

@@ -69,7 +69,7 @@ export const appRoutes: Routes = [
   }
 ];
 
-function initializeTranslations(translationService: TranslationService): () => Promise<void> {
+function initializeTranslations(translationService: TranslationService): () => void {
   return () => translationService.init();
 }
 

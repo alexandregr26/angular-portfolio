@@ -94,4 +94,25 @@ describe('Routed SEO metadata', () => {
     expectManifestTitle('/');
     expect(meta.getTag("name='robots'")).toBeNull();
   });
+
+  it('redirects both forms of each category root to useful homepage content and metadata', async () => {
+    for (const [category, section] of [['project', 'projects'], ['work', 'work']]) {
+      for (const suffix of ['', '/']) {
+        await navigate('/work/coinbase/');
+        // Use the raw URL here to cover programmatic trailing-slash navigation.
+        await router.navigateByUrl(`/${category}${suffix}`);
+        fixture.detectChanges();
+        await fixture.whenStable();
+
+        expect(router.url).toBe(`/#${section}`);
+        expectManifestTitle('/');
+        expect(fixture.nativeElement.querySelector(`main #${section}`)).not.toBeNull();
+        expect(document.querySelector('link[rel="canonical"]')?.getAttribute('href')).toBe(`${seoPages.siteUrl}/`);
+        expect(meta.getTag("name='robots'")).toBeNull();
+      }
+    }
+    await navigate('/project/not-a-project');
+    expect(fixture.nativeElement.querySelector('app-not-found main')).not.toBeNull();
+    expect(meta.getTag("name='robots'")?.content).toBe('noindex, follow');
+  });
 });

@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build && node scripts/generate-seo-pages.mjs",
     "test:seo": "node scripts/check-seo-output.mjs",
+    "test:seo:paths": "node --test scripts/seo-paths.spec.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

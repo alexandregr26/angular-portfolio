@@ -6,6 +6,11 @@ const canonicalPaths = new Set(
 );
 
 export class CanonicalUrlSerializer extends DefaultUrlSerializer {
+  override parse(url: string): UrlTree {
+    // Treat category-root aliases equally in direct and programmatic navigation.
+    return super.parse(url.replace(/^\/(project|work)\/(?=$|[?#])/, '/$1'));
+  }
+
   override serialize(tree: UrlTree): string {
     const url = super.serialize(tree);
     const match = /^([^?#]*)(.*)$/.exec(url);

@@ -1,5 +1,6 @@
 import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { createStructuredData, structuredDataId } from '../src/seo-structured-data.mjs';
 
 const outputDirectory = new URL('../docs/', import.meta.url);
@@ -65,7 +66,7 @@ for (const page of pages) {
   if (!page.path.startsWith('/') || (page.path !== '/' && !page.path.endsWith('/'))) {
     throw new Error(`SEO paths must use root-relative directory URLs: ${page.path}`);
   }
-  const directory = join(outputDirectory.pathname, page.path);
+  const directory = join(fileURLToPath(outputDirectory), page.path);
   await mkdir(directory, { recursive: true });
   await writeFile(join(directory, 'index.html'), renderPage(page));
 }

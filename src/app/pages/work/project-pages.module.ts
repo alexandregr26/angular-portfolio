@@ -13,6 +13,11 @@ import { UtatComponent } from './utat/utat.component';
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/#projects'
+  },
+  {
     path: 'splitz',
     component: SplitzComponent
   },

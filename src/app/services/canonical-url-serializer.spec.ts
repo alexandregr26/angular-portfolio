@@ -14,4 +14,13 @@ describe('CanonicalUrlSerializer', () => {
     expect(serializer.serialize(serializer.parse('/'))).toBe('/');
     expect(serializer.serialize(serializer.parse('/missing'))).toBe('/missing');
   });
+
+  it('normalizes only category-root trailing slashes while preserving query and fragment', () => {
+    for (const category of ['project', 'work']) {
+      expect(serializer.serialize(serializer.parse(`/${category}/`))).toBe(`/${category}`);
+      expect(serializer.serialize(serializer.parse(`/${category}/?ref=resume#section`)))
+        .toBe(`/${category}?ref=resume#section`);
+    }
+    expect(serializer.serialize(serializer.parse('/missing/'))).toBe('/missing/');
+  });
 });

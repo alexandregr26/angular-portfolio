@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { createStructuredData, structuredDataId } from '../src/seo-structured-data.mjs';
 
 const outputDirectory = new URL('../docs/', import.meta.url);
@@ -25,7 +26,7 @@ for (const page of pages) {
   const url = `${siteUrl}${page.path}`;
   assert(!seenUrls.has(url), `Duplicate URL: ${url}`);
   seenUrls.add(url);
-  const html = await readFile(join(outputDirectory.pathname, page.path, 'index.html'), 'utf8');
+  const html = await readFile(join(fileURLToPath(outputDirectory), page.path, 'index.html'), 'utf8');
 
   assert(html.includes(`<title>${page.title}</title>`), `Missing title: ${page.path}`);
   assert(html.includes(`<link rel="canonical" href="${url}">`), `Wrong canonical: ${page.path}`);
